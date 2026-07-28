@@ -47,8 +47,47 @@ true-gap cost is **ocean 3-hourly** fields.
    (mapped / derivable / true_gap), realm, frequency, and GB/year.
    Use it to look up any single variable.
 
-(The `raw/by_realm/*.csv` files are the per-realm production lists — useful later,
-not needed for this meeting.)
+## The final "production" table (the shape Tomas asked for)
+
+`out/production/<realm>.csv` — **one CSV per model realm**, three columns exactly
+like Tomas' example:
+
+| frequency | time_ave_or_inst | variables |
+|---|---|---|
+| 6hr | ave | RELHUM, PS, T |
+
+The `variables` column holds the **raw model names** the model must output for that
+realm at that frequency/statistic. This is the hand-off table for whoever
+configures the model output.
+
+**Two related tables and how they differ:**
+- `out/by_realm/<realm>.csv` — the **Data-Request view**: variables in their
+  CMIP7/DR names (what was *requested*).
+- `out/raw/by_realm/<realm>.csv` — the **detailed model view**: DR names + raw
+  model names + the split of what's missing (`derivable` vs `true_gap`) + GB/year.
+  `production/` is just its `variables_raw` column, cleaned up.
+
+## What weighs the most (size drivers)
+
+Cost per variable = `horizontal points × vertical levels × timesteps/year × 4 B`.
+On the CMCC-ESM3 grid, a **single variable** costs roughly (uncompressed):
+
+| field type | monthly | daily | 3-hourly |
+|---|---|---|---|
+| **3-D ocean** (360×291×75) | 0.38 GB | 11.5 GB | **92 GB** |
+| **3-D atmos** (48600×58) | 0.14 GB | 4.1 GB | 33 GB |
+| 2-D ocean | 0.005 GB | 0.15 GB | 1.2 GB |
+| 2-D atmos | 0.002 GB | 0.07 GB | 0.6 GB |
+
+So **frequency and 3-D matter enormously**: one 3-hourly 3-D ocean field ≈ 92 GB/yr
+— by itself almost a whole CMIP6 model-year. That is why the true-gap cost (224 GB)
+is dominated by a handful of **ocean sub-daily 3-D** fields. See the biggest
+individual variables with:
+```bash
+head -12 out/volume_by_variable.csv     # sorted largest-first
+```
+
+(The `raw/by_realm/*.csv` files carry the same info plus the GB columns.)
 
 ## Don't read the CSV in the terminal — make a readable summary
 
@@ -74,6 +113,38 @@ less truegap_summary.txt          # or open it in an editor
 i.e. for each **Division**, each **opportunity** it owns, each **group**, and the
 exact **true-gap variable names** — which is precisely the "who asked for what,
 and what's the gap" view for the discussion.
+
+## The 5 Baseline true-gap variables (spelled out)
+
+Baseline groups are split by **output frequency** (see next section). The 5
+baseline variables flagged true-gap are:
+
+| group | variable | full name | likely status |
+|---|---|---|---|
+| baseline_fixed | `mrsofc` | Capacity of Soil to Store Water (field capacity) | maybe addable (CLM soil params) |
+| baseline_fixed | `rootd` | Maximum Root Depth | maybe addable (CLM) |
+| baseline_monthly | `bigthetao` | Sea Water **Conservative** Temperature (TEOS-10) | real gap — model writes `thetao` (potential) |
+| baseline_monthly | `rluscs` | Surface Upwelling **Clear-Sky** Longwave Radiation | maybe derivable (CAM clear-sky fluxes) |
+| baseline_monthly | `snw` | Surface Snow Amount (snow water equivalent) | quick add — CLM `H2OSNO` exists |
+
+So of the 5, only `bigthetao` is a genuine "model doesn't produce it" case; the
+others are likely a reformatter line or a simple derivation. **None is missing
+from the request** — all 131 baseline variables are present.
+
+### What "fixed" and "monthly" mean
+
+The baseline opportunity lists the *same* physical variables at several **output
+frequencies**, one group per frequency:
+
+- **`baseline_fixed`** → **time-invariant** fields, written **once** for the whole
+  run (they never change in time): grid geometry, land fraction, soil field
+  capacity (`mrsofc`), root depth (`rootd`). Storage cost ≈ nil.
+- **`baseline_monthly`** → **monthly** values (one per month, 12/year) — usually
+  monthly means.
+- (`baseline_daily` → daily; `baseline_subdaily` → 6-hourly/3-hourly.)
+
+Same variable can appear in more than one of these (e.g. `tas` monthly *and*
+daily) — those are distinct entries, not duplicates.
 
 ## Talking points
 
