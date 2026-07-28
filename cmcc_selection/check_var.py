@@ -19,6 +19,8 @@ def main():
     ap.add_argument("--version", default="v1.2.2.4")
     ap.add_argument("--var", required=True, help="out_name or CMIP6 short name, e.g. bigthetao")
     ap.add_argument("--opportunity", default=None)
+    ap.add_argument("--list", action="store_true",
+                    help="also print all variables of --opportunity, sorted by CMIP6 name")
     a = ap.parse_args()
 
     from data_request_api.content import dreq_content as dc
@@ -74,6 +76,16 @@ def main():
             uids = {getattr(v, "uid", None) for v in ov}
             print(f"  total variables in this opportunity: {len(ov)}")
             print(f"  contains '{a.var}': {bool(matched_uids & uids)}")
+            if a.list:
+                # sort by CMIP6 compound name (as the Airtable view does)
+                def c6c(v):
+                    return by_uid.get(getattr(v, "uid", None), {}).get("cmip6_compound_name", "") or ""
+                print(f"\n  --- all {len(ov)} variables (CMIP6 name | CMIP7 out_name) ---")
+                for v in sorted(ov, key=lambda x: c6c(x).lower()):
+                    i = by_uid.get(getattr(v, "uid", None), {})
+                    mark = "  <<<" if getattr(v, "uid", None) in matched_uids else ""
+                    print(f"    {c6c(v):22s} {i.get('out_name',''):14s} "
+                          f"{i.get('frequency',''):5s}{mark}")
         except Exception as e:  # noqa: BLE001
             print(f"  (lookup failed - check the exact opportunity title: {e})")
 
