@@ -138,7 +138,13 @@ def main():
                              "opportunities": r.get("opportunities", "")})
         else:
             per_realm_stat[realm][0] += 1
-            bucket["raw"].add(model)
+            # a CMOR var can map to several raw fields ("SOILLIQ, SOILICE") -
+            # split so the per-realm/production lists are clean, de-duplicated
+            # sets of individual raw model variable names
+            for m in str(model).split(","):
+                m = m.strip()
+                if m:
+                    bucket["raw"].add(m)
             row_out["raw_name"] = model
             row_out["in_reformatter"] = "True"
             row_out["map_category"] = "mapped"
@@ -162,6 +168,23 @@ def main():
                             ", ".join(sorted(b["raw"])),
                             ", ".join(sorted(b["derivable"])),
                             ", ".join(sorted(b["true_gap"]))])
+
+    # minimal PRODUCTION tables (the shape Tomas suggested):
+    # frequency | time_ave_or_inst | variables (raw model names only)
+    prod_dir = os.path.join(args.outdir, "production")
+    os.makedirs(prod_dir, exist_ok=True)
+    n_prod = 0
+    for realm, freqmap in sorted(by_realm.items()):
+        rows_out = [(freq, cell, sorted(b["raw"]))
+                    for (freq, cell), b in sorted(freqmap.items()) if b["raw"]]
+        if not rows_out:
+            continue
+        with open(os.path.join(prod_dir, f"{realm or 'unknown'}.csv"), "w", newline="") as f:
+            w = csv.writer(f)
+            w.writerow(["frequency", "time_ave_or_inst", "variables"])
+            for freq, cell, vs in rows_out:
+                w.writerow([freq, cell, ", ".join(vs)])
+        n_prod += 1
 
     _write(os.path.join(raw_dir, "mapping_detail.csv"), detail,
            ["cmip6_name", "out_name", "model", "realm", "lookup", "reprocess",
@@ -191,6 +214,8 @@ def main():
         print(f"{realm:12s} {m:7d} {d:10d} {g:9d}")
     print(f"[write]  {realm_dir}/  (per-realm: variables_dr | variables_raw | "
           "variables_unmapped_derivable | variables_unmapped_true_gap)")
+    print(f"[write]  {prod_dir}/  ({n_prod} production tables: "
+          "frequency | time_ave_or_inst | variables [raw model names])")
     print(f"[write]  {os.path.join(args.outdir, 'cmcc_variables_mapped.csv')}")
     print(f"[write]  {os.path.join(raw_dir, 'mapping_detail.csv')}")
     print(f"[write]  {os.path.join(raw_dir, 'unmapped.csv')}  <- TRIAGE SHEET "
