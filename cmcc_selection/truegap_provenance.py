@@ -89,7 +89,7 @@ def main():
         if not placed:
             unattributed.append(var)
 
-    # detail CSV: one row per (division, opportunity, group)
+    # detail CSV: one row per (division, opportunity, group), with the var names
     out = os.path.join(args.outdir, "truegap_provenance.csv")
     with open(out, "w", newline="") as f:
         w = csv.writer(f)
@@ -99,23 +99,39 @@ def main():
             uv = sorted(set(vs))
             w.writerow([div, opp, prio, grp, len(uv), ", ".join(uv)])
 
-    # readable summary grouped by Division -> Opportunity -> group
+    # opportunity-level rollup CSV: one row per (division, opportunity)
+    out_opp = os.path.join(args.outdir, "truegap_by_opportunity.csv")
+    by_opp = defaultdict(lambda: {"groups": set(), "vars": set()})
+    for (div, opp, prio, grp), vs in rec.items():
+        b = by_opp[(div, opp, prio)]
+        b["groups"].add(grp)
+        b["vars"].update(vs)
+    with open(out_opp, "w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["division", "opportunity", "cmcc_priority", "n_true_gap",
+                    "groups_with_true_gap", "true_gap_variables"])
+        for (div, opp, prio), b in sorted(by_opp.items()):
+            w.writerow([div, opp, prio, len(b["vars"]),
+                        ", ".join(sorted(b["groups"])),
+                        ", ".join(sorted(b["vars"]))])
+
+    # readable summary grouped by Division -> Opportunity -> group, WITH names
     by_div = defaultdict(lambda: defaultdict(list))
     for (div, opp, prio, grp), vs in rec.items():
-        by_div[div][(opp, prio)].append((grp, len(set(vs))))
+        by_div[div][(opp, prio)].append((grp, sorted(set(vs))))
     print()
     for div in sorted(by_div):
-        n = sum(c for opp in by_div[div].values() for _, c in opp)
-        print(f"### {div}   ({n} true_gap variable-slots)")
+        n = len({v for opp in by_div[div].values() for _, vs in opp for v in vs})
+        print(f"### {div}   ({n} distinct true_gap variables)")
         for (opp, prio) in sorted(by_div[div]):
-            grps = sorted(by_div[div][(opp, prio)])
             print(f"  [{prio:6}] {opp}")
-            for grp, c in grps:
-                print(f"        {grp:52s} {c:3d}")
+            for grp, vs in sorted(by_div[div][(opp, prio)]):
+                print(f"        {grp:48s} {len(vs):3d}  {', '.join(vs)}")
     if unattributed:
         print(f"\n[warn] {len(unattributed)} true_gap vars not attributed to a "
               f"High/Medium group (e.g. {', '.join(sorted(set(unattributed))[:5])})")
     print(f"\n[write] {out}")
+    print(f"[write] {out_opp}")
 
 
 if __name__ == "__main__":
