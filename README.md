@@ -15,7 +15,7 @@ details and tuning knobs.
 | `CMCC_CMIP7-DR-opportunities-Final*` | the internal CMCC selection (source of truth): opportunities, CMCC priority, variable groups |
 | `cmcc_selection/` | our scripts + outputs |
 | `CMIP7_DReq_Software_v1.4/` | upstream CMIP7 Data Request API (clone) |
-| `cmip_reformatter/` | CMOR→raw-name lookup tables (clone; gitignored) |
+| `cmip_reformatter/` | CMOR→raw-name lookup tables (clone; gitignored). Mapping uses `cmip-tables/cmip6plus/variables/` (has `ocnbgc` + CMIP7 branded/pressure variants); `cmip-tables/cmip6/variables/` has ~23 extra names (`co2`, `fco2nat`, `rtmt`, land-carbon…) usable via `--fallback-lookup-dir` |
 
 ## Setup (once, on the server)
 
@@ -39,6 +39,8 @@ python build_cmcc_cmip7_table.py --version v1.2.2.4 --outdir out 2>/dev/null
 
 # 2) translate to raw model names     -> the production list
 python map_to_raw_names.py 2>/dev/null
+#    (optionally pull in the older cmip6 table for names cmip6plus lacks:
+#     --fallback-lookup-dir ../cmip_reformatter/cmip-tables/cmip6/variables )
 
 # 3) estimate data volume             -> GB / model-year
 python estimate_volume.py --version v1.2.2.4 2>/dev/null
