@@ -34,42 +34,59 @@ REALM_TO_LOOKUP = {
 }
 
 
-def load_lookups(lookup_dir):
-    """Return (per_fam, combined) where
-    per_fam[fam][out_name] = dict(model, reprocess, long_name)
-    combined[out_name]     = list of (fam, model)   (for fallback / audit)."""
-    per_fam, combined = {}, defaultdict(list)
-    for fam in sorted(set(REALM_TO_LOOKUP.values())):
-        path = os.path.join(lookup_dir, f"{fam}_lookup.csv")
-        if not os.path.exists(path):
-            raise FileNotFoundError(path)
-        per_fam[fam] = {}
-        with open(path, newline="") as f:
-            for row in csv.DictReader(f):
-                out = row["variable"].strip()
-                rec = {"model": row["model"].strip(),
-                       "reprocess": row.get("reprocess", "").strip(),
-                       "long_name": row.get("long_name", "").strip()}
-                per_fam[fam][out] = rec
-                combined[out].append((fam, rec["model"]))
+def load_lookups(lookup_dirs):
+    """lookup_dirs: ordered list of directories; earlier dirs win on conflict
+    (primary = cmip6plus, optional fallback = cmip6).
+    Return (per_fam, combined):
+      per_fam[fam][out_name] = dict(model, reprocess, long_name, source)
+      combined[out_name]     = list of (fam, model)   (for fallback / audit)."""
+    if isinstance(lookup_dirs, str):
+        lookup_dirs = [lookup_dirs]
+    per_fam = {fam: {} for fam in sorted(set(REALM_TO_LOOKUP.values()))}
+    combined = defaultdict(list)
+    found_any = False
+    for d in lookup_dirs:
+        if not d:
+            continue
+        # tag = the table generation, e.g. "cmip6plus" or "cmip6"
+        tag = os.path.basename(os.path.dirname(os.path.normpath(d)))
+        for fam in per_fam:
+            path = os.path.join(d, f"{fam}_lookup.csv")
+            if not os.path.exists(path):
+                continue
+            found_any = True
+            with open(path, newline="") as f:
+                for row in csv.DictReader(f):
+                    out = row["variable"].strip()
+                    if out in per_fam[fam]:
+                        continue                 # earlier (primary) table wins
+                    rec = {"model": row["model"].strip(),
+                           "reprocess": row.get("reprocess", "").strip(),
+                           "long_name": row.get("long_name", "").strip(),
+                           "source": tag}
+                    per_fam[fam][out] = rec
+                    combined[out].append((fam, rec["model"]))
+    if not found_any:
+        raise FileNotFoundError(f"no *_lookup.csv found in {lookup_dirs}")
     return per_fam, combined
 
 
 def resolve(keys, realm, per_fam, combined):
     """keys = tuple of lookup keys to try in order (normally just the cmip6 name).
-    Return (model, fam_used, reprocess) or (None, None, None) if unmapped."""
+    Return (model, fam_used, reprocess) or (None, None, None) if unmapped.
+    fam_used encodes the family + source table, e.g. 'atm:cmip6plus' ('*' = realm mismatch)."""
     fam = REALM_TO_LOOKUP.get(realm)
     # Look in the realm's own lookup family first...
     for key in keys:
         if key and fam and key in per_fam[fam]:
             r = per_fam[fam][key]
-            return r["model"], fam, r["reprocess"]
+            return r["model"], f"{fam}:{r['source']}", r["reprocess"]
     # ...then any lookup (realm mismatch, flagged with *)
     for key in keys:
         if key and key in combined:
             fam2, model = combined[key][0]
             r = per_fam[fam2][key]
-            return r["model"], fam2 + "*", r["reprocess"]
+            return r["model"], f"{fam2}:{r['source']}*", r["reprocess"]
     return None, None, None
 
 
@@ -79,11 +96,16 @@ def main():
     ap.add_argument("--vars", default=os.path.join(here, "out", "cmcc_variables.csv"))
     ap.add_argument("--lookup-dir",
                     default=os.path.join(here, "..", "cmip_reformatter",
-                                         "cmip-tables", "cmip6plus", "variables"))
+                                         "cmip-tables", "cmip6plus", "variables"),
+                    help="primary lookup tables (default: cmip6plus/variables)")
+    ap.add_argument("--fallback-lookup-dir", default="",
+                    help="secondary tables used ONLY for names the primary lacks, "
+                         "e.g. .../cmip-tables/cmip6/variables (adds co2, fco2nat, "
+                         "rtmt, several land-carbon vars, ...). Off by default.")
     ap.add_argument("--outdir", default=os.path.join(here, "out"))
     args = ap.parse_args()
 
-    per_fam, combined = load_lookups(args.lookup_dir)
+    per_fam, combined = load_lookups([args.lookup_dir, args.fallback_lookup_dir])
     n_lookup = sum(len(v) for v in per_fam.values())
     print(f"[lookup] {n_lookup} CMOR->raw entries across {len(per_fam)} families")
 
