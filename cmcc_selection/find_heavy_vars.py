@@ -76,6 +76,15 @@ def main():
     with open(args.mapped, newline="") as f:
         rows = list(csv.DictReader(f))
 
+    # GB/year: prefer the dedicated volume file (survives map reruns that drop the
+    # GB_per_year column from cmcc_variables_mapped.csv)
+    vol = {}
+    vpath = os.path.join(args.outdir, "volume_by_variable.csv")
+    if os.path.exists(vpath):
+        with open(vpath, newline="") as f:
+            for v in csv.DictReader(f):
+                vol[v.get("compound_name", "")] = v.get("GB_per_year", "")
+
     hits = [r for r in rows
             if r.get("realm") == args.realm and r.get("frequency") == args.freq]
 
@@ -85,7 +94,7 @@ def main():
         if args.only_3d and not is3d:
             continue
         var = r.get("cmip6_name") or r.get("out_name", "")
-        gb = r.get("GB_per_year", "")
+        gb = r.get("GB_per_year", "") or vol.get(r.get("compound_name", ""), "")
         v_opps = [o for o in r.get("opportunities", "").split(";") if o]
         v_groups = {_norm(g) for g in r.get("groups", "").split(";") if g}
         placed = False
