@@ -106,6 +106,7 @@ def main():
                 out_rows.append({
                     "variable": var, "dim": "3D" if is3d else "2D",
                     "cell": r.get("cell", ""), "GB_per_year": gb,
+                    "map_category": r.get("map_category", ""),
                     "group": info["norm2name"][gn], "opportunity": opp,
                     "division": info["division"], "cmcc_priority": info["priority"],
                     "in_baseline": "YES" if BASELINE_KEY in opp.lower() else "no",
@@ -116,6 +117,7 @@ def main():
         if not placed:
             out_rows.append({"variable": var, "dim": "3D" if is3d else "2D",
                              "cell": r.get("cell", ""), "GB_per_year": gb,
+                             "map_category": r.get("map_category", ""),
                              "group": "?", "opportunity": "?", "division": "?",
                              "cmcc_priority": "?", "in_baseline": "?",
                              "long_name": r.get("long_name", ""),
@@ -128,8 +130,9 @@ def main():
             return 0.0
 
     out_rows.sort(key=lambda x: -gbf(x["GB_per_year"]))
-    fields = ["variable", "dim", "cell", "GB_per_year", "in_baseline", "group",
-              "opportunity", "division", "cmcc_priority", "long_name", "compound_name"]
+    fields = ["variable", "dim", "cell", "GB_per_year", "map_category", "in_baseline",
+              "group", "opportunity", "division", "cmcc_priority", "long_name",
+              "compound_name"]
     out = os.path.join(args.outdir, f"heavy_{args.realm}_{args.freq}.csv")
     with open(out, "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=fields)
@@ -141,16 +144,17 @@ def main():
     n2 = len({r["variable"] for r in out_rows if r["dim"] == "2D"})
     in_base = sorted({r["variable"] for r in out_rows if r["in_baseline"] == "YES"})
     print(f"{args.freq} {args.realm}: {n3} distinct 3-D and {n2} distinct 2-D variables\n")
-    print(f"{'variable':16s} {'dim':3s} {'GB/yr':>8s} {'baseline':8s} "
-          f"{'division':14s} {'group':32s} opportunity")
+    print(f"{'variable':16s} {'dim':3s} {'GB/yr':>7s} {'category':9s} {'baseline':8s} "
+          f"{'division':14s} {'group':28s} opportunity")
     seen = set()
     for r in out_rows:
         k = (r["variable"], r["group"], r["opportunity"])
         if k in seen:
             continue
         seen.add(k)
-        print(f"{r['variable']:16s} {r['dim']:3s} {gbf(r['GB_per_year']):8.1f} "
-              f"{r['in_baseline']:8s} {r['division']:14s} {r['group']:32s} {r['opportunity']}")
+        print(f"{r['variable']:16s} {r['dim']:3s} {gbf(r['GB_per_year']):7.1f} "
+              f"{r['map_category']:9s} {r['in_baseline']:8s} {r['division']:14s} "
+              f"{r['group']:28s} {r['opportunity']}")
     print(f"\n>>> 3-D {args.freq} {args.realm} variables in the BASELINE (IPCC) opportunity: "
           + (", ".join(in_base) if in_base else "NONE"))
     print(f"[write] {out}")
