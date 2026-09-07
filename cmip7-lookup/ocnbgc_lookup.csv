@@ -54,3 +54,69 @@ talkos,True,talk,Surface Total Alkalinity
 zmeso,False,zmeso,Mole Concentration of Mesozooplankton Expressed as Carbon in Sea Water
 zmicro,False,zmicro,Mole Concentration of Microzooplankton Expressed as Carbon in Sea Water
 zooc,True,"zmeso, zmicro",Zooplankton Carbon Concentration
+chlcalc,False,,Mass Concentration of Calcareous Phytoplankton Expressed as Chlorophyll in Sea Water
+chldiaz,False,,Mass Concentration of Diazotrophs Expressed as Chlorophyll in Sea Water
+chlpico,False,,Mass Concentration of Picophytoplankton Expressed as Chlorophyll in Sea Water
+co3200,False,,Carbonate Ion Concentration
+co3os,False,,Surface Carbonate Ion Concentration
+co3satarag200,False,,Mole Concentration of Carbonate Ion in Equilibrium with Pure Aragonite in Sea Water
+co3sataragos,False,,Surface Mole Concentration of Carbonate Ion in Equilibrium with Pure Aragonite in Sea Water
+dfeos,False,,Surface Dissolved Iron Concentration
+dmso,False,,Mole Concentration of Dimethyl Sulphide in Sea Water
+dmsos,False,,Surface Mole Concentration of Dimethyl Sulphide in Sea Water
+epc1000,False,,Downward Flux of Particulate Organic Carbon at 1000m
+epcalc1000,False,,Downward Flux of Calcite at 1000m
+epn100,False,,Downward Flux of Particulate Nitrogen
+epp100,False,,Downward Flux of Particulate Phosphorus
+epsi100,False,,Downward Flux of Particulate Silicon
+expcob,False,,Sinking Flux of Particulate Organic Carbon Reaching the Ocean Bottom
+fgdms,False,,Surface Upward Flux of DMS
+fric,False,,Downward Inorganic Carbon Flux at Ocean Bottom
+froc,False,,Downward Organic Carbon Flux at Ocean Bottom
+fsfe,False,,Surface Downward Net Flux of Iron
+fsn,False,,Surface Downward Net Flux of Nitrogen
+graz,False,,Total Grazing of Phytoplankton by Zooplankton
+icfriver,False,,Flux of Inorganic Carbon into Ocean Surface by Runoff
+intpoc,False,,Particulate Organic Carbon Content
+intppcalc,False,,Net Primary Mole Productivity of Carbon by Calcareous Phytoplankton
+intppdiaz,False,,Net Primary Mole Productivity of Carbon by Diazotrophs
+intppnano,False,,Net Primary Organic Carbon Production by Nanophytoplankton
+intppnitrate,False,,Primary Organic Carbon Production by Phytoplankton Based on Nitrate Uptake Alone
+intpppico,False,,Net Primary Mole Productivity of Carbon by Picophytoplankton
+limfecalc,False,,Iron Limitation of Calcareous Phytoplankton
+limfediat,False,,Iron Limitation of Diatoms
+limfediaz,False,,Iron Limitation of Diazotrophs
+limfemisc,False,,Iron Limitation of Other Phytoplankton
+limfepico,False,,Iron Limitation of Picophytoplankton
+limirrcalc,False,,Irradiance Limitation of Calcareous Phytoplankton
+limirrdiat,False,,Irradiance Limitation of Diatoms
+limirrdiaz,False,,Irradiance Limitation of Diazotrophs
+limirrmisc,False,,Irradiance Limitation of Other Phytoplankton
+limirrpico,False,,Irradiance Limitation of Picophytoplankton
+limncalc,False,,Nitrogen Limitation of Calcareous Phytoplankton
+limndiat,False,,Nitrogen Limitation of Diatoms
+limndiaz,False,,Nitrogen Limitation of Diazotrophs
+limnmisc,False,,Nitrogen Limitation of Other Phytoplankton
+limnpico,False,,Nitrogen Limitation of Picophytoplankton
+o2200,False,,Dissolved Oxygen Concentration at 200 meters
+o2min,False,,Oxygen Minimum Concentration
+o2sat,False,,Dissolved Oxygen Concentration at Saturation
+ocfriver,False,,Flux of Organic Carbon into Ocean Surface by Runoff
+ph200,False,,pH
+phyc200,False,,Phytoplankton Carbon Concentration
+phycalc,False,,Mole Concentration of Calcareous Phytoplankton Expressed as Carbon in Sea Water
+phycos,False,,Sea Surface Phytoplankton Carbon Concentration
+phydiatos,False,,Surface Mole Concentration of Diatoms Expressed as Carbon in Sea Water
+phydiaz,False,,Mole Concentration of Diazotrophs Expressed as Carbon in Sea Water
+phydiazos,False,,Surface Mole Concentration of Diazotrophs Expressed as Carbon in Sea Water
+phymiscos,False,,Surface Mole Concentration of Miscellaneous Phytoplankton Expressed as Carbon in Sea Water
+phynano,False,,Mole Concentration of Nanophytoplankton Expressed as Carbon in Sea Water
+phypico,False,,Mole Concentration of Picophytoplankton Expressed as Carbon in Sea Water
+ppos,False,,Primary Carbon Production by Phytoplankton
+sialgc,False,,Total Ice Algal Carbon Amount in Sea Ice
+sichl,False,,Amount of Total Ice Algae Expressed as Chlorophyll in Sea Ice
+sigpp,False,,Gross Primary Productivity in Sea Ice as Carbon Amount Flux
+sino3,False,,Dissolved Nitrate Amount in Sea Ice
+sios,False,,Surface Total Dissolved Inorganic Silicon Concentration
+sisi,False,,Dissolved Silicon Amount in Sea Ice
+zmisc,False,,Mole Concentration of Other Zooplankton Expressed as Carbon in Sea Water

@@ -69,3 +69,36 @@ wmo,True,wmo,Upward Ocean Mass Transport
 wo,False,wo,Sea Water Vertical Velocity
 zos,False,zos,Sea Surface Height Above Geoid
 zostoga,False,zostoga,Global Average Thermosteric Sea Level Change
+absscint,False,,Integral wrt depth of seawater absolute salinity expressed as salt mass content
+bigthetao,False,,Sea Water Conservative Temperature
+bigthetao200,False,,Sea Water Conservative Temperature at 200 meters
+bigthetaoga,False,,Global Average Sea Water Conservative Temperature
+chcint,False,,Depth Integrated Seawater Conservative Temperature Expressed As Heat Content
+ficeberg,False,,Water Flux into Sea Water from Icebergs
+flandice,False,,Water Flux into Sea Water from Land Ice
+hfbasinpsmadv,False,,Northward Ocean Heat Transport Due to Parameterized Submesoscale Advection
+hfrunoffds,False,,Temperature Flux Due to Runoff Expressed as Heat Flux into Sea Water
+hfx,False,,3D Ocean Heat X Transport
+hfxint,False,,Vertically Integrated Ocean Heat X Transport
+hfy,False,,3D Ocean Heat Y Transport
+hfyint,False,,Vertically Integrated Ocean Heat Y Transport
+msftmrho,False,,Ocean Meridional Overturning Mass Streamfunction
+msftmz,False,,Ocean Meridional Overturning Mass Streamfunction
+msftmzmpa,False,,Ocean Meridional Overturning Mass Streamfunction Due to Parameterized Mesoscale Advection
+msftyrho,False,,Ocean Y Overturning Mass Streamfunction
+pfscint,False,,Integral wrt depth of seawater preformed salinity expressed as salt mass content
+phcint,False,,Integrated Ocean Heat Content from Potential Temperature
+pso,False,,Sea Water Pressure at Sea Water Surface
+rsdo,False,,Downwelling Shortwave Radiation in Sea Water
+scint,False,,Integral wrt depth of seawater practical salinity expressed as salt mass content
+sfx,False,,3D Ocean Salt Mass X Transport
+sfxint,False,,Vertically Integrated Ocean Salt Mass X Transport
+sfy,False,,3D Ocean Salt Mass Y Transport
+sfyint,False,,Vertically Integrated Ocean Salt Mass Y Transport
+sltbasin,False,,Northward Ocean Salt Transport
+thetao200,False,,Sea Water Potential Temperature at 200 meters
+uos,False,,Daily Surface Sea Water X Velocity
+vos,False,,Daily Surface Sea Water Y Velocity
+vsf,False,,Virtual Salt Flux into Sea Water
+zfullo,False,,Depth Below Geoid of Ocean Layer
+zossq,False,,Square of Sea Surface Height Above Geoid

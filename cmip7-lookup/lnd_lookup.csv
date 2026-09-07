@@ -111,3 +111,125 @@ tslsiLut,True,"TG, cols1d",Surface Temperature on Landuse Tile
 tsn,False,SNOTTOPL,Snow Internal Temperature
 vegFrac,True,pfts1d_wtgcell,Total Vegetated Percentage Cover
 vegHeight,False,HTOP,Height of the Vegetation Canopy
+agesno,False,,Mean Age of Snow
+albc,False,,Canopy Albedo
+cGeologicStorage,False,,Carbon Mass in Geologic Storage
+cLeaf,False,,Carbon Mass in Leaves
+cLitterCwd,False,,Carbon Mass in Coarse Woody Debris
+cLitterSubSurf,False,,Carbon Mass in Below-Ground Litter
+cLitterSurf,False,,Carbon Mass in Above-Ground Litter
+cOther,False,,"Carbon Mass in Vegetation Components Other than Leaves, Stems and Roots"
+cRoot,False,,Carbon Mass in Roots
+cSoilLevels,False,,Carbon Mass in Each Model Soil Level (Summed over All Soil Carbon Pools in That Level)
+cSoilPools,False,,Carbon Mass in Each Model Soil Pool (Summed over Vertical Levels)
+cStem,False,,Carbon Mass in Stem
+cVegGrass,False,,Carbon Mass in Vegetation on Grass Tiles
+cVegShrub,False,,Carbon Mass in Vegetation on Shrub Tiles
+cVegTree,False,,Carbon Mass in Vegetation on Tree Tiles
+cnc,False,,Canopy Covered Area Percentage
+cropFracC4,False,,Percentage Cover by C4 Crops
+depthl,False,,Depth of Lake Below the Surface
+dgw,False,,Change in Groundwater
+drivw,False,,Change in River Storage
+dsn,False,,Change in Snow Water Equivalent
+dsw,False,,Change in Surface Water Storage
+esn,False,,Snow Evaporation
+evspsblpot,False,,Potential Evapotranspiration
+fAnthDisturb,False,,"Carbon Mass Flux from Vegetation, Litter or Soil Pools into the Atmosphere Due to any Human Activity [kgC m-2 s-1]"
+fCLandToOcean,False,,Lateral Transfer of Carbon out of Grid Cell That Eventually Goes into Ocean
+fDeforestToAtmos,False,,Deforested Biomass That Goes into Atmosphere as a Result of Anthropogenic Land-Use Change [kgC m-2 s-1]
+fFireAll,False,,Carbon Mass Flux into Atmosphere Due to CO2 Emission from Fire Including All Sources [kgC m-2 s-1]
+fFireNat,False,,Carbon Mass Flux into Atmosphere Due to CO2 Emission from Natural Fire [kgC m-2 s-1]
+fHarvestToAtmos,False,,Harvested Biomass That Goes Straight into Atmosphere as Carbon Mass Flux [kgC m-2 s-1]
+fHarvestToGeologicStorage,False,,Harvested Biomass That Goes into Geological Storage
+fLitterFire,False,,"Carbon Mass Flux from Litter, CWD or any non-Living Pool into Atmosphere Due to CO2 Emission from All Fire [kgC m-2 s-1]"
+fNAnthDisturb,False,,Nitrogen Mass Flux out of Land Due to any Human Activity
+fNOx,False,,Total Land NOx Flux
+fNVegLitter,False,,Total Nitrogen Mass Flux from Vegetation to Litter
+fNVegSoil,False,,Total Nitrogen Mass Flux from Vegetation Directly to Soil
+fNfert,False,,Total Nitrogen Added for Cropland Fertilisation (Artificial and Manure)
+fNgas,False,,"Total Nitrogen Lost to the Atmosphere (Sum of NHx, NOx, N2O, N2)"
+fNgasFire,False,,"Total Nitrogen Lost to the Atmosphere (Including NHx, NOx, N2O, N2) from Fire"
+fNgasNonFire,False,,"Total Nitrogen Lost to the Atmosphere (Including NHx, NOx, N2O, N2) from All Processes Except Fire"
+fNloss,False,,"Total Nitrogen Lost (Including NHx, NOx, N2O, N2 and Leaching)"
+fVegFire,False,,Carbon Mass Flux from Vegetation into Atmosphere Due to CO2 Emission from All Fire [kgC m-2 s-1]
+fVegLitterMortality,False,,Total Carbon Mass Flux from Vegetation to Litter as a Result of Mortality
+fVegLitterSenescence,False,,"Total Carbon Mass Flux from Vegetation to Litter as a Result of Leaf, Branch, and Root Senescence"
+fVegSoil,False,,Total Carbon Mass Flux from Vegetation Directly to Soil
+fVegSoilMortality,False,,Total Carbon Mass Flux from Vegetation to Soil as a Result of Mortality
+fVegSoilSenescence,False,,"Total Carbon Mass Flux from Vegetation to Soil as a Result of Leaf, Branch, and Root Senescence"
+fracInLut,False,,Annual Gross Percentage That Was Transferred into This Tile from Other Land-Use Tiles
+fracOutLut,False,,Annual Gross Percentage of Land-Use Tile That Was Transferred into Other Land-Use Tiles
+gppGrass,False,,Gross Primary Production on Grass Tiles as Carbon Mass Flux [kgC m-2 s-1]
+gppShrub,False,,Gross Primary Production on Shrub Tiles as Carbon Mass Flux [kgC m-2 s-1]
+gppTree,False,,Gross Primary Production on Tree Tiles as Carbon Mass Flux [kgC m-2 s-1]
+gppVgt,False,,Gross Primary Production on Vegetation type as Carbon Mass Flux [kgC m-2 s-1]
+hfdsl,False,,Ground heat flux at 3hr
+irrDem,False,,irrigation water demand
+irrGw,False,,irrigation water withdrawal from groundwater
+irrLut,False,,irrigation water withdrawal
+irrSurf,False,,irrigation water withdrawal from surface water
+laiVgt,False,,Leaf Area Index on Vegetation type
+lwsnl,False,,Liquid Water Content of Snow Layer
+mrrob,False,,Subsurface Runoff
+mrso100,False,,Soil moisture in the top 1 m of the soil column
+mrsofc,False,,Capacity of Soil to Store Water (Field Capacity)
+mrtws,False,,Terrestrial Water Storage
+nLeaf,False,,Nitrogen Mass in Leaves
+nLitterCwd,False,,Nitrogen Mass in Coarse Woody Debris
+nLitterSubSurf,False,,Nitrogen Mass in Below-Ground Litter (non CWD)
+nLitterSurf,False,,Nitrogen Mass in Above-Ground Litter (non CWD)
+nMineralNH4,False,,Mineral Ammonium in the Soil
+nMineralNO3,False,,Mineral Nitrate in the Soil
+nOther,False,,"Nitrogen Mass in Vegetation Components Other than Leaves, Stem and Root"
+nRoot,False,,Nitrogen Mass in Roots
+nStem,False,,Nitrogen Mass in Stem
+nbpLut,False,,Net Carbon Mass Flux into Land-Use Tile [kgC m-2 s-1]
+nppGrass,False,,Net Primary Production on Grass Tiles as Carbon Mass Flux [kgC m-2 s-1]
+nppLeaf,False,,Net Primary Production Allocated to Leaves as Carbon Mass Flux [kgC m-2 s-1]
+nppOther,False,,Net Primary Production Allocated to Other Pools (not Leaves Stem or Roots) as Carbon Mass Flux [kgC m-2 s-1]
+nppRoot,False,,Net Primary Production Allocated to Roots as Carbon Mass Flux [kgC m-2 s-1]
+nppShrub,False,,Net Primary Production on Shrub Tiles as Carbon Mass Flux [kgC m-2 s-1]
+nppStem,False,,Net Primary Production Allocated to Stem as Carbon Mass Flux [kgC m-2 s-1]
+nppTree,False,,Net Primary Production on Tree Tiles as Carbon Mass Flux [kgC m-2 s-1]
+nppVgt,False,,Net Primary Production on Vegetation type as Carbon Mass Flux [kgC m-2 s-1]
+orogSouth30,False,,Surface Altitude
+pastureFrac,False,,Percentage of Land Which Is Anthropogenic Pasture
+pastureFracC3,False,,C3 Pasture Area Percentage
+pastureFracC4,False,,C4 Pasture Area Percentage
+pflw,False,,Liquid Water Content of Permafrost Layer
+prveg,False,,Precipitation onto Canopy
+qgwr,False,,Groundwater Recharge from Soil Layer
+raGrass,False,,Autotrophic Respiration on Grass Tiles as Carbon Mass Flux [kgC m-2 s-1]
+raLeaf,False,,Total Respiration from Leaves as Carbon Mass Flux [kgC m-2 s-1]
+raOther,False,,Total Respiration from Other Pools (not Leaves Stem or Roots) as Carbon Mass Flux [kgC m-2 s-1]
+raRoot,False,,Total Respiration from Roots as Carbon Mass Flux [kgC m-2 s-1]
+raShrub,False,,Autotrophic Respiration on Shrub Tiles as Carbon Mass Flux [kgC m-2 s-1]
+raStem,False,,Total Respiration from Stem as Carbon Mass Flux [kgC m-2 s-1]
+raTree,False,,Autotrophic Respiration on Tree Tiles as Carbon Mass Flux [kgC m-2 s-1]
+raVgt,False,,Autotrophic Respiration on Vegetation type as Carbon Mass Flux [kgC m-2 s-1]
+rhGrass,False,,Heterotrophic Respiration on Grass Tiles as Carbon Mass Flux [kgC m-2 s-1]
+rhLitter,False,,Carbon Mass Flux into Atmosphere Due to Heterotrophic Respiration from Litter on Land
+rhShrub,False,,Heterotrophic Respiration on Shrub Tiles as Carbon Mass Flux [kgC m-2 s-1]
+rhSoil,False,,Carbon Mass Flux into Atmosphere Due to Heterotrophic Respiration from Soil on Land
+rhTree,False,,Heterotrophic Respiration on Tree Tiles as Carbon Mass Flux [kgC m-2 s-1]
+rhVgt,False,,Heterotrophic Respiration on Vegetation type as Carbon Mass Flux [kgC m-2 s-1]
+rivo,False,,River Discharge
+rootd,False,,Maximum Root Depth
+rsdss,False,,Surface Downwelling Shortwave Radiation over Snow
+rsuss,False,,Surface Upwelling Shortwave Radiation over Snow
+rzwc,False,,Root Zone Soil Moisture
+sftlaf,False,,Fraction of the Grid Cell Occupied by Lake
+snw,False,,Surface Snow Amount
+sootsn,False,,Snow Soot Content
+srfrad,False,,Net radiative flux at surface
+sw,False,,Surface Water Storage
+tpf,False,,Permafrost Layer Thickness
+vegHeightGrass,False,,Height of Grass
+vegHeightShrub,False,,Height of Shrubs
+vegHeightTree,False,,Height of Trees
+wetlandCH4,False,,Grid Averaged Methane Emissions from Wetlands
+wetlandCH4cons,False,,Grid Averaged Methane Consumption (Methanotrophy) from Wetlands
+wetlandCH4prod,False,,Grid Averaged Methane Production (Methanogenesis) from Wetlands
+wetlandFrac,False,,Wetland Percentage Cover
+wtd,False,,Water Table Depth

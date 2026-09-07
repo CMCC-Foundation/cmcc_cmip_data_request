@@ -76,3 +76,144 @@ wap8,True,"OMEGA, PS, T",Omega (=dp/dt)
 zg,True,"Z3, PS, T",Geopotential Height
 zg500,False,Z500,Geopotential Height at 500hPa
 zg7h,True,"Z3, PS, T",Geopotential Height
+abs550bc,False,,black carbon aaod@550nm
+abs550dust,False,,dust absorption aerosol optical depth @550nm
+abs550so4,False,,sulfate aaod@550nm
+aod550volso4,False,,Monthly Aerosol Optical Depth at 550nm Due to Stratospheric Volcanic Aerosols
+bldep,False,,Boundary Layer Depth
+bry,False,,Total Inorganic Bromine Volume Mixing Ratio
+ccn,False,,Cloud Condensation Nuclei Concentration at Liquid Cloud Top
+cdnc,False,,Cloud Liquid Droplet Number Concentration
+cfc113global,False,,Global Mean Mole Fraction of CFC113
+cfc114,False,,Mole Fraction of CFC114
+cfc11global,False,,Global Mean Mole Fraction of CFC11
+cfc12global,False,,Global Mean Mole Fraction of CFC12
+ch4,False,,Mole Fraction of CH4
+ch4losssoil,False,,loss of methane from the atmosphere due to biological consumption in the soil
+cldnvi,False,,Column Integrated Cloud Droplet Number
+cltc,False,,Convective Cloud Cover Percentage
+cly,False,,Total Inorganic Chlorine Volume Mixing Ratio
+co,False,,CO Volume Mixing Ratio
+co2,False,,Mole Fraction of CO2
+co23D,False,,3D-Field of Transported CO2
+co2Clim,False,,Mole Fraction of CO2
+co2mass,False,,Total Atmospheric Mass of CO2
+co2massClim,False,,Total Atmospheric Mass of CO2
+co2s,False,,Near-surface atmosphere CO2
+conccn,False,,Aerosol Number Concentration
+drydust,False,,Dry Deposition Rate of Dust
+drynh3,False,,Dry Deposition Rate of NH3
+drynh4,False,,Dry Deposition Rate of NH4
+drynoy,False,,Dry Deposition Rate of NOy
+emiach4,False,,anthropogenic emission rate of CH4
+emibbbc,False,,total emission rate of black carbon aerosol mass from all biomass burning
+emibbch4,False,,total emission of CH4 from all biomass burning
+emibbco,False,,total emission rate of CO from all biomass burning
+emibbdms,False,,total emission of DMS from all biomass burning
+emibboa,False,,total emission of organic aerosol from all biomass burning
+emibbso2,False,,total emission rate of SO2 from all biomass burning
+emibbvoc,False,,total emission rate of NMVOC from all biomass burning
+emich4,False,,total emission rate of CH4
+emilkch4,False,,lake emission rate of CH4
+epfy,False,,Northward Component of the Eliassen-Palm Flux
+epfz,False,,Upward Component of the Eliassen-Palm Flux
+fco2all,False,,Carbon Mass Flux into Atmosphere Due to All Emissions of CO2 from All Sources [kgC m-2 s-1]
+fco2antt,False,,Carbon Mass Flux into Atmosphere Due to All Anthropogenic Emissions of CO2 [kgC m-2 s-1]
+fco2fos,False,,Carbon Mass Flux into Atmosphere Due to Fossil Fuel Emissions of CO2 [kgC m-2 s-1]
+fco2nat,False,,Surface Carbon Mass Flux into the Atmosphere Due to Natural Sources [kgC m-2 s-1]
+flashrate,False,,Lightning Flash Rate
+hcfc22,False,,Mole Fraction of HCFC22
+hcfc22global,False,,Global Mean Mole Fraction of HCFC22
+hcl,False,,HCl Volume Mixing Ratio
+hfc125,False,,Mole Fraction of HFC125
+hfc134a,False,,Mole Fraction of HFC134a
+hfdsnb,False,,Downward Heat Flux at Snow Base
+hno3,False,,HNO3 Volume Mixing Ratio
+hursSouth30,False,,Near-Surface Relative Humidity
+hus6,False,,Specific humidity
+loadbc,False,,Load of Black Carbon Aerosol
+loadoa,False,,Load of Dry Aerosol Organic Matter
+loadpoa,False,,Load of Dry Aerosol Primary Organic Matter
+loadso4,False,,Load of SO4
+lwp,False,,Liquid Water Path
+meanage,False,,Mean Age of Stratospheric Air
+mmrbc,False,,Elemental Carbon Mass Mixing Ratio
+mmrdust,False,,Dust Aerosol Mass Mixing Ratio
+mmrnh4,False,,NH4 Mass Mixing Ratio
+mmrno3,False,,NO3 Aerosol Mass Mixing Ratio
+mmroa,False,,Total Organic Aerosol Mass Mixing Ratio
+mmrpm2p5,False,,PM2.5 Mass Mixing Ratio
+mmrso4,False,,Aerosol Sulfate Mass Mixing Ratio
+mmrsoa,False,,Secondary Organic Aerosol Mass Mixing Ratio
+mmrss,False,,Sea-Salt Aerosol Mass Mixing Ratio
+n2o,False,,Mole Fraction of N2O
+noaahi2m,False,,mean 2m daily NOAA heat index
+noaahi2mmax,False,,max 2m daily NOAA heat index
+noy,False,,Total Reactive Nitrogen Volume Mixing Ratio
+o3,False,,Mole Fraction of O3
+o3ste,False,,Stratospheric Ozone Tracer Volume Mixing Ratio
+od550bb,False,,Aerosol Optical Depth at 550nm Due to Biomass Burning
+od550bc,False,,Black Carbon Optical Thickness at 550nm
+od550dust,False,,Dust Optical Thickness at 550nm
+od550no3,False,,Nitrate Aerosol Optical Depth at 550nm
+od550oa,False,,Total Organic Aerosol Optical Depth at 550nm
+od550so4,False,,Sulfate Aerosol Optical Depth at 550nm
+od550soa,False,,Particulate Organic Aerosol Optical Depth at 550nm
+od550ss,False,,Sea-Salt Aerosol Optical Depth at 550nm
+oh,False,,OH Volume Mixing Ratio
+prSouth30,False,,Precipitation
+prhmax,False,,Maximum Hourly Precipitation Rate
+prra,False,,Rainfall Flux
+prrsn,False,,Fraction of Rainfall on Snow
+prsnc,False,,Convective Snowfall Flux
+prsnsn,False,,Fraction of Snowfall (Including Hail and Graupel) on Snow
+psSouth30,False,,Surface Air Pressure
+reffsclwtop,False,,Cloud-Top Effective Droplet Radius in Stratiform Cloud
+rldsSouth30,False,,Surface Downwelling Longwave Radiation
+rluscs,False,,Surface Upwelling Clear-Sky Longwave Radiation
+rsdsSouth30,False,,Surface Downwelling Shortwave Radiation
+rtmt,False,,Net Downward Radiative Flux at Top of Model
+sfcWindSouth30,False,,Near-Surface Wind Speed
+sfo3max,False,,Daily Maximum O3 Volume Mixing Ratio near-surface
+sfpm1,False,,Near-surface PM1.0 Mixing Ratio
+sfpm10,False,,Near-surface PM10 Mixing Ratio
+sfpm25,False,,Near-surface PM2.5 Mixing Ratio
+snmsl,False,,Water Flowing out of Snowpack
+snrefr,False,,Refreezing of Water in the Snow
+snwc,False,,Snow Water Equivalent Intercepted by the Vegetation
+so2,False,,SO2 Volume Mixing Ratio
+ta6,False,,Air temperature
+taUTLS,False,,6 hourly instantaneous temperature in the UTLS region
+tasSouth30,False,,Near-Surface Air Temperature
+tauunoegw,False,,Zonal mean eastward Reynolds stress from non-orographic eastward gravity wave parameterization
+tauunowgw,False,,Zonal mean eastward Reynolds stress from non-orographic westward gravity wave parameterization
+tauuogw,False,,Zonal mean eastward Reynolds stress from orographic gravity wave parameterization
+tauvnogw,False,,Zonal mean northward Reynolds stress from non-orographic gravity wave parameterization
+tauvogw,False,,Zonal mean northward Reynolds stress from orographic gravity wave parameterization
+tdps,False,,2m Dewpoint Temperature
+tntmp,False,,Zonal Mean Tendency of Air Temperature Due to Model Physics
+tntrl,False,,Zonal Mean Tendency of Air Temperature Due to Longwave Radiative Heating
+tntrs,False,,Zonal Mean Tendency of Air Temperature Due to Shortwave Radiative Heating
+tropo3ste,False,,Tropospheric ozone volume mixing ratio due to stratosphere-troposphere exchange (STE)
+tsns,False,,Snow Surface Temperature
+ua6,False,,Eastward wind
+uaUTLS,False,,6 hourly instantaneous eastward wind in the UTLS region
+utendepfd,False,,Tendency of Eastward Wind Due to Eliassen-Palm Flux Divergence
+utendnogw,False,,Eastward Acceleration Due to Non-Orographic Gravity Wave Drag
+utendogw,False,,Eastward Acceleration Due to Orographic Gravity Wave Drag
+utendvtem,False,,Tendency of Eastward Wind Due to TEM Northward Advection and Coriolis Term
+utendwtem,False,,Tendency of Eastward Wind Due to TEM Upward Advection
+va6,False,,Northward Wind
+vaUTLS,False,,6 hourly instantaneous northward wind in the UTLS region
+vtem,False,,Transformed Eulerian Mean Northward Wind
+wap6,False,,Omega (=dp/dt)
+wbgt2m,False,,mean 2m daily wet bulb globe temperature
+wbgt2mmax,False,,maximum 2m daily wet bulb globe temperature
+wetdust,False,,Wet Deposition Rate of Dust
+wetnh3,False,,Wet Deposition Rate of NH3
+wetnh4,False,,Wet Deposition Rate of NH4
+wetnoy,False,,Wet Deposition Rate of NOy Including Aerosol Nitrate
+wsgmax100m,False,,Maximum Wind Speed of Gust at 100m
+wsgmax10m,False,,Maximum Wind Speed of Gust at 10m
+wtem,False,,Transformed Eulerian Mean Upward Wind
+zg1000,False,,Geopotential Height at 1000hPa

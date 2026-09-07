@@ -58,3 +58,27 @@ sivol,False,hi,Sea-Ice Volume per Area
 sndmassmelt,False,sndmassmelt,Snow Mass Rate of Change Through Melt
 sndmasssnf,False,sndmasssnf,Snow Mass Change Through Snow Fall
 sndmasssubl,False,sndmassubl,Snow Mass Rate of Change Through Evaporation or Sublimation
+siarean,False,,Sea-Ice Area North
+siareas,False,,Sea-Ice Area South
+siconca,False,,Sea-Ice Area Percentage (Atmospheric Grid)
+sidconcdyn,False,,Sea-Ice Area Fraction Tendency Due to Dynamics
+sidmassgrowthsi,False,,Sea-Ice Mass Change Through Snow-to-Ice Conversion
+sidmassmeltlat,False,,Sea-Ice Mass Change Through Lateral Melting
+siextentn,False,,Sea-Ice Extent North
+siextents,False,,Sea-Ice Extent South
+sifllattop,False,,Net Latent Heat Flux over Sea Ice
+siflsaltbot,False,,Salt Flux from Sea Ice
+siflsensbot,False,,Net Upward Sensible Heat Flux under Sea Ice
+siflswdbot,False,,Downwelling Shortwave Flux under Sea Ice
+siitdsnconc,False,,Snow Area Percentages in Ice Thickness Categories
+siitdsnthick,False,,Snow Thickness in Ice Thickness Categories
+sisndmassdyn,False,,Snow Mass Rate of Change Through Advection by Sea-Ice Dynamics
+sisndmassmelt,False,,Snow Mass Rate of Change Through Melt
+sisndmasssi,False,,Snow Mass Rate of Change Through Snow-to-Ice Conversion
+sisndmasssnf,False,,Snow Mass Change Through Snowfall
+sisndmasssubl,False,,Snow Mass Rate of Change Through Evaporation or Sublimation
+sisndmasswind,False,,Snow Mass Rate of Change Through Wind Drift of Snow
+sisnmassn,False,,Snow Mass on Sea Ice North
+sisnmasss,False,,Snow Mass on Sea Ice South
+sivoln,False,,Sea-Ice Volume North
+sivols,False,,Sea-Ice Volume South
