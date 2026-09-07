@@ -37,18 +37,24 @@ group name in the internal file that did not match the DR (rename, typo, or a
 free-text note that leaked through the comma split, e.g. the `not…` fragment in
 "Ocean Extremes"). Fix the internal file or accept, then re-run.
 
-## Step 3 — map to model raw names (cmip_reformatter)
+## Step 3 — map to model raw names (`cmip7-lookup/`)
 `cmcc_variables.csv` / `by_realm/*.csv` carry **CMOR** `out_name`s. Map them to
-raw model names (RELHUM/PS/T…) with the cmip_reformatter lookup tables. Clone
-that repo alongside (it is gitignored here):
+raw model names (RELHUM/PS/T…) with the in-repo lookup tables — no clone needed:
 ```bash
-git clone https://github.com/CMCC-Foundation/cmip_reformatter.git   # in dr_cmip7/
 cd cmcc_selection && python map_to_raw_names.py 2>/dev/null
+# reads ../cmip7-lookup/*_lookup.csv   (--lookup-dir to point elsewhere)
 ```
 Outputs under `out/raw/`: `by_realm/*.csv` (raw names), `mapping_detail.csv`
-(audit; `*` on lookup = realm mismatch), and **`unmapped.csv`** — selected vars
-with no raw-model equivalent = production gap to triage (drop, or extend the
-reformatter lookups).
+(audit; `lookup` = `<component>:<table set>`, `*` = realm mismatch), and
+**`unmapped.csv`** — selected vars with no raw-model equivalent = production gap
+to triage. `out/production/*.csv` is the hand-off table (raw names only).
+
+Optional: `--fallback-lookup-dir ../cmip_reformatter/cmip-tables/cmip6/variables`
+pulls in ~23 names the cmip6plus tables lack (`co2`, `fco2nat`, `rtmt`, some
+land-carbon), for which you need the reformatter clone:
+```bash
+git clone https://github.com/CMCC-Foundation/cmip_reformatter.git   # in dr_cmip7/
+```
 
 ## Step 4 — data-volume estimate (CMIP6 ref ≈ 100 GB / model-year)
 Reuses the DR size math but with a PER-REALM grid (atmos vs ocean) and totals
@@ -59,6 +65,25 @@ python estimate_volume.py --version v1.2.2.4 2>/dev/null
 ```
 Prints GB/model-year totals + per-realm + per-frequency, split request (all 853)
 vs producible (mapped 497); writes `out/volume_by_variable.csv`.
+
+## Step 5 — push the gaps into the lookup tables (to fill by hand)
+```bash
+python build_cmip7_lookup.py       # --dry-run to preview, --true-gap-only to skip derivable
+```
+Appends every requested variable with no raw name to
+`../cmip7-lookup/<component>_lookup.csv` as a row with an **empty `model`**,
+keeping the original 4-column format and the original block byte-identical (row
+order taken from `--reference-dir`, the cmip6plus tables). Fill `model` → re-run
+step 3 and the variable becomes `mapped`. Idempotent (existing cells copied
+verbatim, only missing variables appended) and it verifies that every requested
+CMOR name has a row. Needs no API — see
+[`../cmip7-lookup/README.md`](../cmip7-lookup/README.md).
+
+## Step 6 — gap provenance / heavy variables (no API)
+```bash
+python truegap_provenance.py > truegap_summary.txt 2>/dev/null   # Division -> opp -> group -> vars
+python find_heavy_vars.py --realm ocean --freq 3hr               # out/heavy_ocean_3hr.csv
+```
 
 ## Tuning knobs
 - `KEEP_PRIORITIES` in the script — currently `{high, medium}` (CMCC per-opportunity priority).

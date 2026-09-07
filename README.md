@@ -14,8 +14,9 @@ details and tuning knobs.
 |------|------------|
 | `CMCC_CMIP7-DR-opportunities-Final*` | the internal CMCC selection (source of truth): opportunities, CMCC priority, variable groups |
 | `cmcc_selection/` | our scripts + outputs |
+| `cmip7-lookup/` | **the CMOR→raw-name tables we maintain** — mappings *and* the 322 true-gap rows to fill by hand ([details](cmip7-lookup/README.md)) |
 | `CMIP7_DReq_Software_v1.4/` | upstream CMIP7 Data Request API (clone) |
-| `cmip_reformatter/` | CMOR→raw-name lookup tables (clone; gitignored). Mapping uses `cmip-tables/cmip6plus/variables/` (has `ocnbgc` + CMIP7 branded/pressure variants); `cmip-tables/cmip6/variables/` has ~23 extra names (`co2`, `fco2nat`, `rtmt`, land-carbon…) usable via `--fallback-lookup-dir` |
+| `cmip_reformatter/` | the reformatter itself (clone; gitignored). `cmip7-lookup/` was seeded from its `cmip-tables/cmip6plus/variables/`; `cmip-tables/cmip6/variables/` has ~23 extra names (`co2`, `fco2nat`, `rtmt`, land-carbon…) usable via `--fallback-lookup-dir` |
 
 ## Setup (once, on the server)
 
@@ -29,24 +30,52 @@ pip install CMIP7-data-request-api       # if not already present
 git clone https://github.com/CMCC-Foundation/cmip_reformatter.git   # inside dr_cmip7/
 ```
 
-## Run it — 3 commands
+## Run it — 4 commands
 
 ```bash
 cd cmcc_selection
 
-# 1) select + expand + cross-check   -> the CMOR variable list
+# 1) select + expand + cross-check   -> the CMOR variable list   [needs the DR API]
 python build_cmcc_cmip7_table.py --version v1.2.2.4 --outdir out 2>/dev/null
 
 # 2) translate to raw model names     -> the production list
 python map_to_raw_names.py 2>/dev/null
-#    (optionally pull in the older cmip6 table for names cmip6plus lacks:
+#    reads ../cmip7-lookup/*_lookup.csv
+#    (optionally pull in the older cmip6 table for names it lacks:
 #     --fallback-lookup-dir ../cmip_reformatter/cmip-tables/cmip6/variables )
 
-# 3) estimate data volume             -> GB / model-year
+# 3) estimate data volume             -> GB / model-year          [needs the DR API]
 python estimate_volume.py --version v1.2.2.4 2>/dev/null
+
+# 4) push the gaps back into the lookup tables, to be filled by hand
+python build_cmip7_lookup.py            # --dry-run to preview
 ```
 
 (`2>/dev/null` just hides harmless `modeling_realm_-_primary` API warnings.)
+
+Steps 1 and 3 need `data_request_api` (run them on the server env); steps 2 and 4
+and every `truegap_*`/`find_heavy_vars` script are pure post-processing and run
+anywhere.
+
+### The gap-closing loop
+
+`build_cmip7_lookup.py` appends every requested variable that has no raw name to
+`cmip7-lookup/<component>_lookup.csv` as a row with an **empty `model`** column,
+keeping the tables in their original 4-column reformatter format
+(`variable,reprocess,model,long_name`) with the original block untouched:
+
+```
+zg7h,True,"Z3, PS, T",Geopotential Height     <- end of the original block
+abs550bc,False,,black carbon aaod@550nm       <- appended: fill `model`
+```
+
+Fill `model` with the raw model field name → the next `map_to_raw_names.py` run
+counts the variable as `mapped` and puts it in `out/production/`. 759 rows now:
+**373 mapped, 386 to fill** (322 true_gap + 64 derivable). The merge is
+idempotent — existing cells are copied verbatim, only missing variables are
+appended — and it ends with a coverage check (`660/660 expected CMOR names
+present`). Realm/Division/GB context stays in `out/raw/unmapped.csv` and
+`out/truegap_*.csv`. See [`cmip7-lookup/README.md`](cmip7-lookup/README.md).
 
 ## What you get (in `cmcc_selection/out/`)
 
@@ -65,13 +94,16 @@ python estimate_volume.py --version v1.2.2.4 2>/dev/null
 
 Each selected variable ends up in exactly one bucket:
 
-- **mapped** — its exact CMIP6 name is in the reformatter → produced directly
-  (`tasmax→TREFHTMX`, `chlos→chl` with `reprocess`).
+- **mapped** — its exact CMIP6 name has a raw `model` name in `cmip7-lookup/` →
+  produced directly (`tasmax→TREFHTMX`, `chlos→chl` with `reprocess`).
 - **derivable** — the CMIP6 name is absent but its *base field* (the `out_name`)
-  is in the reformatter → produce the base raw var and post-process
+  is in the lookup → produce the base raw var and post-process
   (`thetao200` from `thetao`; `base_raw` column names it).
-- **true_gap** — neither is known to the reformatter → not producible as-is
-  (`co2s`, hemispheric sea-ice scalars, most `aerosol`/`atmosChem`).
+- **true_gap** — neither is known → not producible as-is (`co2s`, hemispheric
+  sea-ice scalars, most `aerosol`/`atmosChem`). These now also sit in
+  `cmip7-lookup/` as empty-`model` rows to fill in (step 4 above); a lookup row
+  whose `model` is still empty is ignored by the mapper, so the variable keeps
+  showing up as a gap until someone resolves it.
 
 `raw/unmapped.csv` lists the **derivable** and **true_gap** ones, sorted by
 realm then category, with columns `realm | category | cmip6_name | out_name |
@@ -173,7 +205,10 @@ TOTAL                                        212.71    224.34    437.05
 **vs CMIP6 (~100 GB/model-year):** produced ≈ **2×**, full request ≈ **4.4×**.
 
 **Where the cost sits:** the true_gap is almost entirely **ocean sub-daily** —
-`ocean` = 186 of the 224 GB true_gap, and by frequency `3hr` alone = 174 GB. So
+`ocean` = 186 of the 224 GB true_gap, and by frequency `3hr` alone = 174 GB. Two
+3-hourly ocean variables account for 76 % of the whole gap cost: `ficeberg`
+(85.8 GB/yr) and `hfrunoffds` (85.5 GB/yr) — see the `GB_per_year` column of
+`cmip7-lookup/ocn_lookup.csv`, or `out/heavy_ocean_3hr.csv`. So
 the expensive part of the request is ocean 3-hourly (mostly 3-D) fields; that is
 the single biggest lever if the volume needs trimming. By contrast `atmos` is
 almost fully producible today (124 produced / 2 true_gap), and `6hr`/`1hr` have

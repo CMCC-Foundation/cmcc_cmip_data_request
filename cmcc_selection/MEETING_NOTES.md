@@ -47,6 +47,28 @@ true-gap cost is **ocean 3-hourly** fields.
    (mapped / derivable / true_gap), realm, frequency, and GB/year.
    Use it to look up any single variable.
 
+## Where the true gaps get fixed: `cmip7-lookup/`
+
+The gaps are not only *reported*, they have a **worksheet**. `cmip7-lookup/`
+holds one CMOR→raw table per model component (`atm`, `ice`, `lnd`, `ocn`,
+`ocnbgc`), in the same 4-column format the reformatter already uses. Each table
+is the original list of variables we produce, **plus** every requested variable
+with no raw name appended at the end with an **empty `model`** column:
+
+```
+variable,reprocess,model,long_name
+zg7h,True,"Z3, PS, T",Geopotential Height     <- end of the original block
+abs550bc,False,,black carbon aaod@550nm       <- appended: model to fill
+snw,False,,Surface Snow Amount
+```
+
+Write the raw model name in `model` (`snw` → `H2OSNO`) and the variable becomes
+producible on the next `map_to_raw_names.py` run; leave it empty for the ones to
+drop and note the decision in `out/raw/unmapped.csv`. 759 rows: **373 already
+mapped, 386 to fill** (322 true gaps + 64 derivable). Which realm, which
+Division, how many GB: `out/raw/unmapped.csv` and `out/truegap_*.csv`. Details:
+[`../cmip7-lookup/README.md`](../cmip7-lookup/README.md).
+
 ## The final "production" table (the shape Tomas asked for)
 
 `out/production/<realm>.csv` — **one CSV per model realm**, three columns exactly
