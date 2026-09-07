@@ -1,11 +1,16 @@
 #!/usr/bin/env python
 """
 Map the CMOR variables selected by build_cmcc_cmip7_table.py to the model's RAW
-output names, using the cmip_reformatter lookup tables
-(cmip_reformatter/cmip-tables/cmip6plus/variables/*_lookup.csv).
+output names, using the in-repo CMIP7 lookup tables (../cmip7-lookup/*_lookup.csv,
+seeded from cmip_reformatter/cmip-tables/cmip6plus/variables and extended in
+place by build_cmip7_lookup.py).
 
-Each lookup row is:  variable,reprocess,model,long_name
+Each lookup row is:  variable,reprocess,model,long_name[,status,...]
   variable = CMOR out_name (join key)   model = raw model variable name
+
+A row with an EMPTY `model` is a true-gap placeholder written by
+build_cmip7_lookup.py and waiting for a hand-filled raw name: it is ignored here,
+so the variable stays in the gap lists until someone fills it in.
 
 Outputs (under <outdir>/raw/):
   by_realm/<realm>.csv   frequency | cell | n | variables   (RAW model names)
@@ -17,7 +22,7 @@ No API needed - pure post-processing of out/cmcc_variables.csv.
 Usage:
     python map_to_raw_names.py \
         --vars out/cmcc_variables.csv \
-        --lookup-dir ../cmip_reformatter/cmip-tables/cmip6plus/variables \
+        --lookup-dir ../cmip7-lookup \
         --outdir out
 """
 import argparse
@@ -34,22 +39,32 @@ REALM_TO_LOOKUP = {
 }
 
 
+def table_tag(d):
+    """Short name of a lookup-table set, used in the `lookup` audit column.
+    .../cmip-tables/cmip6plus/variables -> cmip6plus   (reformatter layout)
+    .../cmip7-lookup                    -> cmip7-lookup (in-repo layout)"""
+    d = os.path.normpath(d)
+    base = os.path.basename(d)
+    return os.path.basename(os.path.dirname(d)) if base == "variables" else base
+
+
 def load_lookups(lookup_dirs):
     """lookup_dirs: ordered list of directories; earlier dirs win on conflict
-    (primary = cmip6plus, optional fallback = cmip6).
-    Return (per_fam, combined):
+    (primary = cmip7-lookup, optional fallback = cmip6).
+    Return (per_fam, combined, n_placeholder):
       per_fam[fam][out_name] = dict(model, reprocess, long_name, source)
-      combined[out_name]     = list of (fam, model)   (for fallback / audit)."""
+      combined[out_name]     = list of (fam, model)   (for fallback / audit)
+      n_placeholder          = rows skipped because `model` is still empty."""
     if isinstance(lookup_dirs, str):
         lookup_dirs = [lookup_dirs]
     per_fam = {fam: {} for fam in sorted(set(REALM_TO_LOOKUP.values()))}
     combined = defaultdict(list)
     found_any = False
+    n_placeholder = 0
     for d in lookup_dirs:
         if not d:
             continue
-        # tag = the table generation, e.g. "cmip6plus" or "cmip6"
-        tag = os.path.basename(os.path.dirname(os.path.normpath(d)))
+        tag = table_tag(d)
         for fam in per_fam:
             path = os.path.join(d, f"{fam}_lookup.csv")
             if not os.path.exists(path):
@@ -58,9 +73,14 @@ def load_lookups(lookup_dirs):
             with open(path, newline="") as f:
                 for row in csv.DictReader(f):
                     out = row["variable"].strip()
+                    model = (row.get("model") or "").strip()
+                    if not model:
+                        # true-gap placeholder awaiting a hand-filled raw name
+                        n_placeholder += 1
+                        continue
                     if out in per_fam[fam]:
                         continue                 # earlier (primary) table wins
-                    rec = {"model": row["model"].strip(),
+                    rec = {"model": model,
                            "reprocess": row.get("reprocess", "").strip(),
                            "long_name": row.get("long_name", "").strip(),
                            "source": tag}
@@ -68,7 +88,7 @@ def load_lookups(lookup_dirs):
                     combined[out].append((fam, rec["model"]))
     if not found_any:
         raise FileNotFoundError(f"no *_lookup.csv found in {lookup_dirs}")
-    return per_fam, combined
+    return per_fam, combined, n_placeholder
 
 
 def resolve(keys, realm, per_fam, combined):
@@ -95,9 +115,9 @@ def main():
     here = os.path.dirname(os.path.abspath(__file__))
     ap.add_argument("--vars", default=os.path.join(here, "out", "cmcc_variables.csv"))
     ap.add_argument("--lookup-dir",
-                    default=os.path.join(here, "..", "cmip_reformatter",
-                                         "cmip-tables", "cmip6plus", "variables"),
-                    help="primary lookup tables (default: cmip6plus/variables)")
+                    default=os.path.join(here, "..", "cmip7-lookup"),
+                    help="primary lookup tables (default: ../cmip7-lookup, the "
+                         "in-repo CMIP7 tables extended by build_cmip7_lookup.py)")
     ap.add_argument("--fallback-lookup-dir", default="",
                     help="secondary tables used ONLY for names the primary lacks, "
                          "e.g. .../cmip-tables/cmip6/variables (adds co2, fco2nat, "
@@ -105,9 +125,13 @@ def main():
     ap.add_argument("--outdir", default=os.path.join(here, "out"))
     args = ap.parse_args()
 
-    per_fam, combined = load_lookups([args.lookup_dir, args.fallback_lookup_dir])
+    per_fam, combined, n_todo = load_lookups([args.lookup_dir, args.fallback_lookup_dir])
     n_lookup = sum(len(v) for v in per_fam.values())
-    print(f"[lookup] {n_lookup} CMOR->raw entries across {len(per_fam)} families")
+    print(f"[lookup] {table_tag(args.lookup_dir)}: {n_lookup} CMOR->raw entries "
+          f"across {len(per_fam)} families")
+    if n_todo:
+        print(f"[lookup] {n_todo} rows still have an empty 'model' "
+              f"(true-gap placeholders to fill by hand) -> counted as gaps")
 
     with open(args.vars, newline="") as f:
         rows = list(csv.DictReader(f))
