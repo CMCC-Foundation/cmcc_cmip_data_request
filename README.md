@@ -8,27 +8,38 @@ All the tooling lives in [`cmcc_selection/`](cmcc_selection/). This page is the
 30-second guide; [`cmcc_selection/RUNBOOK.md`](cmcc_selection/RUNBOOK.md) has the
 details and tuning knobs.
 
-## Repo layout
+## Repository organization
 
 | path | what it is |
 |------|------------|
 | `CMCC_CMIP7-DR-opportunities-Final*` | the internal CMCC selection (source of truth): opportunities, CMCC priority, variable groups |
 | `cmcc_selection/` | our scripts + outputs |
 | `cmip7-lookup/` | **the CMOR→raw-name tables we maintain** — mappings *and* the 322 true-gap rows to fill by hand ([details](cmip7-lookup/README.md)) |
-| `CMIP7_DReq_Software_v1.4/` | upstream CMIP7 Data Request API (clone) |
+| `CMIP7_DReq_Software` | upstream CMIP7 Data Request API (git submodule) |
 | `cmip_reformatter/` | the reformatter itself (clone; gitignored). `cmip7-lookup/` was seeded from its `cmip-tables/cmip6plus/variables/`; `cmip-tables/cmip6/variables/` has ~23 extra names (`co2`, `fco2nat`, `rtmt`, land-carbon…) usable via `--fallback-lookup-dir` |
 
 ## Setup (once, on the server)
 
-Run the following
-```bash
-./downl_CMIP7_DReq.sh                    # script for cloning CMIP7_DReq_Software repository
-conda env create -n my_dreq_env --file CMIP7_DReq_Software_v1.4/env.yml
-conda activate my_dreq_env               # env with the DR API installed
-pip install CMIP7-data-request-api       # if not already present
-# CMOR -> raw-name lookup tables:
-git clone https://github.com/CMCC-Foundation/cmip_reformatter.git   # inside dr_cmip7/
-```
+To get the project's code, along with the CMIP7 Data Request Software, use the following command
+
+`git clone --recurse-submodules https://github.com/giovanniconti83/dr_cmip7`
+
+If you already cloned the project and forgot `--recurse-submodules`, the folder CMIP7_DReq_Software will be empty, 
+but the submodule content can be initialized by running
+`git submodule update --init`
+
+The working environment can be setup using the provided anaconda3 `environment.yml` file:
+
+`conda env create -f environment.yml`
+
+The environment is called `cmcc-dr-cmip7` by default, but it is possible to use the option `--name SOME_ENVIRONMENT_NAME` to define a custom name. 
+You should then activate the conda python environment using the command:
+
+`conda activate cmcc-dr-cmip7`
+
+To update your environment with following changes to the env file use
+
+`conda env update -f environment.yml`
 
 ## Run it — 4 commands
 
