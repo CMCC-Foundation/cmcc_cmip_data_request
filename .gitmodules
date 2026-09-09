@@ -1,0 +1,3 @@
+[submodule "CMIP7_DReq_Software"]
+	path = CMIP7_DReq_Software
+	url = https://github.com/CMIP-Data-Request/CMIP7_DReq_Software
