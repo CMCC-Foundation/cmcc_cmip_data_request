@@ -3,3 +3,6 @@ cmip_reformatter/
 
 __pycache__/
 *.pyc
+
+# Office lock files (created while a document is open)
+~$*
