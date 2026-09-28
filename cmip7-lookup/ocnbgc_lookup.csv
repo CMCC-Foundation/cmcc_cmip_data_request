@@ -55,7 +55,7 @@ zmeso,False,zmeso,Mole Concentration of Mesozooplankton Expressed as Carbon in S
 zmicro,False,zmicro,Mole Concentration of Microzooplankton Expressed as Carbon in Sea Water
 zooc,True,"zmeso, zmicro",Zooplankton Carbon Concentration
 chlcalc,False,,Mass Concentration of Calcareous Phytoplankton Expressed as Chlorophyll in Sea Water
-chldiaz,False,,Mass Concentration of Diazotrophs Expressed as Chlorophyll in Sea Water
+chldiaz,False,NOT-IN-MODEL,Mass Concentration of Diazotrophs Expressed as Chlorophyll in Sea Water
 chlpico,False,,Mass Concentration of Picophytoplankton Expressed as Chlorophyll in Sea Water
 co3200,False,,Carbonate Ion Concentration
 co3os,False,,Surface Carbonate Ion Concentration
@@ -79,13 +79,13 @@ graz,False,,Total Grazing of Phytoplankton by Zooplankton
 icfriver,False,,Flux of Inorganic Carbon into Ocean Surface by Runoff
 intpoc,False,,Particulate Organic Carbon Content
 intppcalc,False,,Net Primary Mole Productivity of Carbon by Calcareous Phytoplankton
-intppdiaz,False,,Net Primary Mole Productivity of Carbon by Diazotrophs
+intppdiaz,False,NOT-IN-MODEL,Net Primary Mole Productivity of Carbon by Diazotrophs
 intppnano,False,,Net Primary Organic Carbon Production by Nanophytoplankton
 intppnitrate,False,,Primary Organic Carbon Production by Phytoplankton Based on Nitrate Uptake Alone
 intpppico,False,,Net Primary Mole Productivity of Carbon by Picophytoplankton
 limfecalc,False,,Iron Limitation of Calcareous Phytoplankton
 limfediat,False,,Iron Limitation of Diatoms
-limfediaz,False,,Iron Limitation of Diazotrophs
+limfediaz,False,NOT-IN-MODEL,Iron Limitation of Diazotrophs
 limfemisc,False,,Iron Limitation of Other Phytoplankton
 limfepico,False,,Iron Limitation of Picophytoplankton
 limirrcalc,False,,Irradiance Limitation of Calcareous Phytoplankton
@@ -95,7 +95,7 @@ limirrmisc,False,,Irradiance Limitation of Other Phytoplankton
 limirrpico,False,,Irradiance Limitation of Picophytoplankton
 limncalc,False,,Nitrogen Limitation of Calcareous Phytoplankton
 limndiat,False,,Nitrogen Limitation of Diatoms
-limndiaz,False,,Nitrogen Limitation of Diazotrophs
+limndiaz,False,NOT-IN-MODEL,Nitrogen Limitation of Diazotrophs
 limnmisc,False,,Nitrogen Limitation of Other Phytoplankton
 limnpico,False,,Nitrogen Limitation of Picophytoplankton
 o2200,False,,Dissolved Oxygen Concentration at 200 meters
@@ -107,8 +107,8 @@ phyc200,False,,Phytoplankton Carbon Concentration
 phycalc,False,,Mole Concentration of Calcareous Phytoplankton Expressed as Carbon in Sea Water
 phycos,False,,Sea Surface Phytoplankton Carbon Concentration
 phydiatos,False,,Surface Mole Concentration of Diatoms Expressed as Carbon in Sea Water
-phydiaz,False,,Mole Concentration of Diazotrophs Expressed as Carbon in Sea Water
-phydiazos,False,,Surface Mole Concentration of Diazotrophs Expressed as Carbon in Sea Water
+phydiaz,False,NOT-IN-MODEL,Mole Concentration of Diazotrophs Expressed as Carbon in Sea Water
+phydiazos,False,NOT-IN-MODEL,Surface Mole Concentration of Diazotrophs Expressed as Carbon in Sea Water
 phymiscos,False,,Surface Mole Concentration of Miscellaneous Phytoplankton Expressed as Carbon in Sea Water
 phynano,False,,Mole Concentration of Nanophytoplankton Expressed as Carbon in Sea Water
 phypico,False,,Mole Concentration of Picophytoplankton Expressed as Carbon in Sea Water
