@@ -94,12 +94,12 @@ cldnvi,False,,Column Integrated Cloud Droplet Number
 cltc,False,,Convective Cloud Cover Percentage
 cly,False,,Total Inorganic Chlorine Volume Mixing Ratio
 co,False,,CO Volume Mixing Ratio
-co2,False,,Mole Fraction of CO2
-co23D,False,,3D-Field of Transported CO2
+co2,False,CO2,Mole Fraction of CO2
+co23D,False,CO2,3D-Field of Transported CO2
 co2Clim,False,,Mole Fraction of CO2
 co2mass,False,,Total Atmospheric Mass of CO2
 co2massClim,False,,Total Atmospheric Mass of CO2
-co2s,False,,Near-surface atmosphere CO2
+co2s,False,CO2,Near-surface atmosphere CO2
 conccn,False,,Aerosol Number Concentration
 drydust,False,,Dry Deposition Rate of Dust
 drynh3,False,,Dry Deposition Rate of NH3
