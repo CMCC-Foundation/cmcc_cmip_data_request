@@ -1,0 +1,10 @@
+frequency,cell,n,variables_dr,GB_per_year
+3hr,ave,10,"ficeberg, flandice, friver, hfds, hfrunoffds, rsntds, sfdsi, tauuo, tauvo, wfo",180.0510
+3hr,inst,1,tos,1.1396
+day,ave,15,"bigthetao200, hfxint, hfyint, mlotst, rsdo, so, sos, t20d, thetao200, tos, tossq, uos, vos, wo, zos",33.6171
+dec,ave,10,"bigthetao, masscello, masso, so, tauuo, tauvo, thetao, thkcello, volcello, volo",0.0176
+fx,unknown,8,"areacello, basin, deptho, hfgeou, masscello, sftof, thkcello, volcello",0.0898
+mon,ave,67,"absscint, agessc, bigthetao, bigthetaoga, chcint, ficeberg, friver, hfbasin, hfbasinpadv, hfbasinpmadv, hfbasinpmdiff, hfbasinpsmadv, hfds, hfx, hfy, masscello, masso, mlotst, msftbarot, msftmrho, msftmz, msftmzmpa, msftyrho, msftyz, obvfsq, pbo, pfscint, phcint, pso, scint, sf6, sfx, sfxint, sfy, sfyint, sltbasin, so, sob, soga, sos, sosga, t20d, tauuo, tauvo, thetao, thetaoga, thetaot, thetaot2000, thetaot300, thetaot700, thkcello, tob, tos, tosga, umo, uo, vmo, vo, volcello, volo, vsf, wfo, wmo, wo, zos, zossq, zostoga",7.2409
+mon,max,1,mlotstmax,0.0047
+mon,min,1,mlotstmin,0.0047
+yr,ave,2,"volcello, zfullo",0.0585

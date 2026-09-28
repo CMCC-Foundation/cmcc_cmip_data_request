@@ -1,0 +1,3 @@
+frequency,cell,n_dr,variables_dr,variables_raw,variables_unmapped_derivable,variables_unmapped_true_gap
+day,ave,7,"drynh3, drynh4, drynoy, flashrate, wetnh3, wetnh4, wetnoy",,,"drynh3, drynh4, drynoy, flashrate, wetnh3, wetnh4, wetnoy"
+mon,ave,17,"cfc113global, cfc11global, cfc12global, ch4, ch4losssoil, drynoy, emiach4, emich4, emilkch4, flashrate, hcfc22global, meanage, n2o, o3, o3ste, tropo3ste, wetnoy",,cfc12global,"cfc113global, cfc11global, ch4, ch4losssoil, drynoy, emiach4, emich4, emilkch4, flashrate, hcfc22global, meanage, n2o, o3, o3ste, tropo3ste, wetnoy"

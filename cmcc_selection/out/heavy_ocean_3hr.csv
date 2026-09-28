@@ -1,0 +1,14 @@
+variable,dim,cell,GB_per_year,map_category,in_baseline,group,opportunity,division,cmcc_priority,long_name,compound_name
+ficeberg,3D,ave,85.4672,true_gap,no,ISIMIP_oceanforcing_3hr,Climate impacts on marine biodiversity and ecosystems,ESYDA,medium,Water Flux into Sea Water from Icebergs,ocean.ficeberg.tavg-ol-hxy-sea.3hr.glb
+hfrunoffds,3D,ave,85.4672,true_gap,no,ISIMIP_oceanforcing_3hr,Climate impacts on marine biodiversity and ecosystems,ESYDA,medium,Temperature Flux Due to Runoff Expressed as Heat Flux into Sea Water,ocean.hfrunoffds.tavg-ol-hxy-sea.3hr.glb
+flandice,2D,ave,1.1396,true_gap,no,ISIMIP_oceanforcing_3hr,Climate impacts on marine biodiversity and ecosystems,ESYDA,medium,Water Flux into Sea Water from Land Ice,ocean.flandice.tavg-u-hxy-sea.3hr.glb
+friver,2D,ave,1.1396,mapped,no,ISIMIP_oceanforcing_3hr,Climate impacts on marine biodiversity and ecosystems,ESYDA,medium,Water Flux into Sea Water from Rivers,ocean.friver.tavg-u-hxy-sea.3hr.glb
+hfds,2D,ave,1.1396,mapped,no,ISIMIP_oceanforcing_3hr,Climate impacts on marine biodiversity and ecosystems,ESYDA,medium,Downward Heat Flux at Sea Water Surface,ocean.hfds.tavg-u-hxy-sea.3hr.glb
+rsntds,2D,ave,1.1396,mapped,no,ISIMIP_oceanforcing_3hr,Climate impacts on marine biodiversity and ecosystems,ESYDA,medium,Net Downward Shortwave Radiation at Sea Water Surface,ocean.rsntds.tavg-u-hxy-sea.3hr.glb
+sfdsi,2D,ave,1.1396,mapped,no,ISIMIP_oceanforcing_3hr,Climate impacts on marine biodiversity and ecosystems,ESYDA,medium,Downward Sea Ice Basal Salt Flux,ocean.sfdsi.tavg-u-hxy-sea.3hr.glb
+tauuo,2D,ave,1.1396,mapped,no,ISIMIP_oceanforcing_3hr,Climate impacts on marine biodiversity and ecosystems,ESYDA,medium,Sea Water Surface Downward X Stress,ocean.tauuo.tavg-u-hxy-sea.3hr.glb
+tauuo,2D,ave,1.1396,mapped,no,dynamical_downscaling_ocean_air_sea_forcing,Dynamical Downscaling (CORDEX),CLIVAP,high,Sea Water Surface Downward X Stress,ocean.tauuo.tavg-u-hxy-sea.3hr.glb
+tauvo,2D,ave,1.1396,mapped,no,ISIMIP_oceanforcing_3hr,Climate impacts on marine biodiversity and ecosystems,ESYDA,medium,Sea Water Surface Downward Y Stress,ocean.tauvo.tavg-u-hxy-sea.3hr.glb
+tauvo,2D,ave,1.1396,mapped,no,dynamical_downscaling_ocean_air_sea_forcing,Dynamical Downscaling (CORDEX),CLIVAP,high,Sea Water Surface Downward Y Stress,ocean.tauvo.tavg-u-hxy-sea.3hr.glb
+tos,2D,inst,1.1396,mapped,no,Ocean_Temperature_Extremes,Ocean Extremes,ESYDA,medium,Sea Surface Temperature,ocean.tos.tpt-u-hxy-sea.3hr.glb
+wfo,2D,ave,1.1396,mapped,no,ISIMIP_oceanforcing_3hr,Climate impacts on marine biodiversity and ecosystems,ESYDA,medium,Water Flux into Sea Water,ocean.wfo.tavg-u-hxy-sea.3hr.glb

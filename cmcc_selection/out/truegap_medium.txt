@@ -1,0 +1,134 @@
+==============================================================================
+ CMIP7 output — variables with NO corresponding model field (TRUE GAP)
+ Priority: MEDIUM
+ 51 distinct variables, 7 opportunities, 4 divisions
+==============================================================================
+
+
+##############################################################################
+#  DIVISION: CLIVAP
+##############################################################################
+
+  Opportunity: Robust Risk Assessment of Tipping Points
+  --------------------------------------------------------------------------
+
+    group: baseline_fixed
+        mrsofc               Capacity of Soil to Store Water (Field Capacity)
+        rootd                Maximum Root Depth
+
+    group: baseline_monthly
+        bigthetao            Sea Water Conservative Temperature
+        rluscs               Surface Upwelling Clear-Sky Longwave Radiation
+        snw                  Surface Snow Amount
+
+
+##############################################################################
+#  DIVISION: EIEE
+##############################################################################
+
+  Opportunity: Energy System Impacts
+  --------------------------------------------------------------------------
+
+    group: impact_energy_damaging_other
+        flashrate            Lightning Flash Rate
+
+    group: impact_energy_hydropower
+        mrrob                Subsurface Runoff
+
+    group: impacts_energy_damaging_wind
+        wsgmax100m           Maximum Wind Speed of Gust at 100m
+        wsgmax10m            Maximum Wind Speed of Gust at 10m
+
+  Opportunity: Health Impacts
+  --------------------------------------------------------------------------
+
+    group: HealthFloodingDaily
+        mrsofc               Capacity of Soil to Store Water (Field Capacity)
+        snw                  Surface Snow Amount
+
+    group: HealthPollutionDaily
+        sfo3max              Daily Maximum O3 Volume Mixing Ratio near-surface
+        sfpm1                Near-surface PM1.0 Mixing Ratio
+        sfpm10               Near-surface PM10 Mixing Ratio
+        sfpm25               Near-surface PM2.5 Mixing Ratio
+
+    group: Heat_Indices
+        noaahi2m             mean 2m daily NOAA heat index
+        noaahi2mmax          max 2m daily NOAA heat index
+        wbgt2m               mean 2m daily wet bulb globe temperature
+        wbgt2mmax            maximum 2m daily wet bulb globe temperature
+
+
+##############################################################################
+#  DIVISION: ESYDA
+##############################################################################
+
+  Opportunity: Accurate assessment of land-atmosphere coupling
+  --------------------------------------------------------------------------
+
+    group: landatm_coupling_3hA
+        bldep                Boundary Layer Depth
+        srfrad               Net radiative flux at surface
+
+    group: landatm_coupling_3hr_medium
+        hfdsl                Ground heat flux at 3hr
+
+  Opportunity: Climate impacts on marine biodiversity and ecosystems
+  --------------------------------------------------------------------------
+
+    group: ISIMIP_oceanforcing_3hr
+        ficeberg             Water Flux into Sea Water from Icebergs
+        flandice             Water Flux into Sea Water from Land Ice
+        hfrunoffds           Temperature Flux Due to Runoff Expressed as Heat Flux into Sea Water
+
+    group: biodiv_marine_daily
+        expcob               Sinking Flux of Particulate Organic Carbon Reaching the Ocean Bottom
+        intpoc               Particulate Organic Carbon Content
+        o2min                Oxygen Minimum Concentration
+        phycalc              Mole Concentration of Calcareous Phytoplankton Expressed as Carbon in Sea Water
+        phydiazos            Surface Mole Concentration of Diazotrophs Expressed as Carbon in Sea Water
+        phynano              Mole Concentration of Nanophytoplankton Expressed as Carbon in Sea Water
+        phypico              Mole Concentration of Picophytoplankton Expressed as Carbon in Sea Water
+        rsdo                 Downwelling Shortwave Radiation in Sea Water
+        uos                  Daily Surface Sea Water X Velocity
+        vos                  Daily Surface Sea Water Y Velocity
+
+    group: marine_bgc_baseline
+        co2massClim          Total Atmospheric Mass of CO2
+        dmsos                Surface Mole Concentration of Dimethyl Sulphide in Sea Water
+        fric                 Downward Inorganic Carbon Flux at Ocean Bottom
+        froc                 Downward Organic Carbon Flux at Ocean Bottom
+        graz                 Total Grazing of Phytoplankton by Zooplankton
+        msftmz               Ocean Meridional Overturning Mass Streamfunction
+        phycalc              Mole Concentration of Calcareous Phytoplankton Expressed as Carbon in Sea Water
+        phypico              Mole Concentration of Picophytoplankton Expressed as Carbon in Sea Water
+        zmisc                Mole Concentration of Other Zooplankton Expressed as Carbon in Sea Water
+
+    group: marine_bgc_fishmip
+        intppcalc            Net Primary Mole Productivity of Carbon by Calcareous Phytoplankton
+        intppdiaz            Net Primary Mole Productivity of Carbon by Diazotrophs
+        intppnano            Net Primary Organic Carbon Production by Nanophytoplankton
+        intpppico            Net Primary Mole Productivity of Carbon by Picophytoplankton
+
+  Opportunity: Ocean Extremes
+  --------------------------------------------------------------------------
+
+    group: Ocean_Temperature_Extremes
+        bigthetao200         Sea Water Conservative Temperature at 200 meters
+
+
+##############################################################################
+#  DIVISION: ICR
+##############################################################################
+
+  Opportunity: Bias-adjustment for impacts modeling and analysis
+  --------------------------------------------------------------------------
+
+    group: ISIMIP_deposition_variables
+        drynh3               Dry Deposition Rate of NH3
+        drynh4               Dry Deposition Rate of NH4
+        drynoy               Dry Deposition Rate of NOy
+        wetnh3               Wet Deposition Rate of NH3
+        wetnh4               Wet Deposition Rate of NH4
+        wetnoy               Wet Deposition Rate of NOy Including Aerosol Nitrate
+

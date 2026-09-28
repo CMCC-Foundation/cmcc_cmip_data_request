@@ -1,0 +1,680 @@
+==============================================================================
+ CMIP7 output — variables with NO corresponding model field (TRUE GAP)
+ Priority: HIGH
+ 296 distinct variables, 21 opportunities, 4 divisions
+==============================================================================
+
+
+##############################################################################
+#  DIVISION: CLIVAP
+##############################################################################
+
+  Opportunity: Atmospheric dynamics and variability
+  --------------------------------------------------------------------------
+
+    group: baseline_fixed
+        mrsofc               Capacity of Soil to Store Water (Field Capacity)
+        rootd                Maximum Root Depth
+
+    group: baseline_monthly
+        bigthetao            Sea Water Conservative Temperature
+        rluscs               Surface Upwelling Clear-Sky Longwave Radiation
+        snw                  Surface Snow Amount
+
+    group: dynvar_basic
+        epfy                 Northward Component of the Eliassen-Palm Flux
+        epfz                 Upward Component of the Eliassen-Palm Flux
+        meanage              Mean Age of Stratospheric Air
+        tauunoegw            Zonal mean eastward Reynolds stress from non-orographic eastward gravity wave parameterization
+        tauunowgw            Zonal mean eastward Reynolds stress from non-orographic westward gravity wave parameterization
+        tauuogw              Zonal mean eastward Reynolds stress from orographic gravity wave parameterization
+        tauvnogw             Zonal mean northward Reynolds stress from non-orographic gravity wave parameterization
+        tauvogw              Zonal mean northward Reynolds stress from orographic gravity wave parameterization
+        tntmp                Zonal Mean Tendency of Air Temperature Due to Model Physics
+        tntrl                Zonal Mean Tendency of Air Temperature Due to Longwave Radiative Heating
+        tntrs                Zonal Mean Tendency of Air Temperature Due to Shortwave Radiative Heating
+        utendepfd            Tendency of Eastward Wind Due to Eliassen-Palm Flux Divergence
+        utendnogw            Eastward Acceleration Due to Non-Orographic Gravity Wave Drag
+        utendogw             Eastward Acceleration Due to Orographic Gravity Wave Drag
+        utendvtem            Tendency of Eastward Wind Due to TEM Northward Advection and Coriolis Term
+        utendwtem            Tendency of Eastward Wind Due to TEM Upward Advection
+        vtem                 Transformed Eulerian Mean Northward Wind
+        wtem                 Transformed Eulerian Mean Upward Wind
+
+  Opportunity: Detection and Attribution
+  --------------------------------------------------------------------------
+
+    group: DAMIP_monthly
+        abs550bc             black carbon aaod@550nm
+        abs550dust           dust absorption aerosol optical depth @550nm
+        abs550so4            sulfate aaod@550nm
+        aod550volso4         Monthly Aerosol Optical Depth at 550nm Due to Stratospheric Volcanic Aerosols
+        co2massClim          Total Atmospheric Mass of CO2
+        loadso4              Load of SO4
+        msftmrho             Ocean Meridional Overturning Mass Streamfunction
+        msftmz               Ocean Meridional Overturning Mass Streamfunction
+        o3ste                Stratospheric Ozone Tracer Volume Mixing Ratio
+        od550dust            Dust Optical Thickness at 550nm
+        od550soa             Particulate Organic Aerosol Optical Depth at 550nm
+        rtmt                 Net Downward Radiative Flux at Top of Model
+        snw                  Surface Snow Amount
+        tropo3ste            Tropospheric ozone volume mixing ratio due to stratosphere-troposphere exchange (STE)
+
+  Opportunity: Diagnosing temperature variability and extremes
+  --------------------------------------------------------------------------
+
+    group: DCPP_essential
+        co2massClim          Total Atmospheric Mass of CO2
+        msftmz               Ocean Meridional Overturning Mass Streamfunction
+        vsf                  Virtual Salt Flux into Sea Water
+        zfullo               Depth Below Geoid of Ocean Layer
+
+    group: DCPP_wider
+        co2s                 Near-surface atmosphere CO2
+        co3satarag200        Mole Concentration of Carbonate Ion in Equilibrium with Pure Aragonite in Sea Water
+        co3sataragos         Surface Mole Concentration of Carbonate Ion in Equilibrium with Pure Aragonite in Sea Water
+        epfy                 Northward Component of the Eliassen-Palm Flux
+        epfz                 Upward Component of the Eliassen-Palm Flux
+        epsi100              Downward Flux of Particulate Silicon
+        msftmrho             Ocean Meridional Overturning Mass Streamfunction
+        msftmzmpa            Ocean Meridional Overturning Mass Streamfunction Due to Parameterized Mesoscale Advection
+        sifllattop           Net Latent Heat Flux over Sea Ice
+        tdps                 2m Dewpoint Temperature
+        utendepfd            Tendency of Eastward Wind Due to Eliassen-Palm Flux Divergence
+        vtem                 Transformed Eulerian Mean Northward Wind
+        wtem                 Transformed Eulerian Mean Upward Wind
+        zossq                Square of Sea Surface Height Above Geoid
+
+    group: temperature_variability_daily_highpriority
+        evspsblpot           Potential Evapotranspiration
+
+  Opportunity: Dynamical Downscaling (CORDEX)
+  --------------------------------------------------------------------------
+
+    group: dynamical_downscaling_aerosols_chemistry
+        bry                  Total Inorganic Bromine Volume Mixing Ratio
+        cly                  Total Inorganic Chlorine Volume Mixing Ratio
+        co                   CO Volume Mixing Ratio
+        hcl                  HCl Volume Mixing Ratio
+        hno3                 HNO3 Volume Mixing Ratio
+        mmrbc                Elemental Carbon Mass Mixing Ratio
+        mmrdust              Dust Aerosol Mass Mixing Ratio
+        mmrnh4               NH4 Mass Mixing Ratio
+        mmrno3               NO3 Aerosol Mass Mixing Ratio
+        mmroa                Total Organic Aerosol Mass Mixing Ratio
+        mmrso4               Aerosol Sulfate Mass Mixing Ratio
+        mmrsoa               Secondary Organic Aerosol Mass Mixing Ratio
+        mmrss                Sea-Salt Aerosol Mass Mixing Ratio
+        n2o                  Mole Fraction of N2O
+        noy                  Total Reactive Nitrogen Volume Mixing Ratio
+        o3                   Mole Fraction of O3
+        oh                   OH Volume Mixing Ratio
+        so2                  SO2 Volume Mixing Ratio
+
+    group: dynamical_downscaling_core
+        cfc113global         Global Mean Mole Fraction of CFC113
+        cfc114               Mole Fraction of CFC114
+        cfc11global          Global Mean Mole Fraction of CFC11
+        ch4                  Mole Fraction of CH4
+        co2                  Mole Fraction of CO2
+        hcfc22               Mole Fraction of HCFC22
+        hcfc22global         Global Mean Mole Fraction of HCFC22
+        hfc125               Mole Fraction of HFC125
+        hfc134a              Mole Fraction of HFC134a
+        n2o                  Mole Fraction of N2O
+        o3                   Mole Fraction of O3
+        od550bb              Aerosol Optical Depth at 550nm Due to Biomass Burning
+        od550bc              Black Carbon Optical Thickness at 550nm
+        od550dust            Dust Optical Thickness at 550nm
+        od550no3             Nitrate Aerosol Optical Depth at 550nm
+        od550oa              Total Organic Aerosol Optical Depth at 550nm
+        od550so4             Sulfate Aerosol Optical Depth at 550nm
+        od550ss              Sea-Salt Aerosol Optical Depth at 550nm
+
+    group: dynamical_downscaling_ocean_air_sea_biogeochemistry_forcing
+        drydust              Dry Deposition Rate of Dust
+        drynoy               Dry Deposition Rate of NOy
+        fsfe                 Surface Downward Net Flux of Iron
+        fsn                  Surface Downward Net Flux of Nitrogen
+        wetdust              Wet Deposition Rate of Dust
+        wetnoy               Wet Deposition Rate of NOy Including Aerosol Nitrate
+
+    group: dynamical_downscaling_ocean_biogeochemistry_forcing
+        chldiaz              Mass Concentration of Diazotrophs Expressed as Chlorophyll in Sea Water
+        chlpico              Mass Concentration of Picophytoplankton Expressed as Chlorophyll in Sea Water
+        icfriver             Flux of Inorganic Carbon into Ocean Surface by Runoff
+        ocfriver             Flux of Organic Carbon into Ocean Surface by Runoff
+        phycalc              Mole Concentration of Calcareous Phytoplankton Expressed as Carbon in Sea Water
+        phydiaz              Mole Concentration of Diazotrophs Expressed as Carbon in Sea Water
+        phypico              Mole Concentration of Picophytoplankton Expressed as Carbon in Sea Water
+        zmisc                Mole Concentration of Other Zooplankton Expressed as Carbon in Sea Water
+
+    group: dynamical_downscaling_ocean_core
+        ficeberg             Water Flux into Sea Water from Icebergs
+
+  Opportunity: Multi-annual-to-decadal predictability of the Earth System and risk assessment of climate extremes
+  --------------------------------------------------------------------------
+
+    group: DCPP_essential
+        co2massClim          Total Atmospheric Mass of CO2
+        msftmz               Ocean Meridional Overturning Mass Streamfunction
+        vsf                  Virtual Salt Flux into Sea Water
+        zfullo               Depth Below Geoid of Ocean Layer
+
+    group: DCPP_wider
+        co2s                 Near-surface atmosphere CO2
+        co3satarag200        Mole Concentration of Carbonate Ion in Equilibrium with Pure Aragonite in Sea Water
+        co3sataragos         Surface Mole Concentration of Carbonate Ion in Equilibrium with Pure Aragonite in Sea Water
+        epfy                 Northward Component of the Eliassen-Palm Flux
+        epfz                 Upward Component of the Eliassen-Palm Flux
+        epsi100              Downward Flux of Particulate Silicon
+        msftmrho             Ocean Meridional Overturning Mass Streamfunction
+        msftmzmpa            Ocean Meridional Overturning Mass Streamfunction Due to Parameterized Mesoscale Advection
+        sifllattop           Net Latent Heat Flux over Sea Ice
+        tdps                 2m Dewpoint Temperature
+        utendepfd            Tendency of Eastward Wind Due to Eliassen-Palm Flux Divergence
+        vtem                 Transformed Eulerian Mean Northward Wind
+        wtem                 Transformed Eulerian Mean Upward Wind
+        zossq                Square of Sea Surface Height Above Geoid
+
+
+##############################################################################
+#  DIVISION: ESYDA
+##############################################################################
+
+  Opportunity: Baseline Climate Variables for Earth System Modelling
+  --------------------------------------------------------------------------
+
+    group: baseline_fixed
+        mrsofc               Capacity of Soil to Store Water (Field Capacity)
+        rootd                Maximum Root Depth
+
+    group: baseline_monthly
+        bigthetao            Sea Water Conservative Temperature
+        rluscs               Surface Upwelling Clear-Sky Longwave Radiation
+        snw                  Surface Snow Amount
+
+  Opportunity: Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles
+  --------------------------------------------------------------------------
+
+    group: atmosphere_carbon_cycle_tier1
+        co23D                3D-Field of Transported CO2
+        co2mass              Total Atmospheric Mass of CO2
+        fco2all              Carbon Mass Flux into Atmosphere Due to All Emissions of CO2 from All Sources [kgC m-2 s-1]
+        fco2antt             Carbon Mass Flux into Atmosphere Due to All Anthropogenic Emissions of CO2 [kgC m-2 s-1]
+        fco2fos              Carbon Mass Flux into Atmosphere Due to Fossil Fuel Emissions of CO2 [kgC m-2 s-1]
+        fco2nat              Surface Carbon Mass Flux into the Atmosphere Due to Natural Sources [kgC m-2 s-1]
+
+    group: land_benchmarking_and_landcover_variables_tier1
+        albc                 Canopy Albedo
+        cnc                  Canopy Covered Area Percentage
+        mrtws                Terrestrial Water Storage
+        pastureFrac          Percentage of Land Which Is Anthropogenic Pasture
+        prveg                Precipitation onto Canopy
+        snw                  Surface Snow Amount
+
+    group: land_benchmarking_and_landcover_variables_tier2
+        cropFracC4           Percentage Cover by C4 Crops
+        mrtws                Terrestrial Water Storage
+        pastureFracC3        C3 Pasture Area Percentage
+        pastureFracC4        C4 Pasture Area Percentage
+        wetlandCH4           Grid Averaged Methane Emissions from Wetlands
+        wetlandCH4cons       Grid Averaged Methane Consumption (Methanotrophy) from Wetlands
+        wetlandCH4prod       Grid Averaged Methane Production (Methanogenesis) from Wetlands
+        wetlandFrac          Wetland Percentage Cover
+
+    group: land_carbon_cycle_tier1
+        cGeologicStorage     Carbon Mass in Geologic Storage
+        fAnthDisturb         Carbon Mass Flux from Vegetation, Litter or Soil Pools into the Atmosphere Due to any Human Activity [kgC m-2 s-1]
+        fCLandToOcean        Lateral Transfer of Carbon out of Grid Cell That Eventually Goes into Ocean
+        fDeforestToAtmos     Deforested Biomass That Goes into Atmosphere as a Result of Anthropogenic Land-Use Change [kgC m-2 s-1]
+        fFireAll             Carbon Mass Flux into Atmosphere Due to CO2 Emission from Fire Including All Sources [kgC m-2 s-1]
+        fFireNat             Carbon Mass Flux into Atmosphere Due to CO2 Emission from Natural Fire [kgC m-2 s-1]
+        fHarvestToAtmos      Harvested Biomass That Goes Straight into Atmosphere as Carbon Mass Flux [kgC m-2 s-1]
+        fHarvestToGeologicStorage Harvested Biomass That Goes into Geological Storage
+        fVegSoil             Total Carbon Mass Flux from Vegetation Directly to Soil
+
+    group: land_carbon_cycle_tier2
+        cLeaf                Carbon Mass in Leaves
+        cLitterCwd           Carbon Mass in Coarse Woody Debris
+        cLitterSubSurf       Carbon Mass in Below-Ground Litter
+        cLitterSurf          Carbon Mass in Above-Ground Litter
+        cOther               Carbon Mass in Vegetation Components Other than Leaves, Stems and Roots
+        cRoot                Carbon Mass in Roots
+        cSoilPools           Carbon Mass in Each Model Soil Pool (Summed over Vertical Levels)
+        cStem                Carbon Mass in Stem
+        fLitterFire          Carbon Mass Flux from Litter, CWD or any non-Living Pool into Atmosphere Due to CO2 Emission from All Fire [kgC m-2 s-1]
+        fVegFire             Carbon Mass Flux from Vegetation into Atmosphere Due to CO2 Emission from All Fire [kgC m-2 s-1]
+        fVegLitterMortality  Total Carbon Mass Flux from Vegetation to Litter as a Result of Mortality
+        fVegLitterSenescence Total Carbon Mass Flux from Vegetation to Litter as a Result of Leaf, Branch, and Root Senescence
+        fVegSoilMortality    Total Carbon Mass Flux from Vegetation to Soil as a Result of Mortality
+        fVegSoilSenescence   Total Carbon Mass Flux from Vegetation to Soil as a Result of Leaf, Branch, and Root Senescence
+        nppLeaf              Net Primary Production Allocated to Leaves as Carbon Mass Flux [kgC m-2 s-1]
+        nppOther             Net Primary Production Allocated to Other Pools (not Leaves Stem or Roots) as Carbon Mass Flux [kgC m-2 s-1]
+        nppRoot              Net Primary Production Allocated to Roots as Carbon Mass Flux [kgC m-2 s-1]
+        nppStem              Net Primary Production Allocated to Stem as Carbon Mass Flux [kgC m-2 s-1]
+        raLeaf               Total Respiration from Leaves as Carbon Mass Flux [kgC m-2 s-1]
+        raOther              Total Respiration from Other Pools (not Leaves Stem or Roots) as Carbon Mass Flux [kgC m-2 s-1]
+        raRoot               Total Respiration from Roots as Carbon Mass Flux [kgC m-2 s-1]
+        raStem               Total Respiration from Stem as Carbon Mass Flux [kgC m-2 s-1]
+        rhLitter             Carbon Mass Flux into Atmosphere Due to Heterotrophic Respiration from Litter on Land
+        rhSoil               Carbon Mass Flux into Atmosphere Due to Heterotrophic Respiration from Soil on Land
+
+    group: land_ch4_fluxes
+        ch4losssoil          loss of methane from the atmosphere due to biological consumption in the soil
+        emiach4              anthropogenic emission rate of CH4
+        emibbch4             total emission of CH4 from all biomass burning
+        emich4               total emission rate of CH4
+        emilkch4             lake emission rate of CH4
+        wetlandCH4           Grid Averaged Methane Emissions from Wetlands
+        wetlandCH4cons       Grid Averaged Methane Consumption (Methanotrophy) from Wetlands
+        wetlandCH4prod       Grid Averaged Methane Production (Methanogenesis) from Wetlands
+        wetlandFrac          Wetland Percentage Cover
+
+    group: land_nitrogen_cycle_tier1
+        fNAnthDisturb        Nitrogen Mass Flux out of Land Due to any Human Activity
+        fNOx                 Total Land NOx Flux
+        fNVegLitter          Total Nitrogen Mass Flux from Vegetation to Litter
+        fNVegSoil            Total Nitrogen Mass Flux from Vegetation Directly to Soil
+        fNfert               Total Nitrogen Added for Cropland Fertilisation (Artificial and Manure)
+        fNloss               Total Nitrogen Lost (Including NHx, NOx, N2O, N2 and Leaching)
+
+    group: land_nitrogen_cycle_tier2
+        fNgas                Total Nitrogen Lost to the Atmosphere (Sum of NHx, NOx, N2O, N2)
+        fNgasFire            Total Nitrogen Lost to the Atmosphere (Including NHx, NOx, N2O, N2) from Fire
+        fNgasNonFire         Total Nitrogen Lost to the Atmosphere (Including NHx, NOx, N2O, N2) from All Processes Except Fire
+        nLeaf                Nitrogen Mass in Leaves
+        nLitterCwd           Nitrogen Mass in Coarse Woody Debris
+        nLitterSubSurf       Nitrogen Mass in Below-Ground Litter (non CWD)
+        nLitterSurf          Nitrogen Mass in Above-Ground Litter (non CWD)
+        nMineralNH4          Mineral Ammonium in the Soil
+        nMineralNO3          Mineral Nitrate in the Soil
+        nOther               Nitrogen Mass in Vegetation Components Other than Leaves, Stem and Root
+        nRoot                Nitrogen Mass in Roots
+        nStem                Nitrogen Mass in Stem
+
+    group: ocean_carbon_cycle_tier2
+        chlcalc              Mass Concentration of Calcareous Phytoplankton Expressed as Chlorophyll in Sea Water
+        chldiaz              Mass Concentration of Diazotrophs Expressed as Chlorophyll in Sea Water
+        chlpico              Mass Concentration of Picophytoplankton Expressed as Chlorophyll in Sea Water
+        dmso                 Mole Concentration of Dimethyl Sulphide in Sea Water
+        epn100               Downward Flux of Particulate Nitrogen
+        epp100               Downward Flux of Particulate Phosphorus
+        fgdms                Surface Upward Flux of DMS
+        fric                 Downward Inorganic Carbon Flux at Ocean Bottom
+        froc                 Downward Organic Carbon Flux at Ocean Bottom
+        graz                 Total Grazing of Phytoplankton by Zooplankton
+        icfriver             Flux of Inorganic Carbon into Ocean Surface by Runoff
+        intppcalc            Net Primary Mole Productivity of Carbon by Calcareous Phytoplankton
+        intppdiaz            Net Primary Mole Productivity of Carbon by Diazotrophs
+        intppnitrate         Primary Organic Carbon Production by Phytoplankton Based on Nitrate Uptake Alone
+        intpppico            Net Primary Mole Productivity of Carbon by Picophytoplankton
+        phycalc              Mole Concentration of Calcareous Phytoplankton Expressed as Carbon in Sea Water
+        phypico              Mole Concentration of Picophytoplankton Expressed as Carbon in Sea Water
+        zmisc                Mole Concentration of Other Zooplankton Expressed as Carbon in Sea Water
+
+  Opportunity: Changes in marine biogeochemical cycles and ecosystem processes
+  --------------------------------------------------------------------------
+
+    group: marine_bgc_baseline
+        co2massClim          Total Atmospheric Mass of CO2
+        dmsos                Surface Mole Concentration of Dimethyl Sulphide in Sea Water
+        fric                 Downward Inorganic Carbon Flux at Ocean Bottom
+        froc                 Downward Organic Carbon Flux at Ocean Bottom
+        graz                 Total Grazing of Phytoplankton by Zooplankton
+        msftmz               Ocean Meridional Overturning Mass Streamfunction
+        phycalc              Mole Concentration of Calcareous Phytoplankton Expressed as Carbon in Sea Water
+        phypico              Mole Concentration of Picophytoplankton Expressed as Carbon in Sea Water
+        zmisc                Mole Concentration of Other Zooplankton Expressed as Carbon in Sea Water
+
+    group: marine_bgc_carbon_sink
+        o2sat                Dissolved Oxygen Concentration at Saturation
+
+    group: marine_bgc_fishmip
+        intppcalc            Net Primary Mole Productivity of Carbon by Calcareous Phytoplankton
+        intppdiaz            Net Primary Mole Productivity of Carbon by Diazotrophs
+        intppnano            Net Primary Organic Carbon Production by Nanophytoplankton
+        intpppico            Net Primary Mole Productivity of Carbon by Picophytoplankton
+
+    group: marine_bgc_pp_uncertainty
+        limfecalc            Iron Limitation of Calcareous Phytoplankton
+        limfediat            Iron Limitation of Diatoms
+        limfediaz            Iron Limitation of Diazotrophs
+        limfemisc            Iron Limitation of Other Phytoplankton
+        limfepico            Iron Limitation of Picophytoplankton
+        limirrcalc           Irradiance Limitation of Calcareous Phytoplankton
+        limirrdiat           Irradiance Limitation of Diatoms
+        limirrdiaz           Irradiance Limitation of Diazotrophs
+        limirrmisc           Irradiance Limitation of Other Phytoplankton
+        limirrpico           Irradiance Limitation of Picophytoplankton
+        limncalc             Nitrogen Limitation of Calcareous Phytoplankton
+        limndiat             Nitrogen Limitation of Diatoms
+        limndiaz             Nitrogen Limitation of Diazotrophs
+        limnmisc             Nitrogen Limitation of Other Phytoplankton
+        limnpico             Nitrogen Limitation of Picophytoplankton
+
+    group: marine_bgc_seaice
+        sialgc               Total Ice Algal Carbon Amount in Sea Ice
+        sichl                Amount of Total Ice Algae Expressed as Chlorophyll in Sea Ice
+        sigpp                Gross Primary Productivity in Sea Ice as Carbon Amount Flux
+        sino3                Dissolved Nitrate Amount in Sea Ice
+        sisi                 Dissolved Silicon Amount in Sea Ice
+
+  Opportunity: Constructing a Global Carbon Budget
+  --------------------------------------------------------------------------
+
+    group: atmosphere_carbon_cycle_tier1
+        co23D                3D-Field of Transported CO2
+        co2mass              Total Atmospheric Mass of CO2
+        fco2all              Carbon Mass Flux into Atmosphere Due to All Emissions of CO2 from All Sources [kgC m-2 s-1]
+        fco2antt             Carbon Mass Flux into Atmosphere Due to All Anthropogenic Emissions of CO2 [kgC m-2 s-1]
+        fco2fos              Carbon Mass Flux into Atmosphere Due to Fossil Fuel Emissions of CO2 [kgC m-2 s-1]
+        fco2nat              Surface Carbon Mass Flux into the Atmosphere Due to Natural Sources [kgC m-2 s-1]
+
+    group: land_carbon_cycle_tier1
+        cGeologicStorage     Carbon Mass in Geologic Storage
+        fAnthDisturb         Carbon Mass Flux from Vegetation, Litter or Soil Pools into the Atmosphere Due to any Human Activity [kgC m-2 s-1]
+        fCLandToOcean        Lateral Transfer of Carbon out of Grid Cell That Eventually Goes into Ocean
+        fDeforestToAtmos     Deforested Biomass That Goes into Atmosphere as a Result of Anthropogenic Land-Use Change [kgC m-2 s-1]
+        fFireAll             Carbon Mass Flux into Atmosphere Due to CO2 Emission from Fire Including All Sources [kgC m-2 s-1]
+        fFireNat             Carbon Mass Flux into Atmosphere Due to CO2 Emission from Natural Fire [kgC m-2 s-1]
+        fHarvestToAtmos      Harvested Biomass That Goes Straight into Atmosphere as Carbon Mass Flux [kgC m-2 s-1]
+        fHarvestToGeologicStorage Harvested Biomass That Goes into Geological Storage
+        fVegSoil             Total Carbon Mass Flux from Vegetation Directly to Soil
+
+    group: land_carbon_cycle_tier2
+        cLeaf                Carbon Mass in Leaves
+        cLitterCwd           Carbon Mass in Coarse Woody Debris
+        cLitterSubSurf       Carbon Mass in Below-Ground Litter
+        cLitterSurf          Carbon Mass in Above-Ground Litter
+        cOther               Carbon Mass in Vegetation Components Other than Leaves, Stems and Roots
+        cRoot                Carbon Mass in Roots
+        cSoilPools           Carbon Mass in Each Model Soil Pool (Summed over Vertical Levels)
+        cStem                Carbon Mass in Stem
+        fLitterFire          Carbon Mass Flux from Litter, CWD or any non-Living Pool into Atmosphere Due to CO2 Emission from All Fire [kgC m-2 s-1]
+        fVegFire             Carbon Mass Flux from Vegetation into Atmosphere Due to CO2 Emission from All Fire [kgC m-2 s-1]
+        fVegLitterMortality  Total Carbon Mass Flux from Vegetation to Litter as a Result of Mortality
+        fVegLitterSenescence Total Carbon Mass Flux from Vegetation to Litter as a Result of Leaf, Branch, and Root Senescence
+        fVegSoilMortality    Total Carbon Mass Flux from Vegetation to Soil as a Result of Mortality
+        fVegSoilSenescence   Total Carbon Mass Flux from Vegetation to Soil as a Result of Leaf, Branch, and Root Senescence
+        nppLeaf              Net Primary Production Allocated to Leaves as Carbon Mass Flux [kgC m-2 s-1]
+        nppOther             Net Primary Production Allocated to Other Pools (not Leaves Stem or Roots) as Carbon Mass Flux [kgC m-2 s-1]
+        nppRoot              Net Primary Production Allocated to Roots as Carbon Mass Flux [kgC m-2 s-1]
+        nppStem              Net Primary Production Allocated to Stem as Carbon Mass Flux [kgC m-2 s-1]
+        raLeaf               Total Respiration from Leaves as Carbon Mass Flux [kgC m-2 s-1]
+        raOther              Total Respiration from Other Pools (not Leaves Stem or Roots) as Carbon Mass Flux [kgC m-2 s-1]
+        raRoot               Total Respiration from Roots as Carbon Mass Flux [kgC m-2 s-1]
+        raStem               Total Respiration from Stem as Carbon Mass Flux [kgC m-2 s-1]
+        rhLitter             Carbon Mass Flux into Atmosphere Due to Heterotrophic Respiration from Litter on Land
+        rhSoil               Carbon Mass Flux into Atmosphere Due to Heterotrophic Respiration from Soil on Land
+
+  Opportunity: Earth's Energy Budget
+  --------------------------------------------------------------------------
+
+    group: seaice_budget_energy_monthly
+        sifllattop           Net Latent Heat Flux over Sea Ice
+        siflsensbot          Net Upward Sensible Heat Flux under Sea Ice
+        siflswdbot           Downwelling Shortwave Flux under Sea Ice
+
+  Opportunity: Ocean changes, drivers and impacts
+  --------------------------------------------------------------------------
+
+    group: int_ocean_budgets
+        absscint             Integral wrt depth of seawater absolute salinity expressed as salt mass content
+        chcint               Depth Integrated Seawater Conservative Temperature Expressed As Heat Content
+        pfscint              Integral wrt depth of seawater preformed salinity expressed as salt mass content
+        phcint               Integrated Ocean Heat Content from Potential Temperature
+        scint                Integral wrt depth of seawater practical salinity expressed as salt mass content
+
+    group: ocean_meridional_overturning_streamfunctions
+        msftmrho             Ocean Meridional Overturning Mass Streamfunction
+        msftmz               Ocean Meridional Overturning Mass Streamfunction
+        msftyrho             Ocean Y Overturning Mass Streamfunction
+
+    group: ocean_mesoscale
+        hfx                  3D Ocean Heat X Transport
+        hfxint               Vertically Integrated Ocean Heat X Transport
+        hfy                  3D Ocean Heat Y Transport
+        hfyint               Vertically Integrated Ocean Heat Y Transport
+        sfx                  3D Ocean Salt Mass X Transport
+        sfxint               Vertically Integrated Ocean Salt Mass X Transport
+        sfy                  3D Ocean Salt Mass Y Transport
+        sfyint               Vertically Integrated Ocean Salt Mass Y Transport
+        uos                  Daily Surface Sea Water X Velocity
+        vos                  Daily Surface Sea Water Y Velocity
+
+    group: omip_scalars_high_priority
+        bigthetao            Sea Water Conservative Temperature
+        bigthetaoga          Global Average Sea Water Conservative Temperature
+        pso                  Sea Water Pressure at Sea Water Surface
+
+    group: omip_transports_high_priority
+        hfbasinpsmadv        Northward Ocean Heat Transport Due to Parameterized Submesoscale Advection
+        msftmrho             Ocean Meridional Overturning Mass Streamfunction
+        msftmz               Ocean Meridional Overturning Mass Streamfunction
+        msftyrho             Ocean Y Overturning Mass Streamfunction
+        sltbasin             Northward Ocean Salt Transport
+
+    group: seaice_state_monthly_basic
+        siconca              Sea-Ice Area Percentage (Atmospheric Grid)
+
+  Opportunity: Role of fire in the Earth system
+  --------------------------------------------------------------------------
+
+    group: FireMIP_daily
+        cldnvi               Column Integrated Cloud Droplet Number
+        loadbc               Load of Black Carbon Aerosol
+        loadoa               Load of Dry Aerosol Organic Matter
+        loadpoa              Load of Dry Aerosol Primary Organic Matter
+
+    group: FireMIP_monthly
+        cLeaf                Carbon Mass in Leaves
+        cRoot                Carbon Mass in Roots
+        cStem                Carbon Mass in Stem
+        ccn                  Cloud Condensation Nuclei Concentration at Liquid Cloud Top
+        cdnc                 Cloud Liquid Droplet Number Concentration
+        cltc                 Convective Cloud Cover Percentage
+        co2Clim              Mole Fraction of CO2
+        conccn               Aerosol Number Concentration
+        emibbbc              total emission rate of black carbon aerosol mass from all biomass burning
+        emibbch4             total emission of CH4 from all biomass burning
+        emibbco              total emission rate of CO from all biomass burning
+        emibbdms             total emission of DMS from all biomass burning
+        emibboa              total emission of organic aerosol from all biomass burning
+        emibbso2             total emission rate of SO2 from all biomass burning
+        emibbvoc             total emission rate of NMVOC from all biomass burning
+        fNVegSoil            Total Nitrogen Mass Flux from Vegetation Directly to Soil
+        fNgas                Total Nitrogen Lost to the Atmosphere (Sum of NHx, NOx, N2O, N2)
+        fNgasFire            Total Nitrogen Lost to the Atmosphere (Including NHx, NOx, N2O, N2) from Fire
+        fNloss               Total Nitrogen Lost (Including NHx, NOx, N2O, N2 and Leaching)
+        fco2nat              Surface Carbon Mass Flux into the Atmosphere Due to Natural Sources [kgC m-2 s-1]
+        lwp                  Liquid Water Path
+        mmrpm2p5             PM2.5 Mass Mixing Ratio
+        od550bb              Aerosol Optical Depth at 550nm Due to Biomass Burning
+        od550bc              Black Carbon Optical Thickness at 550nm
+        od550oa              Total Organic Aerosol Optical Depth at 550nm
+        od550soa             Particulate Organic Aerosol Optical Depth at 550nm
+        pflw                 Liquid Water Content of Permafrost Layer
+        prra                 Rainfall Flux
+        reffsclwtop          Cloud-Top Effective Droplet Radius in Stratiform Cloud
+        rtmt                 Net Downward Radiative Flux at Top of Model
+        sootsn               Snow Soot Content
+        tntrs                Tendency of Air Temperature Due to Shortwave Radiative Heating
+        tpf                  Permafrost Layer Thickness
+
+  Opportunity: Sea ice changes, drivers and impacts
+  --------------------------------------------------------------------------
+
+    group: seaice_budget_area_monthly
+        sidconcdyn           Sea-Ice Area Fraction Tendency Due to Dynamics
+
+    group: seaice_budget_energy_monthly
+        sifllattop           Net Latent Heat Flux over Sea Ice
+        siflsensbot          Net Upward Sensible Heat Flux under Sea Ice
+        siflswdbot           Downwelling Shortwave Flux under Sea Ice
+
+    group: seaice_budget_mass_monthly
+        sidmassgrowthsi      Sea-Ice Mass Change Through Snow-to-Ice Conversion
+        sidmassmeltlat       Sea-Ice Mass Change Through Lateral Melting
+        sisndmassdyn         Snow Mass Rate of Change Through Advection by Sea-Ice Dynamics
+        sisndmasssi          Snow Mass Rate of Change Through Snow-to-Ice Conversion
+        sisndmasswind        Snow Mass Rate of Change Through Wind Drift of Snow
+
+    group: seaice_global_monthly_basic
+        siarean              Sea-Ice Area North
+        siareas              Sea-Ice Area South
+        siextentn            Sea-Ice Extent North
+        siextents            Sea-Ice Extent South
+
+    group: seaice_state_daily_basic
+        siconca              Sea-Ice Area Percentage (Atmospheric Grid)
+
+    group: seaice_state_monthly_basic
+        siconca              Sea-Ice Area Percentage (Atmospheric Grid)
+
+  Opportunity: Terrestrial Biodiversity
+  --------------------------------------------------------------------------
+
+    group: biodiv_land_daily
+        evspsblpot           Potential Evapotranspiration
+
+    group: biodiv_land_daily_advanced
+        flashrate            Lightning Flash Rate
+
+    group: biodiv_land_monthly
+        co2mass              Total Atmospheric Mass of CO2
+        evspsblpot           Potential Evapotranspiration
+
+
+##############################################################################
+#  DIVISION: ESYDA, ICR
+##############################################################################
+
+  Opportunity: Assessments for Hydrological Processes, Water Resources, and Freshwater Systems
+  --------------------------------------------------------------------------
+
+    group: WaterResources_daily
+        evspsblpot           Potential Evapotranspiration
+        mrrob                Subsurface Runoff
+
+    group: WaterResources_monthly
+        evspsblpot           Potential Evapotranspiration
+
+    group: hydro_modelling_daily
+        evspsblpot           Potential Evapotranspiration
+
+    group: hydro_modelling_subdaily
+        evspsblpot           Potential Evapotranspiration
+
+    group: hydrology
+        depthl               Depth of Lake Below the Surface
+        dgw                  Change in Groundwater
+        drivw                Change in River Storage
+        dsw                  Change in Surface Water Storage
+        mrrob                Subsurface Runoff
+        mrsofc               Capacity of Soil to Store Water (Field Capacity)
+        mrtws                Terrestrial Water Storage
+        pflw                 Liquid Water Content of Permafrost Layer
+        qgwr                 Groundwater Recharge from Soil Layer
+        rivo                 River Discharge
+        sftlaf               Fraction of the Grid Cell Occupied by Lake
+        siitdsnconc          Snow Area Percentages in Ice Thickness Categories
+        siitdsnthick         Snow Thickness in Ice Thickness Categories
+        snmsl                Water Flowing out of Snowpack
+        snw                  Surface Snow Amount
+        sw                   Surface Water Storage
+        tpf                  Permafrost Layer Thickness
+        wtd                  Water Table Depth
+
+    group: snow_allfreq
+        agesno               Mean Age of Snow
+        dsn                  Change in Snow Water Equivalent
+        esn                  Snow Evaporation
+        hfdsnb               Downward Heat Flux at Snow Base
+        lwsnl                Liquid Water Content of Snow Layer
+        prrsn                Fraction of Rainfall on Snow
+        prsnc                Convective Snowfall Flux
+        prsnsn               Fraction of Snowfall (Including Hail and Graupel) on Snow
+        sidmassgrowthsi      Sea-Ice Mass Change Through Snow-to-Ice Conversion
+        siitdsnthick         Snow Thickness in Ice Thickness Categories
+        sisndmassdyn         Snow Mass Rate of Change Through Advection by Sea-Ice Dynamics
+        sisndmasssi          Snow Mass Rate of Change Through Snow-to-Ice Conversion
+        sisndmasswind        Snow Mass Rate of Change Through Wind Drift of Snow
+        snrefr               Refreezing of Water in the Snow
+        snw                  Surface Snow Amount
+        snwc                 Snow Water Equivalent Intercepted by the Vegetation
+        sootsn               Snow Soot Content
+
+  Opportunity: Land use change
+  --------------------------------------------------------------------------
+
+    group: landuse
+        fracInLut            Annual Gross Percentage That Was Transferred into This Tile from Other Land-Use Tiles
+        fracOutLut           Annual Gross Percentage of Land-Use Tile That Was Transferred into Other Land-Use Tiles
+        irrLut               Irrigation Flux Including any Irrigation for Crops, Trees, Pasture, or Urban Lawns
+        nbpLut               Net Carbon Mass Flux into Land-Use Tile [kgC m-2 s-1]
+
+  Opportunity: Plant Phenology
+  --------------------------------------------------------------------------
+
+    group: plant_phenology_high
+        gppVgt               Gross Primary Production on Vegetation type as Carbon Mass Flux [kgC m-2 s-1]
+        laiVgt               Leaf Area Index on Vegetation type
+
+    group: plant_phenology_medium
+        nppVgt               Net Primary Production on Vegetation type as Carbon Mass Flux [kgC m-2 s-1]
+        raVgt                Autotrophic Respiration on Vegetation type as Carbon Mass Flux [kgC m-2 s-1]
+        rhVgt                Heterotrophic Respiration on Vegetation type as Carbon Mass Flux [kgC m-2 s-1]
+
+  Opportunity: Water cycle/budget assessment
+  --------------------------------------------------------------------------
+
+    group: WaterResources_daily
+        evspsblpot           Potential Evapotranspiration
+        mrrob                Subsurface Runoff
+
+
+##############################################################################
+#  DIVISION: ICR
+##############################################################################
+
+  Opportunity: Agriculture and Food System Impacts
+  --------------------------------------------------------------------------
+
+    group: AgWaterCore
+        evspsblpot           Potential Evapotranspiration
+
+    group: AgWaterExt
+        evspsblpot           Potential Evapotranspiration
+        irrDem               irrigation water demand
+        irrGw                irrigation water withdrawal from groundwater
+        irrLut               irrigation water withdrawal
+        irrSurf              irrigation water withdrawal from surface water
+        mrsofc               Capacity of Soil to Store Water (Field Capacity)
+        rzwc                 Root Zone Soil Moisture
+
+  Opportunity: Vulnerability of urban systems, infrastructure and populations
+  --------------------------------------------------------------------------
+
+    group: WaterResources_daily
+        evspsblpot           Potential Evapotranspiration
+        mrrob                Subsurface Runoff
+
+    group: hydro_modelling_daily
+        evspsblpot           Potential Evapotranspiration
+
+  Opportunity: Water Security and Freshwater Ecosystem Services
+  --------------------------------------------------------------------------
+
+    group: AgWaterCore
+        evspsblpot           Potential Evapotranspiration
+
+    group: AgWaterExt
+        evspsblpot           Potential Evapotranspiration
+        irrDem               irrigation water demand
+        irrGw                irrigation water withdrawal from groundwater
+        irrLut               irrigation water withdrawal
+        irrSurf              irrigation water withdrawal from surface water
+        mrsofc               Capacity of Soil to Store Water (Field Capacity)
+        rzwc                 Root Zone Soil Moisture
+

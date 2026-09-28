@@ -1,0 +1,84 @@
+division,opportunity,cmcc_priority,group,n_true_gap,true_gap_variables
+CLIVAP,Atmospheric dynamics and variability,high,baseline_fixed,2,"mrsofc, rootd"
+CLIVAP,Atmospheric dynamics and variability,high,baseline_monthly,3,"bigthetao, rluscs, snw"
+CLIVAP,Atmospheric dynamics and variability,high,dynvar_basic,18,"epfy, epfz, meanage, tauunoegw, tauunowgw, tauuogw, tauvnogw, tauvogw, tntmp, tntrl, tntrs, utendepfd, utendnogw, utendogw, utendvtem, utendwtem, vtem, wtem"
+CLIVAP,Detection and Attribution,high,DAMIP_monthly,14,"abs550bc, abs550dust, abs550so4, aod550volso4, co2massClim, loadso4, msftmrho, msftmz, o3ste, od550dust, od550soa, rtmt, snw, tropo3ste"
+CLIVAP,Diagnosing temperature variability and extremes,high,DCPP_essential,4,"co2massClim, msftmz, vsf, zfullo"
+CLIVAP,Diagnosing temperature variability and extremes,high,DCPP_wider,14,"co2s, co3satarag200, co3sataragos, epfy, epfz, epsi100, msftmrho, msftmzmpa, sifllattop, tdps, utendepfd, vtem, wtem, zossq"
+CLIVAP,Diagnosing temperature variability and extremes,high,temperature_variability_daily_highpriority,1,evspsblpot
+CLIVAP,Dynamical Downscaling (CORDEX),high,dynamical_downscaling_aerosols_chemistry,18,"bry, cly, co, hcl, hno3, mmrbc, mmrdust, mmrnh4, mmrno3, mmroa, mmrso4, mmrsoa, mmrss, n2o, noy, o3, oh, so2"
+CLIVAP,Dynamical Downscaling (CORDEX),high,dynamical_downscaling_core,18,"cfc113global, cfc114, cfc11global, ch4, co2, hcfc22, hcfc22global, hfc125, hfc134a, n2o, o3, od550bb, od550bc, od550dust, od550no3, od550oa, od550so4, od550ss"
+CLIVAP,Dynamical Downscaling (CORDEX),high,dynamical_downscaling_ocean_air_sea_biogeochemistry_forcing,6,"drydust, drynoy, fsfe, fsn, wetdust, wetnoy"
+CLIVAP,Dynamical Downscaling (CORDEX),high,dynamical_downscaling_ocean_biogeochemistry_forcing,8,"chldiaz, chlpico, icfriver, ocfriver, phycalc, phydiaz, phypico, zmisc"
+CLIVAP,Dynamical Downscaling (CORDEX),high,dynamical_downscaling_ocean_core,1,ficeberg
+CLIVAP,Multi-annual-to-decadal predictability of the Earth System and risk assessment of climate extremes,high,DCPP_essential,4,"co2massClim, msftmz, vsf, zfullo"
+CLIVAP,Multi-annual-to-decadal predictability of the Earth System and risk assessment of climate extremes,high,DCPP_wider,14,"co2s, co3satarag200, co3sataragos, epfy, epfz, epsi100, msftmrho, msftmzmpa, sifllattop, tdps, utendepfd, vtem, wtem, zossq"
+CLIVAP,Robust Risk Assessment of Tipping Points,medium,baseline_fixed,2,"mrsofc, rootd"
+CLIVAP,Robust Risk Assessment of Tipping Points,medium,baseline_monthly,3,"bigthetao, rluscs, snw"
+EIEE,Energy System Impacts,medium,impact_energy_damaging_other,1,flashrate
+EIEE,Energy System Impacts,medium,impact_energy_hydropower,1,mrrob
+EIEE,Energy System Impacts,medium,impacts_energy_damaging_wind,2,"wsgmax100m, wsgmax10m"
+EIEE,Health Impacts,medium,HealthFloodingDaily,2,"mrsofc, snw"
+EIEE,Health Impacts,medium,HealthPollutionDaily,4,"sfo3max, sfpm1, sfpm10, sfpm25"
+EIEE,Health Impacts,medium,Heat_Indices,4,"noaahi2m, noaahi2mmax, wbgt2m, wbgt2mmax"
+ESYDA,Accurate assessment of land-atmosphere coupling,medium,landatm_coupling_3hA,2,"bldep, srfrad"
+ESYDA,Accurate assessment of land-atmosphere coupling,medium,landatm_coupling_3hr_medium,1,hfdsl
+ESYDA,Baseline Climate Variables for Earth System Modelling,high,baseline_fixed,2,"mrsofc, rootd"
+ESYDA,Baseline Climate Variables for Earth System Modelling,high,baseline_monthly,3,"bigthetao, rluscs, snw"
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,high,atmosphere_carbon_cycle_tier1,6,"co23D, co2mass, fco2all, fco2antt, fco2fos, fco2nat"
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,high,land_benchmarking_and_landcover_variables_tier1,6,"albc, cnc, mrtws, pastureFrac, prveg, snw"
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,high,land_benchmarking_and_landcover_variables_tier2,8,"cropFracC4, mrtws, pastureFracC3, pastureFracC4, wetlandCH4, wetlandCH4cons, wetlandCH4prod, wetlandFrac"
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,high,land_carbon_cycle_tier1,9,"cGeologicStorage, fAnthDisturb, fCLandToOcean, fDeforestToAtmos, fFireAll, fFireNat, fHarvestToAtmos, fHarvestToGeologicStorage, fVegSoil"
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,high,land_carbon_cycle_tier2,24,"cLeaf, cLitterCwd, cLitterSubSurf, cLitterSurf, cOther, cRoot, cSoilPools, cStem, fLitterFire, fVegFire, fVegLitterMortality, fVegLitterSenescence, fVegSoilMortality, fVegSoilSenescence, nppLeaf, nppOther, nppRoot, nppStem, raLeaf, raOther, raRoot, raStem, rhLitter, rhSoil"
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,high,land_ch4_fluxes,9,"ch4losssoil, emiach4, emibbch4, emich4, emilkch4, wetlandCH4, wetlandCH4cons, wetlandCH4prod, wetlandFrac"
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,high,land_nitrogen_cycle_tier1,6,"fNAnthDisturb, fNOx, fNVegLitter, fNVegSoil, fNfert, fNloss"
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,high,land_nitrogen_cycle_tier2,12,"fNgas, fNgasFire, fNgasNonFire, nLeaf, nLitterCwd, nLitterSubSurf, nLitterSurf, nMineralNH4, nMineralNO3, nOther, nRoot, nStem"
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,high,ocean_carbon_cycle_tier2,18,"chlcalc, chldiaz, chlpico, dmso, epn100, epp100, fgdms, fric, froc, graz, icfriver, intppcalc, intppdiaz, intppnitrate, intpppico, phycalc, phypico, zmisc"
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,high,marine_bgc_baseline,9,"co2massClim, dmsos, fric, froc, graz, msftmz, phycalc, phypico, zmisc"
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,high,marine_bgc_carbon_sink,1,o2sat
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,high,marine_bgc_fishmip,4,"intppcalc, intppdiaz, intppnano, intpppico"
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,high,marine_bgc_pp_uncertainty,15,"limfecalc, limfediat, limfediaz, limfemisc, limfepico, limirrcalc, limirrdiat, limirrdiaz, limirrmisc, limirrpico, limncalc, limndiat, limndiaz, limnmisc, limnpico"
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,high,marine_bgc_seaice,5,"sialgc, sichl, sigpp, sino3, sisi"
+ESYDA,Climate impacts on marine biodiversity and ecosystems,medium,ISIMIP_oceanforcing_3hr,3,"ficeberg, flandice, hfrunoffds"
+ESYDA,Climate impacts on marine biodiversity and ecosystems,medium,biodiv_marine_daily,10,"expcob, intpoc, o2min, phycalc, phydiazos, phynano, phypico, rsdo, uos, vos"
+ESYDA,Climate impacts on marine biodiversity and ecosystems,medium,marine_bgc_baseline,9,"co2massClim, dmsos, fric, froc, graz, msftmz, phycalc, phypico, zmisc"
+ESYDA,Climate impacts on marine biodiversity and ecosystems,medium,marine_bgc_fishmip,4,"intppcalc, intppdiaz, intppnano, intpppico"
+ESYDA,Constructing a Global Carbon Budget,high,atmosphere_carbon_cycle_tier1,6,"co23D, co2mass, fco2all, fco2antt, fco2fos, fco2nat"
+ESYDA,Constructing a Global Carbon Budget,high,land_carbon_cycle_tier1,9,"cGeologicStorage, fAnthDisturb, fCLandToOcean, fDeforestToAtmos, fFireAll, fFireNat, fHarvestToAtmos, fHarvestToGeologicStorage, fVegSoil"
+ESYDA,Constructing a Global Carbon Budget,high,land_carbon_cycle_tier2,24,"cLeaf, cLitterCwd, cLitterSubSurf, cLitterSurf, cOther, cRoot, cSoilPools, cStem, fLitterFire, fVegFire, fVegLitterMortality, fVegLitterSenescence, fVegSoilMortality, fVegSoilSenescence, nppLeaf, nppOther, nppRoot, nppStem, raLeaf, raOther, raRoot, raStem, rhLitter, rhSoil"
+ESYDA,Earth's Energy Budget,high,seaice_budget_energy_monthly,3,"sifllattop, siflsensbot, siflswdbot"
+ESYDA,Ocean Extremes,medium,Ocean_Temperature_Extremes,1,bigthetao200
+ESYDA,"Ocean changes, drivers and impacts",high,int_ocean_budgets,5,"absscint, chcint, pfscint, phcint, scint"
+ESYDA,"Ocean changes, drivers and impacts",high,ocean_meridional_overturning_streamfunctions,3,"msftmrho, msftmz, msftyrho"
+ESYDA,"Ocean changes, drivers and impacts",high,ocean_mesoscale,10,"hfx, hfxint, hfy, hfyint, sfx, sfxint, sfy, sfyint, uos, vos"
+ESYDA,"Ocean changes, drivers and impacts",high,omip_scalars_high_priority,3,"bigthetao, bigthetaoga, pso"
+ESYDA,"Ocean changes, drivers and impacts",high,omip_transports_high_priority,5,"hfbasinpsmadv, msftmrho, msftmz, msftyrho, sltbasin"
+ESYDA,"Ocean changes, drivers and impacts",high,seaice_state_monthly_basic,1,siconca
+ESYDA,Role of fire in the Earth system,high,FireMIP_daily,4,"cldnvi, loadbc, loadoa, loadpoa"
+ESYDA,Role of fire in the Earth system,high,FireMIP_monthly,33,"cLeaf, cRoot, cStem, ccn, cdnc, cltc, co2Clim, conccn, emibbbc, emibbch4, emibbco, emibbdms, emibboa, emibbso2, emibbvoc, fNVegSoil, fNgas, fNgasFire, fNloss, fco2nat, lwp, mmrpm2p5, od550bb, od550bc, od550oa, od550soa, pflw, prra, reffsclwtop, rtmt, sootsn, tntrs, tpf"
+ESYDA,"Sea ice changes, drivers and impacts",high,seaice_budget_area_monthly,1,sidconcdyn
+ESYDA,"Sea ice changes, drivers and impacts",high,seaice_budget_energy_monthly,3,"sifllattop, siflsensbot, siflswdbot"
+ESYDA,"Sea ice changes, drivers and impacts",high,seaice_budget_mass_monthly,5,"sidmassgrowthsi, sidmassmeltlat, sisndmassdyn, sisndmasssi, sisndmasswind"
+ESYDA,"Sea ice changes, drivers and impacts",high,seaice_global_monthly_basic,4,"siarean, siareas, siextentn, siextents"
+ESYDA,"Sea ice changes, drivers and impacts",high,seaice_state_daily_basic,1,siconca
+ESYDA,"Sea ice changes, drivers and impacts",high,seaice_state_monthly_basic,1,siconca
+ESYDA,Terrestrial Biodiversity,high,biodiv_land_daily,1,evspsblpot
+ESYDA,Terrestrial Biodiversity,high,biodiv_land_daily_advanced,1,flashrate
+ESYDA,Terrestrial Biodiversity,high,biodiv_land_monthly,2,"co2mass, evspsblpot"
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",high,WaterResources_daily,2,"evspsblpot, mrrob"
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",high,WaterResources_monthly,1,evspsblpot
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",high,hydro_modelling_daily,1,evspsblpot
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",high,hydro_modelling_subdaily,1,evspsblpot
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",high,hydrology,18,"depthl, dgw, drivw, dsw, mrrob, mrsofc, mrtws, pflw, qgwr, rivo, sftlaf, siitdsnconc, siitdsnthick, snmsl, snw, sw, tpf, wtd"
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",high,snow_allfreq,17,"agesno, dsn, esn, hfdsnb, lwsnl, prrsn, prsnc, prsnsn, sidmassgrowthsi, siitdsnthick, sisndmassdyn, sisndmasssi, sisndmasswind, snrefr, snw, snwc, sootsn"
+"ESYDA, ICR",Land use change,high,landuse,4,"fracInLut, fracOutLut, irrLut, nbpLut"
+"ESYDA, ICR",Plant Phenology,high,plant_phenology_high,2,"gppVgt, laiVgt"
+"ESYDA, ICR",Plant Phenology,high,plant_phenology_medium,3,"nppVgt, raVgt, rhVgt"
+"ESYDA, ICR",Water cycle/budget assessment,high,WaterResources_daily,2,"evspsblpot, mrrob"
+ICR,Agriculture and Food System Impacts,high,AgWaterCore,1,evspsblpot
+ICR,Agriculture and Food System Impacts,high,AgWaterExt,7,"evspsblpot, irrDem, irrGw, irrLut, irrSurf, mrsofc, rzwc"
+ICR,Bias-adjustment for impacts modeling and analysis,medium,ISIMIP_deposition_variables,6,"drynh3, drynh4, drynoy, wetnh3, wetnh4, wetnoy"
+ICR,"Vulnerability of urban systems, infrastructure and populations",high,WaterResources_daily,2,"evspsblpot, mrrob"
+ICR,"Vulnerability of urban systems, infrastructure and populations",high,hydro_modelling_daily,1,evspsblpot
+ICR,Water Security and Freshwater Ecosystem Services,high,AgWaterCore,1,evspsblpot
+ICR,Water Security and Freshwater Ecosystem Services,high,AgWaterExt,7,"evspsblpot, irrDem, irrGw, irrLut, irrSurf, mrsofc, rzwc"

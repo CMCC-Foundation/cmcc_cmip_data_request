@@ -1,0 +1,3 @@
+frequency,cell,n,variables_dr,GB_per_year
+day,ave,10,"hfdsn, lwsnl, pflw, sbl, snc, snd, snm, snw, tpf, tsn",0.6608
+mon,ave,13,"agesno, hfdsn, lwsnl, mrfso, pflw, sbl, snc, snd, snm, snw, sootsn, tpf, tsn",0.0304

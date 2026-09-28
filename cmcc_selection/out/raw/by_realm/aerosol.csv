@@ -1,0 +1,4 @@
+frequency,cell,n_dr,variables_dr,variables_raw,variables_unmapped_derivable,variables_unmapped_true_gap
+day,ave,3,"sfpm1, sfpm10, sfpm25",,,"sfpm1, sfpm10, sfpm25"
+day,max,1,sfo3max,,,sfo3max
+mon,ave,47,"abs550aer, abs550bc, abs550dust, abs550so4, bry, ccn, cdnc, cfc114, cly, co, conccn, drydust, emibbbc, emibbch4, emibbco, emibbdms, emibboa, emibbso2, emibbvoc, hcfc22, hcl, hfc125, hfc134a, hno3, lwp, mmrbc, mmrdust, mmrnh4, mmrno3, mmroa, mmrpm2p5, mmrso4, mmrsoa, mmrss, noy, od550aer, od550bb, od550bc, od550dust, od550no3, od550oa, od550so4, od550soa, od550ss, oh, so2, wetdust","AODABS, AODVIS",,"abs550bc, abs550dust, abs550so4, bry, ccn, cdnc, cfc114, cly, co, conccn, drydust, emibbbc, emibbch4, emibbco, emibbdms, emibboa, emibbso2, emibbvoc, hcfc22, hcl, hfc125, hfc134a, hno3, lwp, mmrbc, mmrdust, mmrnh4, mmrno3, mmroa, mmrpm2p5, mmrso4, mmrsoa, mmrss, noy, od550bb, od550bc, od550dust, od550no3, od550oa, od550so4, od550soa, od550ss, oh, so2, wetdust"

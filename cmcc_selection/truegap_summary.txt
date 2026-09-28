@@ -1,0 +1,13 @@
+[in] 350 true_gap variables; 30 High/Medium opportunities
+
+  CLIVAP             95 distinct true_gap variables
+  EIEE               14 distinct true_gap variables
+  ESYDA             200 distinct true_gap variables
+  ESYDA, ICR         43 distinct true_gap variables
+  ICR                14 distinct true_gap variables
+[write] /Users/giovanniconti/Documents/dr_cmip7/cmcc_selection/out/truegap_provenance.csv
+[write] /Users/giovanniconti/Documents/dr_cmip7/cmcc_selection/out/truegap_by_opportunity.csv
+[write] /Users/giovanniconti/Documents/dr_cmip7/cmcc_selection/out/truegap_high.txt
+[write] /Users/giovanniconti/Documents/dr_cmip7/cmcc_selection/out/truegap_high.csv
+[write] /Users/giovanniconti/Documents/dr_cmip7/cmcc_selection/out/truegap_medium.txt
+[write] /Users/giovanniconti/Documents/dr_cmip7/cmcc_selection/out/truegap_medium.csv

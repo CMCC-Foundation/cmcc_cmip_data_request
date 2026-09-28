@@ -1,0 +1,3 @@
+frequency,time_ave_or_inst,variables
+day,ave,"aice, ice_present, sisnhc, sisnthick, sispeed, sitempsnic, sitemptop, sithick, siu, siv"
+mon,ave,"aice, hi, hs, ice_present, sidconcth, sidmassdyn, sidmassevapsubl, sidmassgrowthbot, sidmassgrowthwat, sidmassmeltbot, sidmassmelttop, sidmassth, siflcondbot, siflcondtop, siflfwbot, siflfwdrain, sifllwdtop, sifllwutop, siflsenstop, siflswdtop, siflswutop, sihc, sipr, sisnconc, sisnhc, sisnthick, sispeed, sistrxdtop, sistrydtop, sitempsnic, sitemptop, sithick, siu, siv"

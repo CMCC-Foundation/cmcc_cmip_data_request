@@ -1,0 +1,10 @@
+frequency,cell,n_dr,variables_dr,variables_raw,variables_unmapped_derivable,variables_unmapped_true_gap
+3hr,ave,10,"ficeberg, flandice, friver, hfds, hfrunoffds, rsntds, sfdsi, tauuo, tauvo, wfo","friver, fsalt_nemo, hfds, rsntds, tauuo, tauvo, wfo",,"ficeberg, flandice, hfrunoffds"
+3hr,inst,1,tos,tos,,
+day,ave,15,"bigthetao200, hfxint, hfyint, mlotst, rsdo, so, sos, t20d, thetao200, tos, tossq, uos, vos, wo, zos","mlotst, so, sos, t20d, tos, tossq, wo, zos",thetao200,"bigthetao200, hfxint, hfyint, rsdo, uos, vos"
+dec,ave,10,"bigthetao, masscello, masso, so, tauuo, tauvo, thetao, thkcello, volcello, volo","deptht, masso, so, tauuo, tauvo, thetao, volo",,bigthetao
+fx,unknown,8,"areacello, basin, deptho, hfgeou, masscello, sftof, thkcello, volcello","deptht, hfgeou",,
+mon,ave,67,"absscint, agessc, bigthetao, bigthetaoga, chcint, ficeberg, friver, hfbasin, hfbasinpadv, hfbasinpmadv, hfbasinpmdiff, hfbasinpsmadv, hfds, hfx, hfy, masscello, masso, mlotst, msftbarot, msftmrho, msftmz, msftmzmpa, msftyrho, msftyz, obvfsq, pbo, pfscint, phcint, pso, scint, sf6, sfx, sfxint, sfy, sfyint, sltbasin, so, sob, soga, sos, sosga, t20d, tauuo, tauvo, thetao, thetaoga, thetaot, thetaot2000, thetaot300, thetaot700, thkcello, tob, tos, tosga, umo, uo, vmo, vo, volcello, volo, vsf, wfo, wmo, wo, zos, zossq, zostoga","agessc, deptht, friver, hfbasin, hfbasinpadv, hfbasinpmadv, hfbasinpmdiff, hfds, masso, mlotst, msftbarot, msftyz, obvfsq, pbo, sf6, so, sob, soga, sos, sosga, t20d, tauuo, tauvo, thetao, thetaoga, thetaot2000, thetaot300, thetaot700, tob, tos, tosga, umo, uo, vmo, vo, volo, wfo, wmo, wo, zos, zostoga",,"absscint, bigthetao, bigthetaoga, chcint, ficeberg, hfbasinpsmadv, hfx, hfy, msftmrho, msftmz, msftmzmpa, msftyrho, pfscint, phcint, pso, scint, sfx, sfxint, sfy, sfyint, sltbasin, vsf, zossq"
+mon,max,1,mlotstmax,mlotstmax,,
+mon,min,1,mlotstmin,mlotstmin,,
+yr,ave,2,"volcello, zfullo",deptht,,zfullo

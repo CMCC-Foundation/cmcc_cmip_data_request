@@ -1,0 +1,3 @@
+frequency,cell,n_dr,variables_dr,variables_raw,variables_unmapped_derivable,variables_unmapped_true_gap
+day,ave,10,"hfdsn, lwsnl, pflw, sbl, snc, snd, snm, snw, tpf, tsn","FGR, FSNO, QFLX_SUB_SNOW, QSNOMELT, SNOTTOPL, SNOWDP",,"lwsnl, pflw, snw, tpf"
+mon,ave,13,"agesno, hfdsn, lwsnl, mrfso, pflw, sbl, snc, snd, snm, snw, sootsn, tpf, tsn","FGR, FSNO, QFLX_SUB_SNOW, QSNOMELT, SNOTTOPL, SNOWDP, SOILICE",,"agesno, lwsnl, pflw, snw, sootsn, tpf"

@@ -1,0 +1,437 @@
+cmip6_name,out_name,model,realm,lookup,reprocess,frequency,cell,compound_name
+abs550aer,abs550aer,AODABS,aerosol,atm:cmip7-lookup,False,mon,ave,aerosol.abs550aer.tavg-u-hxy-u.mon.glb
+od550aer,od550aer,AODVIS,aerosol,atm:cmip7-lookup,False,mon,ave,aerosol.od550aer.tavg-u-hxy-u.mon.glb
+clt,clt,CLDTOT,atmos,atm:cmip7-lookup,True,1hr,ave,atmos.clt.tavg-u-hxy-u.1hr.30S-90S
+huss,huss,QREFHT,atmos,atm:cmip7-lookup,False,1hr,inst,atmos.huss.tpt-h2m-hxy-u.1hr.glb
+pr,pr,PRECT,atmos,atm:cmip7-lookup,True,1hr,ave,atmos.pr.tavg-u-hxy-u.1hr.glb
+psl,psl,PSL,atmos,atm:cmip7-lookup,False,1hr,inst,atmos.psl.tpt-u-hxy-u.1hr.glb
+rlds,rlds,FLDS,atmos,atm:cmip7-lookup,False,1hr,ave,atmos.rlds.tavg-u-hxy-u.1hr.glb
+rsds,rsds,FSDS,atmos,atm:cmip7-lookup,False,1hr,ave,atmos.rsds.tavg-u-hxy-u.1hr.glb
+tas,tas,TREFHT,atmos,atm:cmip7-lookup,False,1hr,ave,atmos.tas.tavg-h2m-hxy-u.1hr.glb
+uas,uas,"UBOT, VBOT, U10",atmos,atm:cmip7-lookup,True,1hr,inst,atmos.uas.tpt-h10m-hxy-u.1hr.glb
+vas,vas,"VBOT, UBOT, U10",atmos,atm:cmip7-lookup,True,1hr,inst,atmos.vas.tpt-h10m-hxy-u.1hr.glb
+hfls,hfls,LHFLX,atmos,atm:cmip7-lookup,False,3hr,ave,atmos.hfls.tavg-u-hxy-u.3hr.glb
+hfss,hfss,SHFLX,atmos,atm:cmip7-lookup,False,3hr,ave,atmos.hfss.tavg-u-hxy-u.3hr.glb
+hurs,hurs,RHREFHT,atmos,atm:cmip7-lookup,False,3hr,inst,atmos.hurs.tpt-h2m-hxy-u.3hr.glb
+huss,huss,QREFHT,atmos,atm:cmip7-lookup,False,3hr,inst,atmos.huss.tpt-h2m-hxy-u.3hr.glb
+pr,pr,PRECT,atmos,atm:cmip7-lookup,True,3hr,ave,atmos.pr.tavg-u-hxy-u.3hr.glb
+prsn,prsn,"PRECSC,PRECSL",atmos,atm:cmip7-lookup,True,3hr,ave,atmos.prsn.tavg-u-hxy-u.3hr.glb
+ps,ps,PS,atmos,atm:cmip7-lookup,False,3hr,inst,atmos.ps.tpt-u-hxy-u.3hr.glb
+rlds,rlds,FLDS,atmos,atm:cmip7-lookup,False,3hr,ave,atmos.rlds.tavg-u-hxy-u.3hr.glb
+rlus,rlus,"FLNS, FLDS",atmos,atm:cmip7-lookup,True,3hr,ave,atmos.rlus.tavg-u-hxy-u.3hr.glb
+rsds,rsds,FSDS,atmos,atm:cmip7-lookup,False,3hr,ave,atmos.rsds.tavg-u-hxy-u.3hr.glb
+rsus,rsus,"FSDS, FSNS",atmos,atm:cmip7-lookup,True,3hr,ave,atmos.rsus.tavg-u-hxy-u.3hr.glb
+tas,tas,TREFHT,atmos,atm:cmip7-lookup,False,3hr,inst,atmos.tas.tpt-h2m-hxy-u.3hr.glb
+ts,ts,TS,atmos,atm:cmip7-lookup,False,3hr,inst,atmos.ts.tpt-u-hxy-u.3hr.glb
+uas,uas,"UBOT, VBOT, U10",atmos,atm:cmip7-lookup,True,3hr,inst,atmos.uas.tpt-h10m-hxy-u.3hr.glb
+vas,vas,"VBOT, UBOT, U10",atmos,atm:cmip7-lookup,True,3hr,inst,atmos.vas.tpt-h10m-hxy-u.3hr.glb
+hurs,hurs,RHREFHT,atmos,atm:cmip7-lookup,False,6hr,ave,atmos.hurs.tavg-h2m-hxy-u.6hr.glb
+hus,hus,"Q, PS, T",atmos,atm:cmip7-lookup,True,6hr,inst,atmos.hus.tpt-al-hxy-u.6hr.glb
+pr,pr,PRECT,atmos,atm:cmip7-lookup,True,6hr,ave,atmos.pr.tavg-u-hxy-u.6hr.glb
+prsn,prsn,"PRECSC,PRECSL",atmos,atm:cmip7-lookup,True,6hr,ave,atmos.prsn.tavg-u-hxy-u.6hr.glb
+ps,ps,PS,atmos,atm:cmip7-lookup,False,6hr,inst,atmos.ps.tpt-u-hxy-u.6hr.glb
+psl,psl,PSL,atmos,atm:cmip7-lookup,False,6hr,ave,atmos.psl.tavg-u-hxy-u.6hr.glb
+psl,psl,PSL,atmos,atm:cmip7-lookup,False,6hr,inst,atmos.psl.tpt-u-hxy-u.6hr.glb
+rv850,rv850,"U, V, PS, T",atmos,atm:cmip7-lookup,True,6hr,ave,atmos.rv850.tavg-850hPa-hxy-air.6hr.glb
+sfcWind,sfcWind,U10,atmos,atm:cmip7-lookup,False,6hr,ave,atmos.sfcWind.tavg-h10m-hxy-u.6hr.glb
+ta,ta,"T, PS",atmos,atm:cmip7-lookup,True,6hr,inst,atmos.ta.tpt-p3-hxy-air.6hr.glb
+ta,ta,"T, PS",atmos,atm:cmip7-lookup,True,6hr,inst,atmos.ta.tpt-al-hxy-u.6hr.glb
+tas,tas,TREFHT,atmos,atm:cmip7-lookup,False,6hr,ave,atmos.tas.tavg-h2m-hxy-u.6hr.glb
+ts,ts,TS,atmos,atm:cmip7-lookup,False,6hr,inst,atmos.ts.tpt-u-hxy-u.6hr.glb
+ua,ua,"U, PS, T",atmos,atm:cmip7-lookup,True,6hr,inst,atmos.ua.tpt-p3-hxy-air.6hr.glb
+ua,ua,"U, PS, T",atmos,atm:cmip7-lookup,True,6hr,inst,atmos.ua.tpt-al-hxy-u.6hr.glb
+uas,uas,"UBOT, VBOT, U10",atmos,atm:cmip7-lookup,True,6hr,ave,atmos.uas.tavg-h10m-hxy-u.6hr.glb
+va,va,"V, PS, T",atmos,atm:cmip7-lookup,True,6hr,inst,atmos.va.tpt-p3-hxy-air.6hr.glb
+va,va,"V, PS, T",atmos,atm:cmip7-lookup,True,6hr,inst,atmos.va.tpt-al-hxy-u.6hr.glb
+vas,vas,"VBOT, UBOT, U10",atmos,atm:cmip7-lookup,True,6hr,ave,atmos.vas.tavg-h10m-hxy-u.6hr.glb
+zg,zg,"Z3, PS, T",atmos,atm:cmip7-lookup,True,6hr,inst,atmos.zg.tpt-al-hxy-u.6hr.glb
+cl,cl,"CLOUD, PS",atmos,atm:cmip7-lookup,True,day,ave,atmos.cl.tavg-al-hxy-u.day.glb
+clt,clt,CLDTOT,atmos,atm:cmip7-lookup,True,day,ave,atmos.clt.tavg-u-hxy-u.day.glb
+clt,clt,CLDTOT,atmos,atm:cmip7-lookup,True,day,ave,atmos.clt.tavg-u-hxy-lnd.day.glb
+evspsbl,evspsbl,LHFLX,atmos,atm:cmip7-lookup,True,day,ave,atmos.evspsbl.tavg-u-hxy-lnd.day.glb
+hfls,hfls,LHFLX,atmos,atm:cmip7-lookup,False,day,ave,atmos.hfls.tavg-u-hxy-u.day.glb
+hfss,hfss,SHFLX,atmos,atm:cmip7-lookup,False,day,ave,atmos.hfss.tavg-u-hxy-u.day.glb
+hur,hur,"RELHUM, PS, T",atmos,atm:cmip7-lookup,True,day,ave,atmos.hur.tavg-p19-hxy-u.day.glb
+hurs,hurs,RHREFHT,atmos,atm:cmip7-lookup,False,day,ave,atmos.hurs.tavg-h2m-hxy-u.day.glb
+hursmax,hurs,RHREFHTMX,atmos,atm:cmip7-lookup,False,day,max,atmos.hurs.tmax-h2m-hxy-u.day.glb
+hursmin,hurs,RHREFHTMN,atmos,atm:cmip7-lookup,False,day,min,atmos.hurs.tmin-h2m-hxy-u.day.glb
+hus,hus,"Q, PS, T",atmos,atm:cmip7-lookup,True,day,ave,atmos.hus.tavg-p19-hxy-u.day.glb
+huss,huss,QREFHT,atmos,atm:cmip7-lookup,False,day,ave,atmos.huss.tavg-h2m-hxy-u.day.glb
+pfull,pfull,PS,atmos,atm:cmip7-lookup,True,day,ave,atmos.pfull.tavg-al-hxy-u.day.glb
+pr,pr,PRECT,atmos,atm:cmip7-lookup,True,day,ave,atmos.pr.tavg-u-hxy-u.day.glb
+prc,prc,"PRECC, PRECSC",atmos,atm:cmip7-lookup,True,day,ave,atmos.prc.tavg-u-hxy-u.day.glb
+prsn,prsn,"PRECSC,PRECSL",atmos,atm:cmip7-lookup,True,day,ave,atmos.prsn.tavg-u-hxy-u.day.glb
+prw,prw,TMQ,atmos,atm:cmip7-lookup,False,day,ave,atmos.prw.tavg-u-hxy-u.day.glb
+ps,ps,PS,atmos,atm:cmip7-lookup,False,day,ave,atmos.ps.tavg-u-hxy-u.day.glb
+psl,psl,PSL,atmos,atm:cmip7-lookup,False,day,ave,atmos.psl.tavg-u-hxy-u.day.glb
+rlds,rlds,FLDS,atmos,atm:cmip7-lookup,False,day,ave,atmos.rlds.tavg-u-hxy-u.day.glb
+rls,rls,FLNS,atmos,atm:cmip7-lookup,True,day,ave,atmos.rls.tavg-u-hxy-u.day.glb
+rlus,rlus,"FLNS, FLDS",atmos,atm:cmip7-lookup,True,day,ave,atmos.rlus.tavg-u-hxy-u.day.glb
+rlut,rlut,FLUT,atmos,atm:cmip7-lookup,False,day,ave,atmos.rlut.tavg-u-hxy-u.day.glb
+rsds,rsds,FSDS,atmos,atm:cmip7-lookup,False,day,ave,atmos.rsds.tavg-u-hxy-u.day.glb
+rsdt,rsdt,"FSNTOA, FSUTOA",atmos,atm:cmip7-lookup,True,day,ave,atmos.rsdt.tavg-u-hxy-u.day.glb
+rss,rss,FSNS,atmos,atm:cmip7-lookup,False,day,ave,atmos.rss.tavg-u-hxy-u.day.glb
+rsus,rsus,"FSDS, FSNS",atmos,atm:cmip7-lookup,True,day,ave,atmos.rsus.tavg-u-hxy-u.day.glb
+rsut,rsut,FSUTOA,atmos,atm:cmip7-lookup,False,day,ave,atmos.rsut.tavg-u-hxy-u.day.glb
+sfcWind,sfcWind,U10,atmos,atm:cmip7-lookup,False,day,ave,atmos.sfcWind.tavg-h10m-hxy-u.day.glb
+sfcWindmax,sfcWind,WSPDSRFMX,atmos,atm:cmip7-lookup,False,day,max,atmos.sfcWind.tmax-h10m-hxy-u.day.glb
+ta,ta,"T, PS",atmos,atm:cmip7-lookup,True,day,ave,atmos.ta.tavg-p19-hxy-air.day.glb
+ta,ta,"T, PS",atmos,atm:cmip7-lookup,True,day,ave,atmos.ta.tavg-p39-hy-air.day.glb
+ta850,ta,"T, PS",atmos,atm:cmip7-lookup,True,day,ave,atmos.ta.tavg-850hPa-hxy-air.day.glb
+tas,tas,TREFHT,atmos,atm:cmip7-lookup,False,day,ave,atmos.tas.tavg-h2m-hxy-u.day.glb
+tasmax,tas,TREFHTMX,atmos,atm:cmip7-lookup,False,day,max,atmos.tas.tmax-h2m-hxy-u.day.glb
+tasmin,tas,TREFHTMN,atmos,atm:cmip7-lookup,False,day,min,atmos.tas.tmin-h2m-hxy-u.day.glb
+tauu,tauu,TAUX,atmos,atm:cmip7-lookup,False,day,ave,atmos.tauu.tavg-u-hxy-u.day.glb
+tauv,tauv,TAUY,atmos,atm:cmip7-lookup,False,day,ave,atmos.tauv.tavg-u-hxy-u.day.glb
+ts,ts,TS,atmos,atm:cmip7-lookup,False,day,ave,atmos.ts.tavg-u-hxy-u.day.glb
+ua,ua,"U, PS, T",atmos,atm:cmip7-lookup,True,day,ave,atmos.ua.tavg-p19-hxy-air.day.glb
+ua,ua,"U, PS, T",atmos,atm:cmip7-lookup,True,day,ave,atmos.ua.tavg-p39-hy-air.day.glb
+uas,uas,"UBOT, VBOT, U10",atmos,atm:cmip7-lookup,True,day,ave,atmos.uas.tavg-h10m-hxy-u.day.glb
+va,va,"V, PS, T",atmos,atm:cmip7-lookup,True,day,ave,atmos.va.tavg-p19-hxy-air.day.glb
+vas,vas,"VBOT, UBOT, U10",atmos,atm:cmip7-lookup,True,day,ave,atmos.vas.tavg-h10m-hxy-u.day.glb
+wap,wap,"OMEGA, PS, T",atmos,atm:cmip7-lookup,True,day,ave,atmos.wap.tavg-p19-hxy-u.day.glb
+zg,zg,"Z3, PS, T",atmos,atm:cmip7-lookup,True,day,ave,atmos.zg.tavg-p19-hxy-air.day.glb
+zg,zg,"Z3, PS, T",atmos,atm:cmip7-lookup,True,day,ave,atmos.zg.tavg-p39-hy-air.day.glb
+zg500,zg,Z500,atmos,atm:cmip7-lookup,False,day,ave,atmos.zg.tavg-500hPa-hxy-air.day.glb
+areacella,areacella,AREA,atmos,atm:cmip7-lookup,True,fx,unknown,atmos.areacella.ti-u-hxy-u.fx.glb
+sftlf,sftlf,LANDFRAC,atmos,atm:cmip7-lookup,True,fx,unknown,atmos.sftlf.ti-u-hxy-u.fx.glb
+cl,cl,"CLOUD, PS",atmos,atm:cmip7-lookup,True,mon,ave,atmos.cl.tavg-al-hxy-u.mon.glb
+cli,cli,"CLDICE, PS",atmos,atm:cmip7-lookup,False,mon,ave,atmos.cli.tavg-al-hxy-u.mon.glb
+clivi,clivi,TGCLDIWP,atmos,atm:cmip7-lookup,False,mon,ave,atmos.clivi.tavg-u-hxy-u.mon.glb
+clt,clt,CLDTOT,atmos,atm:cmip7-lookup,True,mon,ave,atmos.clt.tavg-u-hxy-u.mon.glb
+clw,clw,"CLDLIQ, PS",atmos,atm:cmip7-lookup,False,mon,ave,atmos.clw.tavg-al-hxy-u.mon.glb
+clwvi,clwvi,TGCLDLWP,atmos,atm:cmip7-lookup,False,mon,ave,atmos.clwvi.tavg-u-hxy-u.mon.glb
+evspsbl,evspsbl,LHFLX,atmos,atm:cmip7-lookup,True,mon,ave,atmos.evspsbl.tavg-u-hxy-u.mon.glb
+hfls,hfls,LHFLX,atmos,atm:cmip7-lookup,False,mon,ave,atmos.hfls.tavg-u-hxy-u.mon.glb
+hfss,hfss,SHFLX,atmos,atm:cmip7-lookup,False,mon,ave,atmos.hfss.tavg-u-hxy-u.mon.glb
+hur,hur,"RELHUM, PS, T",atmos,atm:cmip7-lookup,True,mon,ave,atmos.hur.tavg-p19-hxy-air.mon.glb
+hurs,hurs,RHREFHT,atmos,atm:cmip7-lookup,False,mon,ave,atmos.hurs.tavg-h2m-hxy-u.mon.glb
+hus,hus,"Q, PS, T",atmos,atm:cmip7-lookup,True,mon,ave,atmos.hus.tavg-p19-hxy-u.mon.glb
+huss,huss,QREFHT,atmos,atm:cmip7-lookup,False,mon,ave,atmos.huss.tavg-h2m-hxy-u.mon.glb
+pr,pr,PRECT,atmos,atm:cmip7-lookup,True,mon,ave,atmos.pr.tavg-u-hxy-u.mon.glb
+prc,prc,"PRECC, PRECSC",atmos,atm:cmip7-lookup,True,mon,ave,atmos.prc.tavg-u-hxy-u.mon.glb
+prsn,prsn,"PRECSC,PRECSL",atmos,atm:cmip7-lookup,True,mon,ave,atmos.prsn.tavg-u-hxy-u.mon.glb
+prw,prw,TMQ,atmos,atm:cmip7-lookup,False,mon,ave,atmos.prw.tavg-u-hxy-u.mon.glb
+ps,ps,PS,atmos,atm:cmip7-lookup,False,mon,ave,atmos.ps.tavg-u-hxy-u.mon.glb
+psl,psl,PSL,atmos,atm:cmip7-lookup,False,mon,ave,atmos.psl.tavg-u-hxy-u.mon.glb
+rlds,rlds,FLDS,atmos,atm:cmip7-lookup,False,mon,ave,atmos.rlds.tavg-u-hxy-u.mon.glb
+rldscs,rldscs,FLDSC,atmos,atm:cmip7-lookup,False,mon,ave,atmos.rldscs.tavg-u-hxy-u.mon.glb
+rls,rls,FLNS,atmos,atm:cmip7-lookup,True,mon,ave,atmos.rls.tavg-u-hxy-u.mon.glb
+rlus,rlus,"FLNS, FLDS",atmos,atm:cmip7-lookup,True,mon,ave,atmos.rlus.tavg-u-hxy-u.mon.glb
+rlut,rlut,FLUT,atmos,atm:cmip7-lookup,False,mon,ave,atmos.rlut.tavg-u-hxy-u.mon.glb
+rlutcs,rlutcs,FLUTC,atmos,atm:cmip7-lookup,False,mon,ave,atmos.rlutcs.tavg-u-hxy-u.mon.glb
+rsds,rsds,FSDS,atmos,atm:cmip7-lookup,False,mon,ave,atmos.rsds.tavg-u-hxy-u.mon.glb
+rsdscs,rsdscs,FSDSC,atmos,atm:cmip7-lookup,False,mon,ave,atmos.rsdscs.tavg-u-hxy-u.mon.glb
+rsdt,rsdt,"FSNTOA, FSUTOA",atmos,atm:cmip7-lookup,True,mon,ave,atmos.rsdt.tavg-u-hxy-u.mon.glb
+rss,rss,FSNS,atmos,atm:cmip7-lookup,False,mon,ave,atmos.rss.tavg-u-hxy-u.mon.glb
+rsus,rsus,"FSDS, FSNS",atmos,atm:cmip7-lookup,True,mon,ave,atmos.rsus.tavg-u-hxy-u.mon.glb
+rsuscs,rsuscs,"FSDSC, FSNSC",atmos,atm:cmip7-lookup,True,mon,ave,atmos.rsuscs.tavg-u-hxy-u.mon.glb
+rsut,rsut,FSUTOA,atmos,atm:cmip7-lookup,False,mon,ave,atmos.rsut.tavg-u-hxy-u.mon.glb
+rsutcs,rsutcs,"FSUTOA, SWCF",atmos,atm:cmip7-lookup,True,mon,ave,atmos.rsutcs.tavg-u-hxy-u.mon.glb
+sfcWind,sfcWind,U10,atmos,atm:cmip7-lookup,False,mon,ave,atmos.sfcWind.tavg-h10m-hxy-u.mon.glb
+sfcWindmax,sfcWind,WSPDSRFMX,atmos,atm:cmip7-lookup,False,mon,max,atmos.sfcWind.tmaxavg-h10m-hxy-u.mon.glb
+ta,ta,"T, PS",atmos,atm:cmip7-lookup,True,mon,ave,atmos.ta.tavg-p19-hxy-air.mon.glb
+ta,ta,"T, PS",atmos,atm:cmip7-lookup,True,mon,ave,atmos.ta.tavg-p39-hy-air.mon.glb
+tas,tas,TREFHT,atmos,atm:cmip7-lookup,False,mon,ave,atmos.tas.tavg-h2m-hxy-u.mon.glb
+tasmax,tas,TREFHTMX,atmos,atm:cmip7-lookup,False,mon,max,atmos.tas.tmaxavg-h2m-hxy-u.mon.glb
+tasmin,tas,TREFHTMN,atmos,atm:cmip7-lookup,False,mon,min,atmos.tas.tminavg-h2m-hxy-u.mon.glb
+tauu,tauu,TAUX,atmos,atm:cmip7-lookup,False,mon,ave,atmos.tauu.tavg-u-hxy-u.mon.glb
+tauv,tauv,TAUY,atmos,atm:cmip7-lookup,False,mon,ave,atmos.tauv.tavg-u-hxy-u.mon.glb
+ts,ts,TS,atmos,atm:cmip7-lookup,False,mon,ave,atmos.ts.tavg-u-hxy-u.mon.glb
+ua,ua,"U, PS, T",atmos,atm:cmip7-lookup,True,mon,ave,atmos.ua.tavg-p19-hxy-air.mon.glb
+ua,ua,"U, PS, T",atmos,atm:cmip7-lookup,True,mon,ave,atmos.ua.tavg-p39-hy-air.mon.glb
+uas,uas,"UBOT, VBOT, U10",atmos,atm:cmip7-lookup,True,mon,ave,atmos.uas.tavg-h10m-hxy-u.mon.glb
+va,va,"V, PS, T",atmos,atm:cmip7-lookup,True,mon,ave,atmos.va.tavg-p19-hxy-air.mon.glb
+vas,vas,"VBOT, UBOT, U10",atmos,atm:cmip7-lookup,True,mon,ave,atmos.vas.tavg-h10m-hxy-u.mon.glb
+wap,wap,"OMEGA, PS, T",atmos,atm:cmip7-lookup,True,mon,ave,atmos.wap.tavg-p19-hxy-air.mon.glb
+zg,zg,"Z3, PS, T",atmos,atm:cmip7-lookup,True,mon,ave,atmos.zg.tavg-p19-hxy-air.mon.glb
+zg,zg,"Z3, PS, T",atmos,atm:cmip7-lookup,True,mon,ave,atmos.zg.tavg-p39-hy-air.mon.glb
+evspsblsoi,evspsblsoi,QSOIL,land,lnd:cmip7-lookup,False,3hr,ave,land.evspsblsoi.tavg-u-hxy-u.3hr.glb
+evspsblveg,evspsblveg,QVEGE,land,lnd:cmip7-lookup,False,3hr,ave,land.evspsblveg.tavg-u-hxy-u.3hr.glb
+mrro,mrro,QRUNOFF,land,lnd:cmip7-lookup,False,3hr,ave,land.mrro.tavg-u-hxy-lnd.3hr.glb
+mrros,mrros,QOVER,land,lnd:cmip7-lookup,False,3hr,ave,land.mrros.tavg-u-hxy-lnd.3hr.glb
+mrsos,mrsol,SOILWATER_10CM,land,lnd:cmip7-lookup,False,3hr,inst,land.mrsol.tpt-d10cm-hxy-lnd.3hr.glb
+tran,tran,QVEGT,land,lnd:cmip7-lookup,False,3hr,ave,land.tran.tavg-u-hxy-u.3hr.glb
+tslsi,tslsi,TG,land,lnd:cmip7-lookup,False,3hr,inst,land.tslsi.tpt-u-hxy-lsi.3hr.glb
+evspsblsoi,evspsblsoi,QSOIL,land,lnd:cmip7-lookup,False,day,ave,land.evspsblsoi.tavg-u-hxy-u.day.glb
+evspsblveg,evspsblveg,QVEGE,land,lnd:cmip7-lookup,False,day,ave,land.evspsblveg.tavg-u-hxy-u.day.glb
+mrro,mrro,QRUNOFF,land,lnd:cmip7-lookup,False,day,ave,land.mrro.tavg-u-hxy-lnd.day.glb
+mrros,mrros,QOVER,land,lnd:cmip7-lookup,False,day,ave,land.mrros.tavg-u-hxy-lnd.day.glb
+mrsfl,mrsfl,SOILICE,land,lnd:cmip7-lookup,False,day,ave,land.mrsfl.tavg-sl-hxy-lnd.day.glb
+mrsll,mrsll,SOILLIQ,land,lnd:cmip7-lookup,False,day,ave,land.mrsll.tavg-sl-hxy-lnd.day.glb
+mrso,mrso,"SOILLIQ, SOILICE",land,lnd:cmip7-lookup,True,day,ave,land.mrso.tavg-u-hxy-lnd.day.glb
+mrsol,mrsol,"SOILLIQ, SOILICE",land,lnd:cmip7-lookup,True,day,ave,land.mrsol.tavg-sl-hxy-lnd.day.glb
+mrsos,mrsol,SOILWATER_10CM,land,lnd:cmip7-lookup,False,day,ave,land.mrsol.tavg-d10cm-hxy-lnd.day.glb
+tsl,tsl,TSOI,land,lnd:cmip7-lookup,False,day,ave,land.tsl.tavg-sl-hxy-lnd.day.glb
+orog,orog,topo,land,lnd:cmip7-lookup,True,fx,unknown,land.orog.ti-u-hxy-u.fx.glb
+sftgif,sftgif,cols1d_wtgcell,land,lnd:cmip7-lookup,True,fx,unknown,land.sftgif.ti-u-hxy-u.fx.glb
+slthick,slthick,DZSOI,land,lnd:cmip7-lookup,True,fx,unknown,land.slthick.ti-sl-hxy-lnd.fx.glb
+baresoilFrac,baresoilFrac,pfts1d_wtgcell,land,lnd:cmip7-lookup,True,mon,ave,land.baresoilFrac.tavg-u-hxy-u.mon.glb
+burntFractionAll,burntFractionAll,FAREA_BURNED,land,lnd:cmip7-lookup,True,mon,ave,land.burntFractionAll.tavg-u-hxy-u.mon.glb
+cLand,cLand,TOTCOLC,land,lnd:cmip7-lookup,True,mon,ave,land.cLand.tavg-u-hxy-lnd.mon.glb
+cLitter,cLitter,TOTLITC,land,lnd:cmip7-lookup,True,mon,ave,land.cLitter.tavg-u-hxy-lnd.mon.glb
+cProduct,cProduct,TOTPRODC,land,lnd:cmip7-lookup,True,mon,ave,land.cProduct.tavg-u-hxy-lnd.mon.glb
+cSoil,cSoil,SOILC,land,lnd:cmip7-lookup,True,mon,ave,land.cSoil.tavg-u-hxy-lnd.mon.glb
+cSoilAbove1m,cSoil,"SOIL1C_1m, SOIL2C_1m, SOIL3C_1m",land,lnd:cmip7-lookup,True,mon,ave,land.cSoil.tavg-d100cm-hxy-lnd.mon.glb
+cVeg,cVeg,TOTVEGC,land,lnd:cmip7-lookup,True,mon,ave,land.cVeg.tavg-u-hxy-lnd.mon.glb
+cropFrac,cropFrac,pfts1d_wtgcell,land,lnd:cmip7-lookup,True,mon,ave,land.cropFrac.tavg-u-hxy-u.mon.glb
+cropFracC3,cropFracC3,pfts1d_wtgcell,land,lnd:cmip7-lookup,True,mon,ave,land.cropFracC3.tavg-u-hxy-u.mon.glb
+evspsblsoi,evspsblsoi,QSOIL,land,lnd:cmip7-lookup,False,mon,ave,land.evspsblsoi.tavg-u-hxy-lnd.mon.glb
+evspsblveg,evspsblveg,QVEGE,land,lnd:cmip7-lookup,False,mon,ave,land.evspsblveg.tavg-u-hxy-lnd.mon.glb
+fBNF,fBNF,NFIX_TO_SMINN,land,lnd:cmip7-lookup,True,mon,ave,land.fBNF.tavg-u-hxy-lnd.mon.glb
+fDeforestToProduct,fDeforestToProduct,"DWT_PROD100C_GAIN, DWT_PROD10C_GAIN",land,lnd:cmip7-lookup,True,mon,ave,land.fDeforestToProduct.tavg-u-hxy-lnd.mon.glb
+fFire,fFire,TOTFIRE,land,lnd:cmip7-lookup,True,mon,ave,land.fFire.tavg-u-hxy-lnd.mon.glb
+fHarvestToProduct,fHarvestToProduct,WOOD_HARVESTC,land,lnd:cmip7-lookup,True,mon,ave,land.fHarvestToProduct.tavg-u-hxy-lnd.mon.glb
+fLitterSoil,fLitterSoil,"LITR1C_TO_SOIL1C, LITR2C_TO_SOIL1C, LITR3C_TO_SOIL2C",land,lnd:cmip7-lookup,True,mon,ave,land.fLitterSoil.tavg-u-hxy-lnd.mon.glb
+fLuc,fLuc,LAND_USE_FLUX,land,lnd:cmip7-lookup,True,mon,ave,land.fLuc.tavg-u-hxy-lnd.mon.glb
+fLulccAtmLut,fLulccAtmLut,"DWT_CONV_CFLUX, cols1d",land,lnd:cmip7-lookup,True,mon,ave,land.fLulccAtmLut.tavg-u-hxy-multi.mon.glb
+fN2O,fN2O,"F_N2O_NIT, F_N2O_DENIT",land,lnd:cmip7-lookup,True,mon,ave,land.fN2O.tavg-u-hxy-lnd.mon.glb
+fNLandToOcean,fNLandToOcean,SMIN_NO3_RUNOFF,land,lnd:cmip7-lookup,True,mon,ave,land.fNLandToOcean.tavg-u-hxy-lnd.mon.glb
+fNLitterSoil,fNLitterSoil,"LITR1N_TO_SOIL1N, LITR2N_TO_SOIL1N, LITR3N_TO_SOIL2N",land,lnd:cmip7-lookup,True,mon,ave,land.fNLitterSoil.tavg-u-hxy-lnd.mon.glb
+fNProduct,fNProduct,"DWT_PROD10N_GAIN, DWT_PROD100N_GAIN",land,lnd:cmip7-lookup,True,mon,ave,land.fNProduct.tavg-u-hxy-lnd.mon.glb
+fNdep,fNdep,NDEP_TO_SMINN,land,lnd:cmip7-lookup,True,mon,ave,land.fNdep.tavg-u-hxy-lnd.mon.glb
+fNleach,fNleach,"SMIN_NO3_LEACHED, SOM_N_LEACHED",land,lnd:cmip7-lookup,True,mon,ave,land.fNleach.tavg-u-hxy-lnd.mon.glb
+fNnetmin,fNnetmin,NET_NMIN,land,lnd:cmip7-lookup,True,mon,ave,land.fNnetmin.tavg-u-hxy-lnd.mon.glb
+fNup,fNup,SMINN_TO_PLANT,land,lnd:cmip7-lookup,True,mon,ave,land.fNup.tavg-u-hxy-lnd.mon.glb
+fProductDecomp,fProductDecomp,PRODUCT_CLOSS,land,lnd:cmip7-lookup,True,mon,ave,land.fProductDecomp.tavg-u-hxy-lnd.mon.glb
+fVegLitter,fVegLitter,LITFALL,land,lnd:cmip7-lookup,True,mon,ave,land.fVegLitter.tavg-u-hxy-lnd.mon.glb
+fracLut,fracLut,cols1d_wtgcell,land,lnd:cmip7-lookup,True,mon,inst,land.fracLut.tpt-u-hxy-u.mon.glb
+gpp,gpp,GPP,land,lnd:cmip7-lookup,True,mon,ave,land.gpp.tavg-u-hxy-lnd.mon.glb
+gppLut,gppLut,"GPP, pfts1d",land,lnd:cmip7-lookup,True,mon,ave,land.gppLut.tavg-u-hxy-multi.mon.glb
+grassFrac,grassFrac,pfts1d_wtgcell,land,lnd:cmip7-lookup,True,mon,ave,land.grassFrac.tavg-u-hxy-u.mon.glb
+grassFracC3,grassFracC3,pfts1d_wtgcell,land,lnd:cmip7-lookup,True,mon,ave,land.grassFracC3.tavg-u-hxy-u.mon.glb
+grassFracC4,grassFracC4,pfts1d_wtgcell,land,lnd:cmip7-lookup,True,mon,ave,land.grassFracC4.tavg-u-hxy-u.mon.glb
+hflsLut,hflsLut,"EFLX_LH_TOT, pfts1d",land,lnd:cmip7-lookup,True,mon,ave,land.hflsLut.tavg-u-hxy-multi.mon.glb
+hfssLut,hfssLut,"FSH_R, FSH_U",land,lnd:cmip7-lookup,True,mon,ave,land.hfssLut.tavg-u-hxy-multi.mon.glb
+lai,lai,TLAI,land,lnd:cmip7-lookup,False,mon,ave,land.lai.tavg-u-hxy-lnd.mon.glb
+laiLut,laiLut,"TLAI, pfts1d",land,lnd:cmip7-lookup,True,mon,ave,land.laiLut.tavg-u-hxy-multi.mon.glb
+landCoverFrac,landCoverFrac,"pfts1d_wtgcell, land1d_wtgcell, landfrac",land,lnd:cmip7-lookup,True,mon,ave,land.landCoverFrac.tavg-u-hxy-u.mon.glb
+mrro,mrro,QRUNOFF,land,lnd:cmip7-lookup,False,mon,ave,land.mrro.tavg-u-hxy-lnd.mon.glb
+mrros,mrros,QOVER,land,lnd:cmip7-lookup,False,mon,ave,land.mrros.tavg-u-hxy-lnd.mon.glb
+mrsfl,mrsfl,SOILICE,land,lnd:cmip7-lookup,False,mon,ave,land.mrsfl.tavg-sl-hxy-lnd.mon.glb
+mrsll,mrsll,SOILLIQ,land,lnd:cmip7-lookup,False,mon,ave,land.mrsll.tavg-sl-hxy-lnd.mon.glb
+mrso,mrso,"SOILLIQ, SOILICE",land,lnd:cmip7-lookup,True,mon,ave,land.mrso.tavg-u-hxy-lnd.mon.glb
+mrsol,mrsol,"SOILLIQ, SOILICE",land,lnd:cmip7-lookup,True,mon,ave,land.mrsol.tavg-sl-hxy-lnd.mon.glb
+mrsos,mrsol,SOILWATER_10CM,land,lnd:cmip7-lookup,False,mon,ave,land.mrsol.tavg-d10cm-hxy-lnd.mon.glb
+mrsosLut,mrsolLut,"SOILWATER_10CM, cols1d",land,lnd:cmip7-lookup,True,mon,ave,land.mrsolLut.tavg-d10cm-hxy-multi.mon.glb
+nLand,nLand,TOTCOLN,land,lnd:cmip7-lookup,True,mon,ave,land.nLand.tavg-u-hxy-lnd.mon.glb
+nLitter,nLitter,TOTLITN,land,lnd:cmip7-lookup,True,mon,ave,land.nLitter.tavg-u-hxy-lnd.mon.glb
+nMineral,nMineral,SMINN,land,lnd:cmip7-lookup,True,mon,ave,land.nMineral.tavg-u-hxy-lnd.mon.glb
+nProduct,nProduct,TOTPRODN,land,lnd:cmip7-lookup,True,mon,ave,land.nProduct.tavg-u-hxy-lnd.mon.glb
+nSoil,nSoil,"SOIL1N, SOIL2N, SOIL3N",land,lnd:cmip7-lookup,True,mon,ave,land.nSoil.tavg-u-hxy-lnd.mon.glb
+nVeg,nVeg,TOTVEGN,land,lnd:cmip7-lookup,True,mon,ave,land.nVeg.tavg-u-hxy-lnd.mon.glb
+nbp,nbp,NBP,land,lnd:cmip7-lookup,True,mon,ave,land.nbp.tavg-u-hxy-lnd.mon.glb
+nep,nep,NEP,land,lnd:cmip7-lookup,True,mon,ave,land.nep.tavg-u-hxy-lnd.mon.glb
+netAtmosLandCO2Flux,netAtmosLandCO2Flux,NEE,land,lnd:cmip7-lookup,True,mon,ave,land.netAtmosLandCO2Flux.tavg-u-hxy-lnd.mon.glb
+npp,npp,NPP,land,lnd:cmip7-lookup,True,mon,ave,land.npp.tavg-u-hxy-lnd.mon.glb
+nppLut,nppLut,"NPP, pfts1d",land,lnd:cmip7-lookup,True,mon,ave,land.nppLut.tavg-u-hxy-multi.mon.glb
+ra,ra,AR,land,lnd:cmip7-lookup,True,mon,ave,land.ra.tavg-u-hxy-lnd.mon.glb
+raLut,raLut,"AR, pfts1d",land,lnd:cmip7-lookup,True,mon,ave,land.raLut.tavg-u-hxy-multi.mon.glb
+residualFrac,residualFrac,pfts1d_wtgcell,land,lnd:cmip7-lookup,True,mon,ave,land.residualFrac.tavg-u-hxy-u.mon.glb
+rh,rh,HR,land,lnd:cmip7-lookup,True,mon,ave,land.rh.tavg-u-hxy-lnd.mon.glb
+rhLut,rhLut,"HR, cols1d",land,lnd:cmip7-lookup,True,mon,ave,land.rhLut.tavg-u-hxy-multi.mon.glb
+shrubFrac,shrubFrac,pfts1d_wtgcell,land,lnd:cmip7-lookup,True,mon,ave,land.shrubFrac.tavg-u-hxy-u.mon.glb
+sweLut,sweLut,"H2OSNO, cols1d",land,lnd:cmip7-lookup,True,mon,ave,land.sweLut.tavg-u-hxy-multi.mon.glb
+tasLut,tasLut,"TSA, pfts1d",land,lnd:cmip7-lookup,True,mon,ave,land.tasLut.tavg-h2m-hxy-multi.mon.glb
+tran,tran,QVEGT,land,lnd:cmip7-lookup,False,mon,ave,land.tran.tavg-u-hxy-lnd.mon.glb
+treeFrac,treeFrac,pfts1d_wtgcell,land,lnd:cmip7-lookup,True,mon,ave,land.treeFrac.tavg-u-hxy-u.mon.glb
+treeFracBdlDcd,treeFracBdlDcd,pfts1d_wtgcell,land,lnd:cmip7-lookup,True,mon,ave,land.treeFracBdlDcd.tavg-u-hxy-u.mon.glb
+treeFracBdlEvg,treeFracBdlEvg,pfts1d_wtgcell,land,lnd:cmip7-lookup,True,mon,ave,land.treeFracBdlEvg.tavg-u-hxy-u.mon.glb
+treeFracNdlDcd,treeFracNdlDcd,pfts1d_wtgcell,land,lnd:cmip7-lookup,True,mon,ave,land.treeFracNdlDcd.tavg-u-hxy-u.mon.glb
+treeFracNdlEvg,treeFracNdlEvg,pfts1d_wtgcell,land,lnd:cmip7-lookup,True,mon,ave,land.treeFracNdlEvg.tavg-u-hxy-u.mon.glb
+tsl,tsl,TSOI,land,lnd:cmip7-lookup,False,mon,ave,land.tsl.tavg-sl-hxy-lnd.mon.glb
+tslsiLut,tsLut,"TG, cols1d",land,lnd:cmip7-lookup,True,mon,ave,land.tsLut.tavg-u-hxy-multi.mon.glb
+vegFrac,vegFrac,pfts1d_wtgcell,land,lnd:cmip7-lookup,True,mon,ave,land.vegFrac.tavg-u-hxy-u.mon.glb
+vegHeight,vegHeight,HTOP,land,lnd:cmip7-lookup,False,mon,ave,land.vegHeight.tavg-u-hxy-veg.mon.glb
+baresoilFrac,baresoilFrac,pfts1d_wtgcell,land,lnd:cmip7-lookup,True,yr,ave,land.baresoilFrac.tavg-u-hxy-u.yr.glb
+cLitterLut,cLitterLut,"TOTLITC, cols1d",land,lnd:cmip7-lookup,True,yr,inst,land.cLitterLut.tpt-u-hxy-multi.yr.glb
+cProductLut,cProductLut,"TOTPRODC, cols1d",land,lnd:cmip7-lookup,True,yr,inst,land.cProductLut.tpt-u-hxy-multi.yr.glb
+cSoilLut,cSoilLut,"SOILC, cols1d",land,lnd:cmip7-lookup,True,yr,inst,land.cSoilLut.tpt-u-hxy-multi.yr.glb
+cVegLut,cVegLut,"TOTVEGC, pfts1d",land,lnd:cmip7-lookup,True,yr,inst,land.cVegLut.tpt-u-hxy-multi.yr.glb
+cropFrac,cropFrac,pfts1d_wtgcell,land,lnd:cmip7-lookup,True,yr,ave,land.cropFrac.tavg-u-hxy-u.yr.glb
+fracLut,fracLut,cols1d_wtgcell,land,lnd:cmip7-lookup,True,yr,inst,land.fracLut.tpt-u-hxy-u.yr.glb
+grassFrac,grassFrac,pfts1d_wtgcell,land,lnd:cmip7-lookup,True,yr,ave,land.grassFrac.tavg-u-hxy-u.yr.glb
+residualFrac,residualFrac,pfts1d_wtgcell,land,lnd:cmip7-lookup,True,yr,ave,land.residualFrac.tavg-u-hxy-u.yr.glb
+shrubFrac,shrubFrac,pfts1d_wtgcell,land,lnd:cmip7-lookup,True,yr,ave,land.shrubFrac.tavg-u-hxy-u.yr.glb
+treeFrac,treeFrac,pfts1d_wtgcell,land,lnd:cmip7-lookup,True,yr,ave,land.treeFrac.tavg-u-hxy-u.yr.glb
+vegFrac,vegFrac,pfts1d_wtgcell,land,lnd:cmip7-lookup,True,yr,ave,land.vegFrac.tavg-u-hxy-u.yr.glb
+hfdsn,hfdsn,"FGR, FSNO",landIce,lnd:cmip7-lookup,True,day,ave,landIce.hfdsn.tavg-u-hxy-lnd.day.glb
+sbl,sbl,QFLX_SUB_SNOW,landIce,lnd:cmip7-lookup,False,day,ave,landIce.sbl.tavg-u-hxy-u.day.glb
+snc,snc,FSNO,landIce,lnd:cmip7-lookup,True,day,ave,landIce.snc.tavg-u-hxy-lnd.day.glb
+snd,snd,SNOWDP,landIce,lnd:cmip7-lookup,False,day,ave,landIce.snd.tavg-u-hxy-lnd.day.glb
+snm,snm,QSNOMELT,landIce,lnd:cmip7-lookup,False,day,ave,landIce.snm.tavg-u-hxy-lnd.day.glb
+tsn,tsn,SNOTTOPL,landIce,lnd:cmip7-lookup,False,day,ave,landIce.tsn.tavg-u-hxy-lnd.day.glb
+hfdsn,hfdsn,"FGR, FSNO",landIce,lnd:cmip7-lookup,True,mon,ave,landIce.hfdsn.tavg-u-hxy-lnd.mon.glb
+mrfso,mrfso,SOILICE,landIce,lnd:cmip7-lookup,True,mon,ave,landIce.mrfso.tavg-u-hxy-lnd.mon.glb
+sbl,sbl,QFLX_SUB_SNOW,landIce,lnd:cmip7-lookup,False,mon,ave,landIce.sbl.tavg-u-hxy-lnd.mon.glb
+sbl,sbl,QFLX_SUB_SNOW,landIce,lnd:cmip7-lookup,False,mon,ave,landIce.sbl.tavg-u-hxy-u.mon.glb
+snc,snc,FSNO,landIce,lnd:cmip7-lookup,True,mon,ave,landIce.snc.tavg-u-hxy-lnd.mon.glb
+snd,snd,SNOWDP,landIce,lnd:cmip7-lookup,False,mon,ave,landIce.snd.tavg-u-hxy-lnd.mon.glb
+snm,snm,QSNOMELT,landIce,lnd:cmip7-lookup,False,mon,ave,landIce.snm.tavg-u-hxy-lnd.mon.glb
+tsn,tsn,SNOTTOPL,landIce,lnd:cmip7-lookup,False,mon,ave,landIce.tsn.tavg-u-hxy-lnd.mon.glb
+friver,friver,friver,ocean,ocn:cmip7-lookup,False,3hr,ave,ocean.friver.tavg-u-hxy-sea.3hr.glb
+hfds,hfds,hfds,ocean,ocn:cmip7-lookup,False,3hr,ave,ocean.hfds.tavg-u-hxy-sea.3hr.glb
+rsntds,rsntds,rsntds,ocean,ocn:cmip7-lookup,False,3hr,ave,ocean.rsntds.tavg-u-hxy-sea.3hr.glb
+sfdsi,sfdsi,fsalt_nemo,ocean,ice:cmip7-lookup*,True,3hr,ave,ocean.sfdsi.tavg-u-hxy-sea.3hr.glb
+tauuo,tauuo,tauuo,ocean,ocn:cmip7-lookup,False,3hr,ave,ocean.tauuo.tavg-u-hxy-sea.3hr.glb
+tauvo,tauvo,tauvo,ocean,ocn:cmip7-lookup,False,3hr,ave,ocean.tauvo.tavg-u-hxy-sea.3hr.glb
+tos,tos,tos,ocean,ocn:cmip7-lookup,False,3hr,inst,ocean.tos.tpt-u-hxy-sea.3hr.glb
+wfo,wfo,wfo,ocean,ocn:cmip7-lookup,False,3hr,ave,ocean.wfo.tavg-u-hxy-sea.3hr.glb
+mlotst,mlotst,mlotst,ocean,ocn:cmip7-lookup,False,day,ave,ocean.mlotst.tavg-u-hxy-sea.day.glb
+so,so,so,ocean,ocn:cmip7-lookup,False,day,ave,ocean.so.tavg-ol-hxy-sea.day.glb
+sos,sos,sos,ocean,ocn:cmip7-lookup,False,day,ave,ocean.sos.tavg-u-hxy-sea.day.glb
+t20d,t20d,t20d,ocean,ocn:cmip7-lookup,False,day,ave,ocean.t20d.tavg-u-hxy-sea.day.glb
+tos,tos,tos,ocean,ocn:cmip7-lookup,False,day,ave,ocean.tos.tavg-u-hxy-sea.day.glb
+tossq,tossq,tossq,ocean,ocn:cmip7-lookup,False,day,ave,ocean.tossq.tavg-u-hxy-sea.day.glb
+wo,wo,wo,ocean,ocn:cmip7-lookup,False,day,ave,ocean.wo.tavg-ol-hxy-sea.day.glb
+zos,zos,zos,ocean,ocn:cmip7-lookup,False,day,ave,ocean.zos.tavg-u-hxy-sea.day.glb
+masscello,masscello,deptht,ocean,ocn:cmip7-lookup,True,dec,ave,ocean.masscello.tavg-ol-hxy-sea.dec.glb
+masso,masso,masso,ocean,ocn:cmip7-lookup,False,dec,ave,ocean.masso.tavg-u-hm-sea.dec.glb
+so,so,so,ocean,ocn:cmip7-lookup,False,dec,ave,ocean.so.tavg-ol-hxy-sea.dec.glb
+tauuo,tauuo,tauuo,ocean,ocn:cmip7-lookup,False,dec,ave,ocean.tauuo.tavg-u-hxy-sea.dec.glb
+tauvo,tauvo,tauvo,ocean,ocn:cmip7-lookup,False,dec,ave,ocean.tauvo.tavg-u-hxy-sea.dec.glb
+thetao,thetao,thetao,ocean,ocn:cmip7-lookup,False,dec,ave,ocean.thetao.tavg-ol-hxy-sea.dec.glb
+thkcello,thkcello,deptht,ocean,ocn:cmip7-lookup,True,dec,ave,ocean.thkcello.tavg-ol-hxy-sea.dec.glb
+volcello,volcello,deptht,ocean,ocn:cmip7-lookup,True,dec,ave,ocean.volcello.tavg-ol-hxy-sea.dec.glb
+volo,volo,volo,ocean,ocn:cmip7-lookup,False,dec,ave,ocean.volo.tavg-u-hm-sea.dec.glb
+areacello,areacello,deptht,ocean,ocn:cmip7-lookup,True,fx,unknown,ocean.areacello.ti-u-hxy-u.fx.glb
+basin,basin,deptht,ocean,ocn:cmip7-lookup,True,fx,unknown,ocean.basin.ti-u-hxy-u.fx.glb
+deptho,deptho,deptht,ocean,ocn:cmip7-lookup,True,fx,unknown,ocean.deptho.ti-u-hxy-sea.fx.glb
+hfgeou,hfgeou,hfgeou,ocean,ocn:cmip7-lookup,True,fx,unknown,ocean.hfgeou.ti-u-hxy-sea.fx.glb
+masscello,masscello,deptht,ocean,ocn:cmip7-lookup,True,fx,unknown,ocean.masscello.ti-ol-hxy-sea.fx.glb
+sftof,sftof,deptht,ocean,ocn:cmip7-lookup,True,fx,unknown,ocean.sftof.ti-u-hxy-u.fx.glb
+thkcello,thkcello,deptht,ocean,ocn:cmip7-lookup,True,fx,unknown,ocean.thkcello.ti-ol-hxy-sea.fx.glb
+volcello,volcello,deptht,ocean,ocn:cmip7-lookup,True,fx,unknown,ocean.volcello.ti-ol-hxy-sea.fx.glb
+agessc,agessc,agessc,ocean,ocn:cmip7-lookup,False,mon,ave,ocean.agessc.tavg-ol-hxy-sea.mon.glb
+friver,friver,friver,ocean,ocn:cmip7-lookup,False,mon,ave,ocean.friver.tavg-u-hxy-sea.mon.glb
+hfbasin,hfbasin,hfbasin,ocean,ocn:cmip7-lookup,True,mon,ave,ocean.hfbasin.tavg-u-hyb-sea.mon.glb
+hfbasinpadv,hfbasinpadv,hfbasinpadv,ocean,ocn:cmip7-lookup,True,mon,ave,ocean.hfbasinpadv.tavg-u-hyb-sea.mon.glb
+hfbasinpmadv,hfbasinpmadv,hfbasinpmadv,ocean,ocn:cmip7-lookup,True,mon,ave,ocean.hfbasinpmadv.tavg-u-hyb-sea.mon.glb
+hfbasinpmdiff,hfbasinpmdiff,hfbasinpmdiff,ocean,ocn:cmip7-lookup,True,mon,ave,ocean.hfbasinpmdiff.tavg-u-hyb-sea.mon.glb
+hfds,hfds,hfds,ocean,ocn:cmip7-lookup,False,mon,ave,ocean.hfds.tavg-u-hxy-sea.mon.glb
+masscello,masscello,deptht,ocean,ocn:cmip7-lookup,True,mon,ave,ocean.masscello.tavg-ol-hxy-sea.mon.glb
+masso,masso,masso,ocean,ocn:cmip7-lookup,False,mon,ave,ocean.masso.tavg-u-hm-sea.mon.glb
+mlotst,mlotst,mlotst,ocean,ocn:cmip7-lookup,False,mon,ave,ocean.mlotst.tavg-u-hxy-sea.mon.glb
+mlotstmax,mlotst,mlotstmax,ocean,ocn:cmip7-lookup,False,mon,max,ocean.mlotst.tmax-u-hxy-sea.mon.glb
+mlotstmin,mlotst,mlotstmin,ocean,ocn:cmip7-lookup,False,mon,min,ocean.mlotst.tmin-u-hxy-sea.mon.glb
+msftbarot,msftbarot,msftbarot,ocean,ocn:cmip7-lookup,False,mon,ave,ocean.msftbarot.tavg-u-hxy-sea.mon.glb
+msftyz,msfty,msftyz,ocean,ocn:cmip7-lookup,True,mon,ave,ocean.msfty.tavg-ol-ht-sea.mon.glb
+obvfsq,obvfsq,obvfsq,ocean,ocn:cmip7-lookup,False,mon,ave,ocean.obvfsq.tavg-ol-hxy-sea.mon.glb
+pbo,pbo,pbo,ocean,ocn:cmip7-lookup,False,mon,ave,ocean.pbo.tavg-u-hxy-sea.mon.glb
+sf6,sf6,sf6,ocean,ocn:cmip7-lookup,False,mon,ave,ocean.sf6.tavg-ol-hxy-sea.mon.glb
+so,so,so,ocean,ocn:cmip7-lookup,False,mon,ave,ocean.so.tavg-ol-hxy-sea.mon.glb
+sob,sob,sob,ocean,ocn:cmip7-lookup,False,mon,ave,ocean.sob.tavg-u-hxy-sea.mon.glb
+soga,so,soga,ocean,ocn:cmip7-lookup,False,mon,ave,ocean.so.tavg-u-hm-sea.mon.glb
+sos,sos,sos,ocean,ocn:cmip7-lookup,False,mon,ave,ocean.sos.tavg-u-hxy-sea.mon.glb
+sosga,sos,sosga,ocean,ocn:cmip7-lookup,False,mon,ave,ocean.sos.tavg-u-hm-sea.mon.glb
+t20d,t20d,t20d,ocean,ocn:cmip7-lookup,False,mon,ave,ocean.t20d.tavg-u-hxy-sea.mon.glb
+tauuo,tauuo,tauuo,ocean,ocn:cmip7-lookup,False,mon,ave,ocean.tauuo.tavg-u-hxy-sea.mon.glb
+tauvo,tauvo,tauvo,ocean,ocn:cmip7-lookup,False,mon,ave,ocean.tauvo.tavg-u-hxy-sea.mon.glb
+thetao,thetao,thetao,ocean,ocn:cmip7-lookup,False,mon,ave,ocean.thetao.tavg-ol-hxy-sea.mon.glb
+thetaoga,thetao,thetaoga,ocean,ocn:cmip7-lookup,False,mon,ave,ocean.thetao.tavg-u-hm-sea.mon.glb
+thetaot,thetaot,thetao,ocean,ocn:cmip7-lookup,True,mon,ave,ocean.thetaot.tavg-u-hxy-sea.mon.glb
+thetaot2000,thetao,thetaot2000,ocean,ocn:cmip7-lookup,False,mon,ave,ocean.thetao.tavg-d2000m-hxy-sea.mon.glb
+thetaot300,thetao,thetaot300,ocean,ocn:cmip7-lookup,False,mon,ave,ocean.thetao.tavg-d300m-hxy-sea.mon.glb
+thetaot700,thetao,thetaot700,ocean,ocn:cmip7-lookup,False,mon,ave,ocean.thetao.tavg-d700m-hxy-sea.mon.glb
+thkcello,thkcello,deptht,ocean,ocn:cmip7-lookup,True,mon,ave,ocean.thkcello.tavg-ol-hxy-sea.mon.glb
+tob,tob,tob,ocean,ocn:cmip7-lookup,False,mon,ave,ocean.tob.tavg-u-hxy-sea.mon.glb
+tos,tos,tos,ocean,ocn:cmip7-lookup,False,mon,ave,ocean.tos.tavg-u-hxy-sea.mon.glb
+tosga,tos,tosga,ocean,ocn:cmip7-lookup,False,mon,ave,ocean.tos.tavg-u-hm-sea.mon.glb
+umo,umo,umo,ocean,ocn:cmip7-lookup,False,mon,ave,ocean.umo.tavg-ol-hxy-sea.mon.glb
+uo,uo,uo,ocean,ocn:cmip7-lookup,False,mon,ave,ocean.uo.tavg-ol-hxy-sea.mon.glb
+vmo,vmo,vmo,ocean,ocn:cmip7-lookup,False,mon,ave,ocean.vmo.tavg-ol-hxy-sea.mon.glb
+vo,vo,vo,ocean,ocn:cmip7-lookup,False,mon,ave,ocean.vo.tavg-ol-hxy-sea.mon.glb
+volcello,volcello,deptht,ocean,ocn:cmip7-lookup,True,mon,ave,ocean.volcello.tavg-ol-hxy-sea.mon.glb
+volo,volo,volo,ocean,ocn:cmip7-lookup,False,mon,ave,ocean.volo.tavg-u-hm-sea.mon.glb
+wfo,wfo,wfo,ocean,ocn:cmip7-lookup,False,mon,ave,ocean.wfo.tavg-u-hxy-sea.mon.glb
+wmo,wmo,wmo,ocean,ocn:cmip7-lookup,True,mon,ave,ocean.wmo.tavg-ol-hxy-sea.mon.glb
+wo,wo,wo,ocean,ocn:cmip7-lookup,False,mon,ave,ocean.wo.tavg-ol-hxy-sea.mon.glb
+zos,zos,zos,ocean,ocn:cmip7-lookup,False,mon,ave,ocean.zos.tavg-u-hxy-sea.mon.glb
+zostoga,zostoga,zostoga,ocean,ocn:cmip7-lookup,False,mon,ave,ocean.zostoga.tavg-u-hm-sea.mon.glb
+volcello,volcello,deptht,ocean,ocn:cmip7-lookup,True,yr,ave,ocean.volcello.tavg-ol-hxy-sea.yr.glb
+chlos,chl,chl,ocnBgchem,ocnbgc:cmip7-lookup,True,day,ave,ocnBgchem.chl.tavg-ols-hxy-sea.day.glb
+intpp,intpp,pp,ocnBgchem,ocnbgc:cmip7-lookup,True,day,ave,ocnBgchem.intpp.tavg-u-hxy-sea.day.glb
+o2os,o2,o2,ocnBgchem,ocnbgc:cmip7-lookup,True,day,ave,ocnBgchem.o2.tavg-ols-hxy-sea.day.glb
+phos,ph,ph,ocnBgchem,ocnbgc:cmip7-lookup,True,day,ave,ocnBgchem.ph.tavg-ols-hxy-sea.day.glb
+zmeso,zmeso,zmeso,ocnBgchem,ocnbgc:cmip7-lookup,False,day,ave,ocnBgchem.zmeso.tavg-ol-hxy-sea.day.glb
+zmicro,zmicro,zmicro,ocnBgchem,ocnbgc:cmip7-lookup,False,day,ave,ocnBgchem.zmicro.tavg-ol-hxy-sea.day.glb
+zooc,zooc,"zmeso, zmicro",ocnBgchem,ocnbgc:cmip7-lookup,True,day,ave,ocnBgchem.zooc.tavg-ol-hxy-sea.day.glb
+chl,chl,chl,ocnBgchem,ocnbgc:cmip7-lookup,False,mon,ave,ocnBgchem.chl.tavg-ol-hxy-sea.mon.glb
+chldiat,chldiat,chldiat,ocnBgchem,ocnbgc:cmip7-lookup,False,mon,ave,ocnBgchem.chldiat.tavg-ol-hxy-sea.mon.glb
+chlmisc,chlmisc,chlmisc,ocnBgchem,ocnbgc:cmip7-lookup,False,mon,ave,ocnBgchem.chlmisc.tavg-ol-hxy-sea.mon.glb
+chlos,chl,chl,ocnBgchem,ocnbgc:cmip7-lookup,True,mon,ave,ocnBgchem.chl.tavg-ols-hxy-sea.mon.glb
+detoc,detoc,detoc,ocnBgchem,ocnbgc:cmip7-lookup,False,mon,ave,ocnBgchem.detoc.tavg-ol-hxy-sea.mon.glb
+dfe,dfe,dfe,ocnBgchem,ocnbgc:cmip7-lookup,False,mon,ave,ocnBgchem.dfe.tavg-ol-hxy-sea.mon.glb
+dissic,dissic,dissic,ocnBgchem,ocnbgc:cmip7-lookup,False,mon,ave,ocnBgchem.dissic.tavg-ol-hxy-sea.mon.glb
+dissoc,dissoc,dissoc,ocnBgchem,ocnbgc:cmip7-lookup,False,mon,ave,ocnBgchem.dissoc.tavg-ol-hxy-sea.mon.glb
+dpco2,dpco2,dpco2,ocnBgchem,ocnbgc:cmip7-lookup,True,mon,ave,ocnBgchem.dpco2.tavg-u-hxy-sea.mon.glb
+dpo2,dpo2,dpo2,ocnBgchem,ocnbgc:cmip7-lookup,True,mon,ave,ocnBgchem.dpo2.tavg-u-hxy-sea.mon.glb
+epc100,expc,expc,ocnBgchem,ocnbgc:cmip7-lookup,True,mon,ave,ocnBgchem.expc.tavg-d100m-hxy-sea.mon.glb
+epcalc100,expcalc,expcalc,ocnBgchem,ocnbgc:cmip7-lookup,True,mon,ave,ocnBgchem.expcalc.tavg-d100m-hxy-sea.mon.glb
+expc,expc,expc,ocnBgchem,ocnbgc:cmip7-lookup,True,mon,ave,ocnBgchem.expc.tavg-ol-hxy-sea.mon.glb
+expcalc,expcalc,expcalc,ocnBgchem,ocnbgc:cmip7-lookup,True,mon,ave,ocnBgchem.expcalc.tavg-ol-hxy-sea.mon.glb
+fgco2,fgco2,fgco2,ocnBgchem,ocnbgc:cmip7-lookup,True,mon,ave,ocnBgchem.fgco2.tavg-u-hxy-sea.mon.glb
+intpp,intpp,pp,ocnBgchem,ocnbgc:cmip7-lookup,True,mon,ave,ocnBgchem.intpp.tavg-u-hxy-sea.mon.glb
+intppdiat,intppdiat,ppdiat,ocnBgchem,ocnbgc:cmip7-lookup,True,mon,ave,ocnBgchem.intppdiat.tavg-u-hxy-sea.mon.glb
+intppmisc,intppmisc,ppmisc,ocnBgchem,ocnbgc:cmip7-lookup,True,mon,ave,ocnBgchem.intppmisc.tavg-u-hxy-sea.mon.glb
+nh4,nh4,nh4,ocnBgchem,ocnbgc:cmip7-lookup,False,mon,ave,ocnBgchem.nh4.tavg-ol-hxy-sea.mon.glb
+no3,no3,no3,ocnBgchem,ocnbgc:cmip7-lookup,False,mon,ave,ocnBgchem.no3.tavg-ol-hxy-sea.mon.glb
+no3os,no3,no3,ocnBgchem,ocnbgc:cmip7-lookup,True,mon,ave,ocnBgchem.no3.tavg-ols-hxy-sea.mon.glb
+o2,o2,o2,ocnBgchem,ocnbgc:cmip7-lookup,False,mon,ave,ocnBgchem.o2.tavg-ol-hxy-sea.mon.glb
+o2os,o2,o2,ocnBgchem,ocnbgc:cmip7-lookup,True,mon,ave,ocnBgchem.o2.tavg-ols-hxy-sea.mon.glb
+ph,ph,ph,ocnBgchem,ocnbgc:cmip7-lookup,False,mon,ave,ocnBgchem.ph.tavg-ol-hxy-sea.mon.glb
+phyc,phyc,"phydiat, phymisc",ocnBgchem,ocnbgc:cmip7-lookup,True,mon,ave,ocnBgchem.phyc.tavg-ol-hxy-sea.mon.glb
+phydiat,phydiat,phydiat,ocnBgchem,ocnbgc:cmip7-lookup,False,mon,ave,ocnBgchem.phydiat.tavg-ol-hxy-sea.mon.glb
+phymisc,phymisc,phymisc,ocnBgchem,ocnbgc:cmip7-lookup,False,mon,ave,ocnBgchem.phymisc.tavg-ol-hxy-sea.mon.glb
+po4,po4,po4,ocnBgchem,ocnbgc:cmip7-lookup,False,mon,ave,ocnBgchem.po4.tavg-ol-hxy-sea.mon.glb
+si,si,si,ocnBgchem,ocnbgc:cmip7-lookup,False,mon,ave,ocnBgchem.si.tavg-ol-hxy-sea.mon.glb
+spco2,spco2,pco2,ocnBgchem,ocnbgc:cmip7-lookup,True,mon,ave,ocnBgchem.spco2.tavg-u-hxy-sea.mon.glb
+talk,talk,talk,ocnBgchem,ocnbgc:cmip7-lookup,False,mon,ave,ocnBgchem.talk.tavg-ol-hxy-sea.mon.glb
+zmeso,zmeso,zmeso,ocnBgchem,ocnbgc:cmip7-lookup,False,mon,ave,ocnBgchem.zmeso.tavg-ol-hxy-sea.mon.glb
+zmicro,zmicro,zmicro,ocnBgchem,ocnbgc:cmip7-lookup,False,mon,ave,ocnBgchem.zmicro.tavg-ol-hxy-sea.mon.glb
+zooc,zooc,"zmeso, zmicro",ocnBgchem,ocnbgc:cmip7-lookup,True,mon,ave,ocnBgchem.zooc.tavg-ol-hxy-sea.mon.glb
+siconc,siconc,aice,seaIce,ice:cmip7-lookup,False,day,ave,seaIce.siconc.tavg-u-hxy-u.day.glb
+sisnhc,sisnhc,sisnhc,seaIce,ice:cmip7-lookup,False,day,ave,seaIce.sisnhc.tavg-u-hxy-si.day.glb
+sisnthick,snd,sisnthick,seaIce,ice:cmip7-lookup,False,day,ave,seaIce.snd.tavg-u-hxy-sn.day.glb
+sispeed,sispeed,sispeed,seaIce,ice:cmip7-lookup,False,day,ave,seaIce.sispeed.tavg-u-hxy-si.day.glb
+sitempsnic,sitempsnic,sitempsnic,seaIce,ice:cmip7-lookup,False,day,ave,seaIce.sitempsnic.tavg-u-hxy-si.day.glb
+sitemptop,ts,sitemptop,seaIce,ice:cmip7-lookup,False,day,ave,seaIce.ts.tavg-u-hxy-si.day.glb
+sithick,sithick,sithick,seaIce,ice:cmip7-lookup,False,day,ave,seaIce.sithick.tavg-u-hxy-si.day.glb
+sitimefrac,sitimefrac,ice_present,seaIce,ice:cmip7-lookup,False,day,ave,seaIce.sitimefrac.tavg-u-hxy-sea.day.glb
+siu,siu,siu,seaIce,ice:cmip7-lookup,False,day,ave,seaIce.siu.tavg-u-hxy-si.day.glb
+siv,siv,siv,seaIce,ice:cmip7-lookup,False,day,ave,seaIce.siv.tavg-u-hxy-si.day.glb
+siconc,siconc,aice,seaIce,ice:cmip7-lookup,False,mon,ave,seaIce.siconc.tavg-u-hxy-u.mon.glb
+sidconcth,sidconcth,sidconcth,seaIce,ice:cmip7-lookup,False,mon,ave,seaIce.sidconcth.tavg-u-hxy-sea.mon.glb
+sidmassdyn,sidmassdyn,sidmassdyn,seaIce,ice:cmip7-lookup,False,mon,ave,seaIce.sidmassdyn.tavg-u-hxy-si.mon.glb
+sidmassevapsubl,evspsbl,sidmassevapsubl,seaIce,ice:cmip7-lookup,False,mon,ave,seaIce.evspsbl.tavg-u-hxy-si.mon.glb
+sidmassgrowthbot,sidmassgrowthbot,sidmassgrowthbot,seaIce,ice:cmip7-lookup,False,mon,ave,seaIce.sidmassgrowthbot.tavg-u-hxy-si.mon.glb
+sidmassgrowthwat,sidmassgrowthwat,sidmassgrowthwat,seaIce,ice:cmip7-lookup,False,mon,ave,seaIce.sidmassgrowthwat.tavg-u-hxy-si.mon.glb
+sidmassmeltbot,sidmassmeltbot,sidmassmeltbot,seaIce,ice:cmip7-lookup,False,mon,ave,seaIce.sidmassmeltbot.tavg-u-hxy-si.mon.glb
+sidmassmelttop,sidmassmelttop,sidmassmelttop,seaIce,ice:cmip7-lookup,False,mon,ave,seaIce.sidmassmelttop.tavg-u-hxy-si.mon.glb
+sidmassth,sidmassth,sidmassth,seaIce,ice:cmip7-lookup,False,mon,ave,seaIce.sidmassth.tavg-u-hxy-si.mon.glb
+siflcondbot,siflcondbot,siflcondbot,seaIce,ice:cmip7-lookup,False,mon,ave,seaIce.siflcondbot.tavg-u-hxy-si.mon.glb
+siflcondtop,siflcondtop,siflcondtop,seaIce,ice:cmip7-lookup,False,mon,ave,seaIce.siflcondtop.tavg-u-hxy-si.mon.glb
+siflfwbot,siflfwbot,siflfwbot,seaIce,ice:cmip7-lookup,False,mon,ave,seaIce.siflfwbot.tavg-u-hxy-si.mon.glb
+siflfwdrain,siflfwdrain,siflfwdrain,seaIce,ice:cmip7-lookup,False,mon,ave,seaIce.siflfwdrain.tavg-u-hxy-si.mon.glb
+sifllwdtop,rlds,sifllwdtop,seaIce,ice:cmip7-lookup,False,mon,ave,seaIce.rlds.tavg-u-hxy-si.mon.glb
+sifllwutop,rlus,sifllwutop,seaIce,ice:cmip7-lookup,False,mon,ave,seaIce.rlus.tavg-u-hxy-si.mon.glb
+siflsenstop,siflsenstop,siflsenstop,seaIce,ice:cmip7-lookup,False,mon,ave,seaIce.siflsenstop.tavg-u-hxy-si.mon.glb
+siflswdtop,rsds,siflswdtop,seaIce,ice:cmip7-lookup,False,mon,ave,seaIce.rsds.tavg-u-hxy-si.mon.glb
+siflswutop,rsus,siflswutop,seaIce,ice:cmip7-lookup,False,mon,ave,seaIce.rsus.tavg-u-hxy-si.mon.glb
+sihc,sihc,sihc,seaIce,ice:cmip7-lookup,False,mon,ave,seaIce.sihc.tavg-u-hxy-sea.mon.glb
+simass,simass,hi,seaIce,ice:cmip7-lookup,True,mon,ave,seaIce.simass.tavg-u-hxy-si.mon.glb
+sipr,prra,sipr,seaIce,ice:cmip7-lookup,False,mon,ave,seaIce.prra.tavg-u-hxy-si.mon.glb
+sisnconc,snc,sisnconc,seaIce,ice:cmip7-lookup,False,mon,ave,seaIce.snc.tavg-u-hxy-si.mon.glb
+sisnhc,sisnhc,sisnhc,seaIce,ice:cmip7-lookup,False,mon,ave,seaIce.sisnhc.tavg-u-hxy-si.mon.glb
+sisnmass,snw,hs,seaIce,ice:cmip7-lookup,True,mon,ave,seaIce.snw.tavg-u-hxy-si.mon.glb
+sisnthick,snd,sisnthick,seaIce,ice:cmip7-lookup,False,mon,ave,seaIce.snd.tavg-u-hxy-sn.mon.glb
+sispeed,sispeed,sispeed,seaIce,ice:cmip7-lookup,False,mon,ave,seaIce.sispeed.tavg-u-hxy-si.mon.glb
+sistrxdtop,sistrxdtop,sistrxdtop,seaIce,ice:cmip7-lookup,False,mon,ave,seaIce.sistrxdtop.tavg-u-hxy-si.mon.glb
+sistrydtop,sistrydtop,sistrydtop,seaIce,ice:cmip7-lookup,False,mon,ave,seaIce.sistrydtop.tavg-u-hxy-si.mon.glb
+sitempsnic,sitempsnic,sitempsnic,seaIce,ice:cmip7-lookup,False,mon,ave,seaIce.sitempsnic.tavg-u-hxy-si.mon.glb
+sitemptop,ts,sitemptop,seaIce,ice:cmip7-lookup,False,mon,ave,seaIce.ts.tavg-u-hxy-si.mon.glb
+sithick,sithick,sithick,seaIce,ice:cmip7-lookup,False,mon,ave,seaIce.sithick.tavg-u-hxy-si.mon.glb
+sitimefrac,sitimefrac,ice_present,seaIce,ice:cmip7-lookup,False,mon,ave,seaIce.sitimefrac.tavg-u-hxy-sea.mon.glb
+siu,siu,siu,seaIce,ice:cmip7-lookup,False,mon,ave,seaIce.siu.tavg-u-hxy-si.mon.glb
+siv,siv,siv,seaIce,ice:cmip7-lookup,False,mon,ave,seaIce.siv.tavg-u-hxy-si.mon.glb
+sivol,sieqthick,hi,seaIce,ice:cmip7-lookup,False,mon,ave,seaIce.sieqthick.tavg-u-hxy-si.mon.glb

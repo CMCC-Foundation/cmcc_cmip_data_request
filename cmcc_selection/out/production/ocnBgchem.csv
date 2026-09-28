@@ -1,0 +1,3 @@
+frequency,time_ave_or_inst,variables
+day,ave,"chl, o2, ph, pp, zmeso, zmicro"
+mon,ave,"chl, chldiat, chlmisc, detoc, dfe, dissic, dissoc, dpco2, dpo2, expc, expcalc, fgco2, nh4, no3, o2, pco2, ph, phydiat, phymisc, po4, pp, ppdiat, ppmisc, si, talk, zmeso, zmicro"

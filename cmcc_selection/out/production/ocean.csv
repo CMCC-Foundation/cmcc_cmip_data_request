@@ -1,0 +1,10 @@
+frequency,time_ave_or_inst,variables
+3hr,ave,"friver, fsalt_nemo, hfds, rsntds, tauuo, tauvo, wfo"
+3hr,inst,tos
+day,ave,"mlotst, so, sos, t20d, tos, tossq, wo, zos"
+dec,ave,"deptht, masso, so, tauuo, tauvo, thetao, volo"
+fx,unknown,"deptht, hfgeou"
+mon,ave,"agessc, deptht, friver, hfbasin, hfbasinpadv, hfbasinpmadv, hfbasinpmdiff, hfds, masso, mlotst, msftbarot, msftyz, obvfsq, pbo, sf6, so, sob, soga, sos, sosga, t20d, tauuo, tauvo, thetao, thetaoga, thetaot2000, thetaot300, thetaot700, tob, tos, tosga, umo, uo, vmo, vo, volo, wfo, wmo, wo, zos, zostoga"
+mon,max,mlotstmax
+mon,min,mlotstmin
+yr,ave,deptht

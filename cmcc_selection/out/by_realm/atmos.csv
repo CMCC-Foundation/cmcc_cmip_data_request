@@ -1,0 +1,16 @@
+frequency,cell,n,variables_dr,GB_per_year
+1hr,ave,11,"clt, hursSouth30, pr, prSouth30, rlds, rldsSouth30, rsds, rsdsSouth30, sfcWindSouth30, tas, tasSouth30",7.9300
+1hr,inst,5,"huss, psSouth30, psl, uas, vas",6.3440
+3hr,ave,8,"hfls, hfss, pr, prsn, rlds, rlus, rsds, rsus",4.2293
+3hr,inst,13,"bldep, hurs, hus6, huss, ps, ta6, tas, ts, ua6, uas, va6, vas, wap6",4.2293
+6hr,ave,10,"hurs, pr, prsn, psl, rv850, sfcWind, tas, uas, vas, zg1000",2.3790
+6hr,inst,11,"hus, ps, psl, ta, taUTLS, ts, ua, uaUTLS, va, vaUTLS, zg",79.8282
+6hr,max,1,prhmax,0.0000
+day,ave,71,"cl, cldnvi, clt, epfy, epfz, evspsbl, hfdsnb, hfls, hfss, hur, hurs, hus, huss, loadbc, loadoa, loadpoa, noaahi2m, pfull, pr, prc, prrsn, prsn, prsnc, prsnsn, prw, ps, psl, rlds, rls, rlus, rlut, rsds, rsdt, rss, rsus, rsut, sfcWind, snmsl, snrefr, snwc, ta, ta850, tas, tauu, tauunoegw, tauunowgw, tauuogw, tauv, tauvnogw, tauvogw, tdps, tntmp, tntrl, tntrs, ts, tsns, ua, uas, utendepfd, utendnogw, utendogw, utendvtem, utendwtem, va, vas, vtem, wap, wbgt2m, wtem, zg, zg500",19.4294
+day,max,6,"hursmax, noaahi2mmax, prhmax, sfcWindmax, tasmax, wbgt2mmax",0.3304
+day,min,2,"hursmin, tasmin",0.1322
+fx,unknown,2,"areacella, sftlf",0.0004
+mon,ave,71,"aod550volso4, cl, cli, clivi, clt, cltc, clw, clwvi, co2, co23D, co2mass, co2s, epfy, epfz, evspsbl, fco2all, fco2antt, fco2fos, fco2nat, hfls, hfss, hur, hurs, hus, huss, loadso4, pr, prc, prra, prsn, prw, ps, psl, reffsclwtop, rlds, rldscs, rls, rlus, rluscs, rlut, rlutcs, rsds, rsdscs, rsdt, rss, rsus, rsuscs, rsut, rsutcs, rtmt, sfcWind, ta, tas, tauu, tauv, tdps, tntmp, tntrl, tntrs, ts, ua, uas, utendepfd, utendnogw, utendogw, va, vas, vtem, wap, wtem, zg",1.1493
+mon,clim,2,"co2Clim, co2massClim",0.0413
+mon,max,5,"prhmax, sfcWindmax, tasmax, wsgmax100m, wsgmax10m",0.0087
+mon,min,1,tasmin,0.0022

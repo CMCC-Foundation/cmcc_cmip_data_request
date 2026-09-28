@@ -1,0 +1,56 @@
+division,opportunity,group,variable,long_name,realm,frequencies
+CLIVAP,Robust Risk Assessment of Tipping Points,baseline_fixed,mrsofc,Capacity of Soil to Store Water (Field Capacity),land,fx
+CLIVAP,Robust Risk Assessment of Tipping Points,baseline_fixed,rootd,Maximum Root Depth,land,fx
+CLIVAP,Robust Risk Assessment of Tipping Points,baseline_monthly,bigthetao,Sea Water Conservative Temperature,ocean,mon
+CLIVAP,Robust Risk Assessment of Tipping Points,baseline_monthly,rluscs,Surface Upwelling Clear-Sky Longwave Radiation,atmos,mon
+CLIVAP,Robust Risk Assessment of Tipping Points,baseline_monthly,snw,Surface Snow Amount,landIce,mon
+EIEE,Energy System Impacts,impact_energy_damaging_other,flashrate,Lightning Flash Rate,atmosChem,mon
+EIEE,Energy System Impacts,impact_energy_hydropower,mrrob,Subsurface Runoff,land,day
+EIEE,Energy System Impacts,impacts_energy_damaging_wind,wsgmax100m,Maximum Wind Speed of Gust at 100m,atmos,mon
+EIEE,Energy System Impacts,impacts_energy_damaging_wind,wsgmax10m,Maximum Wind Speed of Gust at 10m,atmos,mon
+EIEE,Health Impacts,HealthFloodingDaily,mrsofc,Capacity of Soil to Store Water (Field Capacity),land,fx
+EIEE,Health Impacts,HealthFloodingDaily,snw,Surface Snow Amount,landIce,day
+EIEE,Health Impacts,HealthPollutionDaily,sfo3max,Daily Maximum O3 Volume Mixing Ratio near-surface,aerosol,day
+EIEE,Health Impacts,HealthPollutionDaily,sfpm1,Near-surface PM1.0 Mixing Ratio,aerosol,day
+EIEE,Health Impacts,HealthPollutionDaily,sfpm10,Near-surface PM10 Mixing Ratio,aerosol,day
+EIEE,Health Impacts,HealthPollutionDaily,sfpm25,Near-surface PM2.5 Mixing Ratio,aerosol,day
+EIEE,Health Impacts,Heat_Indices,noaahi2m,mean 2m daily NOAA heat index,atmos,day
+EIEE,Health Impacts,Heat_Indices,noaahi2mmax,max 2m daily NOAA heat index,atmos,day
+EIEE,Health Impacts,Heat_Indices,wbgt2m,mean 2m daily wet bulb globe temperature,atmos,day
+EIEE,Health Impacts,Heat_Indices,wbgt2mmax,maximum 2m daily wet bulb globe temperature,atmos,day
+ESYDA,Accurate assessment of land-atmosphere coupling,landatm_coupling_3hA,bldep,Boundary Layer Depth,atmos,3hr
+ESYDA,Accurate assessment of land-atmosphere coupling,landatm_coupling_3hA,srfrad,Net radiative flux at surface,land,3hr
+ESYDA,Accurate assessment of land-atmosphere coupling,landatm_coupling_3hr_medium,hfdsl,Ground heat flux at 3hr,land,3hr
+ESYDA,Climate impacts on marine biodiversity and ecosystems,ISIMIP_oceanforcing_3hr,ficeberg,Water Flux into Sea Water from Icebergs,ocean,3hr
+ESYDA,Climate impacts on marine biodiversity and ecosystems,ISIMIP_oceanforcing_3hr,flandice,Water Flux into Sea Water from Land Ice,ocean,3hr
+ESYDA,Climate impacts on marine biodiversity and ecosystems,ISIMIP_oceanforcing_3hr,hfrunoffds,Temperature Flux Due to Runoff Expressed as Heat Flux into Sea Water,ocean,3hr
+ESYDA,Climate impacts on marine biodiversity and ecosystems,biodiv_marine_daily,expcob,Sinking Flux of Particulate Organic Carbon Reaching the Ocean Bottom,ocnBgchem,day
+ESYDA,Climate impacts on marine biodiversity and ecosystems,biodiv_marine_daily,intpoc,Particulate Organic Carbon Content,ocnBgchem,day
+ESYDA,Climate impacts on marine biodiversity and ecosystems,biodiv_marine_daily,o2min,Oxygen Minimum Concentration,ocnBgchem,day
+ESYDA,Climate impacts on marine biodiversity and ecosystems,biodiv_marine_daily,phycalc,Mole Concentration of Calcareous Phytoplankton Expressed as Carbon in Sea Water,ocnBgchem,day
+ESYDA,Climate impacts on marine biodiversity and ecosystems,biodiv_marine_daily,phydiazos,Surface Mole Concentration of Diazotrophs Expressed as Carbon in Sea Water,ocnBgchem,day
+ESYDA,Climate impacts on marine biodiversity and ecosystems,biodiv_marine_daily,phynano,Mole Concentration of Nanophytoplankton Expressed as Carbon in Sea Water,ocnBgchem,day
+ESYDA,Climate impacts on marine biodiversity and ecosystems,biodiv_marine_daily,phypico,Mole Concentration of Picophytoplankton Expressed as Carbon in Sea Water,ocnBgchem,day
+ESYDA,Climate impacts on marine biodiversity and ecosystems,biodiv_marine_daily,rsdo,Downwelling Shortwave Radiation in Sea Water,ocean,day
+ESYDA,Climate impacts on marine biodiversity and ecosystems,biodiv_marine_daily,uos,Daily Surface Sea Water X Velocity,ocean,day
+ESYDA,Climate impacts on marine biodiversity and ecosystems,biodiv_marine_daily,vos,Daily Surface Sea Water Y Velocity,ocean,day
+ESYDA,Climate impacts on marine biodiversity and ecosystems,marine_bgc_baseline,co2massClim,Total Atmospheric Mass of CO2,atmos,mon
+ESYDA,Climate impacts on marine biodiversity and ecosystems,marine_bgc_baseline,dmsos,Surface Mole Concentration of Dimethyl Sulphide in Sea Water,ocnBgchem,mon
+ESYDA,Climate impacts on marine biodiversity and ecosystems,marine_bgc_baseline,fric,Downward Inorganic Carbon Flux at Ocean Bottom,ocnBgchem,mon
+ESYDA,Climate impacts on marine biodiversity and ecosystems,marine_bgc_baseline,froc,Downward Organic Carbon Flux at Ocean Bottom,ocnBgchem,mon
+ESYDA,Climate impacts on marine biodiversity and ecosystems,marine_bgc_baseline,graz,Total Grazing of Phytoplankton by Zooplankton,ocnBgchem,mon
+ESYDA,Climate impacts on marine biodiversity and ecosystems,marine_bgc_baseline,msftmz,Ocean Meridional Overturning Mass Streamfunction,ocean,mon
+ESYDA,Climate impacts on marine biodiversity and ecosystems,marine_bgc_baseline,phycalc,Mole Concentration of Calcareous Phytoplankton Expressed as Carbon in Sea Water,ocnBgchem,mon
+ESYDA,Climate impacts on marine biodiversity and ecosystems,marine_bgc_baseline,phypico,Mole Concentration of Picophytoplankton Expressed as Carbon in Sea Water,ocnBgchem,mon
+ESYDA,Climate impacts on marine biodiversity and ecosystems,marine_bgc_baseline,zmisc,Mole Concentration of Other Zooplankton Expressed as Carbon in Sea Water,ocnBgchem,mon
+ESYDA,Climate impacts on marine biodiversity and ecosystems,marine_bgc_fishmip,intppcalc,Net Primary Mole Productivity of Carbon by Calcareous Phytoplankton,ocnBgchem,mon
+ESYDA,Climate impacts on marine biodiversity and ecosystems,marine_bgc_fishmip,intppdiaz,Net Primary Mole Productivity of Carbon by Diazotrophs,ocnBgchem,mon
+ESYDA,Climate impacts on marine biodiversity and ecosystems,marine_bgc_fishmip,intppnano,Net Primary Organic Carbon Production by Nanophytoplankton,ocnBgchem,mon
+ESYDA,Climate impacts on marine biodiversity and ecosystems,marine_bgc_fishmip,intpppico,Net Primary Mole Productivity of Carbon by Picophytoplankton,ocnBgchem,mon
+ESYDA,Ocean Extremes,Ocean_Temperature_Extremes,bigthetao200,Sea Water Conservative Temperature at 200 meters,ocean,day
+ICR,Bias-adjustment for impacts modeling and analysis,ISIMIP_deposition_variables,drynh3,Dry Deposition Rate of NH3,atmosChem,day
+ICR,Bias-adjustment for impacts modeling and analysis,ISIMIP_deposition_variables,drynh4,Dry Deposition Rate of NH4,atmosChem,day
+ICR,Bias-adjustment for impacts modeling and analysis,ISIMIP_deposition_variables,drynoy,Dry Deposition Rate of NOy,atmosChem,day
+ICR,Bias-adjustment for impacts modeling and analysis,ISIMIP_deposition_variables,wetnh3,Wet Deposition Rate of NH3,atmosChem,day
+ICR,Bias-adjustment for impacts modeling and analysis,ISIMIP_deposition_variables,wetnh4,Wet Deposition Rate of NH4,atmosChem,day
+ICR,Bias-adjustment for impacts modeling and analysis,ISIMIP_deposition_variables,wetnoy,Wet Deposition Rate of NOy Including Aerosol Nitrate,atmosChem,day

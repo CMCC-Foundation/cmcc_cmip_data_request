@@ -1,0 +1,458 @@
+division,opportunity,group,variable,long_name,realm,frequencies
+CLIVAP,Atmospheric dynamics and variability,baseline_fixed,mrsofc,Capacity of Soil to Store Water (Field Capacity),land,fx
+CLIVAP,Atmospheric dynamics and variability,baseline_fixed,rootd,Maximum Root Depth,land,fx
+CLIVAP,Atmospheric dynamics and variability,baseline_monthly,bigthetao,Sea Water Conservative Temperature,ocean,mon
+CLIVAP,Atmospheric dynamics and variability,baseline_monthly,rluscs,Surface Upwelling Clear-Sky Longwave Radiation,atmos,mon
+CLIVAP,Atmospheric dynamics and variability,baseline_monthly,snw,Surface Snow Amount,landIce,mon
+CLIVAP,Atmospheric dynamics and variability,dynvar_basic,epfy,Northward Component of the Eliassen-Palm Flux,atmos,day mon
+CLIVAP,Atmospheric dynamics and variability,dynvar_basic,epfz,Upward Component of the Eliassen-Palm Flux,atmos,day mon
+CLIVAP,Atmospheric dynamics and variability,dynvar_basic,meanage,Mean Age of Stratospheric Air,atmosChem,mon
+CLIVAP,Atmospheric dynamics and variability,dynvar_basic,tauunoegw,Zonal mean eastward Reynolds stress from non-orographic eastward gravity wave parameterization,atmos,day
+CLIVAP,Atmospheric dynamics and variability,dynvar_basic,tauunowgw,Zonal mean eastward Reynolds stress from non-orographic westward gravity wave parameterization,atmos,day
+CLIVAP,Atmospheric dynamics and variability,dynvar_basic,tauuogw,Zonal mean eastward Reynolds stress from orographic gravity wave parameterization,atmos,day
+CLIVAP,Atmospheric dynamics and variability,dynvar_basic,tauvnogw,Zonal mean northward Reynolds stress from non-orographic gravity wave parameterization,atmos,day
+CLIVAP,Atmospheric dynamics and variability,dynvar_basic,tauvogw,Zonal mean northward Reynolds stress from orographic gravity wave parameterization,atmos,day
+CLIVAP,Atmospheric dynamics and variability,dynvar_basic,tntmp,Zonal Mean Tendency of Air Temperature Due to Model Physics,atmos,day mon
+CLIVAP,Atmospheric dynamics and variability,dynvar_basic,tntrl,Zonal Mean Tendency of Air Temperature Due to Longwave Radiative Heating,atmos,day mon
+CLIVAP,Atmospheric dynamics and variability,dynvar_basic,tntrs,Zonal Mean Tendency of Air Temperature Due to Shortwave Radiative Heating,atmos,day mon
+CLIVAP,Atmospheric dynamics and variability,dynvar_basic,utendepfd,Tendency of Eastward Wind Due to Eliassen-Palm Flux Divergence,atmos,day mon
+CLIVAP,Atmospheric dynamics and variability,dynvar_basic,utendnogw,Eastward Acceleration Due to Non-Orographic Gravity Wave Drag,atmos,day mon
+CLIVAP,Atmospheric dynamics and variability,dynvar_basic,utendogw,Eastward Acceleration Due to Orographic Gravity Wave Drag,atmos,day mon
+CLIVAP,Atmospheric dynamics and variability,dynvar_basic,utendvtem,Tendency of Eastward Wind Due to TEM Northward Advection and Coriolis Term,atmos,day
+CLIVAP,Atmospheric dynamics and variability,dynvar_basic,utendwtem,Tendency of Eastward Wind Due to TEM Upward Advection,atmos,day
+CLIVAP,Atmospheric dynamics and variability,dynvar_basic,vtem,Transformed Eulerian Mean Northward Wind,atmos,day mon
+CLIVAP,Atmospheric dynamics and variability,dynvar_basic,wtem,Transformed Eulerian Mean Upward Wind,atmos,day mon
+CLIVAP,Detection and Attribution,DAMIP_monthly,abs550bc,black carbon aaod@550nm,aerosol,mon
+CLIVAP,Detection and Attribution,DAMIP_monthly,abs550dust,dust absorption aerosol optical depth @550nm,aerosol,mon
+CLIVAP,Detection and Attribution,DAMIP_monthly,abs550so4,sulfate aaod@550nm,aerosol,mon
+CLIVAP,Detection and Attribution,DAMIP_monthly,aod550volso4,Monthly Aerosol Optical Depth at 550nm Due to Stratospheric Volcanic Aerosols,atmos,mon
+CLIVAP,Detection and Attribution,DAMIP_monthly,co2massClim,Total Atmospheric Mass of CO2,atmos,mon
+CLIVAP,Detection and Attribution,DAMIP_monthly,loadso4,Load of SO4,atmos,mon
+CLIVAP,Detection and Attribution,DAMIP_monthly,msftmrho,Ocean Meridional Overturning Mass Streamfunction,ocean,mon
+CLIVAP,Detection and Attribution,DAMIP_monthly,msftmz,Ocean Meridional Overturning Mass Streamfunction,ocean,mon
+CLIVAP,Detection and Attribution,DAMIP_monthly,o3ste,Stratospheric Ozone Tracer Volume Mixing Ratio,atmosChem,mon
+CLIVAP,Detection and Attribution,DAMIP_monthly,od550dust,Dust Optical Thickness at 550nm,aerosol,mon
+CLIVAP,Detection and Attribution,DAMIP_monthly,od550soa,Particulate Organic Aerosol Optical Depth at 550nm,aerosol,mon
+CLIVAP,Detection and Attribution,DAMIP_monthly,rtmt,Net Downward Radiative Flux at Top of Model,atmos,mon
+CLIVAP,Detection and Attribution,DAMIP_monthly,snw,Surface Snow Amount,landIce,mon
+CLIVAP,Detection and Attribution,DAMIP_monthly,tropo3ste,Tropospheric ozone volume mixing ratio due to stratosphere-troposphere exchange (STE),atmosChem,mon
+CLIVAP,Diagnosing temperature variability and extremes,DCPP_essential,co2massClim,Total Atmospheric Mass of CO2,atmos,mon
+CLIVAP,Diagnosing temperature variability and extremes,DCPP_essential,msftmz,Ocean Meridional Overturning Mass Streamfunction,ocean,mon
+CLIVAP,Diagnosing temperature variability and extremes,DCPP_essential,vsf,Virtual Salt Flux into Sea Water,ocean,mon
+CLIVAP,Diagnosing temperature variability and extremes,DCPP_essential,zfullo,Depth Below Geoid of Ocean Layer,ocean,yr
+CLIVAP,Diagnosing temperature variability and extremes,DCPP_wider,co2s,Near-surface atmosphere CO2,atmos,mon
+CLIVAP,Diagnosing temperature variability and extremes,DCPP_wider,co3satarag200,Mole Concentration of Carbonate Ion in Equilibrium with Pure Aragonite in Sea Water,ocnBgchem,day
+CLIVAP,Diagnosing temperature variability and extremes,DCPP_wider,co3sataragos,Surface Mole Concentration of Carbonate Ion in Equilibrium with Pure Aragonite in Sea Water,ocnBgchem,day
+CLIVAP,Diagnosing temperature variability and extremes,DCPP_wider,epfy,Northward Component of the Eliassen-Palm Flux,atmos,mon
+CLIVAP,Diagnosing temperature variability and extremes,DCPP_wider,epfz,Upward Component of the Eliassen-Palm Flux,atmos,mon
+CLIVAP,Diagnosing temperature variability and extremes,DCPP_wider,epsi100,Downward Flux of Particulate Silicon,ocnBgchem,mon
+CLIVAP,Diagnosing temperature variability and extremes,DCPP_wider,msftmrho,Ocean Meridional Overturning Mass Streamfunction,ocean,mon
+CLIVAP,Diagnosing temperature variability and extremes,DCPP_wider,msftmzmpa,Ocean Meridional Overturning Mass Streamfunction Due to Parameterized Mesoscale Advection,ocean,mon
+CLIVAP,Diagnosing temperature variability and extremes,DCPP_wider,sifllattop,Net Latent Heat Flux over Sea Ice,seaIce,mon
+CLIVAP,Diagnosing temperature variability and extremes,DCPP_wider,tdps,2m Dewpoint Temperature,atmos,day mon
+CLIVAP,Diagnosing temperature variability and extremes,DCPP_wider,utendepfd,Tendency of Eastward Wind Due to Eliassen-Palm Flux Divergence,atmos,mon
+CLIVAP,Diagnosing temperature variability and extremes,DCPP_wider,vtem,Transformed Eulerian Mean Northward Wind,atmos,mon
+CLIVAP,Diagnosing temperature variability and extremes,DCPP_wider,wtem,Transformed Eulerian Mean Upward Wind,atmos,mon
+CLIVAP,Diagnosing temperature variability and extremes,DCPP_wider,zossq,Square of Sea Surface Height Above Geoid,ocean,mon
+CLIVAP,Diagnosing temperature variability and extremes,temperature_variability_daily_highpriority,evspsblpot,Potential Evapotranspiration,land,day
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_aerosols_chemistry,bry,Total Inorganic Bromine Volume Mixing Ratio,aerosol,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_aerosols_chemistry,cly,Total Inorganic Chlorine Volume Mixing Ratio,aerosol,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_aerosols_chemistry,co,CO Volume Mixing Ratio,aerosol,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_aerosols_chemistry,hcl,HCl Volume Mixing Ratio,aerosol,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_aerosols_chemistry,hno3,HNO3 Volume Mixing Ratio,aerosol,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_aerosols_chemistry,mmrbc,Elemental Carbon Mass Mixing Ratio,aerosol,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_aerosols_chemistry,mmrdust,Dust Aerosol Mass Mixing Ratio,aerosol,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_aerosols_chemistry,mmrnh4,NH4 Mass Mixing Ratio,aerosol,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_aerosols_chemistry,mmrno3,NO3 Aerosol Mass Mixing Ratio,aerosol,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_aerosols_chemistry,mmroa,Total Organic Aerosol Mass Mixing Ratio,aerosol,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_aerosols_chemistry,mmrso4,Aerosol Sulfate Mass Mixing Ratio,aerosol,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_aerosols_chemistry,mmrsoa,Secondary Organic Aerosol Mass Mixing Ratio,aerosol,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_aerosols_chemistry,mmrss,Sea-Salt Aerosol Mass Mixing Ratio,aerosol,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_aerosols_chemistry,n2o,Mole Fraction of N2O,atmosChem,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_aerosols_chemistry,noy,Total Reactive Nitrogen Volume Mixing Ratio,aerosol,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_aerosols_chemistry,o3,Mole Fraction of O3,atmosChem,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_aerosols_chemistry,oh,OH Volume Mixing Ratio,aerosol,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_aerosols_chemistry,so2,SO2 Volume Mixing Ratio,aerosol,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_core,cfc113global,Global Mean Mole Fraction of CFC113,atmosChem,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_core,cfc114,Mole Fraction of CFC114,aerosol,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_core,cfc11global,Global Mean Mole Fraction of CFC11,atmosChem,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_core,ch4,Mole Fraction of CH4,atmosChem,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_core,co2,Mole Fraction of CO2,atmos,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_core,hcfc22,Mole Fraction of HCFC22,aerosol,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_core,hcfc22global,Global Mean Mole Fraction of HCFC22,atmosChem,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_core,hfc125,Mole Fraction of HFC125,aerosol,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_core,hfc134a,Mole Fraction of HFC134a,aerosol,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_core,n2o,Mole Fraction of N2O,atmosChem,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_core,o3,Mole Fraction of O3,atmosChem,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_core,od550bb,Aerosol Optical Depth at 550nm Due to Biomass Burning,aerosol,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_core,od550bc,Black Carbon Optical Thickness at 550nm,aerosol,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_core,od550dust,Dust Optical Thickness at 550nm,aerosol,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_core,od550no3,Nitrate Aerosol Optical Depth at 550nm,aerosol,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_core,od550oa,Total Organic Aerosol Optical Depth at 550nm,aerosol,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_core,od550so4,Sulfate Aerosol Optical Depth at 550nm,aerosol,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_core,od550ss,Sea-Salt Aerosol Optical Depth at 550nm,aerosol,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_ocean_air_sea_biogeochemistry_forcing,drydust,Dry Deposition Rate of Dust,aerosol,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_ocean_air_sea_biogeochemistry_forcing,drynoy,Dry Deposition Rate of NOy,atmosChem,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_ocean_air_sea_biogeochemistry_forcing,fsfe,Surface Downward Net Flux of Iron,ocnBgchem,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_ocean_air_sea_biogeochemistry_forcing,fsn,Surface Downward Net Flux of Nitrogen,ocnBgchem,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_ocean_air_sea_biogeochemistry_forcing,wetdust,Wet Deposition Rate of Dust,aerosol,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_ocean_air_sea_biogeochemistry_forcing,wetnoy,Wet Deposition Rate of NOy Including Aerosol Nitrate,atmosChem,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_ocean_biogeochemistry_forcing,chldiaz,Mass Concentration of Diazotrophs Expressed as Chlorophyll in Sea Water,ocnBgchem,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_ocean_biogeochemistry_forcing,chlpico,Mass Concentration of Picophytoplankton Expressed as Chlorophyll in Sea Water,ocnBgchem,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_ocean_biogeochemistry_forcing,icfriver,Flux of Inorganic Carbon into Ocean Surface by Runoff,ocnBgchem,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_ocean_biogeochemistry_forcing,ocfriver,Flux of Organic Carbon into Ocean Surface by Runoff,ocnBgchem,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_ocean_biogeochemistry_forcing,phycalc,Mole Concentration of Calcareous Phytoplankton Expressed as Carbon in Sea Water,ocnBgchem,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_ocean_biogeochemistry_forcing,phydiaz,Mole Concentration of Diazotrophs Expressed as Carbon in Sea Water,ocnBgchem,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_ocean_biogeochemistry_forcing,phypico,Mole Concentration of Picophytoplankton Expressed as Carbon in Sea Water,ocnBgchem,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_ocean_biogeochemistry_forcing,zmisc,Mole Concentration of Other Zooplankton Expressed as Carbon in Sea Water,ocnBgchem,mon
+CLIVAP,Dynamical Downscaling (CORDEX),dynamical_downscaling_ocean_core,ficeberg,Water Flux into Sea Water from Icebergs,ocean,mon
+CLIVAP,Multi-annual-to-decadal predictability of the Earth System and risk assessment of climate extremes,DCPP_essential,co2massClim,Total Atmospheric Mass of CO2,atmos,mon
+CLIVAP,Multi-annual-to-decadal predictability of the Earth System and risk assessment of climate extremes,DCPP_essential,msftmz,Ocean Meridional Overturning Mass Streamfunction,ocean,mon
+CLIVAP,Multi-annual-to-decadal predictability of the Earth System and risk assessment of climate extremes,DCPP_essential,vsf,Virtual Salt Flux into Sea Water,ocean,mon
+CLIVAP,Multi-annual-to-decadal predictability of the Earth System and risk assessment of climate extremes,DCPP_essential,zfullo,Depth Below Geoid of Ocean Layer,ocean,yr
+CLIVAP,Multi-annual-to-decadal predictability of the Earth System and risk assessment of climate extremes,DCPP_wider,co2s,Near-surface atmosphere CO2,atmos,mon
+CLIVAP,Multi-annual-to-decadal predictability of the Earth System and risk assessment of climate extremes,DCPP_wider,co3satarag200,Mole Concentration of Carbonate Ion in Equilibrium with Pure Aragonite in Sea Water,ocnBgchem,day
+CLIVAP,Multi-annual-to-decadal predictability of the Earth System and risk assessment of climate extremes,DCPP_wider,co3sataragos,Surface Mole Concentration of Carbonate Ion in Equilibrium with Pure Aragonite in Sea Water,ocnBgchem,day
+CLIVAP,Multi-annual-to-decadal predictability of the Earth System and risk assessment of climate extremes,DCPP_wider,epfy,Northward Component of the Eliassen-Palm Flux,atmos,mon
+CLIVAP,Multi-annual-to-decadal predictability of the Earth System and risk assessment of climate extremes,DCPP_wider,epfz,Upward Component of the Eliassen-Palm Flux,atmos,mon
+CLIVAP,Multi-annual-to-decadal predictability of the Earth System and risk assessment of climate extremes,DCPP_wider,epsi100,Downward Flux of Particulate Silicon,ocnBgchem,mon
+CLIVAP,Multi-annual-to-decadal predictability of the Earth System and risk assessment of climate extremes,DCPP_wider,msftmrho,Ocean Meridional Overturning Mass Streamfunction,ocean,mon
+CLIVAP,Multi-annual-to-decadal predictability of the Earth System and risk assessment of climate extremes,DCPP_wider,msftmzmpa,Ocean Meridional Overturning Mass Streamfunction Due to Parameterized Mesoscale Advection,ocean,mon
+CLIVAP,Multi-annual-to-decadal predictability of the Earth System and risk assessment of climate extremes,DCPP_wider,sifllattop,Net Latent Heat Flux over Sea Ice,seaIce,mon
+CLIVAP,Multi-annual-to-decadal predictability of the Earth System and risk assessment of climate extremes,DCPP_wider,tdps,2m Dewpoint Temperature,atmos,day mon
+CLIVAP,Multi-annual-to-decadal predictability of the Earth System and risk assessment of climate extremes,DCPP_wider,utendepfd,Tendency of Eastward Wind Due to Eliassen-Palm Flux Divergence,atmos,mon
+CLIVAP,Multi-annual-to-decadal predictability of the Earth System and risk assessment of climate extremes,DCPP_wider,vtem,Transformed Eulerian Mean Northward Wind,atmos,mon
+CLIVAP,Multi-annual-to-decadal predictability of the Earth System and risk assessment of climate extremes,DCPP_wider,wtem,Transformed Eulerian Mean Upward Wind,atmos,mon
+CLIVAP,Multi-annual-to-decadal predictability of the Earth System and risk assessment of climate extremes,DCPP_wider,zossq,Square of Sea Surface Height Above Geoid,ocean,mon
+ESYDA,Baseline Climate Variables for Earth System Modelling,baseline_fixed,mrsofc,Capacity of Soil to Store Water (Field Capacity),land,fx
+ESYDA,Baseline Climate Variables for Earth System Modelling,baseline_fixed,rootd,Maximum Root Depth,land,fx
+ESYDA,Baseline Climate Variables for Earth System Modelling,baseline_monthly,bigthetao,Sea Water Conservative Temperature,ocean,mon
+ESYDA,Baseline Climate Variables for Earth System Modelling,baseline_monthly,rluscs,Surface Upwelling Clear-Sky Longwave Radiation,atmos,mon
+ESYDA,Baseline Climate Variables for Earth System Modelling,baseline_monthly,snw,Surface Snow Amount,landIce,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,atmosphere_carbon_cycle_tier1,co23D,3D-Field of Transported CO2,atmos,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,atmosphere_carbon_cycle_tier1,co2mass,Total Atmospheric Mass of CO2,atmos,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,atmosphere_carbon_cycle_tier1,fco2all,Carbon Mass Flux into Atmosphere Due to All Emissions of CO2 from All Sources [kgC m-2 s-1],atmos,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,atmosphere_carbon_cycle_tier1,fco2antt,Carbon Mass Flux into Atmosphere Due to All Anthropogenic Emissions of CO2 [kgC m-2 s-1],atmos,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,atmosphere_carbon_cycle_tier1,fco2fos,Carbon Mass Flux into Atmosphere Due to Fossil Fuel Emissions of CO2 [kgC m-2 s-1],atmos,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,atmosphere_carbon_cycle_tier1,fco2nat,Surface Carbon Mass Flux into the Atmosphere Due to Natural Sources [kgC m-2 s-1],atmos,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_benchmarking_and_landcover_variables_tier1,albc,Canopy Albedo,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_benchmarking_and_landcover_variables_tier1,cnc,Canopy Covered Area Percentage,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_benchmarking_and_landcover_variables_tier1,mrtws,Terrestrial Water Storage,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_benchmarking_and_landcover_variables_tier1,pastureFrac,Percentage of Land Which Is Anthropogenic Pasture,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_benchmarking_and_landcover_variables_tier1,prveg,Precipitation onto Canopy,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_benchmarking_and_landcover_variables_tier1,snw,Surface Snow Amount,landIce,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_benchmarking_and_landcover_variables_tier2,cropFracC4,Percentage Cover by C4 Crops,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_benchmarking_and_landcover_variables_tier2,mrtws,Terrestrial Water Storage,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_benchmarking_and_landcover_variables_tier2,pastureFracC3,C3 Pasture Area Percentage,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_benchmarking_and_landcover_variables_tier2,pastureFracC4,C4 Pasture Area Percentage,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_benchmarking_and_landcover_variables_tier2,wetlandCH4,Grid Averaged Methane Emissions from Wetlands,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_benchmarking_and_landcover_variables_tier2,wetlandCH4cons,Grid Averaged Methane Consumption (Methanotrophy) from Wetlands,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_benchmarking_and_landcover_variables_tier2,wetlandCH4prod,Grid Averaged Methane Production (Methanogenesis) from Wetlands,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_benchmarking_and_landcover_variables_tier2,wetlandFrac,Wetland Percentage Cover,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_carbon_cycle_tier1,cGeologicStorage,Carbon Mass in Geologic Storage,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_carbon_cycle_tier1,fAnthDisturb,"Carbon Mass Flux from Vegetation, Litter or Soil Pools into the Atmosphere Due to any Human Activity [kgC m-2 s-1]",land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_carbon_cycle_tier1,fCLandToOcean,Lateral Transfer of Carbon out of Grid Cell That Eventually Goes into Ocean,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_carbon_cycle_tier1,fDeforestToAtmos,Deforested Biomass That Goes into Atmosphere as a Result of Anthropogenic Land-Use Change [kgC m-2 s-1],land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_carbon_cycle_tier1,fFireAll,Carbon Mass Flux into Atmosphere Due to CO2 Emission from Fire Including All Sources [kgC m-2 s-1],land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_carbon_cycle_tier1,fFireNat,Carbon Mass Flux into Atmosphere Due to CO2 Emission from Natural Fire [kgC m-2 s-1],land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_carbon_cycle_tier1,fHarvestToAtmos,Harvested Biomass That Goes Straight into Atmosphere as Carbon Mass Flux [kgC m-2 s-1],land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_carbon_cycle_tier1,fHarvestToGeologicStorage,Harvested Biomass That Goes into Geological Storage,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_carbon_cycle_tier1,fVegSoil,Total Carbon Mass Flux from Vegetation Directly to Soil,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_carbon_cycle_tier2,cLeaf,Carbon Mass in Leaves,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_carbon_cycle_tier2,cLitterCwd,Carbon Mass in Coarse Woody Debris,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_carbon_cycle_tier2,cLitterSubSurf,Carbon Mass in Below-Ground Litter,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_carbon_cycle_tier2,cLitterSurf,Carbon Mass in Above-Ground Litter,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_carbon_cycle_tier2,cOther,"Carbon Mass in Vegetation Components Other than Leaves, Stems and Roots",land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_carbon_cycle_tier2,cRoot,Carbon Mass in Roots,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_carbon_cycle_tier2,cSoilPools,Carbon Mass in Each Model Soil Pool (Summed over Vertical Levels),land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_carbon_cycle_tier2,cStem,Carbon Mass in Stem,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_carbon_cycle_tier2,fLitterFire,"Carbon Mass Flux from Litter, CWD or any non-Living Pool into Atmosphere Due to CO2 Emission from All Fire [kgC m-2 s-1]",land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_carbon_cycle_tier2,fVegFire,Carbon Mass Flux from Vegetation into Atmosphere Due to CO2 Emission from All Fire [kgC m-2 s-1],land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_carbon_cycle_tier2,fVegLitterMortality,Total Carbon Mass Flux from Vegetation to Litter as a Result of Mortality,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_carbon_cycle_tier2,fVegLitterSenescence,"Total Carbon Mass Flux from Vegetation to Litter as a Result of Leaf, Branch, and Root Senescence",land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_carbon_cycle_tier2,fVegSoilMortality,Total Carbon Mass Flux from Vegetation to Soil as a Result of Mortality,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_carbon_cycle_tier2,fVegSoilSenescence,"Total Carbon Mass Flux from Vegetation to Soil as a Result of Leaf, Branch, and Root Senescence",land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_carbon_cycle_tier2,nppLeaf,Net Primary Production Allocated to Leaves as Carbon Mass Flux [kgC m-2 s-1],land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_carbon_cycle_tier2,nppOther,Net Primary Production Allocated to Other Pools (not Leaves Stem or Roots) as Carbon Mass Flux [kgC m-2 s-1],land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_carbon_cycle_tier2,nppRoot,Net Primary Production Allocated to Roots as Carbon Mass Flux [kgC m-2 s-1],land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_carbon_cycle_tier2,nppStem,Net Primary Production Allocated to Stem as Carbon Mass Flux [kgC m-2 s-1],land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_carbon_cycle_tier2,raLeaf,Total Respiration from Leaves as Carbon Mass Flux [kgC m-2 s-1],land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_carbon_cycle_tier2,raOther,Total Respiration from Other Pools (not Leaves Stem or Roots) as Carbon Mass Flux [kgC m-2 s-1],land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_carbon_cycle_tier2,raRoot,Total Respiration from Roots as Carbon Mass Flux [kgC m-2 s-1],land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_carbon_cycle_tier2,raStem,Total Respiration from Stem as Carbon Mass Flux [kgC m-2 s-1],land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_carbon_cycle_tier2,rhLitter,Carbon Mass Flux into Atmosphere Due to Heterotrophic Respiration from Litter on Land,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_carbon_cycle_tier2,rhSoil,Carbon Mass Flux into Atmosphere Due to Heterotrophic Respiration from Soil on Land,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_ch4_fluxes,ch4losssoil,loss of methane from the atmosphere due to biological consumption in the soil,atmosChem,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_ch4_fluxes,emiach4,anthropogenic emission rate of CH4,atmosChem,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_ch4_fluxes,emibbch4,total emission of CH4 from all biomass burning,aerosol,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_ch4_fluxes,emich4,total emission rate of CH4,atmosChem,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_ch4_fluxes,emilkch4,lake emission rate of CH4,atmosChem,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_ch4_fluxes,wetlandCH4,Grid Averaged Methane Emissions from Wetlands,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_ch4_fluxes,wetlandCH4cons,Grid Averaged Methane Consumption (Methanotrophy) from Wetlands,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_ch4_fluxes,wetlandCH4prod,Grid Averaged Methane Production (Methanogenesis) from Wetlands,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_ch4_fluxes,wetlandFrac,Wetland Percentage Cover,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_nitrogen_cycle_tier1,fNAnthDisturb,Nitrogen Mass Flux out of Land Due to any Human Activity,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_nitrogen_cycle_tier1,fNOx,Total Land NOx Flux,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_nitrogen_cycle_tier1,fNVegLitter,Total Nitrogen Mass Flux from Vegetation to Litter,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_nitrogen_cycle_tier1,fNVegSoil,Total Nitrogen Mass Flux from Vegetation Directly to Soil,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_nitrogen_cycle_tier1,fNfert,Total Nitrogen Added for Cropland Fertilisation (Artificial and Manure),land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_nitrogen_cycle_tier1,fNloss,"Total Nitrogen Lost (Including NHx, NOx, N2O, N2 and Leaching)",land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_nitrogen_cycle_tier2,fNgas,"Total Nitrogen Lost to the Atmosphere (Sum of NHx, NOx, N2O, N2)",land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_nitrogen_cycle_tier2,fNgasFire,"Total Nitrogen Lost to the Atmosphere (Including NHx, NOx, N2O, N2) from Fire",land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_nitrogen_cycle_tier2,fNgasNonFire,"Total Nitrogen Lost to the Atmosphere (Including NHx, NOx, N2O, N2) from All Processes Except Fire",land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_nitrogen_cycle_tier2,nLeaf,Nitrogen Mass in Leaves,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_nitrogen_cycle_tier2,nLitterCwd,Nitrogen Mass in Coarse Woody Debris,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_nitrogen_cycle_tier2,nLitterSubSurf,Nitrogen Mass in Below-Ground Litter (non CWD),land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_nitrogen_cycle_tier2,nLitterSurf,Nitrogen Mass in Above-Ground Litter (non CWD),land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_nitrogen_cycle_tier2,nMineralNH4,Mineral Ammonium in the Soil,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_nitrogen_cycle_tier2,nMineralNO3,Mineral Nitrate in the Soil,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_nitrogen_cycle_tier2,nOther,"Nitrogen Mass in Vegetation Components Other than Leaves, Stem and Root",land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_nitrogen_cycle_tier2,nRoot,Nitrogen Mass in Roots,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,land_nitrogen_cycle_tier2,nStem,Nitrogen Mass in Stem,land,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,ocean_carbon_cycle_tier2,chlcalc,Mass Concentration of Calcareous Phytoplankton Expressed as Chlorophyll in Sea Water,ocnBgchem,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,ocean_carbon_cycle_tier2,chldiaz,Mass Concentration of Diazotrophs Expressed as Chlorophyll in Sea Water,ocnBgchem,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,ocean_carbon_cycle_tier2,chlpico,Mass Concentration of Picophytoplankton Expressed as Chlorophyll in Sea Water,ocnBgchem,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,ocean_carbon_cycle_tier2,dmso,Mole Concentration of Dimethyl Sulphide in Sea Water,ocnBgchem,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,ocean_carbon_cycle_tier2,epn100,Downward Flux of Particulate Nitrogen,ocnBgchem,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,ocean_carbon_cycle_tier2,epp100,Downward Flux of Particulate Phosphorus,ocnBgchem,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,ocean_carbon_cycle_tier2,fgdms,Surface Upward Flux of DMS,ocnBgchem,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,ocean_carbon_cycle_tier2,fric,Downward Inorganic Carbon Flux at Ocean Bottom,ocnBgchem,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,ocean_carbon_cycle_tier2,froc,Downward Organic Carbon Flux at Ocean Bottom,ocnBgchem,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,ocean_carbon_cycle_tier2,graz,Total Grazing of Phytoplankton by Zooplankton,ocnBgchem,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,ocean_carbon_cycle_tier2,icfriver,Flux of Inorganic Carbon into Ocean Surface by Runoff,ocnBgchem,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,ocean_carbon_cycle_tier2,intppcalc,Net Primary Mole Productivity of Carbon by Calcareous Phytoplankton,ocnBgchem,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,ocean_carbon_cycle_tier2,intppdiaz,Net Primary Mole Productivity of Carbon by Diazotrophs,ocnBgchem,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,ocean_carbon_cycle_tier2,intppnitrate,Primary Organic Carbon Production by Phytoplankton Based on Nitrate Uptake Alone,ocnBgchem,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,ocean_carbon_cycle_tier2,intpppico,Net Primary Mole Productivity of Carbon by Picophytoplankton,ocnBgchem,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,ocean_carbon_cycle_tier2,phycalc,Mole Concentration of Calcareous Phytoplankton Expressed as Carbon in Sea Water,ocnBgchem,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,ocean_carbon_cycle_tier2,phypico,Mole Concentration of Picophytoplankton Expressed as Carbon in Sea Water,ocnBgchem,mon
+ESYDA,Benchmarking and Attributing Changes to Global Carbon and other Biogeochemical Cycles,ocean_carbon_cycle_tier2,zmisc,Mole Concentration of Other Zooplankton Expressed as Carbon in Sea Water,ocnBgchem,mon
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,marine_bgc_baseline,co2massClim,Total Atmospheric Mass of CO2,atmos,mon
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,marine_bgc_baseline,dmsos,Surface Mole Concentration of Dimethyl Sulphide in Sea Water,ocnBgchem,mon
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,marine_bgc_baseline,fric,Downward Inorganic Carbon Flux at Ocean Bottom,ocnBgchem,mon
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,marine_bgc_baseline,froc,Downward Organic Carbon Flux at Ocean Bottom,ocnBgchem,mon
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,marine_bgc_baseline,graz,Total Grazing of Phytoplankton by Zooplankton,ocnBgchem,mon
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,marine_bgc_baseline,msftmz,Ocean Meridional Overturning Mass Streamfunction,ocean,mon
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,marine_bgc_baseline,phycalc,Mole Concentration of Calcareous Phytoplankton Expressed as Carbon in Sea Water,ocnBgchem,mon
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,marine_bgc_baseline,phypico,Mole Concentration of Picophytoplankton Expressed as Carbon in Sea Water,ocnBgchem,mon
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,marine_bgc_baseline,zmisc,Mole Concentration of Other Zooplankton Expressed as Carbon in Sea Water,ocnBgchem,mon
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,marine_bgc_carbon_sink,o2sat,Dissolved Oxygen Concentration at Saturation,ocnBgchem,mon
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,marine_bgc_fishmip,intppcalc,Net Primary Mole Productivity of Carbon by Calcareous Phytoplankton,ocnBgchem,mon
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,marine_bgc_fishmip,intppdiaz,Net Primary Mole Productivity of Carbon by Diazotrophs,ocnBgchem,mon
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,marine_bgc_fishmip,intppnano,Net Primary Organic Carbon Production by Nanophytoplankton,ocnBgchem,mon
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,marine_bgc_fishmip,intpppico,Net Primary Mole Productivity of Carbon by Picophytoplankton,ocnBgchem,mon
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,marine_bgc_pp_uncertainty,limfecalc,Iron Limitation of Calcareous Phytoplankton,ocnBgchem,mon
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,marine_bgc_pp_uncertainty,limfediat,Iron Limitation of Diatoms,ocnBgchem,mon
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,marine_bgc_pp_uncertainty,limfediaz,Iron Limitation of Diazotrophs,ocnBgchem,mon
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,marine_bgc_pp_uncertainty,limfemisc,Iron Limitation of Other Phytoplankton,ocnBgchem,mon
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,marine_bgc_pp_uncertainty,limfepico,Iron Limitation of Picophytoplankton,ocnBgchem,mon
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,marine_bgc_pp_uncertainty,limirrcalc,Irradiance Limitation of Calcareous Phytoplankton,ocnBgchem,mon
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,marine_bgc_pp_uncertainty,limirrdiat,Irradiance Limitation of Diatoms,ocnBgchem,mon
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,marine_bgc_pp_uncertainty,limirrdiaz,Irradiance Limitation of Diazotrophs,ocnBgchem,mon
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,marine_bgc_pp_uncertainty,limirrmisc,Irradiance Limitation of Other Phytoplankton,ocnBgchem,mon
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,marine_bgc_pp_uncertainty,limirrpico,Irradiance Limitation of Picophytoplankton,ocnBgchem,mon
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,marine_bgc_pp_uncertainty,limncalc,Nitrogen Limitation of Calcareous Phytoplankton,ocnBgchem,mon
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,marine_bgc_pp_uncertainty,limndiat,Nitrogen Limitation of Diatoms,ocnBgchem,mon
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,marine_bgc_pp_uncertainty,limndiaz,Nitrogen Limitation of Diazotrophs,ocnBgchem,mon
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,marine_bgc_pp_uncertainty,limnmisc,Nitrogen Limitation of Other Phytoplankton,ocnBgchem,mon
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,marine_bgc_pp_uncertainty,limnpico,Nitrogen Limitation of Picophytoplankton,ocnBgchem,mon
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,marine_bgc_seaice,sialgc,Total Ice Algal Carbon Amount in Sea Ice,ocnBgchem,mon
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,marine_bgc_seaice,sichl,Amount of Total Ice Algae Expressed as Chlorophyll in Sea Ice,ocnBgchem,mon
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,marine_bgc_seaice,sigpp,Gross Primary Productivity in Sea Ice as Carbon Amount Flux,ocnBgchem,mon
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,marine_bgc_seaice,sino3,Dissolved Nitrate Amount in Sea Ice,ocnBgchem,mon
+ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,marine_bgc_seaice,sisi,Dissolved Silicon Amount in Sea Ice,ocnBgchem,mon
+ESYDA,Constructing a Global Carbon Budget,atmosphere_carbon_cycle_tier1,co23D,3D-Field of Transported CO2,atmos,mon
+ESYDA,Constructing a Global Carbon Budget,atmosphere_carbon_cycle_tier1,co2mass,Total Atmospheric Mass of CO2,atmos,mon
+ESYDA,Constructing a Global Carbon Budget,atmosphere_carbon_cycle_tier1,fco2all,Carbon Mass Flux into Atmosphere Due to All Emissions of CO2 from All Sources [kgC m-2 s-1],atmos,mon
+ESYDA,Constructing a Global Carbon Budget,atmosphere_carbon_cycle_tier1,fco2antt,Carbon Mass Flux into Atmosphere Due to All Anthropogenic Emissions of CO2 [kgC m-2 s-1],atmos,mon
+ESYDA,Constructing a Global Carbon Budget,atmosphere_carbon_cycle_tier1,fco2fos,Carbon Mass Flux into Atmosphere Due to Fossil Fuel Emissions of CO2 [kgC m-2 s-1],atmos,mon
+ESYDA,Constructing a Global Carbon Budget,atmosphere_carbon_cycle_tier1,fco2nat,Surface Carbon Mass Flux into the Atmosphere Due to Natural Sources [kgC m-2 s-1],atmos,mon
+ESYDA,Constructing a Global Carbon Budget,land_carbon_cycle_tier1,cGeologicStorage,Carbon Mass in Geologic Storage,land,mon
+ESYDA,Constructing a Global Carbon Budget,land_carbon_cycle_tier1,fAnthDisturb,"Carbon Mass Flux from Vegetation, Litter or Soil Pools into the Atmosphere Due to any Human Activity [kgC m-2 s-1]",land,mon
+ESYDA,Constructing a Global Carbon Budget,land_carbon_cycle_tier1,fCLandToOcean,Lateral Transfer of Carbon out of Grid Cell That Eventually Goes into Ocean,land,mon
+ESYDA,Constructing a Global Carbon Budget,land_carbon_cycle_tier1,fDeforestToAtmos,Deforested Biomass That Goes into Atmosphere as a Result of Anthropogenic Land-Use Change [kgC m-2 s-1],land,mon
+ESYDA,Constructing a Global Carbon Budget,land_carbon_cycle_tier1,fFireAll,Carbon Mass Flux into Atmosphere Due to CO2 Emission from Fire Including All Sources [kgC m-2 s-1],land,mon
+ESYDA,Constructing a Global Carbon Budget,land_carbon_cycle_tier1,fFireNat,Carbon Mass Flux into Atmosphere Due to CO2 Emission from Natural Fire [kgC m-2 s-1],land,mon
+ESYDA,Constructing a Global Carbon Budget,land_carbon_cycle_tier1,fHarvestToAtmos,Harvested Biomass That Goes Straight into Atmosphere as Carbon Mass Flux [kgC m-2 s-1],land,mon
+ESYDA,Constructing a Global Carbon Budget,land_carbon_cycle_tier1,fHarvestToGeologicStorage,Harvested Biomass That Goes into Geological Storage,land,mon
+ESYDA,Constructing a Global Carbon Budget,land_carbon_cycle_tier1,fVegSoil,Total Carbon Mass Flux from Vegetation Directly to Soil,land,mon
+ESYDA,Constructing a Global Carbon Budget,land_carbon_cycle_tier2,cLeaf,Carbon Mass in Leaves,land,mon
+ESYDA,Constructing a Global Carbon Budget,land_carbon_cycle_tier2,cLitterCwd,Carbon Mass in Coarse Woody Debris,land,mon
+ESYDA,Constructing a Global Carbon Budget,land_carbon_cycle_tier2,cLitterSubSurf,Carbon Mass in Below-Ground Litter,land,mon
+ESYDA,Constructing a Global Carbon Budget,land_carbon_cycle_tier2,cLitterSurf,Carbon Mass in Above-Ground Litter,land,mon
+ESYDA,Constructing a Global Carbon Budget,land_carbon_cycle_tier2,cOther,"Carbon Mass in Vegetation Components Other than Leaves, Stems and Roots",land,mon
+ESYDA,Constructing a Global Carbon Budget,land_carbon_cycle_tier2,cRoot,Carbon Mass in Roots,land,mon
+ESYDA,Constructing a Global Carbon Budget,land_carbon_cycle_tier2,cSoilPools,Carbon Mass in Each Model Soil Pool (Summed over Vertical Levels),land,mon
+ESYDA,Constructing a Global Carbon Budget,land_carbon_cycle_tier2,cStem,Carbon Mass in Stem,land,mon
+ESYDA,Constructing a Global Carbon Budget,land_carbon_cycle_tier2,fLitterFire,"Carbon Mass Flux from Litter, CWD or any non-Living Pool into Atmosphere Due to CO2 Emission from All Fire [kgC m-2 s-1]",land,mon
+ESYDA,Constructing a Global Carbon Budget,land_carbon_cycle_tier2,fVegFire,Carbon Mass Flux from Vegetation into Atmosphere Due to CO2 Emission from All Fire [kgC m-2 s-1],land,mon
+ESYDA,Constructing a Global Carbon Budget,land_carbon_cycle_tier2,fVegLitterMortality,Total Carbon Mass Flux from Vegetation to Litter as a Result of Mortality,land,mon
+ESYDA,Constructing a Global Carbon Budget,land_carbon_cycle_tier2,fVegLitterSenescence,"Total Carbon Mass Flux from Vegetation to Litter as a Result of Leaf, Branch, and Root Senescence",land,mon
+ESYDA,Constructing a Global Carbon Budget,land_carbon_cycle_tier2,fVegSoilMortality,Total Carbon Mass Flux from Vegetation to Soil as a Result of Mortality,land,mon
+ESYDA,Constructing a Global Carbon Budget,land_carbon_cycle_tier2,fVegSoilSenescence,"Total Carbon Mass Flux from Vegetation to Soil as a Result of Leaf, Branch, and Root Senescence",land,mon
+ESYDA,Constructing a Global Carbon Budget,land_carbon_cycle_tier2,nppLeaf,Net Primary Production Allocated to Leaves as Carbon Mass Flux [kgC m-2 s-1],land,mon
+ESYDA,Constructing a Global Carbon Budget,land_carbon_cycle_tier2,nppOther,Net Primary Production Allocated to Other Pools (not Leaves Stem or Roots) as Carbon Mass Flux [kgC m-2 s-1],land,mon
+ESYDA,Constructing a Global Carbon Budget,land_carbon_cycle_tier2,nppRoot,Net Primary Production Allocated to Roots as Carbon Mass Flux [kgC m-2 s-1],land,mon
+ESYDA,Constructing a Global Carbon Budget,land_carbon_cycle_tier2,nppStem,Net Primary Production Allocated to Stem as Carbon Mass Flux [kgC m-2 s-1],land,mon
+ESYDA,Constructing a Global Carbon Budget,land_carbon_cycle_tier2,raLeaf,Total Respiration from Leaves as Carbon Mass Flux [kgC m-2 s-1],land,mon
+ESYDA,Constructing a Global Carbon Budget,land_carbon_cycle_tier2,raOther,Total Respiration from Other Pools (not Leaves Stem or Roots) as Carbon Mass Flux [kgC m-2 s-1],land,mon
+ESYDA,Constructing a Global Carbon Budget,land_carbon_cycle_tier2,raRoot,Total Respiration from Roots as Carbon Mass Flux [kgC m-2 s-1],land,mon
+ESYDA,Constructing a Global Carbon Budget,land_carbon_cycle_tier2,raStem,Total Respiration from Stem as Carbon Mass Flux [kgC m-2 s-1],land,mon
+ESYDA,Constructing a Global Carbon Budget,land_carbon_cycle_tier2,rhLitter,Carbon Mass Flux into Atmosphere Due to Heterotrophic Respiration from Litter on Land,land,mon
+ESYDA,Constructing a Global Carbon Budget,land_carbon_cycle_tier2,rhSoil,Carbon Mass Flux into Atmosphere Due to Heterotrophic Respiration from Soil on Land,land,mon
+ESYDA,Earth's Energy Budget,seaice_budget_energy_monthly,sifllattop,Net Latent Heat Flux over Sea Ice,seaIce,mon
+ESYDA,Earth's Energy Budget,seaice_budget_energy_monthly,siflsensbot,Net Upward Sensible Heat Flux under Sea Ice,seaIce,mon
+ESYDA,Earth's Energy Budget,seaice_budget_energy_monthly,siflswdbot,Downwelling Shortwave Flux under Sea Ice,seaIce,mon
+ESYDA,"Ocean changes, drivers and impacts",int_ocean_budgets,absscint,Integral wrt depth of seawater absolute salinity expressed as salt mass content,ocean,mon
+ESYDA,"Ocean changes, drivers and impacts",int_ocean_budgets,chcint,Depth Integrated Seawater Conservative Temperature Expressed As Heat Content,ocean,mon
+ESYDA,"Ocean changes, drivers and impacts",int_ocean_budgets,pfscint,Integral wrt depth of seawater preformed salinity expressed as salt mass content,ocean,mon
+ESYDA,"Ocean changes, drivers and impacts",int_ocean_budgets,phcint,Integrated Ocean Heat Content from Potential Temperature,ocean,mon
+ESYDA,"Ocean changes, drivers and impacts",int_ocean_budgets,scint,Integral wrt depth of seawater practical salinity expressed as salt mass content,ocean,mon
+ESYDA,"Ocean changes, drivers and impacts",ocean_meridional_overturning_streamfunctions,msftmrho,Ocean Meridional Overturning Mass Streamfunction,ocean,mon
+ESYDA,"Ocean changes, drivers and impacts",ocean_meridional_overturning_streamfunctions,msftmz,Ocean Meridional Overturning Mass Streamfunction,ocean,mon
+ESYDA,"Ocean changes, drivers and impacts",ocean_meridional_overturning_streamfunctions,msftyrho,Ocean Y Overturning Mass Streamfunction,ocean,mon
+ESYDA,"Ocean changes, drivers and impacts",ocean_mesoscale,hfx,3D Ocean Heat X Transport,ocean,mon
+ESYDA,"Ocean changes, drivers and impacts",ocean_mesoscale,hfxint,Vertically Integrated Ocean Heat X Transport,ocean,day
+ESYDA,"Ocean changes, drivers and impacts",ocean_mesoscale,hfy,3D Ocean Heat Y Transport,ocean,mon
+ESYDA,"Ocean changes, drivers and impacts",ocean_mesoscale,hfyint,Vertically Integrated Ocean Heat Y Transport,ocean,day
+ESYDA,"Ocean changes, drivers and impacts",ocean_mesoscale,sfx,3D Ocean Salt Mass X Transport,ocean,mon
+ESYDA,"Ocean changes, drivers and impacts",ocean_mesoscale,sfxint,Vertically Integrated Ocean Salt Mass X Transport,ocean,mon
+ESYDA,"Ocean changes, drivers and impacts",ocean_mesoscale,sfy,3D Ocean Salt Mass Y Transport,ocean,mon
+ESYDA,"Ocean changes, drivers and impacts",ocean_mesoscale,sfyint,Vertically Integrated Ocean Salt Mass Y Transport,ocean,mon
+ESYDA,"Ocean changes, drivers and impacts",ocean_mesoscale,uos,Daily Surface Sea Water X Velocity,ocean,day
+ESYDA,"Ocean changes, drivers and impacts",ocean_mesoscale,vos,Daily Surface Sea Water Y Velocity,ocean,day
+ESYDA,"Ocean changes, drivers and impacts",omip_scalars_high_priority,bigthetao,Sea Water Conservative Temperature,ocean,dec mon
+ESYDA,"Ocean changes, drivers and impacts",omip_scalars_high_priority,bigthetaoga,Global Average Sea Water Conservative Temperature,ocean,mon
+ESYDA,"Ocean changes, drivers and impacts",omip_scalars_high_priority,pso,Sea Water Pressure at Sea Water Surface,ocean,mon
+ESYDA,"Ocean changes, drivers and impacts",omip_transports_high_priority,hfbasinpsmadv,Northward Ocean Heat Transport Due to Parameterized Submesoscale Advection,ocean,mon
+ESYDA,"Ocean changes, drivers and impacts",omip_transports_high_priority,msftmrho,Ocean Meridional Overturning Mass Streamfunction,ocean,mon
+ESYDA,"Ocean changes, drivers and impacts",omip_transports_high_priority,msftmz,Ocean Meridional Overturning Mass Streamfunction,ocean,mon
+ESYDA,"Ocean changes, drivers and impacts",omip_transports_high_priority,msftyrho,Ocean Y Overturning Mass Streamfunction,ocean,mon
+ESYDA,"Ocean changes, drivers and impacts",omip_transports_high_priority,sltbasin,Northward Ocean Salt Transport,ocean,mon
+ESYDA,"Ocean changes, drivers and impacts",seaice_state_monthly_basic,siconca,Sea-Ice Area Percentage (Atmospheric Grid),seaIce,mon
+ESYDA,Role of fire in the Earth system,FireMIP_daily,cldnvi,Column Integrated Cloud Droplet Number,atmos,day
+ESYDA,Role of fire in the Earth system,FireMIP_daily,loadbc,Load of Black Carbon Aerosol,atmos,day
+ESYDA,Role of fire in the Earth system,FireMIP_daily,loadoa,Load of Dry Aerosol Organic Matter,atmos,day
+ESYDA,Role of fire in the Earth system,FireMIP_daily,loadpoa,Load of Dry Aerosol Primary Organic Matter,atmos,day
+ESYDA,Role of fire in the Earth system,FireMIP_monthly,cLeaf,Carbon Mass in Leaves,land,mon
+ESYDA,Role of fire in the Earth system,FireMIP_monthly,cRoot,Carbon Mass in Roots,land,mon
+ESYDA,Role of fire in the Earth system,FireMIP_monthly,cStem,Carbon Mass in Stem,land,mon
+ESYDA,Role of fire in the Earth system,FireMIP_monthly,ccn,Cloud Condensation Nuclei Concentration at Liquid Cloud Top,aerosol,mon
+ESYDA,Role of fire in the Earth system,FireMIP_monthly,cdnc,Cloud Liquid Droplet Number Concentration,aerosol,mon
+ESYDA,Role of fire in the Earth system,FireMIP_monthly,cltc,Convective Cloud Cover Percentage,atmos,mon
+ESYDA,Role of fire in the Earth system,FireMIP_monthly,co2Clim,Mole Fraction of CO2,atmos,mon
+ESYDA,Role of fire in the Earth system,FireMIP_monthly,conccn,Aerosol Number Concentration,aerosol,mon
+ESYDA,Role of fire in the Earth system,FireMIP_monthly,emibbbc,total emission rate of black carbon aerosol mass from all biomass burning,aerosol,mon
+ESYDA,Role of fire in the Earth system,FireMIP_monthly,emibbch4,total emission of CH4 from all biomass burning,aerosol,mon
+ESYDA,Role of fire in the Earth system,FireMIP_monthly,emibbco,total emission rate of CO from all biomass burning,aerosol,mon
+ESYDA,Role of fire in the Earth system,FireMIP_monthly,emibbdms,total emission of DMS from all biomass burning,aerosol,mon
+ESYDA,Role of fire in the Earth system,FireMIP_monthly,emibboa,total emission of organic aerosol from all biomass burning,aerosol,mon
+ESYDA,Role of fire in the Earth system,FireMIP_monthly,emibbso2,total emission rate of SO2 from all biomass burning,aerosol,mon
+ESYDA,Role of fire in the Earth system,FireMIP_monthly,emibbvoc,total emission rate of NMVOC from all biomass burning,aerosol,mon
+ESYDA,Role of fire in the Earth system,FireMIP_monthly,fNVegSoil,Total Nitrogen Mass Flux from Vegetation Directly to Soil,land,mon
+ESYDA,Role of fire in the Earth system,FireMIP_monthly,fNgas,"Total Nitrogen Lost to the Atmosphere (Sum of NHx, NOx, N2O, N2)",land,mon
+ESYDA,Role of fire in the Earth system,FireMIP_monthly,fNgasFire,"Total Nitrogen Lost to the Atmosphere (Including NHx, NOx, N2O, N2) from Fire",land,mon
+ESYDA,Role of fire in the Earth system,FireMIP_monthly,fNloss,"Total Nitrogen Lost (Including NHx, NOx, N2O, N2 and Leaching)",land,mon
+ESYDA,Role of fire in the Earth system,FireMIP_monthly,fco2nat,Surface Carbon Mass Flux into the Atmosphere Due to Natural Sources [kgC m-2 s-1],atmos,mon
+ESYDA,Role of fire in the Earth system,FireMIP_monthly,lwp,Liquid Water Path,aerosol,mon
+ESYDA,Role of fire in the Earth system,FireMIP_monthly,mmrpm2p5,PM2.5 Mass Mixing Ratio,aerosol,mon
+ESYDA,Role of fire in the Earth system,FireMIP_monthly,od550bb,Aerosol Optical Depth at 550nm Due to Biomass Burning,aerosol,mon
+ESYDA,Role of fire in the Earth system,FireMIP_monthly,od550bc,Black Carbon Optical Thickness at 550nm,aerosol,mon
+ESYDA,Role of fire in the Earth system,FireMIP_monthly,od550oa,Total Organic Aerosol Optical Depth at 550nm,aerosol,mon
+ESYDA,Role of fire in the Earth system,FireMIP_monthly,od550soa,Particulate Organic Aerosol Optical Depth at 550nm,aerosol,mon
+ESYDA,Role of fire in the Earth system,FireMIP_monthly,pflw,Liquid Water Content of Permafrost Layer,landIce,mon
+ESYDA,Role of fire in the Earth system,FireMIP_monthly,prra,Rainfall Flux,atmos,mon
+ESYDA,Role of fire in the Earth system,FireMIP_monthly,reffsclwtop,Cloud-Top Effective Droplet Radius in Stratiform Cloud,atmos,mon
+ESYDA,Role of fire in the Earth system,FireMIP_monthly,rtmt,Net Downward Radiative Flux at Top of Model,atmos,mon
+ESYDA,Role of fire in the Earth system,FireMIP_monthly,sootsn,Snow Soot Content,landIce,mon
+ESYDA,Role of fire in the Earth system,FireMIP_monthly,tntrs,Tendency of Air Temperature Due to Shortwave Radiative Heating,atmos,mon
+ESYDA,Role of fire in the Earth system,FireMIP_monthly,tpf,Permafrost Layer Thickness,landIce,mon
+ESYDA,"Sea ice changes, drivers and impacts",seaice_budget_area_monthly,sidconcdyn,Sea-Ice Area Fraction Tendency Due to Dynamics,seaIce,mon
+ESYDA,"Sea ice changes, drivers and impacts",seaice_budget_energy_monthly,sifllattop,Net Latent Heat Flux over Sea Ice,seaIce,mon
+ESYDA,"Sea ice changes, drivers and impacts",seaice_budget_energy_monthly,siflsensbot,Net Upward Sensible Heat Flux under Sea Ice,seaIce,mon
+ESYDA,"Sea ice changes, drivers and impacts",seaice_budget_energy_monthly,siflswdbot,Downwelling Shortwave Flux under Sea Ice,seaIce,mon
+ESYDA,"Sea ice changes, drivers and impacts",seaice_budget_mass_monthly,sidmassgrowthsi,Sea-Ice Mass Change Through Snow-to-Ice Conversion,seaIce,mon
+ESYDA,"Sea ice changes, drivers and impacts",seaice_budget_mass_monthly,sidmassmeltlat,Sea-Ice Mass Change Through Lateral Melting,seaIce,mon
+ESYDA,"Sea ice changes, drivers and impacts",seaice_budget_mass_monthly,sisndmassdyn,Snow Mass Rate of Change Through Advection by Sea-Ice Dynamics,seaIce,mon
+ESYDA,"Sea ice changes, drivers and impacts",seaice_budget_mass_monthly,sisndmasssi,Snow Mass Rate of Change Through Snow-to-Ice Conversion,seaIce,mon
+ESYDA,"Sea ice changes, drivers and impacts",seaice_budget_mass_monthly,sisndmasswind,Snow Mass Rate of Change Through Wind Drift of Snow,seaIce,mon
+ESYDA,"Sea ice changes, drivers and impacts",seaice_global_monthly_basic,siarean,Sea-Ice Area North,seaIce,mon
+ESYDA,"Sea ice changes, drivers and impacts",seaice_global_monthly_basic,siareas,Sea-Ice Area South,seaIce,mon
+ESYDA,"Sea ice changes, drivers and impacts",seaice_global_monthly_basic,siextentn,Sea-Ice Extent North,seaIce,mon
+ESYDA,"Sea ice changes, drivers and impacts",seaice_global_monthly_basic,siextents,Sea-Ice Extent South,seaIce,mon
+ESYDA,"Sea ice changes, drivers and impacts",seaice_state_daily_basic,siconca,Sea-Ice Area Percentage (Atmospheric Grid),seaIce,day
+ESYDA,"Sea ice changes, drivers and impacts",seaice_state_monthly_basic,siconca,Sea-Ice Area Percentage (Atmospheric Grid),seaIce,mon
+ESYDA,Terrestrial Biodiversity,biodiv_land_daily,evspsblpot,Potential Evapotranspiration,land,day
+ESYDA,Terrestrial Biodiversity,biodiv_land_daily_advanced,flashrate,Lightning Flash Rate,atmosChem,day
+ESYDA,Terrestrial Biodiversity,biodiv_land_monthly,co2mass,Total Atmospheric Mass of CO2,atmos,mon
+ESYDA,Terrestrial Biodiversity,biodiv_land_monthly,evspsblpot,Potential Evapotranspiration,land,mon
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",WaterResources_daily,evspsblpot,Potential Evapotranspiration,land,day
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",WaterResources_daily,mrrob,Subsurface Runoff,land,day
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",WaterResources_monthly,evspsblpot,Potential Evapotranspiration,land,mon
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",hydro_modelling_daily,evspsblpot,Potential Evapotranspiration,land,day
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",hydro_modelling_subdaily,evspsblpot,Potential Evapotranspiration,land,day
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",hydrology,depthl,Depth of Lake Below the Surface,land,fx
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",hydrology,dgw,Change in Groundwater,land,day
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",hydrology,drivw,Change in River Storage,land,day
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",hydrology,dsw,Change in Surface Water Storage,land,day
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",hydrology,mrrob,Subsurface Runoff,land,day
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",hydrology,mrsofc,Capacity of Soil to Store Water (Field Capacity),land,fx
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",hydrology,mrtws,Terrestrial Water Storage,land,day
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",hydrology,pflw,Liquid Water Content of Permafrost Layer,landIce,day
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",hydrology,qgwr,Groundwater Recharge from Soil Layer,land,day
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",hydrology,rivo,River Discharge,land,day
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",hydrology,sftlaf,Fraction of the Grid Cell Occupied by Lake,land,fx
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",hydrology,siitdsnconc,Snow Area Percentages in Ice Thickness Categories,seaIce,day
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",hydrology,siitdsnthick,Snow Thickness in Ice Thickness Categories,seaIce,day
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",hydrology,snmsl,Water Flowing out of Snowpack,atmos,day
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",hydrology,snw,Surface Snow Amount,landIce,day
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",hydrology,sw,Surface Water Storage,land,day
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",hydrology,tpf,Permafrost Layer Thickness,landIce,day
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",hydrology,wtd,Water Table Depth,land,day
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",snow_allfreq,agesno,Mean Age of Snow,landIce,mon
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",snow_allfreq,dsn,Change in Snow Water Equivalent,land,day
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",snow_allfreq,esn,Snow Evaporation,land,day
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",snow_allfreq,hfdsnb,Downward Heat Flux at Snow Base,atmos,day
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",snow_allfreq,lwsnl,Liquid Water Content of Snow Layer,landIce,day mon
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",snow_allfreq,prrsn,Fraction of Rainfall on Snow,atmos,day
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",snow_allfreq,prsnc,Convective Snowfall Flux,atmos,day
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",snow_allfreq,prsnsn,Fraction of Snowfall (Including Hail and Graupel) on Snow,atmos,day
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",snow_allfreq,sidmassgrowthsi,Sea-Ice Mass Change Through Snow-to-Ice Conversion,seaIce,mon
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",snow_allfreq,siitdsnthick,Snow Thickness in Ice Thickness Categories,seaIce,mon
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",snow_allfreq,sisndmassdyn,Snow Mass Rate of Change Through Advection by Sea-Ice Dynamics,seaIce,mon
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",snow_allfreq,sisndmasssi,Snow Mass Rate of Change Through Snow-to-Ice Conversion,seaIce,mon
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",snow_allfreq,sisndmasswind,Snow Mass Rate of Change Through Wind Drift of Snow,seaIce,mon
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",snow_allfreq,snrefr,Refreezing of Water in the Snow,atmos,day
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",snow_allfreq,snw,Surface Snow Amount,landIce,day mon
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",snow_allfreq,snwc,Snow Water Equivalent Intercepted by the Vegetation,atmos,day
+"ESYDA, ICR","Assessments for Hydrological Processes, Water Resources, and Freshwater Systems",snow_allfreq,sootsn,Snow Soot Content,landIce,mon
+"ESYDA, ICR",Land use change,landuse,fracInLut,Annual Gross Percentage That Was Transferred into This Tile from Other Land-Use Tiles,land,yr
+"ESYDA, ICR",Land use change,landuse,fracOutLut,Annual Gross Percentage of Land-Use Tile That Was Transferred into Other Land-Use Tiles,land,yr
+"ESYDA, ICR",Land use change,landuse,irrLut,"Irrigation Flux Including any Irrigation for Crops, Trees, Pasture, or Urban Lawns",land,mon
+"ESYDA, ICR",Land use change,landuse,nbpLut,Net Carbon Mass Flux into Land-Use Tile [kgC m-2 s-1],land,mon
+"ESYDA, ICR",Plant Phenology,plant_phenology_high,gppVgt,Gross Primary Production on Vegetation type as Carbon Mass Flux [kgC m-2 s-1],land,day
+"ESYDA, ICR",Plant Phenology,plant_phenology_high,laiVgt,Leaf Area Index on Vegetation type,land,day
+"ESYDA, ICR",Plant Phenology,plant_phenology_medium,nppVgt,Net Primary Production on Vegetation type as Carbon Mass Flux [kgC m-2 s-1],land,day
+"ESYDA, ICR",Plant Phenology,plant_phenology_medium,raVgt,Autotrophic Respiration on Vegetation type as Carbon Mass Flux [kgC m-2 s-1],land,day
+"ESYDA, ICR",Plant Phenology,plant_phenology_medium,rhVgt,Heterotrophic Respiration on Vegetation type as Carbon Mass Flux [kgC m-2 s-1],land,day
+"ESYDA, ICR",Water cycle/budget assessment,WaterResources_daily,evspsblpot,Potential Evapotranspiration,land,day
+"ESYDA, ICR",Water cycle/budget assessment,WaterResources_daily,mrrob,Subsurface Runoff,land,day
+ICR,Agriculture and Food System Impacts,AgWaterCore,evspsblpot,Potential Evapotranspiration,land,day
+ICR,Agriculture and Food System Impacts,AgWaterExt,evspsblpot,Potential Evapotranspiration,land,day
+ICR,Agriculture and Food System Impacts,AgWaterExt,irrDem,irrigation water demand,land,day
+ICR,Agriculture and Food System Impacts,AgWaterExt,irrGw,irrigation water withdrawal from groundwater,land,day
+ICR,Agriculture and Food System Impacts,AgWaterExt,irrLut,irrigation water withdrawal,land,day
+ICR,Agriculture and Food System Impacts,AgWaterExt,irrSurf,irrigation water withdrawal from surface water,land,day
+ICR,Agriculture and Food System Impacts,AgWaterExt,mrsofc,Capacity of Soil to Store Water (Field Capacity),land,fx
+ICR,Agriculture and Food System Impacts,AgWaterExt,rzwc,Root Zone Soil Moisture,land,day
+ICR,"Vulnerability of urban systems, infrastructure and populations",WaterResources_daily,evspsblpot,Potential Evapotranspiration,land,day
+ICR,"Vulnerability of urban systems, infrastructure and populations",WaterResources_daily,mrrob,Subsurface Runoff,land,day
+ICR,"Vulnerability of urban systems, infrastructure and populations",hydro_modelling_daily,evspsblpot,Potential Evapotranspiration,land,day
+ICR,Water Security and Freshwater Ecosystem Services,AgWaterCore,evspsblpot,Potential Evapotranspiration,land,day
+ICR,Water Security and Freshwater Ecosystem Services,AgWaterExt,evspsblpot,Potential Evapotranspiration,land,day
+ICR,Water Security and Freshwater Ecosystem Services,AgWaterExt,irrDem,irrigation water demand,land,day
+ICR,Water Security and Freshwater Ecosystem Services,AgWaterExt,irrGw,irrigation water withdrawal from groundwater,land,day
+ICR,Water Security and Freshwater Ecosystem Services,AgWaterExt,irrLut,irrigation water withdrawal,land,day
+ICR,Water Security and Freshwater Ecosystem Services,AgWaterExt,irrSurf,irrigation water withdrawal from surface water,land,day
+ICR,Water Security and Freshwater Ecosystem Services,AgWaterExt,mrsofc,Capacity of Soil to Store Water (Field Capacity),land,fx
+ICR,Water Security and Freshwater Ecosystem Services,AgWaterExt,rzwc,Root Zone Soil Moisture,land,day
