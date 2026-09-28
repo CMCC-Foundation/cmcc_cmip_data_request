@@ -58,8 +58,8 @@ sivol,False,hi,Sea-Ice Volume per Area
 sndmassmelt,False,sndmassmelt,Snow Mass Rate of Change Through Melt
 sndmasssnf,False,sndmasssnf,Snow Mass Change Through Snow Fall
 sndmasssubl,False,sndmassubl,Snow Mass Rate of Change Through Evaporation or Sublimation
-siarean,False,,Sea-Ice Area North
-siareas,False,,Sea-Ice Area South
+siarean,False,NOT-IN-MODEL,Sea-Ice Area North
+siareas,False,NOT-IN-MODEL,Sea-Ice Area South
 siconca,False,,Sea-Ice Area Percentage (Atmospheric Grid)
 sidconcdyn,False,,Sea-Ice Area Fraction Tendency Due to Dynamics
 sidmassgrowthsi,False,,Sea-Ice Mass Change Through Snow-to-Ice Conversion
@@ -80,5 +80,5 @@ sisndmasssubl,False,,Snow Mass Rate of Change Through Evaporation or Sublimation
 sisndmasswind,False,,Snow Mass Rate of Change Through Wind Drift of Snow
 sisnmassn,False,,Snow Mass on Sea Ice North
 sisnmasss,False,,Snow Mass on Sea Ice South
-sivoln,False,,Sea-Ice Volume North
-sivols,False,,Sea-Ice Volume South
+sivoln,False,NOT-IN-MODEL,Sea-Ice Volume North
+sivols,False,NOT-IN-MODEL,Sea-Ice Volume South
