@@ -41,7 +41,7 @@ To update your environment with following changes to the env file use
 
 `conda env update -f environment.yml`
 
-## Run it — 4 commands
+## Run it — 5 commands
 
 ```bash
 cd cmcc_selection
@@ -60,6 +60,9 @@ python estimate_volume.py --version v1.2.2.4 2>/dev/null
 
 # 4) push the gaps back into the lookup tables, to be filled by hand
 python build_cmip7_lookup.py            # --dry-run to preview
+
+# 5) turn the production tables into CESM history namelists
+python make_namelists.py                # -> out/namelists/user_nl_cam, user_nl_clm
 ```
 
 (`2>/dev/null` just hides harmless `modeling_realm_-_primary` API warnings.)
@@ -100,6 +103,8 @@ present`). Realm/Division/GB context stays in `out/raw/unmapped.csv` and
 | `raw/mapping_detail.csv` | every directly-mapped DR var → raw name, which lookup, `reprocess` flag |
 | `raw/unmapped.csv` | **triage sheet** for vars with no direct raw mapping — see below |
 | `volume_by_variable.csv` | per-variable GB/model-year, largest first |
+| `namelists/user_nl_cam`, `namelists/user_nl_clm` | CESM history namelists: one tape per frequency, statistic as a per-field flag, `empty_htapes` set |
+| `namelists/tapes.csv` | audit: field → tape → the CMIP7 variables it serves, plus what was left off a tape and why |
 
 ### Mapping outcomes (three buckets)
 

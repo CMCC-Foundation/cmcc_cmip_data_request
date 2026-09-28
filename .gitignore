@@ -6,3 +6,6 @@ __pycache__/
 
 # Office lock files (created while a document is open)
 ~$*
+
+# macOS folder metadata
+.DS_Store

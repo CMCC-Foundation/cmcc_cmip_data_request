@@ -79,7 +79,20 @@ verbatim, only missing variables appended) and it verifies that every requested
 CMOR name has a row. Needs no API — see
 [`../cmip7-lookup/README.md`](../cmip7-lookup/README.md).
 
-## Step 6 — gap provenance / heavy variables (no API)
+## Step 6 — CESM history namelists (no API)
+```bash
+python make_namelists.py                  # --days-per-file 365, --valid-fields ...
+```
+Turns `out/production/<realm>.csv` into `out/namelists/user_nl_cam` (CAM6: atmos +
+aerosol + atmosChem) and `out/namelists/user_nl_clm` (CLM5: land + landIce), plus
+`tapes.csv` (field → tape → the CMIP7 variables it serves). One history tape per
+requested frequency (`nhtfrq`/`mfilt` from `--days-per-file`), the statistic as an
+explicit per-field flag (`'TREFHT:A'`, `'PS:I'`, `'TREFHTMX:X'`), `empty_htapes`
+set. A frequency gets a second tape when one field is requested there both
+averaged and instantaneous (CAM 6hr). Copy into the case and run
+`./preview_namelists` — that is what actually validates the field names.
+
+## Step 7 — gap provenance / heavy variables (no API)
 ```bash
 python truegap_provenance.py > truegap_summary.txt 2>/dev/null   # Division -> opp -> group -> vars
 python find_heavy_vars.py --realm ocean --freq 3hr               # out/heavy_ocean_3hr.csv
