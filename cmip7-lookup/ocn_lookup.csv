@@ -70,9 +70,9 @@ wo,False,wo,Sea Water Vertical Velocity
 zos,False,zos,Sea Surface Height Above Geoid
 zostoga,False,zostoga,Global Average Thermosteric Sea Level Change
 absscint,False,,Integral wrt depth of seawater absolute salinity expressed as salt mass content
-bigthetao,False,,Sea Water Conservative Temperature
-bigthetao200,False,,Sea Water Conservative Temperature at 200 meters
-bigthetaoga,False,,Global Average Sea Water Conservative Temperature
+bigthetao,False,NOT-IN-MODEL,Sea Water Conservative Temperature
+bigthetao200,False,NOT-IN-MODEL,Sea Water Conservative Temperature at 200 meters
+bigthetaoga,False,NOT-IN-MODEL,Global Average Sea Water Conservative Temperature
 chcint,False,,Depth Integrated Seawater Conservative Temperature Expressed As Heat Content
 ficeberg,False,,Water Flux into Sea Water from Icebergs
 flandice,False,,Water Flux into Sea Water from Land Ice
