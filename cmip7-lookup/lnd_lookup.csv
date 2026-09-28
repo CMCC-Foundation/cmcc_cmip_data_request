@@ -1,7 +1,7 @@
 variable,reprocess,model,long_name
 areacellr,True,area,Grid-Cell Area for River Model Variables
 baresoilFrac,True,pfts1d_wtgcell,Bare Soil Percentage Area Coverage
-burntFractionAll,True,FAREA_BURNED,Percentage of Entire Grid cell  that is Covered by Burnt Vegetation (All Classes)
+burntFractionAll,True,FAREA_BURNED,Percentage of entire grid cell  that is Covered by Burnt Vegetation (All Classes)
 c3PftFrac,True,pfts1d_wtgcell,Percentage Cover by C3 Plant Functional Type
 c4PftFrac,True,pfts1d_wtgcell,Percentage Cover by C4 Plant Functional Type
 cLand,True,TOTCOLC,Total Carbon in All Terrestrial Carbon Pools
