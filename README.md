@@ -47,7 +47,10 @@ To update your environment with following changes to the env file use
 cd cmcc_selection
 
 # 1) select + expand + cross-check   -> the CMOR variable list   [needs the DR API]
-python build_cmcc_cmip7_table.py --version v1.2.2.4 --outdir out 2>/dev/null
+python build_cmcc_cmip7_table.py --version v1.2.2.5 --outdir out 2>/dev/null
+#   additonal options:
+#   --select_groups "baseline_monthly, baseline_daily, baseline_fixed, baseline_subdaily" to select specific variable groups
+#   --exclude_groups "dynamical_downscaling_aerosols_chemistry" remove this variable group from processing
 
 # 2) translate to raw model names     -> the production list
 python map_to_raw_names.py 2>/dev/null
@@ -56,7 +59,7 @@ python map_to_raw_names.py 2>/dev/null
 #     --fallback-lookup-dir ../cmip_reformatter/cmip-tables/cmip6/variables )
 
 # 3) estimate data volume             -> GB / model-year          [needs the DR API]
-python estimate_volume.py --version v1.2.2.4 2>/dev/null
+python estimate_volume.py --version v1.2.2.5 2>/dev/null
 
 # 4) push the gaps back into the lookup tables, to be filled by hand
 python build_cmip7_lookup.py            # --dry-run to preview

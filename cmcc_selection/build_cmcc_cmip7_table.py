@@ -89,8 +89,19 @@ def clean_group_token(tok):
     return gid, note
 
 
-def parse_cmcc_csv(path):
+def parse_cmcc_csv(args):
     """Return list of dicts: {opportunity, priority, groups:[(gid,note)], raw}."""
+
+    # parse user options for groups
+    exclude_groups = []
+    if args.exclude_groups is not None:
+        exclude_groups = args.exclude_groups.replace(' ', '').split(',')
+    select_groups = []
+    if args.select_groups is not None:
+        select_groups = args.select_groups.replace(' ', '').split(',')
+
+    # load input csv data
+    path = args.csv
     with open(path, newline="") as f:
         rows = list(csv.reader(f))
     # header row is the one containing 'CMCC priority'
@@ -108,6 +119,17 @@ def parse_cmcc_csv(path):
         groups, seen = [], set()
         for raw_tok in re.split(r"[,\n]", vg):
             gid, note = clean_group_token(raw_tok)
+            # skip if empty
+            if gid is None:
+                continue
+            # Skip if in exclude list
+            if gid.lower() in exclude_groups:
+                continue
+            # Skip in not in selected, if selected is not empty
+            if select_groups:
+                if gid.lower() not in select_groups:
+                    continue
+            # add variable group
             if gid and gid.lower() not in seen:
                 seen.add(gid.lower())
                 groups.append((gid, note))
@@ -325,15 +347,19 @@ def main():
     ap.add_argument("--csv",
                     default=os.path.join(here, "..",
                                          "CMCC_CMIP7-DR-opportunities-Final_DR-Selection.csv"))
-    ap.add_argument("--version", default="v1.2.2.2")
+    ap.add_argument("--version", default="v1.2.2.5")
     ap.add_argument("--outdir", default=os.path.join(here, "out"))
     ap.add_argument("--parse-only", action="store_true",
                     help="only parse the CMCC CSV and print the selection (no API needed)")
     ap.add_argument("--allow-unmatched", action="store_true",
                     help="do not exit non-zero when some groups stay unresolved")
+    ap.add_argument("--select_groups", default=None,
+                    help="user selection of variable groups, as comma separated text")
+    ap.add_argument("--exclude_groups", default=None,
+                    help="user list of variable groups to exclude, as comma separated text")
     args = ap.parse_args()
 
-    selection = parse_cmcc_csv(args.csv)
+    selection = parse_cmcc_csv(args)
     n_groups = sum(len(e["groups"]) for e in selection)
     print(f"[parse] {len(selection)} High/Medium opportunities, "
           f"{n_groups} group references")
