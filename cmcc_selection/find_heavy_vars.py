@@ -65,7 +65,7 @@ def main():
     here = os.path.dirname(os.path.abspath(__file__))
     ap.add_argument("--mapped", default=os.path.join(here, "out", "cmcc_variables_mapped.csv"))
     ap.add_argument("--csv", default=os.path.join(here, "..",
-                    "CMCC_CMIP7-DR-opportunities-Final - DR-Selection.csv"))
+                    "CMCC_CMIP7-DR-opportunities-Final_DR-Selection.csv"))
     ap.add_argument("--outdir", default=os.path.join(here, "out"))
     ap.add_argument("--realm", default="ocean", help="realm to filter (default ocean)")
     ap.add_argument("--freq", default="3hr", help="frequency to filter (default 3hr)")

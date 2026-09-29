@@ -138,7 +138,7 @@ def footnote(y, lines):
 
 
 # ------------------------------------------------------- slide (1) opportunities
-# High/Medium as recorded in CMCC_CMIP7-DR-opportunities-Final - DR-Selection.csv
+# High/Medium as recorded in CMCC_CMIP7-DR-opportunities-Final_DR-Selection.csv
 OPPS = [
     ("ESYDA", [
         ("Baseline Climate Variables for Earth System Modelling", "high"),

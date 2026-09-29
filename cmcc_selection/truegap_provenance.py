@@ -6,7 +6,7 @@ owns that opportunity.
 
 Joins:
   * out/cmcc_variables_mapped.csv  (map_category, groups, opportunities per var)
-  * CMCC_CMIP7-DR-opportunities-Final - DR-Selection.csv  (Division per opportunity)
+  * CMCC_CMIP7-DR-opportunities-Final_DR-Selection.csv  (Division per opportunity)
 
 Group names are reconciled with the same cleaning + ALIASES used by
 build_cmcc_cmip7_table.py, so the two sides line up (e.g. omip_geometry_physics
@@ -15,7 +15,7 @@ build_cmcc_cmip7_table.py, so the two sides line up (e.g. omip_geometry_physics
 Usage:
     python truegap_provenance.py \
         --mapped out/cmcc_variables_mapped.csv \
-        --csv "../CMCC_CMIP7-DR-opportunities-Final - DR-Selection.csv"
+        --csv "../CMCC_CMIP7-DR-opportunities-Final_DR-Selection.csv"
 """
 import argparse
 import csv
@@ -60,7 +60,7 @@ def main():
     here = os.path.dirname(os.path.abspath(__file__))
     ap.add_argument("--mapped", default=os.path.join(here, "out", "cmcc_variables_mapped.csv"))
     ap.add_argument("--csv", default=os.path.join(here, "..",
-                    "CMCC_CMIP7-DR-opportunities-Final - DR-Selection.csv"))
+                    "CMCC_CMIP7-DR-opportunities-Final_DR-Selection.csv"))
     ap.add_argument("--outdir", default=os.path.join(here, "out"))
     args = ap.parse_args()
 

@@ -5,7 +5,7 @@ Build the CMCC CMIP7 output-variable table from the internal DR selection.
 Pipeline (steps 1-5 of the CMCC roadmap; volume + reformatter are separate):
 
   1. Parse the internal request
-       CMCC_CMIP7-DR-opportunities-Final - DR-Selection.csv
+       CMCC_CMIP7-DR-opportunities-Final_DR-Selection.csv
      keeping only opportunities flagged High or Medium CMCC priority, and
      collect the variable-group names listed for each.
   2. Load the CMIP7 Data Request via the API and expand every requested
@@ -28,7 +28,7 @@ so run this there, not on a laptop without the package + deps.
 
 Usage:
     python build_cmcc_cmip7_table.py \
-        --csv "../CMCC_CMIP7-DR-opportunities-Final - DR-Selection.csv" \
+        --csv "../CMCC_CMIP7-DR-opportunities-Final_DR-Selection.csv" \
         --version v1.2.2.2 \
         --outdir out
 """
@@ -324,7 +324,7 @@ def main():
     here = os.path.dirname(os.path.abspath(__file__))
     ap.add_argument("--csv",
                     default=os.path.join(here, "..",
-                                         "CMCC_CMIP7-DR-opportunities-Final - DR-Selection.csv"))
+                                         "CMCC_CMIP7-DR-opportunities-Final_DR-Selection.csv"))
     ap.add_argument("--version", default="v1.2.2.2")
     ap.add_argument("--outdir", default=os.path.join(here, "out"))
     ap.add_argument("--parse-only", action="store_true",
