@@ -1,0 +1,78 @@
+variable,reprocess,model,long_name
+abs550aer,False,AODABS,Ambient Aerosol Absorption Optical Thickness at 550nm
+areacella,True,AREA,Grid-Cell Area for Atmospheric Grid Variables
+ccb,False,PCONVB,Air Pressure at Convective Cloud Base
+cct,False,PCONVT,Air Pressure at Convective Cloud Top
+ci,False,FREQZM,Fraction of Time Convection Occurs in Cell
+cl,True,"CLOUD, PS",Percentage Cloud Cover
+cli,False,"CLDICE, PS",Mass Fraction of Cloud Ice
+clivi,False,TGCLDIWP,Ice Water Path
+clt,True,CLDTOT,Total Cloud Cover Percentage
+clw,False,"CLDLIQ, PS",Mass Fraction of Cloud Liquid Water
+clwvi,False,TGCLDLWP,Condensed Water Path
+evspsbl,True,LHFLX,Evaporation Including Sublimation and Transpiration
+hfls,False,LHFLX,Surface Upward Latent Heat Flux
+hfss,False,SHFLX,Surface Upward Sensible Heat Flux
+hur,True,"RELHUM, PS, T",Relative Humidity
+hurs,False,RHREFHT,Near-Surface Relative Humidity
+hursmax,False,RHREFHTMX,Daily Maximum Near-Surface Relative Humidity
+hursmin,False,RHREFHTMN,Daily Minimum Near-Surface Relative Humidity
+hus,True,"Q, PS, T", Specific Humidity
+hus19,True,"Q, PS, T",Specific Humidity
+hus8,True,"Q, PS, T",Specific Humidity
+huss,False,QREFHT,Near-Surface Specific Humidity
+od550aer,False,AODVIS,Ambient Aerosol Optical Thickness at 550nm
+pfull,True,PS,Pressure at Model Full-Levels
+phalf,True,PS,Pressure on Model Half-Levels
+pr,True,PRECT,Precipitation
+prc,True,"PRECC, PRECSC",Convective Precipitation
+prrc,True,PRECC,Convective Rainfall Rate
+prsn,True,"PRECSC,PRECSL",Snowfall Flux
+prw,False,TMQ,Water Vapor Path
+ps,False,PS,Surface Air Pressure
+psl,False,PSL,Sea Level Pressure
+rlds,False,FLDS,Surface Downwelling Longwave Radiation
+rldscs,False,FLDSC,Surface Downwelling Clear-Sky Longwave Radiation
+rls,True,FLNS,Net Longwave Surface Radiation
+rlus,True,"FLNS, FLDS",Surface Upwelling Longwave Radiation
+rlut,False,FLUT,TOA Outgoing Longwave Radiation
+rlutcs,False,FLUTC,TOA Outgoing Clear-Sky Longwave Radiation
+rsds,False,FSDS,Surface Downwelling Shortwave Radiation
+rsdscs,False,FSDSC,Surface Downwelling Clear-Sky Shortwave Radiation
+rsdsdiff,False,"SOLLD,SOLSD",Surface Diffuse Downwelling Shortwave Radiation
+rsdt,True,"FSNTOA, FSUTOA",TOA Incident Shortwave Radiation
+rss,False,FSNS,Net Shortwave Surface Radiation
+rsus,True,"FSDS, FSNS",Surface Upwelling Shortwave Radiation
+rsuscs,True,"FSDSC, FSNSC",Surface Upwelling Clear-Sky Shortwave Radiation
+rsut,False,FSUTOA,TOA Outgoing Shortwave Radiation
+rsutcs,True,"FSUTOA, SWCF",TOA Outgoing Clear-Sky Shortwave Radiation
+rv850,True,"U, V, PS, T",Relative Vorticity at 850hPa
+sci,False,FREQSH,Fraction of Time Shallow Convection Occurs
+sfcWind,False,U10,Near-Surface Wind Speed
+sfcWindmax,False,WSPDSRFMX,Daily Maximum Near-Surface Wind Speed
+sftlf,True,LANDFRAC,Percentage of the grid  cell occupied by land (including lakes)
+ta,True,"T, PS",Air Temperature
+ta7h,True,"T, PS",Air Temperature
+ta8,True,"T, PS",Air Temperature
+ta850,True,"T, PS",Air Temperature
+tas,False,TREFHT,Near-Surface Air Temperature
+tasmax,False,TREFHTMX,Daily Maximum Near-Surface Air Temperature
+tasmin,False,TREFHTMN,Daily Minimum Near-Surface Air Temperature
+tauu,False,TAUX,Surface Downward Eastward Wind Stress
+tauv,False,TAUY,Surface Downward Northward Wind Stress
+ts,False,TS,Surface Temperature
+ua,True,"U, PS, T",Eastward Wind
+ua19,True,"U, PS, T",Eastward Wind
+ua7h,True,"U, PS, T",Eastward Wind
+ua8,True,"U, PS, T",Eastward Wind
+uas,True,"UBOT, VBOT, U10",Eastward Near-Surface Wind
+va,True,"V, PS, T",Northward Wind
+va19,True,"V, PS, T",Northward Wind
+va7h,True,"V, PS, T",Northward Wind
+va8,True,"V, PS, T",Northward Wind
+vas,True,"VBOT, UBOT, U10",Northward Near-Surface Wind
+wap,True,"OMEGA, PS, T",Omega (=dp/dt)
+wap8,True,"OMEGA, PS, T",Omega (=dp/dt)
+zg,True,"Z3, PS, T",Geopotential Height
+zg500,False,Z500,Geopotential Height at 500hPa
+zg7h,True,"Z3, PS, T",Geopotential Height
