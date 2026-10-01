@@ -3,6 +3,7 @@ channels:
   - conda-forge
   - nodefaults
 dependencies:
+  - numpy
   - bs4
   - coverage
   - openpyxl
