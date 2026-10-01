@@ -22,7 +22,7 @@ details and tuning knobs.
 
 To get the project's code, along with the CMIP7 Data Request Software, use the following command
 
-`git clone --recurse-submodules https://github.com/giovanniconti83/dr_cmip7`
+`git clone --recurse-submodules https://github.com/CMCC-Foundation/cmcc_cmip_data_request`
 
 If you already cloned the project and forgot `--recurse-submodules`, the folder CMIP7_DReq_Software will be empty, 
 but the submodule content can be initialized by running
