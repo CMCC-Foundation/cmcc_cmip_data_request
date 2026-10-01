@@ -54,7 +54,7 @@ REALM_TO_LOOKUP = {
     "seaIce": "ice",
 }
 
-FIELDS = ["variable", "reprocess", "model", "long_name", "cmip6"]   # the original format
+FIELDS = ["variable", "reprocess", "model", "long_name", "cmip6_name"]   # updated: format
 FAMS = sorted(set(REALM_TO_LOOKUP.values()))
 
 
@@ -74,28 +74,21 @@ def load_request(mapped_path):
         rows = list(csv.DictReader(f))
     req = {}
     for r in rows:
-        #var = (r.get("cmip6_name") or r.get("out_name") or "").strip()
         var = '.'.join((r.get("compound_name" or "")).split('.')[:3]).strip()
         if not var:
             continue
-        e = req.setdefault(var, {"cmip6_name": set(), "realms": set(), "long_name": ""})
-        e["cmip6_name"].add(r.get("cmip6_name", ""))
+        e = req.setdefault(var, {"cmip6_name": None, "realm": None, "long_name": "", 'raw': ""})
+        e["cmip6_name"] = r.get("cmip6_name", "")
         if r.get("realm"):
-            e["realms"].add(r["realm"])
+            e["realm"] = families_of([r["realm"]])
+        else:
+            raise SystemExit (f"ERROR: Cannot find realm for variable: {var}")
         e["long_name"] = e["long_name"] or r.get("long_name", "")
     return req, len(rows)
 
 
-def category_of(entry):
-    """One category per variable name (true_gap wins - it is the actionable one)."""
-    for c in ("true_gap", "derivable", "mapped"):
-        if c in entry["category"]:
-            return c
-    return ""
-
-
 def families_of(entry):
-    return {REALM_TO_LOOKUP[r] for r in entry["realms"] if r in REALM_TO_LOOKUP}
+    return [REALM_TO_LOOKUP[r] for r in entry if r in REALM_TO_LOOKUP][0]
 
 
 def main():
@@ -117,67 +110,55 @@ def main():
     os.makedirs(args.lookup_dir, exist_ok=True)
 
     req, n_entries = load_request(args.mapped)
-    n_cat = defaultdict(int)
     
-    #for e in req.values():
-    #    n_cat[category_of(e)] += 1
-    #print(f"[in]     {n_entries} selected entries -> {len(req)} distinct CMOR names "
-    #      f"({n_cat['mapped']} mapped, {n_cat['derivable']} derivable, "
-    #      f"{n_cat['true_gap']} true_gap)")
-
-    #want = {"true_gap"} if args.true_gap_only else {"true_gap", "derivable"}
-    #to_add = defaultdict(dict)                       # fam -> {var: entry}
-    #unplaced = []
-    #for var, e in req.items():
-    #    if category_of(e) not in want:
-    #        continue
-    #    fams = families_of(e)
-    #    if not fams:
-    #        unplaced.append(var)
-    #        continue
-    #    for fam in fams:
-    #        to_add[fam][var] = e
-
     ref_ok = os.path.isdir(args.reference_dir)
     if not ref_ok:
         print(f"[ref]    {args.reference_dir} not found. Stop.")
         return
 
-    print(f"\n{'table':22s} {'original':>8s} {'appended':>8s} {'new':>4s} {'to_fill':>7s}")
-    tot = [0, 0, 0, 0]
+    print(f"\n{'table':22s} {'mapped':>8s} {'new':>8s}")
+    tot = [0, 0,]
     tables = {}
     for fam in FAMS:
-        path = os.path.join(args.lookup_dir, f"{fam}_lookup.csv")
-        cur_order, cur = read_table(path)
+        # load cmip reference lookup table for realm
         ref_order, ref = read_table(os.path.join(args.reference_dir, f"{fam}_lookup.csv"))
 
-        # 1) the original block, in its original order   2) rows appended earlier
-        base = ref_order if ref_ok else cur_order
-        base_set = set(base)
-        appended = [v for v in cur_order if v not in base_set]
-        # 3) variables of the request still missing from this table
-        known = base_set | set(appended)
-        new = sorted(v for v in to_add[fam] if v not in known)
+        # get local dict of variables for this realm
+        fam_req = {d:req[d] for d in req.keys() if req[d]['realm']==fam}
 
-        rows = []
-        for var in base + appended + new:
-            # existing cells are copied VERBATIM (no re-formatting, no stripping)
-            src = cur.get(var) or ref.get(var) or {}
-            e = req.get(var)
-            reprocess = src.get("reprocess") or ""
-            long_name = src.get("long_name") or ""
-            rows.append({
-                "variable": var,
-                # a valid Python literal: cmip_reformatter eval()s this column
-                "reprocess": reprocess if reprocess.strip() else "False",
-                "model": src.get("model") or "",
-                "long_name": long_name if long_name.strip()
-                             else (e["long_name"] if e else ""),
-                "notes": "",
-            })
+        # loop on fam_req and fill output
+        map_dict = {}
+        new_dict = {}
+        for var in fam_req.keys():
+            var_cmip6 = fam_req[var]['cmip6_name']
+            if var_cmip6  in ref.keys():
+                map_dict[var] = {
+                           'variable': var,
+                           'reprocess': ref[var_cmip6]['reprocess'],
+                           'model': ref[var_cmip6]['model'],
+                           'long_name': fam_req[var]['long_name'],
+                           'cmip6_name': var_cmip6,
+                }
+            else:
+                new_dict[var] = {
+                           'variable': var,
+                           'reprocess': "False",
+                           'model': "DISCARD",
+                           'long_name': fam_req[var]['long_name'],
+                           'cmip6_name': var_cmip6,
+                }
 
-        n_todo = sum(1 for r in rows if not r["model"].strip())
+        # sort by key
+        map_dict = {k: v for k, v in sorted(map_dict.items(), key=lambda item: item[0])}
+        new_dict = {k: v for k, v in sorted(new_dict.items(), key=lambda item: item[0])}
+
+        # collate dicts
+        fam_out = dict(map_dict, **new_dict)
+
+        # write dicts
         if not args.dry_run:
+            path = os.path.join(args.lookup_dir, f"{fam}_lookup.csv")
+            rows = [fam_out[d] for d in fam_out.keys()]
             if not os.path.exists(path):
                 with open(path, "w", newline="") as f:
                     w = csv.DictWriter(f, fieldnames=FIELDS, extrasaction="ignore")
@@ -188,26 +169,28 @@ def main():
                 return
                 
         tables[fam] = {r["variable"] for r in rows}
-        counts = (len(base), len(appended), len(new), n_todo)
-        print(f"{fam + '_lookup.csv':22s} {counts[0]:8d} {counts[1]:8d} "
-              f"{counts[2]:4d} {counts[3]:7d}")
+        counts = (len(map_dict), len(new_dict))
+        print(f"{fam + '_lookup.csv':22s} {counts[0]:8d} {counts[1]:8d} ")
         tot = [t + c for t, c in zip(tot, counts)]
 
-    print(f"{'TOTAL':22s} {tot[0]:8d} {tot[1]:8d} {tot[2]:4d} {tot[3]:7d}")
-    print("\noriginal = rows of the reference cmip6plus table (order preserved)\n"
-          "appended = gap rows added by an earlier run\n"
-          "new      = gap rows appended by THIS run (model empty -> fill by hand)\n"
-          "to_fill  = rows still waiting for a raw `model` name")
-    if unplaced:
-        print(f"\n[warn] {len(unplaced)} gap vars with no realm->table family, skipped: "
-              f"{', '.join(sorted(unplaced)[:8])}")
+    print(f"{'TOTAL':22s} {tot[0]:8d} {tot[1]:8d}")
+    print("\nmapped = variables already in reference cmip6plus table\n"
+          "new  = variables still waiting for a raw `model` name")
 
-    check(req, tables, want)
+    #check(req, tables, want)
     if args.dry_run:
         print(f"\n[dry-run] nothing written to {args.lookup_dir}")
     else:
         print(f"\n[write] {args.lookup_dir}/*_lookup.csv  <- fill the empty `model` "
               "cells, then re-run map_to_raw_names.py")
+
+
+def category_of(entry):
+    """One category per variable name (true_gap wins - it is the actionable one)."""
+    for c in ("true_gap", "derivable", "mapped"):
+        if c in entry["category"]:
+            return c
+    return ""
 
 
 def check(req, tables, want):
