@@ -1,4 +1,4 @@
-variable,reprocess,model,long_name
+variable,reprocess,model,long_name, notes
 sfdsi,True,fsalt_nemo,Downward Sea Ice Basal Salt Flux
 siage,False,siage,Age of Sea Ice
 sicompstren,False,sicompstren,Compressive Sea Ice Strength
@@ -11,7 +11,7 @@ sidmassgrowthwat,False,sidmassgrowthwat,Sea-Ice Mass Change Through Growth in Su
 sidmasslat,False,sidmasslat,Lateral Sea Ice Melt Rate
 sidmassmeltbot,False,sidmassmeltbot,Sea-Ice Mass Change Through Bottom Melting
 sidmassmelttop,False,sidmassmelttop,Sea-Ice Mass Change Through Surface Melting
-sidmasssi,False,sidmasssi,Sea-Ice Mass Change Through Snow-to-Ice Conversion
+sidmasssi,False,SUPERSEEDED,Sea-Ice Mass Change Through Snow-to-Ice Conversion,sidmassgrowthsi
 sidmassth,False,sidmassth,Sea-Ice Mass Change from Thermodynamics
 sidmasstranx,False,sidmasstranx,X-Component of Sea-Ice Mass Transport
 sidmasstrany,False,sidmasstrany,Y-Component of Sea-Ice Mass Transport
@@ -38,7 +38,7 @@ sihc,False,sihc,Sea-Ice Heat Content per Unit Area
 simass,True,hi,Sea-Ice Mass per Area
 sipr,False,sipr,Rainfall Rate over Sea Ice
 sirdgthick,False,sirdgthick,Ridged Ice Thickness
-sisnconc,False,sisnconc,Snow Area Percentage
+sisnconc,True,SUPERSEEDED,Snow Area Percentage, snc
 sisnhc,False,sisnhc,Snow Heat Content per Unit Area
 sisnmass,True,hs,Snow Mass per Area
 sisnthick,False,sisnthick,Snow Thickness
@@ -55,30 +55,30 @@ sitimefrac,False,ice_present,Fraction of Time Steps with Sea Ice
 siu,False,siu,X-Component of Sea-Ice Velocity
 siv,False,siv,Y-Component of Sea-Ice Velocity
 sivol,False,hi,Sea-Ice Volume per Area
-sndmassmelt,False,sndmassmelt,Snow Mass Rate of Change Through Melt
-sndmasssnf,False,sndmasssnf,Snow Mass Change Through Snow Fall
-sndmasssubl,False,sndmassubl,Snow Mass Rate of Change Through Evaporation or Sublimation
+sndmassmelt,False,SUPERSEEDED,Snow Mass Rate of Change Through Melt,sisndmassmelt
+sndmasssnf,False,SUPERSEEDED,Snow Mass Change Through Snow Fall,sisndmasssnf
+sndmasssubl,False,SUPERSEEDED,Snow Mass Rate of Change Through Evaporation or Sublimation,sisndmassubl
 siarean,False,NOT-IN-MODEL,Sea-Ice Area North
 siareas,False,NOT-IN-MODEL,Sea-Ice Area South
-siconca,False,,Sea-Ice Area Percentage (Atmospheric Grid)
-sidconcdyn,False,,Sea-Ice Area Fraction Tendency Due to Dynamics
-sidmassgrowthsi,False,,Sea-Ice Mass Change Through Snow-to-Ice Conversion
-sidmassmeltlat,False,,Sea-Ice Mass Change Through Lateral Melting
-siextentn,False,,Sea-Ice Extent North
-siextents,False,,Sea-Ice Extent South
-sifllattop,False,,Net Latent Heat Flux over Sea Ice
-siflsaltbot,False,,Salt Flux from Sea Ice
-siflsensbot,False,,Net Upward Sensible Heat Flux under Sea Ice
-siflswdbot,False,,Downwelling Shortwave Flux under Sea Ice
-siitdsnconc,False,,Snow Area Percentages in Ice Thickness Categories
-siitdsnthick,False,,Snow Thickness in Ice Thickness Categories
-sisndmassdyn,False,,Snow Mass Rate of Change Through Advection by Sea-Ice Dynamics
-sisndmassmelt,False,,Snow Mass Rate of Change Through Melt
-sisndmasssi,False,,Snow Mass Rate of Change Through Snow-to-Ice Conversion
-sisndmasssnf,False,,Snow Mass Change Through Snowfall
-sisndmasssubl,False,,Snow Mass Rate of Change Through Evaporation or Sublimation
-sisndmasswind,False,,Snow Mass Rate of Change Through Wind Drift of Snow
-sisnmassn,False,,Snow Mass on Sea Ice North
-sisnmasss,False,,Snow Mass on Sea Ice South
+siconca,False,NOT-IN-MODEL,Sea-Ice Area Percentage (Atmospheric Grid)
+sidconcdyn,False,sidconcdyn,Sea-Ice Area Fraction Tendency Due to Dynamics
+sidmassgrowthsi,False,sidmasssi,Sea-Ice Mass Change Through Snow-to-Ice Conversion
+sidmassmeltlat,False,sidmasslat,Sea-Ice Mass Change Through Lateral Melting
+siextentn,False,NOT-IN-MODEL,Sea-Ice Extent North
+siextents,False,NOT-IN-MODEL,Sea-Ice Extent South
+sifllattop,False,sifllatstop,Net Latent Heat Flux over Sea Ice
+siflsaltbot,False,siflsaltbot,Salt Flux from Sea Ice
+siflsensbot,False,siflsensupbot,Net Upward Sensible Heat Flux under Sea Ice
+siflswdbot,False,siflswdbot,Downwelling Shortwave Flux under Sea Ice
+siitdsnconc,False,NOT-IN-MODEL,Snow Area Percentages in Ice Thickness Categories
+siitdsnthick,False,siitdsnthick,Snow Thickness in Ice Thickness Categories
+sisndmassdyn,False,NOT-IN-MODEL,Snow Mass Rate of Change Through Advection by Sea-Ice Dynamics
+sisndmassmelt,False,sndmassmelt,Snow Mass Rate of Change Through Melt
+sisndmasssi,False,NOT-IN-MODEL,Snow Mass Rate of Change Through Snow-to-Ice Conversion
+sisndmasssnf,False,sndmasssnf,Snow Mass Change Through Snowfall
+sisndmasssubl,False,sndmassubl,Snow Mass Rate of Change Through Evaporation or Sublimation
+sisndmasswind,False,NOT-IN-MODEL,Snow Mass Rate of Change Through Wind Drift of Snow
+sisnmassn,False,NOT-IN-MODEL,Snow Mass on Sea Ice North
+sisnmasss,False,NOT-IN-MODEL,Snow Mass on Sea Ice South
 sivoln,False,NOT-IN-MODEL,Sea-Ice Volume North
 sivols,False,NOT-IN-MODEL,Sea-Ice Volume South
