@@ -241,6 +241,9 @@ def build(selection, meta_by_uid, groups):
                     meta = meta_by_uid.get(uid)
                     if meta is None:
                         continue
+                    # ugly patch to select only global data (should come from a cfg.yml file)
+                    if meta['region'] != 'glb':
+                        continue
                     n_vars += 1
                     name = meta["_unique_name"]
                     rec = var_rows.get(name)
@@ -372,7 +375,7 @@ def main():
 
     print(f"[load] loading Data Request {args.version} via API ...")
     _DR, meta_by_uid, groups = load_dr(args.version)
-    print(f"[load] {len(groups)} variable groups, {len(meta_by_uid)} variables in DR")
+    print(f"[load] DR {args.version} contains: {len(groups)} variable groups, {len(meta_by_uid)} variables")
 
     crosscheck, var_rows = build(selection, meta_by_uid, groups)
 
