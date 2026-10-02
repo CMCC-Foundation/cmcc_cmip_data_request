@@ -1,104 +1,100 @@
-variable,reprocess,model,long_name
-agessc,False,agessc,Sea Water Age Since Surface Contact
-areacello,True,deptht,Grid-Cell Area for Ocean Variables
-basin,True,deptht,Region Selection Index
-cfc12,False,cfc12,Mole Concentration of CFC12 in Sea Water
-deptho,True,deptht,Sea Floor Depth Below Geoid
-evs,False,evs,Water Evaporation Flux Where Ice Free Ocean over Sea
-fgcfc12,False,fgcfc12,Surface Downward CFC12 Flux
-fgsf6,False,fgsf6,Surface Downward SF6 Flux
-friver,False,friver,Water Flux into Sea Water from Rivers
-fsitherm,False,fsitherm,Water Flux into Sea Water Due to Sea Ice Thermodynamics
-hfbasin,True,hfbasin,Northward Ocean Heat Transport
-hfbasinpadv,True,hfbasinpadv,Northward Ocean Heat Transport Due to Parameterized Eddy Advection
-hfbasinpmadv,True,hfbasinpmadv,Northward Ocean Heat Transport Due to Parameterized Mesoscale Advection
-hfbasinpmdiff,True,hfbasinpmdiff,Northward Ocean Heat Transport Due to Parameterized Mesoscale Diffusion
-hfds,False,hfds,Downward Heat Flux at Sea Water Surface
-hfevapds,False,hfevapds,Temperature Flux Due to Evaporation Expressed as Heat Flux out of Sea Water
-hfgeou,True,hfgeou,Upward Geothermal Heat Flux at Sea Floor
-hflso,False,hflso,Surface Downward Latent Heat Flux
-hfrainds,False,hfrainds,Temperature Flux due to Rainfall Expressed as Heat Flux into Sea Water
-hfrunoffds2d,False,hfrunoffds,Temperature Flux Due to Runoff Expressed as Heat Flux into Sea Water
-hfsifrazil2d,False,hfsifrazil,Heat Flux into Sea Water Due to Frazil Ice Formation
-hfsnthermds2d,False,hfsnthermds,Heat Flux into Sea Water Due to Snow Thermodynamics
-hfsso,False,hfsso,Surface Downward Sensible Heat Flux
-masscello,True,deptht,Ocean Grid-Cell Mass per Area
-masso,False,masso,Sea Water Mass
-mlotst,False,mlotst,Ocean Mixed Layer Thickness Defined by Sigma T
-mlotstmax,False,mlotstmax,Maximum Ocean Mixed Layer Thickness Defined by Sigma T
-mlotstmin,False,mlotstmin,Minimum Ocean Mixed Layer Thickness Defined by Sigma T
-msftbarot,False,msftbarot,Ocean Barotropic Mass Streamfunction
-msftyz,True,msftyz,Ocean Y Overturning Mass Streamfunction
-obvfsq,False,obvfsq,Square of Brunt Vaisala Frequency in Sea Water
-omldamax,False,omldamax,Mean Daily Maximum Ocean Mixed Layer Thickness Defined by Mixing Scheme
-pbo,False,pbo,Sea Water Pressure at Sea Floor
-prsn,False,prsn,Snowfall rate
-rlntds,False,rlntds,Surface Net Downward Longwave Radiation
-rsntds,False,rsntds,Net Downward Shortwave Radiation at Sea Water Surface
-sf6,False,sf6,Mole Concentration of SF6 in Sea Water
-sftof,True,deptht,Sea Area Percentage
-so,False,so,Sea Water Salinity
-sob,False,sob,Sea Water Salinity at Sea Floor
-soga,False,soga,Global Mean Sea Water Salinity
-sos,False,sos,Sea Surface Salinity
-sosga,False,sosga,Global Average Sea Surface Salinity
-sossq,False,sossq,Square of Sea Surface Salinity
-t20d,False,t20d,Depth of 20 degree Celsius Isotherm
-tauuo,False,tauuo,Sea Water Surface Downward X Stress
-tauvo,False,tauvo,Sea Water Surface Downward Y Stress
-thetao,False,thetao,Sea Water Potential Temperature
-thetaoga,False,thetaoga,Global Average Sea Water Potential Temperature
-thetaot,True,thetao,Vertically Averaged Sea Water Potential Temperature
-thetaot2000,False,thetaot2000,Depth Average Potential Temperature of Upper 2000m
-thetaot300,False,thetaot300,Depth Average Potential Temperature of Upper 300m
-thetaot700,False,thetaot700,Depth Average Potential Temperature of Upper 700m
-thkcello,True,deptht,Ocean Model Cell Thickness
-tob,False,tob,Sea Water Potential Temperature at Sea Floor
-tos,False,tos,Sea Surface Temperature
-tosga,False,tosga,Global Average Sea Surface Temperature
-tossq,False,tossq,Square of Sea Surface Temperature
-umo,False,umo,Ocean Mass X Transport
-uo,False,uo,Sea Water X Velocity
-vmo,False,vmo,Ocean Mass Y Transport
-vo,False,vo,Sea Water Y Velocity
-volcello,True,deptht,Ocean Grid-Cell Volume
-volo,False,volo,Sea Water Volume
-vsfsit,False,vsfsit,Virtual Salt Flux into Sea Water Due to Sea Ice Thermodynamics
-wfo,False,wfo,Water Flux into Sea Water
-wmo,True,wmo,Upward Ocean Mass Transport
-wo,False,wo,Sea Water Vertical Velocity
-zos,False,zos,Sea Surface Height Above Geoid
-zostoga,False,zostoga,Global Average Thermosteric Sea Level Change
-absscint,False,,Integral wrt depth of seawater absolute salinity expressed as salt mass content
-bigthetao,False,NOT-IN-MODEL,Sea Water Conservative Temperature
-bigthetao200,False,NOT-IN-MODEL,Sea Water Conservative Temperature at 200 meters
-bigthetaoga,False,NOT-IN-MODEL,Global Average Sea Water Conservative Temperature
-chcint,False,,Depth Integrated Seawater Conservative Temperature Expressed As Heat Content
-ficeberg,False,,Water Flux into Sea Water from Icebergs
-flandice,False,,Water Flux into Sea Water from Land Ice
-hfbasinpsmadv,False,,Northward Ocean Heat Transport Due to Parameterized Submesoscale Advection
-hfrunoffds,False,,Temperature Flux Due to Runoff Expressed as Heat Flux into Sea Water
-hfx,False,,3D Ocean Heat X Transport
-hfxint,False,,Vertically Integrated Ocean Heat X Transport
-hfy,False,,3D Ocean Heat Y Transport
-hfyint,False,,Vertically Integrated Ocean Heat Y Transport
-msftmrho,False,,Ocean Meridional Overturning Mass Streamfunction
-msftmz,False,,Ocean Meridional Overturning Mass Streamfunction
-msftmzmpa,False,,Ocean Meridional Overturning Mass Streamfunction Due to Parameterized Mesoscale Advection
-msftyrho,False,,Ocean Y Overturning Mass Streamfunction
-pfscint,False,,Integral wrt depth of seawater preformed salinity expressed as salt mass content
-phcint,False,,Integrated Ocean Heat Content from Potential Temperature
-pso,False,,Sea Water Pressure at Sea Water Surface
-rsdo,False,,Downwelling Shortwave Radiation in Sea Water
-scint,False,,Integral wrt depth of seawater practical salinity expressed as salt mass content
-sfx,False,,3D Ocean Salt Mass X Transport
-sfxint,False,,Vertically Integrated Ocean Salt Mass X Transport
-sfy,False,,3D Ocean Salt Mass Y Transport
-sfyint,False,,Vertically Integrated Ocean Salt Mass Y Transport
-sltbasin,False,,Northward Ocean Salt Transport
-thetao200,False,,Sea Water Potential Temperature at 200 meters
-uos,False,,Daily Surface Sea Water X Velocity
-vos,False,,Daily Surface Sea Water Y Velocity
-vsf,False,,Virtual Salt Flux into Sea Water
-zfullo,False,,Depth Below Geoid of Ocean Layer
-zossq,False,,Square of Sea Surface Height Above Geoid
+variable,reprocess,model,long_name,cmip6_name
+ocean.agessc.tavg-ol-hxy-sea,False,agessc,Sea Water Age Since Surface Contact,agessc
+ocean.areacello.ti-u-hxy-u,True,deptht,Grid-Cell Area for Ocean Variables,areacello
+ocean.basin.ti-u-hxy-u,True,deptht,Region Selection Index,basin
+ocean.deptho.ti-u-hxy-sea,True,deptht,Sea Floor Depth Below Geoid,deptho
+ocean.friver.tavg-u-hxy-sea,False,friver,Water Flux into Sea Water from Rivers,friver
+ocean.hfbasin.tavg-u-hyb-sea,True,hfbasin,Northward Ocean Heat Transport,hfbasin
+ocean.hfbasinpadv.tavg-u-hyb-sea,True,hfbasinpadv,Northward Ocean Heat Transport Due to Parameterized Eddy Advection,hfbasinpadv
+ocean.hfbasinpmadv.tavg-u-hyb-sea,True,hfbasinpmadv,Northward Ocean Heat Transport Due to Parameterized Mesoscale Advection,hfbasinpmadv
+ocean.hfbasinpmdiff.tavg-u-hyb-sea,True,hfbasinpmdiff,Northward Ocean Heat Transport Due to Parameterized Mesoscale Diffusion,hfbasinpmdiff
+ocean.hfds.tavg-u-hxy-sea,False,hfds,Downward Heat Flux at Sea Water Surface,hfds
+ocean.hfgeou.ti-u-hxy-sea,True,hfgeou,Upward Geothermal Heat Flux at Sea Floor,hfgeou
+ocean.masscello.tavg-ol-hxy-sea,True,deptht,Ocean Grid-Cell Mass per Area,masscello
+ocean.masscello.ti-ol-hxy-sea,True,deptht,Ocean Grid-Cell Mass per Area,masscello
+ocean.masso.tavg-u-hm-sea,False,masso,Sea Water Mass,masso
+ocean.mlotst.tavg-u-hxy-sea,False,mlotst,Ocean Mixed Layer Thickness Defined by Delta Sigma T of 0.03 kg m-3 referenced to the model level closest to 10 m depth,mlotst
+ocean.mlotst.tmax-u-hxy-sea,False,mlotstmax,Maximum Ocean Mixed Layer Thickness Defined by Delta Sigma T of 0.03 kg m-3 referenced to the model level closest to 10 m depth,mlotstmax
+ocean.mlotst.tmin-u-hxy-sea,False,mlotstmin,Minimum Ocean Mixed Layer Thickness Defined by Delta Sigma T of 0.03 kg m-3 referenced to the model level closest to 10 m depth,mlotstmin
+ocean.msftbarot.tavg-u-hxy-sea,False,msftbarot,Ocean Barotropic Mass Streamfunction,msftbarot
+ocean.msfty.tavg-ol-ht-sea,True,msftyz,Ocean Y Overturning Mass Streamfunction,msftyz
+ocean.obvfsq.tavg-ol-hxy-sea,False,obvfsq,Square of Brunt Vaisala Frequency in Sea Water,obvfsq
+ocean.pbo.tavg-u-hxy-sea,False,pbo,Sea Water Pressure at Sea Floor,pbo
+ocean.rsntds.tavg-u-hxy-sea,False,rsntds,Net Downward Shortwave Radiation at Sea Water Surface,rsntds
+ocean.sf6.tavg-ol-hxy-sea,False,sf6,Mole Concentration of SF6 in Sea Water,sf6
+ocean.sftof.ti-u-hxy-u,True,deptht,Sea Area Percentage,sftof
+ocean.so.tavg-ol-hxy-sea,False,so,Sea Water Salinity,so
+ocean.so.tavg-u-hm-sea,False,soga,Global Mean Sea Water Salinity,soga
+ocean.sob.tavg-u-hxy-sea,False,sob,Sea Water Salinity at Sea Floor,sob
+ocean.sos.tavg-u-hm-sea,False,sosga,Global Average Sea Surface Salinity,sosga
+ocean.sos.tavg-u-hxy-sea,False,sos,Sea Surface Salinity,sos
+ocean.sossq.tavg-u-hxy-sea,False,sossq,Square of Sea Surface Salinity,sossq
+ocean.t20d.tavg-u-hxy-sea,False,t20d,Depth of 20 degree Celsius Isotherm,t20d
+ocean.tauuo.tavg-u-hxy-sea,False,tauuo,Sea Water Surface Downward X Stress,tauuo
+ocean.tauvo.tavg-u-hxy-sea,False,tauvo,Sea Water Surface Downward Y Stress,tauvo
+ocean.thetao.tavg-d2000m-hxy-sea,False,thetaot2000,Depth Average Potential Temperature of Upper 2000m,thetaot2000
+ocean.thetao.tavg-d300m-hxy-sea,False,thetaot300,Depth Average Potential Temperature of Upper 300m,thetaot300
+ocean.thetao.tavg-d700m-hxy-sea,False,thetaot700,Depth Average Potential Temperature of Upper 700m,thetaot700
+ocean.thetao.tavg-ol-hxy-sea,False,thetao,Sea Water Potential Temperature,thetao
+ocean.thetao.tavg-u-hm-sea,False,thetaoga,Global Average Sea Water Potential Temperature,thetaoga
+ocean.thetaot.tavg-u-hxy-sea,True,thetao,Vertically Averaged Sea Water Potential Temperature,thetaot
+ocean.thkcello.tavg-ol-hxy-sea,True,deptht,Ocean Model Cell Thickness,thkcello
+ocean.thkcello.ti-ol-hxy-sea,True,deptht,Ocean Model Cell Thickness,thkcello
+ocean.tob.tavg-u-hxy-sea,False,tob,Sea Water Potential Temperature at Sea Floor,tob
+ocean.tos.tavg-u-hm-sea,False,tosga,Global Average Sea Surface Temperature,tosga
+ocean.tos.tavg-u-hxy-sea,False,tos,Sea Surface Temperature,tos
+ocean.tos.tpt-u-hxy-sea,False,tos,Sea Surface Temperature,tos
+ocean.tossq.tavg-u-hxy-sea,False,tossq,Square of Sea Surface Temperature,tossq
+ocean.umo.tavg-ol-hxy-sea,False,umo,Ocean Mass X Transport,umo
+ocean.uo.tavg-ol-hxy-sea,False,uo,Sea Water X Velocity,uo
+ocean.vmo.tavg-ol-hxy-sea,False,vmo,Ocean Mass Y Transport,vmo
+ocean.vo.tavg-ol-hxy-sea,False,vo,Sea Water Y Velocity,vo
+ocean.volcello.tavg-ol-hxy-sea,True,deptht,Ocean Grid-Cell Volume,volcello
+ocean.volcello.ti-ol-hxy-sea,True,deptht,Ocean Grid-Cell Volume,volcello
+ocean.volo.tavg-u-hm-sea,False,volo,Sea Water Volume,volo
+ocean.wfo.tavg-u-hxy-sea,False,wfo,Water Flux into Sea Water,wfo
+ocean.wmo.tavg-ol-hxy-sea,True,wmo,Upward Ocean Mass Transport,wmo
+ocean.wo.tavg-ol-hxy-sea,False,wo,Sea Water Vertical Velocity,wo
+ocean.zos.tavg-u-hxy-sea,False,zos,Sea Surface Height Above Geoid,zos
+ocean.zostoga.tavg-u-hm-sea,False,zostoga,Global Average Thermosteric Sea Level Change,zostoga
+ocean.absscint.tavg-op4-hxy-sea,False,DISCARD,Integral wrt depth of seawater absolute salinity expressed as salt mass content,absscint
+ocean.bigthetao.tavg-ol-hxy-sea,False,DISCARD,Sea Water Conservative Temperature,bigthetao
+ocean.bigthetao.tavg-op20bar-hxy-sea,False,DISCARD,Sea Water Conservative Temperature at 200 meters,bigthetao200
+ocean.bigthetao.tavg-u-hm-sea,False,DISCARD,Global Average Sea Water Conservative Temperature,bigthetaoga
+ocean.chcint.tavg-op4-hxy-sea,False,DISCARD,Depth Integrated Seawater Conservative Temperature Expressed As Heat Content,chcint
+ocean.dxto.ti-u-hxy-u,False,DISCARD,Cell Length in the X Direction at t-points,dxto
+ocean.dxuo.ti-u-hxy-u,False,DISCARD,Cell Length in the X Direction at u-points,dxuo
+ocean.dxvo.ti-u-hxy-u,False,DISCARD,Cell Length in the X Direction at v-points,dxvo
+ocean.dyto.ti-u-hxy-u,False,DISCARD,Cell Length in the Y Direction at t-points,dyto
+ocean.dyuo.ti-u-hxy-u,False,DISCARD,Cell Length in the Y Direction at u-points,dyuo
+ocean.dyvo.ti-u-hxy-u,False,DISCARD,Cell Length in the Y Direction at v-points,dyvo
+ocean.ficeberg.tavg-ol-hxy-sea,False,DISCARD,Water Flux into Sea Water from Icebergs,ficeberg
+ocean.flandice.tavg-u-hxy-sea,False,DISCARD,Water Flux into Sea Water from Land Ice,flandice
+ocean.hfbasinpsmadv.tavg-u-hyb-sea,False,DISCARD,Northward Ocean Heat Transport Due to Parameterized Submesoscale Advection,hfbasinpsmadv
+ocean.hfrunoffds.tavg-ol-hxy-sea,False,DISCARD,Temperature Flux Due to Runoff Expressed as Heat Flux into Sea Water,hfrunoffds
+ocean.hfx.tavg-ol-hxy-sea,False,DISCARD,3D Ocean Heat X Transport,hfx
+ocean.hfx.tavg-u-hxy-sea,False,DISCARD,Vertically Integrated Ocean Heat X Transport,hfxint
+ocean.hfy.tavg-ol-hxy-sea,False,DISCARD,3D Ocean Heat Y Transport,hfy
+ocean.hfy.tavg-u-hxy-sea,False,DISCARD,Vertically Integrated Ocean Heat Y Transport,hfyint
+ocean.mlotstsq.tavg-u-hxy-sea,False,DISCARD,Square of Ocean Mixed Layer Thickness Defined by Delta Sigma T of 0.03 kg m-3 referenced to the model level closest to 10 m depth,mlotstsq
+ocean.msftm.tavg-ol-hyb-sea,False,DISCARD,Ocean Meridional Overturning Mass Streamfunction,msftmz
+ocean.msftm.tavg-rho-hyb-sea,False,DISCARD,Ocean Meridional Overturning Mass Streamfunction,msftmrho
+ocean.msftmmpa.tavg-ol-hyb-sea,False,DISCARD,Ocean Meridional Overturning Mass Streamfunction Due to Parameterized Mesoscale Advection,msftmzmpa
+ocean.msfty.tavg-rho-ht-sea,False,DISCARD,Ocean Y Overturning Mass Streamfunction,msftyrho
+ocean.pfscint.tavg-op4-hxy-sea,False,DISCARD,Integral wrt depth of seawater preformed salinity expressed as salt mass content,pfscint
+ocean.phcint.tavg-op4-hxy-sea,False,DISCARD,Integrated Ocean Heat Content from Potential Temperature,phcint
+ocean.pso.tavg-u-hxy-sea,False,DISCARD,Sea Water Pressure at Sea Water Surface,pso
+ocean.rsdo.tavg-ol-hxy-sea,False,DISCARD,Downwelling Shortwave Radiation in Sea Water,rsdo
+ocean.scint.tavg-op4-hxy-sea,False,DISCARD,Integral wrt depth of seawater practical salinity expressed as salt mass content,scint
+ocean.sfdsi.tavg-u-hxy-sea,False,DISCARD,Downward Sea Ice Basal Salt Flux,sfdsi
+ocean.sltbasin.tavg-u-hyb-sea,False,DISCARD,Northward Ocean Salt Transport,sltbasin
+ocean.thetao.tavg-op20bar-hxy-sea,False,DISCARD,Sea Water Potential Temperature at 200 meters,thetao200
+ocean.thkcelluo.tavg-ol-hxy-sea,False,DISCARD,Ocean Model Cell Thickness at u-points,thkcelluo
+ocean.thkcellvo.tavg-ol-hxy-sea,False,DISCARD,Ocean Model Cell Thickness at v-points,thkcellvo
+ocean.tnkebto.tavg-u-hxy-sea,False,DISCARD,Tendency of Ocean Eddy Kinetic Energy Content Due to Parameterized Eddy Advection,tnkebto
+ocean.uos.tavg-u-hxy-sea,False,DISCARD,Daily Surface Sea Water X Velocity,uos
+ocean.vos.tavg-u-hxy-sea,False,DISCARD,Daily Surface Sea Water Y Velocity,vos
+ocean.vsf.tavg-u-hxy-sea,False,DISCARD,Virtual Salt Flux into Sea Water,vsf
+ocean.wfcorr.tavg-u-hxy-sea,False,DISCARD,Water Flux Correction,wfcorr
+ocean.zfullo.tavg-ol-hxy-sea,False,DISCARD,Depth Below Geoid of Ocean Layer,zfullo
+ocean.zossq.tavg-u-hxy-sea,False,DISCARD,Square of Sea Surface Height Above Geoid,zossq
