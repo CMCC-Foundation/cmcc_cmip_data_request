@@ -57,11 +57,11 @@ ocean.wmo.tavg-ol-hxy-sea,True,wmo,Upward Ocean Mass Transport,wmo
 ocean.wo.tavg-ol-hxy-sea,False,wo,Sea Water Vertical Velocity,wo
 ocean.zos.tavg-u-hxy-sea,False,zos,Sea Surface Height Above Geoid,zos
 ocean.zostoga.tavg-u-hm-sea,False,zostoga,Global Average Thermosteric Sea Level Change,zostoga
-ocean.absscint.tavg-op4-hxy-sea,False,,Integral wrt depth of seawater absolute salinity expressed as salt mass content,absscint
-ocean.bigthetao.tavg-ol-hxy-sea,False,,Sea Water Conservative Temperature,bigthetao
-ocean.bigthetao.tavg-op20bar-hxy-sea,False,,Sea Water Conservative Temperature at 200 meters,bigthetao200
-ocean.bigthetao.tavg-u-hm-sea,False,,Global Average Sea Water Conservative Temperature,bigthetaoga
-ocean.chcint.tavg-op4-hxy-sea,False,,Depth Integrated Seawater Conservative Temperature Expressed As Heat Content,chcint
+ocean.absscint.tavg-op4-hxy-sea,False,DISCARD,Integral wrt depth of seawater absolute salinity expressed as salt mass content,absscint
+ocean.bigthetao.tavg-ol-hxy-sea,False,DISCARD,Sea Water Conservative Temperature,bigthetao
+ocean.bigthetao.tavg-op20bar-hxy-sea,False,DISCARD,Sea Water Conservative Temperature at 200 meters,bigthetao200
+ocean.bigthetao.tavg-u-hm-sea,False,DISCARD,Global Average Sea Water Conservative Temperature,bigthetaoga
+ocean.chcint.tavg-op4-hxy-sea,False,DISCARD,Depth Integrated Seawater Conservative Temperature Expressed As Heat Content,chcint
 ocean.dxto.ti-u-hxy-u,True,deptht,Cell Length in the X Direction at t-points,dxto
 ocean.dxuo.ti-u-hxy-u,True,deptht,Cell Length in the X Direction at u-points,dxuo
 ocean.dxvo.ti-u-hxy-u,True,deptht,Cell Length in the X Direction at v-points,dxvo
