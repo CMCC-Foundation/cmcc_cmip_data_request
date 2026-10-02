@@ -45,7 +45,7 @@ seaIce.sidmassgrowthsi.tavg-u-hxy-si,False,sidmasssi,Sea-Ice Mass Change Through
 seaIce.sidmassmeltlat.tavg-u-hxy-si,False,sidmasslat,Sea-Ice Mass Change Through Lateral Melting,sidmassmeltlat,
 seaIce.sifllattop.tavg-u-hxy-si,False,sifllatstop,Net Latent Heat Flux over Sea Ice,sifllattop,
 seaIce.siflsensbot.tavg-u-hxy-si,False,siflsensupbot,Net Upward Sensible Heat Flux under Sea Ice,siflsensbot,
-seaIce.siflswdbot.tavg-u-hxy-si,False,siflswdbot,Downwelling Shortwave Flux under Sea Ice,siflswdbot
+seaIce.siflswdbot.tavg-u-hxy-si,False,siflswdbot,Downwelling Shortwave Flux under Sea Ice,siflswdbot,
 seaIce.siitdconc.tavg-u-hxy-si,False,siitdconc,Sea-Ice Area Percentages in Ice Thickness Categories,siitdconc,
 seaIce.siitdsnconc.tavg-u-hxy-si,False,siitdsnconc,Snow Area Percentages in Ice Thickness Categories,siitdsnconc,
 seaIce.siitdsnthick.tavg-u-hxy-si,False,siitdsnthick,Snow Thickness in Ice Thickness Categories,siitdsnthick,
