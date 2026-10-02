@@ -46,7 +46,6 @@ atmos.rsus.tavg-u-hxy-u,True,"FSDS, FSNS",Surface Upwelling Shortwave Radiation,
 atmos.rsuscs.tavg-u-hxy-u,True,"FSDSC, FSNSC",Surface Upwelling Clear-Sky Shortwave Radiation,rsuscs
 atmos.rsut.tavg-u-hxy-u,False,FSUTOA,TOA Outgoing Shortwave Radiation,rsut
 atmos.rsutcs.tavg-u-hxy-u,True,"FSUTOA, SWCF",TOA Outgoing Clear-Sky Shortwave Radiation,rsutcs
-atmos.rv850.tavg-850hPa-hxy-air,True,"U, V, PS, T",Relative Vorticity at 850hPa,rv850
 atmos.sfcWind.tavg-h10m-hxy-u,False,U10,Near-Surface Wind Speed,sfcWind
 atmos.sfcWind.tmax-h10m-hxy-u,False,WSPDSRFMX,Daily Maximum Near-Surface Wind Speed,sfcWindmax
 atmos.sfcWind.tmaxavg-h10m-hxy-u,False,WSPDSRFMX,Daily Maximum Near-Surface Wind Speed,sfcWindmax
@@ -67,7 +66,6 @@ atmos.tauv.tavg-u-hxy-u,False,TAUY,Surface Downward Northward Wind Stress,tauv
 atmos.ts.tavg-u-hxy-u,False,TS,Surface Temperature,ts
 atmos.ts.tpt-u-hxy-u,False,TS,Surface Temperature,ts
 atmos.ua.tavg-p19-hxy-air,True,"U, PS, T",Eastward Wind,ua
-atmos.ua.tavg-p39-hy-air,True,"U, PS, T",Eastward Wind,ua
 atmos.ua.tpt-al-hxy-u,True,"U, PS, T",Eastward Wind,ua
 atmos.ua.tpt-p3-hxy-air,True,"U, PS, T",Eastward Wind,ua
 atmos.uas.tavg-h10m-hxy-u,True,"UBOT, VBOT, U10",Eastward Near-Surface Wind,uas
@@ -81,7 +79,6 @@ atmos.wap.tavg-p19-hxy-air,True,"OMEGA, PS, T",Omega (=dp/dt),wap
 atmos.wap.tavg-p19-hxy-u,True,"OMEGA, PS, T",Omega (=dp/dt),wap
 atmos.zg.tavg-500hPa-hxy-air,False,Z500,Geopotential Height at 500hPa,zg500
 atmos.zg.tavg-p19-hxy-air,True,"Z3, PS, T",Geopotential Height,zg
-atmos.zg.tavg-p39-hy-air,True,"Z3, PS, T",Geopotential Height,zg
 atmos.zg.tpt-al-hxy-u,True,"Z3, PS, T",Geopotential height,zg
 aerosol.abs550bc.tavg-u-hxy-u,False,DISCARD,black carbon aaod@550nm,abs550bc
 aerosol.abs550dust.tavg-u-hxy-u,False,DISCARD,dust absorption aerosol optical depth @550nm,abs550dust
@@ -120,14 +117,11 @@ atmos.bldep.tpt-u-hxy-u,False,DISCARD,Boundary Layer Depth,bldep
 atmos.cldnvi.tavg-u-hxy-u,False,DISCARD,Column Integrated Cloud Droplet Number,cldnvi
 atmos.cltc.tavg-u-hxy-u,False,DISCARD,Convective Cloud Cover Percentage,cltc
 atmos.co2.tavg-al-hxy-u,False,DISCARD,Mole Fraction of CO2,co2
-atmos.co2.tavg-h2m-hxy-u,False,DISCARD,Near-surface atmosphere CO2,co2s
 atmos.co2.tavg-p19-hxy-air,False,DISCARD,Mole Fraction of CO2,co2
 atmos.co2.tclm-p19-hxy-air,False,DISCARD,Mole Fraction of CO2,co2Clim
 atmos.co2.tclm-u-hm-u,False,DISCARD,Total Atmospheric Mass of CO2,co2massClim
 atmos.co23D.tavg-al-hxy-u,False,DISCARD,3D-Field of Transported CO2,co23D
 atmos.co2mass.tavg-u-hm-u,False,DISCARD,Total Atmospheric Mass of CO2,co2mass
-atmos.epfy.tavg-p39-hy-air,False,DISCARD,Northward Component of the Eliassen-Palm Flux,epfy
-atmos.epfz.tavg-p39-hy-air,False,DISCARD,Upward Component of the Eliassen-Palm Flux,epfz
 atmos.fco2all.tavg-u-hxy-u,False,DISCARD,Carbon Mass Flux into Atmosphere Due to All Emissions of CO2 from All Sources [kgC m-2 s-1],fco2all
 atmos.fco2antt.tavg-u-hxy-u,False,DISCARD,Carbon Mass Flux into Atmosphere Due to All Anthropogenic Emissions of CO2 [kgC m-2 s-1],fco2antt
 atmos.fco2fos.tavg-u-hxy-u,False,DISCARD,Carbon Mass Flux into Atmosphere Due to Fossil Fuel Emissions of CO2 [kgC m-2 s-1],fco2fos
@@ -153,34 +147,17 @@ atmos.snrefr.tavg-u-hxy-lnd,False,DISCARD,Refreezing of Water in the Snow,snrefr
 atmos.snwc.tavg-u-hxy-lnd,False,DISCARD,Snow Water Equivalent Intercepted by the Vegetation,snwc
 atmos.ta.tpt-p5u-hxy-u,False,DISCARD,6 hourly instantaneous temperature in the UTLS region,taUTLS
 atmos.ta.tpt-p6-hxy-air,False,DISCARD,Air temperature,ta6
-atmos.tauunoegw.tavg-p39-hy-air,False,DISCARD,Zonal mean eastward Reynolds stress from non-orographic eastward gravity wave parameterization,tauunoegw
-atmos.tauunowgw.tavg-p39-hy-air,False,DISCARD,Zonal mean eastward Reynolds stress from non-orographic westward gravity wave parameterization,tauunowgw
-atmos.tauuogw.tavg-p39-hy-air,False,DISCARD,Zonal mean eastward Reynolds stress from orographic gravity wave parameterization,tauuogw
-atmos.tauvnogw.tavg-p39-hy-air,False,DISCARD,Zonal mean northward Reynolds stress from non-orographic gravity wave parameterization,tauvnogw
-atmos.tauvogw.tavg-p39-hy-air,False,DISCARD,Zonal mean northward Reynolds stress from orographic gravity wave parameterization,tauvogw
-atmos.tdps.tavg-h2m-hxy-u,False,DISCARD,2m Dewpoint Temperature,tdps
-atmos.tntmp.tavg-p39-hy-air,False,DISCARD,Zonal Mean Tendency of Air Temperature Due to Model Physics,tntmp
-atmos.tntrl.tavg-p39-hy-air,False,DISCARD,Zonal Mean Tendency of Air Temperature Due to Longwave Radiative Heating,tntrl
 atmos.tntrs.tavg-al-hxy-u,False,DISCARD,Tendency of Air Temperature Due to Shortwave Radiative Heating,tntrs
-atmos.tntrs.tavg-p39-hy-air,False,DISCARD,Zonal Mean Tendency of Air Temperature Due to Shortwave Radiative Heating,tntrs
 atmos.ts.tavg-u-hxy-lnd,False,DISCARD,Snow Surface Temperature,tsns
 atmos.ua.tpt-p5u-hxy-air,False,DISCARD,6 hourly instantaneous eastward wind in the UTLS region,uaUTLS
 atmos.ua.tpt-p6-hxy-air,False,DISCARD,Eastward wind,ua6
-atmos.utendepfd.tavg-p39-hy-air,False,DISCARD,Tendency of Eastward Wind Due to Eliassen-Palm Flux Divergence,utendepfd
-atmos.utendnogw.tavg-p39-hy-air,False,DISCARD,Eastward Acceleration Due to Non-Orographic Gravity Wave Drag,utendnogw
-atmos.utendogw.tavg-p39-hy-air,False,DISCARD,Eastward Acceleration Due to Orographic Gravity Wave Drag,utendogw
-atmos.utendvtem.tavg-p39-hy-air,False,DISCARD,Tendency of Eastward Wind Due to TEM Northward Advection and Coriolis Term,utendvtem
-atmos.utendwtem.tavg-p39-hy-air,False,DISCARD,Tendency of Eastward Wind Due to TEM Upward Advection,utendwtem
 atmos.va.tpt-p5u-hxy-air,False,DISCARD,6 hourly instantaneous northward wind in the UTLS region,vaUTLS
 atmos.va.tpt-p6-hxy-air,False,DISCARD,Northward Wind,va6
-atmos.vtem.tavg-p39-hy-air,False,DISCARD,Transformed Eulerian Mean Northward Wind,vtem
 atmos.wap.tpt-p6-hxy-air,False,DISCARD,Omega (=dp/dt),wap6
 atmos.wbgt.tavg-h2m-hxy-u,False,DISCARD,mean 2m daily wet bulb globe temperature,wbgt2m
 atmos.wbgt.tmax-h2m-hxy-u,False,DISCARD,maximum 2m daily wet bulb globe temperature,wbgt2mmax
 atmos.wsg.tmax-h100m-hxy-u,False,DISCARD,Maximum Wind Speed of Gust at 100m,wsgmax100m
 atmos.wsg.tmax-h10m-hxy-u,False,DISCARD,Maximum Wind Speed of Gust at 10m,wsgmax10m
-atmos.wtem.tavg-p39-hy-air,False,DISCARD,Transformed Eulerian Mean Upward Wind,wtem
-atmos.zg.tavg-1000hPa-hxy-air,False,DISCARD,Geopotential Height at 1000hPa,zg1000
 atmosChem.cfc11.tavg-u-hm-air,False,DISCARD,Global Mean Mole Fraction of CFC11,cfc11global
 atmosChem.cfc113.tavg-u-hm-air,False,DISCARD,Global Mean Mole Fraction of CFC113,cfc113global
 atmosChem.cfc12.tavg-u-hm-air,False,DISCARD,Global Mean Mole Fraction of CFC12,cfc12global
@@ -191,7 +168,6 @@ atmosChem.drynoy.tavg-u-hxy-u,False,DISCARD,Dry Deposition Rate of NOy,drynoy
 atmosChem.emich4.tavg-u-hxy-u,False,DISCARD,total emission rate of CH4,emich4
 atmosChem.flashrate.tavg-u-hxy-u,False,DISCARD,Lightning Flash Rate,flashrate
 atmosChem.hcfc22.tavg-u-hm-air,False,DISCARD,Global Mean Mole Fraction of HCFC22,hcfc22global
-atmosChem.meanage.tavg-p39-hy-air,False,DISCARD,Mean Age of Stratospheric Air,meanage
 atmosChem.n2o.tavg-al-hxy-u,False,DISCARD,Mole Fraction of N2O,n2o
 atmosChem.o3.tavg-al-hxy-u,False,DISCARD,Mole Fraction of O3,o3
 atmosChem.o3.tavg-p19-hxy-air,False,DISCARD,Mole Fraction of O3,o3
