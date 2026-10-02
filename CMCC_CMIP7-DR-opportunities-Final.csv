@@ -2,7 +2,7 @@ DR-V1.2.2.5,Division,opportunity name (link),"CMCC priority (high, medium, low, 
 Tomas L.,ESYDA,Baseline Climate Variables for Earth System Modelling,High,"baseline_monthly, baseline_daily, baseline_fixed, baseline_subdaily",132
 ,,,,,
 Atmosphere,,,,,
-"Panos A., Antonello Sq.",CLIVAP,Atmospheric dynamics and variability,High,dynvar_basic,
+"Panos A., Antonello Sq.",CLIVAP,Atmospheric dynamics and variability,No Interest,,
 ,,"Clouds, circulation and climate sensitivity: baseline",No Interest,,
 ,,"Clouds, circulation and climate sensitivity: extension for process-level studies",No Interest,,
 ,,"Clouds, radiation & precipitation",No Interest,,
@@ -19,7 +19,7 @@ Daniele P.,ESYDA,Benchmarking and Attributing Changes to Global Carbon and other
 Tomas L.,ESYDA,Changes in marine biogeochemical cycles and ecosystem processes,High,"marine_bgc_baseline, marine_bgc_seaice, marine_bgc_fishmip, marine_bgc_carbon_sink",86
 Momme B.,ESYDA,Constructing a Global Carbon Budget,High,"land_carbon_cycle_tier1, ocean_carbon_cycle_tier1, atmosphere_carbon_cycle_tier1",
 Daniele P.,ESYDA,Earth's Energy Budget,High,"ocean_grid, seaice_budget_energy_monthly, int_ocean_budgets",39
-Dario N.,CLIVAP,Multi-annual-to-decadal predictability of the Earth System and risk assessment of climate extremes,High,"DCPP_essential, DCPP_wider",
+Dario N.,CLIVAP,Multi-annual-to-decadal predictability of the Earth System and risk assessment of climate extremes,High,DCPP_essential,
 "Dario N., Antonello Sq.",CLIVAP,Robust Risk Assessment of Tipping Points,Medium,tipmip_baseline,
 Daniele P.,ESYDA,Role of fire in the Earth system,High,"FireMIP_monthly, FireMIP_daily",118
 "Daniele P. & Guido R. (ICR), \n Antonio T. (ICR)","ESYDA, ICR",Water cycle/budget assessment,High,"baseline_monthly, seaice_budget_freshwater_monthly, int_ocean_budgets, ocean_grid",36
