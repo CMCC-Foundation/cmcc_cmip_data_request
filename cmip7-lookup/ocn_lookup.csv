@@ -90,10 +90,10 @@ ocean.sltbasin.tavg-u-hyb-sea,True,sltbasin,Northward Ocean Salt Transport,sltba
 ocean.thetao.tavg-op20bar-hxy-sea,False,,Sea Water Potential Temperature at 200 meters,thetao200
 ocean.thkcelluo.tavg-ol-hxy-sea,False,thkcelluo,Ocean Model Cell Thickness at u-points,thkcelluo
 ocean.thkcellvo.tavg-ol-hxy-sea,False,thkcellvo,Ocean Model Cell Thickness at v-points,thkcellvo
-ocean.tnkebto.tavg-u-hxy-sea,False,,Tendency of Ocean Eddy Kinetic Energy Content Due to Parameterized Eddy Advection,tnkebto
+ocean.tnkebto.tavg-u-hxy-sea,False,DISCARD,Tendency of Ocean Eddy Kinetic Energy Content Due to Parameterized Eddy Advection,tnkebto
 ocean.uos.tavg-u-hxy-sea,False,uos,Daily Surface Sea Water X Velocity,uos
 ocean.vos.tavg-u-hxy-sea,False,vos,Daily Surface Sea Water Y Velocity,vos
-ocean.vsf.tavg-u-hxy-sea,False,,Virtual Salt Flux into Sea Water,vsf
-ocean.wfcorr.tavg-u-hxy-sea,False,,Water Flux Correction,wfcorr
-ocean.zfullo.tavg-ol-hxy-sea,False,,Depth Below Geoid of Ocean Layer,zfullo
+ocean.vsf.tavg-u-hxy-sea,False,DISCARD,Virtual Salt Flux into Sea Water,vsf
+ocean.wfcorr.tavg-u-hxy-sea,False,DISCARD,Water Flux Correction,wfcorr
+ocean.zfullo.tavg-ol-hxy-sea,False,zfullo,Depth Below Geoid of Ocean Layer,zfullo
 ocean.zossq.tavg-u-hxy-sea,False,zossq,Square of Sea Surface Height Above Geoid,zossq
