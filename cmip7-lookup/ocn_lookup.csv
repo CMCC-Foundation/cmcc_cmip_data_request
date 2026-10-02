@@ -71,12 +71,12 @@ ocean.dyvo.ti-u-hxy-u,True,deptht,Cell Length in the Y Direction at v-points,dyv
 ocean.ficeberg.tavg-ol-hxy-sea,False,DISCARD,Water Flux into Sea Water from Icebergs,ficeberg
 ocean.flandice.tavg-u-hxy-sea,False,DISCARD,Water Flux into Sea Water from Land Ice,flandice
 ocean.hfbasinpsmadv.tavg-u-hyb-sea,False,DISCARD,Northward Ocean Heat Transport Due to Parameterized Submesoscale Advection,hfbasinpsmadv
-ocean.hfrunoffds.tavg-ol-hxy-sea,False,,Temperature Flux Due to Runoff Expressed as Heat Flux into Sea Water,hfrunoffds
+ocean.hfrunoffds.tavg-ol-hxy-sea,False,hfrunoffds,Temperature Flux Due to Runoff Expressed as Heat Flux into Sea Water,hfrunoffds
 ocean.hfx.tavg-ol-hxy-sea,False,,3D Ocean Heat X Transport,hfx
 ocean.hfx.tavg-u-hxy-sea,False,,Vertically Integrated Ocean Heat X Transport,hfxint
 ocean.hfy.tavg-ol-hxy-sea,False,,3D Ocean Heat Y Transport,hfy
 ocean.hfy.tavg-u-hxy-sea,False,,Vertically Integrated Ocean Heat Y Transport,hfyint
-ocean.mlotstsq.tavg-u-hxy-sea,False,,Square of Ocean Mixed Layer Thickness Defined by Delta Sigma T of 0.03 kg m-3 referenced to the model level closest to 10 m depth,mlotstsq
+ocean.mlotstsq.tavg-u-hxy-sea,False,mlotstsq,Square of Ocean Mixed Layer Thickness Defined by Delta Sigma T of 0.03 kg m-3 referenced to the model level closest to 10 m depth,mlotstsq
 ocean.msftm.tavg-ol-hyb-sea,False,DISCARD,Ocean Meridional Overturning Mass Streamfunction,msftmz
 ocean.msftm.tavg-rho-hyb-sea,False,DISCARD,Ocean Meridional Overturning Mass Streamfunction,msftmrho
 ocean.msfty.tavg-rho-ht-sea,False,,Ocean Y Overturning Mass Streamfunction,msftyrho
