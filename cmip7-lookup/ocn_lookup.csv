@@ -57,43 +57,43 @@ ocean.wmo.tavg-ol-hxy-sea,True,wmo,Upward Ocean Mass Transport,wmo
 ocean.wo.tavg-ol-hxy-sea,False,wo,Sea Water Vertical Velocity,wo
 ocean.zos.tavg-u-hxy-sea,False,zos,Sea Surface Height Above Geoid,zos
 ocean.zostoga.tavg-u-hm-sea,False,zostoga,Global Average Thermosteric Sea Level Change,zostoga
-ocean.absscint.tavg-op4-hxy-sea,False,DISCARD,Integral wrt depth of seawater absolute salinity expressed as salt mass content,absscint
-ocean.bigthetao.tavg-ol-hxy-sea,False,DISCARD,Sea Water Conservative Temperature,bigthetao
-ocean.bigthetao.tavg-op20bar-hxy-sea,False,DISCARD,Sea Water Conservative Temperature at 200 meters,bigthetao200
-ocean.bigthetao.tavg-u-hm-sea,False,DISCARD,Global Average Sea Water Conservative Temperature,bigthetaoga
-ocean.chcint.tavg-op4-hxy-sea,False,DISCARD,Depth Integrated Seawater Conservative Temperature Expressed As Heat Content,chcint
-ocean.dxto.ti-u-hxy-u,False,DISCARD,Cell Length in the X Direction at t-points,dxto
-ocean.dxuo.ti-u-hxy-u,False,DISCARD,Cell Length in the X Direction at u-points,dxuo
-ocean.dxvo.ti-u-hxy-u,False,DISCARD,Cell Length in the X Direction at v-points,dxvo
-ocean.dyto.ti-u-hxy-u,False,DISCARD,Cell Length in the Y Direction at t-points,dyto
-ocean.dyuo.ti-u-hxy-u,False,DISCARD,Cell Length in the Y Direction at u-points,dyuo
-ocean.dyvo.ti-u-hxy-u,False,DISCARD,Cell Length in the Y Direction at v-points,dyvo
-ocean.ficeberg.tavg-ol-hxy-sea,False,DISCARD,Water Flux into Sea Water from Icebergs,ficeberg
-ocean.flandice.tavg-u-hxy-sea,False,DISCARD,Water Flux into Sea Water from Land Ice,flandice
-ocean.hfbasinpsmadv.tavg-u-hyb-sea,False,DISCARD,Northward Ocean Heat Transport Due to Parameterized Submesoscale Advection,hfbasinpsmadv
-ocean.hfrunoffds.tavg-ol-hxy-sea,False,DISCARD,Temperature Flux Due to Runoff Expressed as Heat Flux into Sea Water,hfrunoffds
-ocean.hfx.tavg-ol-hxy-sea,False,DISCARD,3D Ocean Heat X Transport,hfx
-ocean.hfx.tavg-u-hxy-sea,False,DISCARD,Vertically Integrated Ocean Heat X Transport,hfxint
-ocean.hfy.tavg-ol-hxy-sea,False,DISCARD,3D Ocean Heat Y Transport,hfy
-ocean.hfy.tavg-u-hxy-sea,False,DISCARD,Vertically Integrated Ocean Heat Y Transport,hfyint
-ocean.mlotstsq.tavg-u-hxy-sea,False,DISCARD,Square of Ocean Mixed Layer Thickness Defined by Delta Sigma T of 0.03 kg m-3 referenced to the model level closest to 10 m depth,mlotstsq
+ocean.absscint.tavg-op4-hxy-sea,False,,Integral wrt depth of seawater absolute salinity expressed as salt mass content,absscint
+ocean.bigthetao.tavg-ol-hxy-sea,False,,Sea Water Conservative Temperature,bigthetao
+ocean.bigthetao.tavg-op20bar-hxy-sea,False,,Sea Water Conservative Temperature at 200 meters,bigthetao200
+ocean.bigthetao.tavg-u-hm-sea,False,,Global Average Sea Water Conservative Temperature,bigthetaoga
+ocean.chcint.tavg-op4-hxy-sea,False,,Depth Integrated Seawater Conservative Temperature Expressed As Heat Content,chcint
+ocean.dxto.ti-u-hxy-u,False,,Cell Length in the X Direction at t-points,dxto
+ocean.dxuo.ti-u-hxy-u,False,,Cell Length in the X Direction at u-points,dxuo
+ocean.dxvo.ti-u-hxy-u,False,,Cell Length in the X Direction at v-points,dxvo
+ocean.dyto.ti-u-hxy-u,False,,Cell Length in the Y Direction at t-points,dyto
+ocean.dyuo.ti-u-hxy-u,False,,Cell Length in the Y Direction at u-points,dyuo
+ocean.dyvo.ti-u-hxy-u,False,,Cell Length in the Y Direction at v-points,dyvo
+ocean.ficeberg.tavg-ol-hxy-sea,False,,Water Flux into Sea Water from Icebergs,ficeberg
+ocean.flandice.tavg-u-hxy-sea,False,,Water Flux into Sea Water from Land Ice,flandice
+ocean.hfbasinpsmadv.tavg-u-hyb-sea,False,,Northward Ocean Heat Transport Due to Parameterized Submesoscale Advection,hfbasinpsmadv
+ocean.hfrunoffds.tavg-ol-hxy-sea,False,,Temperature Flux Due to Runoff Expressed as Heat Flux into Sea Water,hfrunoffds
+ocean.hfx.tavg-ol-hxy-sea,False,,3D Ocean Heat X Transport,hfx
+ocean.hfx.tavg-u-hxy-sea,False,,Vertically Integrated Ocean Heat X Transport,hfxint
+ocean.hfy.tavg-ol-hxy-sea,False,,3D Ocean Heat Y Transport,hfy
+ocean.hfy.tavg-u-hxy-sea,False,,Vertically Integrated Ocean Heat Y Transport,hfyint
+ocean.mlotstsq.tavg-u-hxy-sea,False,,Square of Ocean Mixed Layer Thickness Defined by Delta Sigma T of 0.03 kg m-3 referenced to the model level closest to 10 m depth,mlotstsq
 ocean.msftm.tavg-ol-hyb-sea,False,DISCARD,Ocean Meridional Overturning Mass Streamfunction,msftmz
 ocean.msftm.tavg-rho-hyb-sea,False,DISCARD,Ocean Meridional Overturning Mass Streamfunction,msftmrho
-ocean.msfty.tavg-rho-ht-sea,False,DISCARD,Ocean Y Overturning Mass Streamfunction,msftyrho
-ocean.pfscint.tavg-op4-hxy-sea,False,DISCARD,Integral wrt depth of seawater preformed salinity expressed as salt mass content,pfscint
-ocean.phcint.tavg-op4-hxy-sea,False,DISCARD,Integrated Ocean Heat Content from Potential Temperature,phcint
-ocean.pso.tavg-u-hxy-sea,False,DISCARD,Sea Water Pressure at Sea Water Surface,pso
-ocean.rsdo.tavg-ol-hxy-sea,False,DISCARD,Downwelling Shortwave Radiation in Sea Water,rsdo
-ocean.scint.tavg-op4-hxy-sea,False,DISCARD,Integral wrt depth of seawater practical salinity expressed as salt mass content,scint
-ocean.sfdsi.tavg-u-hxy-sea,False,DISCARD,Downward Sea Ice Basal Salt Flux,sfdsi
+ocean.msfty.tavg-rho-ht-sea,False,,Ocean Y Overturning Mass Streamfunction,msftyrho
+ocean.pfscint.tavg-op4-hxy-sea,False,,Integral wrt depth of seawater preformed salinity expressed as salt mass content,pfscint
+ocean.phcint.tavg-op4-hxy-sea,False,,Integrated Ocean Heat Content from Potential Temperature,phcint
+ocean.pso.tavg-u-hxy-sea,False,,Sea Water Pressure at Sea Water Surface,pso
+ocean.rsdo.tavg-ol-hxy-sea,False,,Downwelling Shortwave Radiation in Sea Water,rsdo
+ocean.scint.tavg-op4-hxy-sea,False,,Integral wrt depth of seawater practical salinity expressed as salt mass content,scint
+ocean.sfdsi.tavg-u-hxy-sea,False,,Downward Sea Ice Basal Salt Flux,sfdsi
 ocean.sltbasin.tavg-u-hyb-sea,True,sltbasin,Northward Ocean Salt Transport,sltbasin
-ocean.thetao.tavg-op20bar-hxy-sea,False,DISCARD,Sea Water Potential Temperature at 200 meters,thetao200
-ocean.thkcelluo.tavg-ol-hxy-sea,False,DISCARD,Ocean Model Cell Thickness at u-points,thkcelluo
-ocean.thkcellvo.tavg-ol-hxy-sea,False,DISCARD,Ocean Model Cell Thickness at v-points,thkcellvo
-ocean.tnkebto.tavg-u-hxy-sea,False,DISCARD,Tendency of Ocean Eddy Kinetic Energy Content Due to Parameterized Eddy Advection,tnkebto
-ocean.uos.tavg-u-hxy-sea,False,DISCARD,Daily Surface Sea Water X Velocity,uos
-ocean.vos.tavg-u-hxy-sea,False,DISCARD,Daily Surface Sea Water Y Velocity,vos
-ocean.vsf.tavg-u-hxy-sea,False,DISCARD,Virtual Salt Flux into Sea Water,vsf
-ocean.wfcorr.tavg-u-hxy-sea,False,DISCARD,Water Flux Correction,wfcorr
-ocean.zfullo.tavg-ol-hxy-sea,False,DISCARD,Depth Below Geoid of Ocean Layer,zfullo
-ocean.zossq.tavg-u-hxy-sea,False,DISCARD,Square of Sea Surface Height Above Geoid,zossq
+ocean.thetao.tavg-op20bar-hxy-sea,False,,Sea Water Potential Temperature at 200 meters,thetao200
+ocean.thkcelluo.tavg-ol-hxy-sea,False,,Ocean Model Cell Thickness at u-points,thkcelluo
+ocean.thkcellvo.tavg-ol-hxy-sea,False,,Ocean Model Cell Thickness at v-points,thkcellvo
+ocean.tnkebto.tavg-u-hxy-sea,False,,Tendency of Ocean Eddy Kinetic Energy Content Due to Parameterized Eddy Advection,tnkebto
+ocean.uos.tavg-u-hxy-sea,False,,Daily Surface Sea Water X Velocity,uos
+ocean.vos.tavg-u-hxy-sea,False,,Daily Surface Sea Water Y Velocity,vos
+ocean.vsf.tavg-u-hxy-sea,False,,Virtual Salt Flux into Sea Water,vsf
+ocean.wfcorr.tavg-u-hxy-sea,False,,Water Flux Correction,wfcorr
+ocean.zfullo.tavg-ol-hxy-sea,False,,Depth Below Geoid of Ocean Layer,zfullo
+ocean.zossq.tavg-u-hxy-sea,False,,Square of Sea Surface Height Above Geoid,zossq
