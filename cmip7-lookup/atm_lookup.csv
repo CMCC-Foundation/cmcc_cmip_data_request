@@ -58,9 +58,9 @@ atmos.ta.tpt-al-hxy-u,True,"T, PS",Air Temperature,ta
 atmos.ta.tpt-p3-hxy-air,True,"T, PS",Air Temperature,ta
 atmos.tas.tavg-h2m-hxy-u,False,TREFHT,Near-Surface Air Temperature,tas
 atmos.tas.tmax-h2m-hxy-u,False,TREFHTMX,Daily Maximum Near-Surface Air Temperature,tasmax
-atmos.tas.tmaxavg-h2m-hxy-u,False,TREFHTMX,Daily Maximum Near-Surface Air Temperature,tasmax
+atmos.tas.tmaxavg-h2m-hxy-u,False,TREFMXAV,Daily Maximum Near-Surface Air Temperature,tasmax
 atmos.tas.tmin-h2m-hxy-u,False,TREFHTMN,Daily Minimum Near-Surface Air Temperature,tasmin
-atmos.tas.tminavg-h2m-hxy-u,False,TREFHTMN,Daily Minimum Near-Surface Air Temperature,tasmin
+atmos.tas.tminavg-h2m-hxy-u,False,TREFMNAV,Daily Minimum Near-Surface Air Temperature,tasmin
 atmos.tas.tpt-h2m-hxy-u,False,TREFHT,Near-Surface Air Temperature,tas
 atmos.tauu.tavg-u-hxy-u,False,TAUX,Surface Downward Eastward Wind Stress,tauu
 atmos.tauv.tavg-u-hxy-u,False,TAUY,Surface Downward Northward Wind Stress,tauv
