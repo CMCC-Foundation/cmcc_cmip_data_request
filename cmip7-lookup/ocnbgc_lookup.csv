@@ -20,11 +20,9 @@ ocnBgchem.intppdiat.tavg-u-hxy-sea,True,ppdiat,Net Primary Organic Carbon Produc
 ocnBgchem.intppmisc.tavg-u-hxy-sea,True,ppmisc,Net Primary Organic Carbon Production by Other Phytoplankton,intppmisc
 ocnBgchem.nh4.tavg-ol-hxy-sea,False,nh4,Dissolved Ammonium Concentration,nh4
 ocnBgchem.no3.tavg-ol-hxy-sea,False,no3,Dissolved Nitrate Concentration,no3
-ocnBgchem.no3.tavg-ols-hxy-sea,True,no3,Surface Dissolved Nitrate Concentration,no3os
 ocnBgchem.o2.tavg-ol-hxy-sea,False,o2,Dissolved Oxygen Concentration,o2
 ocnBgchem.o2.tavg-ols-hxy-sea,True,o2,Surface Dissolved Oxygen Concentration,o2os
 ocnBgchem.ph.tavg-ol-hxy-sea,False,ph,pH,ph
-ocnBgchem.ph.tavg-ols-hxy-sea,True,ph,Surface pH,phos
 ocnBgchem.phyc.tavg-ol-hxy-sea,True,"phydiat, phymisc",Phytoplankton Carbon Concentration,phyc
 ocnBgchem.phydiat.tavg-ol-hxy-sea,False,phydiat,Mole Concentration of Diatoms Expressed as Carbon in Sea Water,phydiat
 ocnBgchem.phymisc.tavg-ol-hxy-sea,False,phymisc,Mole Concentration of Miscellaneous Phytoplankton Expressed as Carbon in Sea Water,phymisc
@@ -42,16 +40,11 @@ ocnBgchem.chl.tavg-op20bar-hxy-sea,False,DISCARD,Mass Concentration of Total Phy
 ocnBgchem.chlcalc.tavg-ol-hxy-sea,False,DISCARD,Mass Concentration of Calcareous Phytoplankton Expressed as Chlorophyll in Sea Water,chlcalc
 ocnBgchem.chldiaz.tavg-ol-hxy-sea,False,DISCARD,Mass Concentration of Diazotrophs Expressed as Chlorophyll in Sea Water,chldiaz
 ocnBgchem.chlpico.tavg-ol-hxy-sea,False,DISCARD,Mass Concentration of Picophytoplankton Expressed as Chlorophyll in Sea Water,chlpico
-ocnBgchem.co3.tavg-ols-hxy-sea,False,DISCARD,Surface Carbonate Ion Concentration,co3os
-ocnBgchem.co3.tavg-op20bar-hxy-sea,False,DISCARD,Carbonate Ion Concentration,co3200
-ocnBgchem.co3satarag.tavg-ols-hxy-sea,False,DISCARD,Surface Mole Concentration of Carbonate Ion in Equilibrium with Pure Aragonite in Sea Water,co3sataragos
-ocnBgchem.co3satarag.tavg-op20bar-hxy-sea,False,DISCARD,Mole Concentration of Carbonate Ion in Equilibrium with Pure Aragonite in Sea Water,co3satarag200
 ocnBgchem.dfe.tavg-ols-hxy-sea,False,DISCARD,Surface Dissolved Iron Concentration,dfeos
 ocnBgchem.dmso.tavg-ol-hxy-sea,False,DISCARD,Mole Concentration of Dimethyl Sulphide in Sea Water,dmso
 ocnBgchem.dmso.tavg-ols-hxy-sea,False,DISCARD,Surface Mole Concentration of Dimethyl Sulphide in Sea Water,dmsos
 ocnBgchem.epn.tavg-d100m-hxy-sea,False,DISCARD,Downward Flux of Particulate Nitrogen,epn100
 ocnBgchem.epp.tavg-d100m-hxy-sea,False,DISCARD,Downward Flux of Particulate Phosphorus,epp100
-ocnBgchem.epsi.tavg-d100m-hxy-sea,False,DISCARD,Downward Flux of Particulate Silicon,epsi100
 ocnBgchem.expc.tavg-d1000m-hxy-sea,False,DISCARD,Downward Flux of Particulate Organic Carbon at 1000m,epc1000
 ocnBgchem.expcalc.tavg-d1000m-hxy-sea,False,DISCARD,Downward Flux of Calcite at 1000m,epcalc1000
 ocnBgchem.expcob.tavg-u-hxy-sea,False,DISCARD,Sinking Flux of Particulate Organic Carbon Reaching the Ocean Bottom,expcob
@@ -80,8 +73,6 @@ ocnBgchem.phydiaz.tavg-ols-hxy-sea,False,DISCARD,Surface Mole Concentration of D
 ocnBgchem.phymisc.tavg-ols-hxy-sea,False,DISCARD,Surface Mole Concentration of Miscellaneous Phytoplankton Expressed as Carbon in Sea Water,phymiscos
 ocnBgchem.phynano.tavg-u-hxy-sea,False,DISCARD,Mole Concentration of Nanophytoplankton Expressed as Carbon in Sea Water,phynano
 ocnBgchem.phypico.tavg-ol-hxy-sea,False,DISCARD,Mole Concentration of Picophytoplankton Expressed as Carbon in Sea Water,phypico
-ocnBgchem.pp.tavg-ols-hxy-sea,False,DISCARD,Primary Carbon Production by Phytoplankton,ppos
-ocnBgchem.si.tavg-ols-hxy-sea,False,DISCARD,Surface Total Dissolved Inorganic Silicon Concentration,sios
 ocnBgchem.sialgc.tavg-u-hxy-si,False,DISCARD,Total Ice Algal Carbon Amount in Sea Ice,sialgc
 ocnBgchem.sichl.tavg-u-hxy-si,False,DISCARD,Amount of Total Ice Algae Expressed as Chlorophyll in Sea Ice,sichl
 ocnBgchem.sigpp.tavg-u-hxy-si,False,DISCARD,Gross Primary Productivity in Sea Ice as Carbon Amount Flux,sigpp
