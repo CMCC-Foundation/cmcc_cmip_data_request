@@ -86,7 +86,7 @@ ocean.pso.tavg-u-hxy-sea,False,DISCARD,Sea Water Pressure at Sea Water Surface,p
 ocean.rsdo.tavg-ol-hxy-sea,False,DISCARD,Downwelling Shortwave Radiation in Sea Water,rsdo
 ocean.scint.tavg-op4-hxy-sea,False,DISCARD,Integral wrt depth of seawater practical salinity expressed as salt mass content,scint
 ocean.sfdsi.tavg-u-hxy-sea,False,DISCARD,Downward Sea Ice Basal Salt Flux,sfdsi
-ocean.sltbasin.tavg-u-hyb-sea,False,DISCARD,Northward Ocean Salt Transport,sltbasin
+ocean.sltbasin.tavg-u-hyb-sea,True,sltbasin,Northward Ocean Salt Transport,sltbasin
 ocean.thetao.tavg-op20bar-hxy-sea,False,DISCARD,Sea Water Potential Temperature at 200 meters,thetao200
 ocean.thkcelluo.tavg-ol-hxy-sea,False,DISCARD,Ocean Model Cell Thickness at u-points,thkcelluo
 ocean.thkcellvo.tavg-ol-hxy-sea,False,DISCARD,Ocean Model Cell Thickness at v-points,thkcellvo
