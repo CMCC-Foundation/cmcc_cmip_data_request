@@ -68,9 +68,9 @@ ocean.dxvo.ti-u-hxy-u,True,deptht,Cell Length in the X Direction at v-points,dxv
 ocean.dyto.ti-u-hxy-u,True,deptht,Cell Length in the Y Direction at t-points,dyto
 ocean.dyuo.ti-u-hxy-u,True,deptht,Cell Length in the Y Direction at u-points,dyuo
 ocean.dyvo.ti-u-hxy-u,True,deptht,Cell Length in the Y Direction at v-points,dyvo
-ocean.ficeberg.tavg-ol-hxy-sea,False,,Water Flux into Sea Water from Icebergs,ficeberg
-ocean.flandice.tavg-u-hxy-sea,False,,Water Flux into Sea Water from Land Ice,flandice
-ocean.hfbasinpsmadv.tavg-u-hyb-sea,False,,Northward Ocean Heat Transport Due to Parameterized Submesoscale Advection,hfbasinpsmadv
+ocean.ficeberg.tavg-ol-hxy-sea,False,DISCARD,Water Flux into Sea Water from Icebergs,ficeberg
+ocean.flandice.tavg-u-hxy-sea,False,DISCARD,Water Flux into Sea Water from Land Ice,flandice
+ocean.hfbasinpsmadv.tavg-u-hyb-sea,False,DISCARD,Northward Ocean Heat Transport Due to Parameterized Submesoscale Advection,hfbasinpsmadv
 ocean.hfrunoffds.tavg-ol-hxy-sea,False,,Temperature Flux Due to Runoff Expressed as Heat Flux into Sea Water,hfrunoffds
 ocean.hfx.tavg-ol-hxy-sea,False,,3D Ocean Heat X Transport,hfx
 ocean.hfx.tavg-u-hxy-sea,False,,Vertically Integrated Ocean Heat X Transport,hfxint
