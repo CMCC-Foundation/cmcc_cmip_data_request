@@ -79,7 +79,6 @@ ocean.hfy.tavg-u-hxy-sea,False,DISCARD,Vertically Integrated Ocean Heat Y Transp
 ocean.mlotstsq.tavg-u-hxy-sea,False,DISCARD,Square of Ocean Mixed Layer Thickness Defined by Delta Sigma T of 0.03 kg m-3 referenced to the model level closest to 10 m depth,mlotstsq
 ocean.msftm.tavg-ol-hyb-sea,False,DISCARD,Ocean Meridional Overturning Mass Streamfunction,msftmz
 ocean.msftm.tavg-rho-hyb-sea,False,DISCARD,Ocean Meridional Overturning Mass Streamfunction,msftmrho
-ocean.msftmmpa.tavg-ol-hyb-sea,False,DISCARD,Ocean Meridional Overturning Mass Streamfunction Due to Parameterized Mesoscale Advection,msftmzmpa
 ocean.msfty.tavg-rho-ht-sea,False,DISCARD,Ocean Y Overturning Mass Streamfunction,msftyrho
 ocean.pfscint.tavg-op4-hxy-sea,False,DISCARD,Integral wrt depth of seawater preformed salinity expressed as salt mass content,pfscint
 ocean.phcint.tavg-op4-hxy-sea,False,DISCARD,Integrated Ocean Heat Content from Potential Temperature,phcint
