@@ -1,12 +1,12 @@
-variable,reprocess,model,long_name,cmip6_name
+variable,reprocess,model,long_name,cmip6_name,notes
 seaIce.evspsbl.tavg-u-hxy-si,False,sidmassevapsubl,Sea-Ice Mass Change Through Evaporation and Sublimation,sidmassevapsubl
-seaIce.prra.tavg-u-hxy-si,False,sipr,Rainfall Rate over Sea Ice,sipr
+seaIce.prra.tavg-u-hxy-si,False,sipr,Rainfall Rate over Sea Ice,sipr,This field should be different than zero only with topographic melt ponds
 seaIce.rlds.tavg-u-hxy-si,False,sifllwdtop,Downwelling Longwave Flux over Sea Ice,sifllwdtop
 seaIce.rlus.tavg-u-hxy-si,False,sifllwutop,Upwelling Longwave Flux over Sea Ice,sifllwutop
 seaIce.rsds.tavg-u-hxy-si,False,siflswdtop,Downwelling Shortwave Flux over Sea Ice,siflswdtop
 seaIce.rsus.tavg-u-hxy-si,False,siflswutop,Upwelling Shortwave Flux over Sea Ice,siflswutop
 seaIce.siage.tavg-u-hxy-si,False,siage,Age of Sea Ice,siage
-seaIce.siconc.tavg-u-hxy-u,False,aice,Sea-Ice Area Percentage (Ocean Grid),siconc
+seaIce.siconc.tavg-u-hxy-u,True,aice*100,Sea-Ice Area Percentage (Ocean Grid),siconc
 seaIce.sidconcth.tavg-u-hxy-sea,False,sidconcth,Sea-Ice Area Fraction Tendency Due to Thermodynamics,sidconcth
 seaIce.sidmassdyn.tavg-u-hxy-si,False,sidmassdyn,Sea-Ice Mass Change from Dynamics,sidmassdyn
 seaIce.sidmassgrowthbot.tavg-u-hxy-si,False,sidmassgrowthbot,Sea-Ice Mass Change Through Basal Growth,sidmassgrowthbot
@@ -22,7 +22,7 @@ seaIce.siflfwbot.tavg-u-hxy-si,False,siflfwbot,Freshwater Flux from Sea Ice,sifl
 seaIce.siflfwdrain.tavg-u-hxy-si,False,siflfwdrain,Freshwater Flux from Sea-Ice Surface,siflfwdrain
 seaIce.siflsenstop.tavg-u-hxy-si,False,siflsenstop,Net Downward Sensible Heat Flux over Sea Ice,siflsenstop
 seaIce.sihc.tavg-u-hxy-sea,False,sihc,Sea-Ice Heat Content,sihc
-seaIce.simass.tavg-u-hxy-si,True,hi,Sea-Ice Mass,simass
+seaIce.simass.tavg-u-hxy-si,False,simass,Sea-Ice Mass,simass, mass of sea ice should be available within CICE 
 seaIce.sisnhc.tavg-u-hxy-si,False,sisnhc,Snow Heat Content,sisnhc
 seaIce.sispeed.tavg-u-hxy-si,False,sispeed,Sea-Ice Speed,sispeed
 seaIce.sitempbot.tavg-u-hxy-si,False,sitempbot,Temperature at Ice-Ocean Interface,sitempbot
@@ -32,32 +32,32 @@ seaIce.sithick.tavg-u-hxy-sir,False,sirdgthick,Ridged Ice Thickness,sirdgthick
 seaIce.sitimefrac.tavg-u-hxy-sea,False,ice_present,Fraction of Time Steps with Sea Ice,sitimefrac
 seaIce.siu.tavg-u-hxy-si,False,siu,X-Component of Sea-Ice Velocity,siu
 seaIce.siv.tavg-u-hxy-si,False,siv,Y-Component of Sea-Ice Velocity,siv
-seaIce.snc.tavg-u-hxy-si,False,sisnconc,Snow Area Percentage,sisnconc
-seaIce.snd.tavg-u-hxy-sn,False,sisnthick,Snow Thickness,sisnthick
-seaIce.snw.tavg-u-hxy-si,True,hs,Snow Mass per Area,sisnmass
+seaIce.snc.tavg-u-hxy-si,True,snowfrac aice,Snow Area Percentage,sisnconc,(snowfrac/aice)*100 since snowfrac is computed on the full cell and not only on sea ice
+seaIce.snd.tavg-u-hxy-sn,True,hs snowfrac,Snow Thickness,sisnthick, hs/snowfrac since snd defines is the sctual thickness (computed only on the snow-covered area)
+seaIce.snw.tavg-u-hxy-si,False,sisnmass,Snow Mass per Area,sisnmass, sisnmass should be a variable of CICE
 seaIce.ts.tavg-u-hxy-si,False,sitemptop,Surface Temperature of Sea Ice,sitemptop
-seaIce.prsn.tavg-u-hxy-si,False,DISCARD,Snow Mass Change Through Snowfall,sisndmasssnf
-seaIce.sbl.tavg-u-hxy-si,False,DISCARD,Snow Mass Rate of Change Through Evaporation or Sublimation,sisndmasssubl
-seaIce.sfdsi.tavg-u-hxy-si,False,DISCARD,Salt Flux from Sea Ice,siflsaltbot
-seaIce.siconca.tavg-u-hxy-u,False,DISCARD,Sea-Ice Area Percentage (Atmospheric Grid),siconca
-seaIce.sidconcdyn.tavg-u-hxy-sea,False,DISCARD,Sea-Ice Area Fraction Tendency Due to Dynamics,sidconcdyn
-seaIce.sidmassgrowthsi.tavg-u-hxy-si,False,DISCARD,Sea-Ice Mass Change Through Snow-to-Ice Conversion,sidmassgrowthsi
-seaIce.sidmassmeltlat.tavg-u-hxy-si,False,DISCARD,Sea-Ice Mass Change Through Lateral Melting,sidmassmeltlat
-seaIce.sifllattop.tavg-u-hxy-si,False,DISCARD,Net Latent Heat Flux over Sea Ice,sifllattop
-seaIce.siflsensbot.tavg-u-hxy-si,False,DISCARD,Net Upward Sensible Heat Flux under Sea Ice,siflsensbot
-seaIce.siflswdbot.tavg-u-hxy-si,False,DISCARD,Downwelling Shortwave Flux under Sea Ice,siflswdbot
-seaIce.siitdconc.tavg-u-hxy-si,False,DISCARD,Sea-Ice Area Percentages in Ice Thickness Categories,siitdconc
-seaIce.siitdsnconc.tavg-u-hxy-si,False,DISCARD,Snow Area Percentages in Ice Thickness Categories,siitdsnconc
-seaIce.siitdsnthick.tavg-u-hxy-si,False,DISCARD,Snow Thickness in Ice Thickness Categories,siitdsnthick
-seaIce.siitdthick.tavg-u-hxy-si,False,DISCARD,Sea-Ice Thickness in Ice Thickness Categories,siitdthick
-seaIce.simpconc.tavg-u-hxy-si,False,DISCARD,Fraction of Sea Ice Covered by Melt Pond,simpconc
-seaIce.simpeffconc.tavg-u-hxy-si,False,DISCARD,Fraction of Sea Ice Covered by Effective Melt Pond,simpeffconc
-seaIce.simprefrozen.tavg-u-hxy-simp,False,DISCARD,Thickness of Refrozen Ice on Melt Pond,simprefrozen
-seaIce.simpthick.tavg-u-hxy-simp,False,DISCARD,Melt Pond Depth,simpthick
-seaIce.sirdgconc.tavg-u-hxy-si,False,DISCARD,Fraction of Ridged Sea Ice,sirdgconc
-seaIce.sisali.tavg-u-hxy-si,False,DISCARD,Sea-Ice Salinity,sisali
-seaIce.sisaltmass.tavg-u-hxy-si,False,DISCARD,Mass of Salt in Sea Ice,sisaltmass
-seaIce.sisndmassdyn.tavg-u-hxy-si,False,DISCARD,Snow Mass Rate of Change Through Advection by Sea-Ice Dynamics,sisndmassdyn
-seaIce.sisndmasssi.tavg-u-hxy-si,False,DISCARD,Snow Mass Rate of Change Through Snow-to-Ice Conversion,sisndmasssi
+seaIce.prsn.tavg-u-hxy-si,False,sisndmasssnf,Snow Mass Change Through Snowfall,sisndmasssnf
+seaIce.sbl.tavg-u-hxy-si,False,sisndmasssubl,Snow Mass Rate of Change Through Evaporation or Sublimation,sisndmasssubl
+seaIce.sfdsi.tavg-u-hxy-si,False,siflsaltbot,Salt Flux from Sea Ice,siflsaltbot
+seaIce.siconca.tavg-u-hxy-u,False,DISCARD,Sea-Ice Area Percentage (Atmospheric Grid),siconca,atmospheric grid
+seaIce.sidconcdyn.tavg-u-hxy-sea,False,sidconcdyn,Sea-Ice Area Fraction Tendency Due to Dynamics,sidconcdyn
+seaIce.sidmassgrowthsi.tavg-u-hxy-si,False,sidmasssi,Sea-Ice Mass Change Through Snow-to-Ice Conversion,sidmassgrowthsi
+seaIce.sidmassmeltlat.tavg-u-hxy-si,False,sidmasslat,Sea-Ice Mass Change Through Lateral Melting,sidmassmeltlat
+seaIce.sifllattop.tavg-u-hxy-si,False,sifllatstop,Net Latent Heat Flux over Sea Ice,sifllattop
+seaIce.siflsensbot.tavg-u-hxy-si,False,siflsensupbot,Net Upward Sensible Heat Flux under Sea Ice,siflsensbot
+seaIce.siflswdbot.tavg-u-hxy-si,False,siflswdbot,Downwelling Shortwave Flux under Sea Ice,siflswdbot
+seaIce.siitdconc.tavg-u-hxy-si,False,siitdconc,Sea-Ice Area Percentages in Ice Thickness Categories,siitdconc
+seaIce.siitdsnconc.tavg-u-hxy-si,False,siitdsnconc,Snow Area Percentages in Ice Thickness Categories,siitdsnconc
+seaIce.siitdsnthick.tavg-u-hxy-si,False,siitdsnthick,Snow Thickness in Ice Thickness Categories,siitdsnthick
+seaIce.siitdthick.tavg-u-hxy-si,False,siitdthick,Sea-Ice Thickness in Ice Thickness Categories,siitdthick
+seaIce.simpconc.tavg-u-hxy-si,True,apond_ai aice,Fraction of Sea Ice Covered by Melt Pond,simpconc,100 * apond_ai / aice (CICE writes snowfracn, the snow fraction of each category's ice area. CMIP7 asks for the percentage of the grid cell. Multiplying by the category ice concentration rescales it to the cell)
+seaIce.simpeffconc.tavg-u-hxy-si,True,apeff_ai aice,Fraction of Sea Ice Covered by Effective Melt Pond,simpeffconc,100 * apeff_ai/aice
+seaIce.simprefrozen.tavg-u-hxy-simp,True,hpond_ai apond_ai,Thickness of Refrozen Ice on Melt Pond,simprefrozen, hpond_ai / apond_ai
+seaIce.simpthick.tavg-u-hxy-simp,True,ipond_ai  apond_ai,Melt Pond Depth,simpthick, ipond_ai / apond_ai
+seaIce.sirdgconc.tavg-u-hxy-si,True,sirdgconc aice,Fraction of Ridged Sea Ice,sirdgconc, sirdgconc/aice
+seaIce.sisali.tavg-u-hxy-si,False,sisali,Sea-Ice Salinity,sisali, it could be constant in time
+seaIce.sisaltmass.tavg-u-hxy-si,False,sisaltmass,Mass of Salt in Sea Ice,sisaltmass
+seaIce.sisndmassdyn.tavg-u-hxy-si,False,sisndmassdyn,Snow Mass Rate of Change Through Advection by Sea-Ice Dynamics,sisndmassdyn
+seaIce.sisndmasssi.tavg-u-hxy-si,False,sisndmasssi,Snow Mass Rate of Change Through Snow-to-Ice Conversion,sisndmasssi
 seaIce.sisndmasswind.tavg-u-hxy-si,False,DISCARD,Snow Mass Rate of Change Through Wind Drift of Snow,sisndmasswind
-seaIce.snm.tavg-u-hxy-si,False,DISCARD,Snow Mass Rate of Change Through Melt,sisndmassmelt
+seaIce.snm.tavg-u-hxy-si,False,sisndmassmelt,Snow Mass Rate of Change Through Melt,sisndmassmelt
