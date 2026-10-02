@@ -38,8 +38,8 @@ ocean.thetao.tavg-d700m-hxy-sea,False,thetaot700,Depth Average Potential Tempera
 ocean.thetao.tavg-ol-hxy-sea,False,thetao,Sea Water Potential Temperature,thetao
 ocean.thetao.tavg-u-hm-sea,False,thetaoga,Global Average Sea Water Potential Temperature,thetaoga
 ocean.thetaot.tavg-u-hxy-sea,True,thetao,Vertically Averaged Sea Water Potential Temperature,thetaot
-ocean.thkcello.tavg-ol-hxy-sea,True,deptht,Ocean Model Cell Thickness,thkcello
-ocean.thkcello.ti-ol-hxy-sea,True,deptht,Ocean Model Cell Thickness,thkcello
+ocean.thkcello.tavg-ol-hxy-sea,True,thkcello,Ocean Model Cell Thickness,thkcello
+ocean.thkcello.ti-ol-hxy-sea,True,thkcello,Ocean Model Cell Thickness,thkcello
 ocean.tob.tavg-u-hxy-sea,False,tob,Sea Water Potential Temperature at Sea Floor,tob
 ocean.tos.tavg-u-hm-sea,False,tosga,Global Average Sea Surface Temperature,tosga
 ocean.tos.tavg-u-hxy-sea,False,tos,Sea Surface Temperature,tos
@@ -62,12 +62,12 @@ ocean.bigthetao.tavg-ol-hxy-sea,False,,Sea Water Conservative Temperature,bigthe
 ocean.bigthetao.tavg-op20bar-hxy-sea,False,,Sea Water Conservative Temperature at 200 meters,bigthetao200
 ocean.bigthetao.tavg-u-hm-sea,False,,Global Average Sea Water Conservative Temperature,bigthetaoga
 ocean.chcint.tavg-op4-hxy-sea,False,,Depth Integrated Seawater Conservative Temperature Expressed As Heat Content,chcint
-ocean.dxto.ti-u-hxy-u,False,,Cell Length in the X Direction at t-points,dxto
-ocean.dxuo.ti-u-hxy-u,False,,Cell Length in the X Direction at u-points,dxuo
-ocean.dxvo.ti-u-hxy-u,False,,Cell Length in the X Direction at v-points,dxvo
-ocean.dyto.ti-u-hxy-u,False,,Cell Length in the Y Direction at t-points,dyto
-ocean.dyuo.ti-u-hxy-u,False,,Cell Length in the Y Direction at u-points,dyuo
-ocean.dyvo.ti-u-hxy-u,False,,Cell Length in the Y Direction at v-points,dyvo
+ocean.dxto.ti-u-hxy-u,True,deptht,Cell Length in the X Direction at t-points,dxto
+ocean.dxuo.ti-u-hxy-u,True,deptht,Cell Length in the X Direction at u-points,dxuo
+ocean.dxvo.ti-u-hxy-u,True,deptht,Cell Length in the X Direction at v-points,dxvo
+ocean.dyto.ti-u-hxy-u,True,deptht,Cell Length in the Y Direction at t-points,dyto
+ocean.dyuo.ti-u-hxy-u,True,deptht,Cell Length in the Y Direction at u-points,dyuo
+ocean.dyvo.ti-u-hxy-u,True,deptht,Cell Length in the Y Direction at v-points,dyvo
 ocean.ficeberg.tavg-ol-hxy-sea,False,,Water Flux into Sea Water from Icebergs,ficeberg
 ocean.flandice.tavg-u-hxy-sea,False,,Water Flux into Sea Water from Land Ice,flandice
 ocean.hfbasinpsmadv.tavg-u-hyb-sea,False,,Northward Ocean Heat Transport Due to Parameterized Submesoscale Advection,hfbasinpsmadv
