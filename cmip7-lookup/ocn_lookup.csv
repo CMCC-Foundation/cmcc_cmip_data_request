@@ -72,10 +72,10 @@ ocean.ficeberg.tavg-ol-hxy-sea,False,DISCARD,Water Flux into Sea Water from Iceb
 ocean.flandice.tavg-u-hxy-sea,False,DISCARD,Water Flux into Sea Water from Land Ice,flandice
 ocean.hfbasinpsmadv.tavg-u-hyb-sea,False,DISCARD,Northward Ocean Heat Transport Due to Parameterized Submesoscale Advection,hfbasinpsmadv
 ocean.hfrunoffds.tavg-ol-hxy-sea,False,hfrunoffds,Temperature Flux Due to Runoff Expressed as Heat Flux into Sea Water,hfrunoffds
-ocean.hfx.tavg-ol-hxy-sea,False,,3D Ocean Heat X Transport,hfx
-ocean.hfx.tavg-u-hxy-sea,False,,Vertically Integrated Ocean Heat X Transport,hfxint
-ocean.hfy.tavg-ol-hxy-sea,False,,3D Ocean Heat Y Transport,hfy
-ocean.hfy.tavg-u-hxy-sea,False,,Vertically Integrated Ocean Heat Y Transport,hfyint
+ocean.hfx.tavg-ol-hxy-sea,False,hfx,3D Ocean Heat X Transport,hfx
+ocean.hfx.tavg-u-hxy-sea,False,hfxint,Vertically Integrated Ocean Heat X Transport,hfxint
+ocean.hfy.tavg-ol-hxy-sea,False,hfy,3D Ocean Heat Y Transport,hfy
+ocean.hfy.tavg-u-hxy-sea,False,hfyint,Vertically Integrated Ocean Heat Y Transport,hfyint
 ocean.mlotstsq.tavg-u-hxy-sea,False,mlotstsq,Square of Ocean Mixed Layer Thickness Defined by Delta Sigma T of 0.03 kg m-3 referenced to the model level closest to 10 m depth,mlotstsq
 ocean.msftm.tavg-ol-hyb-sea,False,DISCARD,Ocean Meridional Overturning Mass Streamfunction,msftmz
 ocean.msftm.tavg-rho-hyb-sea,False,DISCARD,Ocean Meridional Overturning Mass Streamfunction,msftmrho
@@ -83,7 +83,7 @@ ocean.msfty.tavg-rho-ht-sea,False,,Ocean Y Overturning Mass Streamfunction,msfty
 ocean.pfscint.tavg-op4-hxy-sea,False,,Integral wrt depth of seawater preformed salinity expressed as salt mass content,pfscint
 ocean.phcint.tavg-op4-hxy-sea,False,,Integrated Ocean Heat Content from Potential Temperature,phcint
 ocean.pso.tavg-u-hxy-sea,False,,Sea Water Pressure at Sea Water Surface,pso
-ocean.rsdo.tavg-ol-hxy-sea,False,,Downwelling Shortwave Radiation in Sea Water,rsdo
+ocean.rsdo.tavg-ol-hxy-sea,False,rsdo,Downwelling Shortwave Radiation in Sea Water,rsdo
 ocean.scint.tavg-op4-hxy-sea,False,,Integral wrt depth of seawater practical salinity expressed as salt mass content,scint
 ocean.sfdsi.tavg-u-hxy-sea,False,,Downward Sea Ice Basal Salt Flux,sfdsi
 ocean.sltbasin.tavg-u-hyb-sea,True,sltbasin,Northward Ocean Salt Transport,sltbasin
