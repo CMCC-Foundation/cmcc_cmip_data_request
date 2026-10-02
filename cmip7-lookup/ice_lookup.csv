@@ -25,8 +25,6 @@ seaIce.sihc.tavg-u-hxy-sea,False,sihc,Sea-Ice Heat Content,sihc
 seaIce.simass.tavg-u-hxy-si,True,hi,Sea-Ice Mass,simass
 seaIce.sisnhc.tavg-u-hxy-si,False,sisnhc,Snow Heat Content,sisnhc
 seaIce.sispeed.tavg-u-hxy-si,False,sispeed,Sea-Ice Speed,sispeed
-seaIce.sistrxdtop.tavg-u-hxy-si,False,sistrxdtop,X-Component of Atmospheric Stress on Sea Ice,sistrxdtop
-seaIce.sistrydtop.tavg-u-hxy-si,False,sistrydtop,Y-Component of Atmospheric Stress on Sea Ice,sistrydtop
 seaIce.sitempbot.tavg-u-hxy-si,False,sitempbot,Temperature at Ice-Ocean Interface,sitempbot
 seaIce.sitempsnic.tavg-u-hxy-si,False,sitempsnic,Temperature at Snow-Ice Interface,sitempsnic
 seaIce.sithick.tavg-u-hxy-si,False,sithick,Sea-Ice Thickness,sithick
