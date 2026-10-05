@@ -79,13 +79,13 @@ ocean.hfy.tavg-u-hxy-sea,False,hfyint,Vertically Integrated Ocean Heat Y Transpo
 ocean.mlotstsq.tavg-u-hxy-sea,False,mlotstsq,Square of Ocean Mixed Layer Thickness Defined by Delta Sigma T of 0.03 kg m-3 referenced to the model level closest to 10 m depth,mlotstsq
 ocean.msftm.tavg-ol-hyb-sea,False,DISCARD,Ocean Meridional Overturning Mass Streamfunction,msftmz
 ocean.msftm.tavg-rho-hyb-sea,False,DISCARD,Ocean Meridional Overturning Mass Streamfunction,msftmrho
-ocean.msfty.tavg-rho-ht-sea,False,,Ocean Y Overturning Mass Streamfunction,msftyrho
-ocean.pfscint.tavg-op4-hxy-sea,False,,Integral wrt depth of seawater preformed salinity expressed as salt mass content,pfscint
+ocean.msfty.tavg-rho-ht-sea,False,DISCARD,Ocean Y Overturning Mass Streamfunction,msftyrho
+ocean.pfscint.tavg-op4-hxy-sea,False,DISCARD,Integral wrt depth of seawater preformed salinity expressed as salt mass content,pfscint
 ocean.phcint.tavg-op4-hxy-sea,False,,Integrated Ocean Heat Content from Potential Temperature,phcint
 ocean.pso.tavg-u-hxy-sea,False,,Sea Water Pressure at Sea Water Surface,pso
 ocean.rsdo.tavg-ol-hxy-sea,False,rsdo,Downwelling Shortwave Radiation in Sea Water,rsdo
 ocean.scint.tavg-op4-hxy-sea,False,,Integral wrt depth of seawater practical salinity expressed as salt mass content,scint
-ocean.sfdsi.tavg-u-hxy-sea,False,,Downward Sea Ice Basal Salt Flux,sfdsi
+ocean.sfdsi.tavg-u-hxy-sea,False,sfdsi,Downward Sea Ice Basal Salt Flux,sfdsi
 ocean.sltbasin.tavg-u-hyb-sea,True,sltbasin,Northward Ocean Salt Transport,sltbasin
 ocean.thetao.tavg-op20bar-hxy-sea,False,,Sea Water Potential Temperature at 200 meters,thetao200
 ocean.thkcelluo.tavg-ol-hxy-sea,False,thkcelluo,Ocean Model Cell Thickness at u-points,thkcelluo
