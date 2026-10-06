@@ -65,7 +65,7 @@ land.nep.tavg-u-hxy-lnd,True,NEP,Net Carbon Mass Flux out of Atmosphere Due to N
 land.netAtmosLandCO2Flux.tavg-u-hxy-lnd,True,NEE,Net Flux of CO2 Between Atmosphere and Land (Positive into Land) as a Result of All Processes [kgC m-2 s-1],netAtmosLandCO2Flux
 land.npp.tavg-u-hxy-lnd,True,NPP,Net Primary Production on Land as Carbon Mass Flux [kgC m-2 s-1],npp
 land.nppLut.tavg-u-hxy-multi,True,"NPP, pfts1d",Net Primary Production on Land-Use Tile as Carbon Mass Flux [kgC m-2 s-1],nppLut
-land.orog.ti-u-hxy-u,True,topo,Surface Altitude,orog
+land.orog.ti-u-hxy-u,True,TOPO_COL,Surface Altitude,orog
 land.ra.tavg-u-hxy-lnd,True,AR,Carbon Mass Flux into Atmosphere Due to Autotrophic (Plant) Respiration on Land [kgC m-2 s-1],ra
 land.raLut.tavg-u-hxy-multi,True,"AR, pfts1d",Autotrophic Respiration on Land-Use Tile as Carbon Mass Flux [kgC m-2 s-1],raLut
 land.residualFrac.tavg-u-hxy-u,True,pfts1d_wtgcell,Percentage of Grid Cell That Is Land but neither Vegetation Covered nor Bare Soil,residualFrac
