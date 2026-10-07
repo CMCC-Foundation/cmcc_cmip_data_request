@@ -50,7 +50,7 @@ seaIce.siitdconc.tavg-u-hxy-si,False,siitdconc,Sea-Ice Area Percentages in Ice T
 seaIce.siitdsnconc.tavg-u-hxy-si,False,siitdsnconc,Snow Area Percentages in Ice Thickness Categories,siitdsnconc,
 seaIce.siitdsnthick.tavg-u-hxy-si,False,siitdsnthick,Snow Thickness in Ice Thickness Categories,siitdsnthick,
 seaIce.siitdthick.tavg-u-hxy-si,False,siitdthick,Sea-Ice Thickness in Ice Thickness Categories,siitdthick,
-seaIce.simpconc.tavg-u-hxy-si,True,apond_ai aice,Fraction of Sea Ice Covered by Melt Pond,simpconc,100 * apond_ai / aice (CICE writes snowfracn, the snow fraction of each category's ice area. CMIP7 asks for the percentage of the grid cell. Multiplying by the category ice concentration rescales it to the cell)
+seaIce.simpconc.tavg-u-hxy-si,True,apond_ai aice,Fraction of Sea Ice Covered by Melt Pond,simpconc,100 * apond_ai / aice (CICE writes snowfracn: the snow fraction of each category's ice area. CMIP7 asks for the percentage of the grid cell. Multiplying by the category ice concentration rescales it to the cell)
 seaIce.simpeffconc.tavg-u-hxy-si,True,apeff_ai aice,Fraction of Sea Ice Covered by Effective Melt Pond,simpeffconc,100 * apeff_ai/aice
 seaIce.simprefrozen.tavg-u-hxy-simp,True,hpond_ai apond_ai,Thickness of Refrozen Ice on Melt Pond,simprefrozen, hpond_ai / apond_ai
 seaIce.simpthick.tavg-u-hxy-simp,True,ipond_ai  apond_ai,Melt Pond Depth,simpthick, ipond_ai / apond_ai
