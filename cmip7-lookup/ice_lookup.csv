@@ -1,6 +1,6 @@
 variable,reprocess,model,long_name,cmip6_name,notes
 seaIce.evspsbl.tavg-u-hxy-si,False,sidmassevapsubl,Sea-Ice Mass Change Through Evaporation and Sublimation,sidmassevapsubl,
-seaIce.prra.tavg-u-hxy-si,False,sipr,Rainfall Rate over Sea Ice,sipr,This field should be different than zero only with topographic melt ponds
+seaIce.prra.tavg-u-hxy-si,False,DISCARD,Rainfall Rate over Sea Ice,sipr,This field should be different than zero only with topographic melt ponds. This is why we can put DISCARD (otherwise sipr)
 seaIce.rlds.tavg-u-hxy-si,False,sifllwdtop,Downwelling Longwave Flux over Sea Ice,sifllwdtop,
 seaIce.rlus.tavg-u-hxy-si,False,sifllwutop,Upwelling Longwave Flux over Sea Ice,sifllwutop,
 seaIce.rsds.tavg-u-hxy-si,False,siflswdtop,Downwelling Shortwave Flux over Sea Ice,siflswdtop,
@@ -33,7 +33,7 @@ seaIce.sitimefrac.tavg-u-hxy-sea,False,ice_present,Fraction of Time Steps with S
 seaIce.siu.tavg-u-hxy-si,False,siu,X-Component of Sea-Ice Velocity,siu,
 seaIce.siv.tavg-u-hxy-si,False,siv,Y-Component of Sea-Ice Velocity,siv,
 seaIce.snc.tavg-u-hxy-si,True,snowfrac aice,Snow Area Percentage,sisnconc,(snowfrac/aice)*100 since snowfrac is computed on the full cell and not only on sea ice
-seaIce.snd.tavg-u-hxy-sn,True,hs snowfrac,Snow Thickness,sisnthick, hs/snowfrac since snd defines is the sctual thickness (computed only on the snow-covered area)
+seaIce.snd.tavg-u-hxy-sn,True,hs snowfrac,Snow Thickness,sisnthick, hs/snowfrac since snd defines the actual thickness (computed only on the snow-covered area)
 seaIce.snw.tavg-u-hxy-si,False,sisnmass,Snow Mass per Area,sisnmass, sisnmass should be a variable of CICE
 seaIce.ts.tavg-u-hxy-si,False,sitemptop,Surface Temperature of Sea Ice,sitemptop,
 seaIce.prsn.tavg-u-hxy-si,False,sisndmasssnf,Snow Mass Change Through Snowfall,sisndmasssnf,
