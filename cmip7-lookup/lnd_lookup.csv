@@ -101,7 +101,7 @@ land.cRoot.tavg-u-hxy-lnd,True,"FROOTC, LIVECROOTC, DEADCROOTC",Carbon Mass in R
 land.cStem.tavg-u-hxy-lnd,True,"LIVESTEMC, DEADSTEMC",Carbon Mass in Stem,cStem
 land.cnc.tavg-u-hxy-u,False,DISCARD,Canopy Covered Area Percentage,cnc
 land.cropFracC4.tavg-u-hxy-u,True,pfts1d_wtgcell,Percentage Cover by C4 Crops,cropFracC4
-land.depthl.ti-u-hxy-u,True,LAKEDEPTH,Depth of Lake Below the Surface,depthl
+land.depthl.ti-u-hxy-u,True,LAKE_DEPTH,Depth of Lake Below the Surface,depthl
 land.dgw.tavg-u-hxy-lnd,False,DISCARD,Change in Groundwater,dgw
 land.drivw.tavg-u-hxy-lnd,False,DISCARD,Change in River Storage,drivw
 land.dsn.tavg-u-hxy-lnd,False,DISCARD,Change in Snow Water Equivalent,dsn
