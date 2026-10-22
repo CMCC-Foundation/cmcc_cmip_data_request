@@ -1,0 +1,57 @@
+fallback_field,frequency,flag,levels,priority,GB_per_year,dr_variables,cmip7_fields,reason
+AODABS,mon,A,1,High,0.0023,aerosol.abs550aer.tavg-u-hxy-u,AODABSdn,CAM standard day-only absorption AOD
+AODABSBC,mon,A,1,High,0.0023,aerosol.abs550bc.tavg-u-hxy-u,AODABSBCdn,day-only
+AODABSDUST,mon,A,1,High,0.0023,aerosol.abs550dust.tavg-u-hxy-u,AODABSDUSTdn,day-only
+AODABSSO4,mon,A,1,High,0.0023,aerosol.abs550so4.tavg-u-hxy-u,AODABSSO4dn,day-only
+AODBC,mon,A,1,High,0.0023,aerosol.od550bc.tavg-u-hxy-u,AODBCdn,day-only
+AODDUST,mon,A,1,High,0.0023,aerosol.od550dust.tavg-u-hxy-u,AODDUSTdn,day-only
+AODPOM,mon,A,1,High,0.0023,aerosol.od550oa.tavg-u-hxy-u,"AODPOMdn, AODSOAdn",day-only
+AODSO4,mon,A,1,High,0.0023,aerosol.od550so4.tavg-u-hxy-u,AODSO4dn,day-only
+AODSOA,mon,A,1,High,0.0023,aerosol.od550oa.tavg-u-hxy-u aerosol.od550soa.tavg-u-hxy-u,"AODPOMdn, AODSOAdn",day-only
+AODSS,mon,A,1,High,0.0023,aerosol.od550ss.tavg-u-hxy-u,AODSSdn,day-only
+AODVIS,mon,A,1,High,0.0023,aerosol.od550aer.tavg-u-hxy-u,AODVISdn,CAM standard day-only AOD
+BURDENSO4,mon,A,1,High,0.0023,atmos.loadso4.tavg-u-hxy-u,BURDENSO4dn,day-only
+CLDICE,mon,A,58,Core,0.1353,atmos.cli.tavg-al-hxy-u,"CLITOT, PS","accessory: stratiform cloud ice (CMIP6-style cli), monthly only"
+CLDLIQ,mon,A,58,Core,0.1353,atmos.clw.tavg-al-hxy-u,"CLWTOT, PS","accessory: stratiform cloud liquid (CMIP6-style clw), monthly only"
+FLUT,mon,A,1,Core,0.0023,atmos.rlut.tavg-u-hxy-u,FLUTOA,"OLR at top of model (CAM standard, probably used by CESM2 for CMIP6) instead of top of atmosphere"
+FLUTC,mon,A,1,Core,0.0023,atmos.rlutcs.tavg-u-hxy-u,FLUTOAC,clear-sky OLR at top of model (CAM standard) instead of top of atmosphere
+ODV_VOLC_MMR,mon,A,1,High,0.0023,atmos.aod550volso4.tavg-u-hxy-u,ODVdn_VOLC_MMR,CAM standard day-only volcanic AOD
+RHREFHT,mon,A,1,Core,0.0023,atmos.hurs.tavg-h2m-hxy-u,RHCFMIPHT,CAM standard reference-height RH w.r.t. liquid water at all temperatures
+UBOT,mon,A,1,Core,0.0023,atmos.uas.tavg-h10m-hxy-u,UAS,"lowest-level wind, to rebuild other uas/vas definitions with U10"
+VBOT,mon,A,1,Core,0.0023,atmos.vas.tavg-h10m-hxy-u,VAS,"lowest-level wind, to rebuild other uas/vas definitions with U10"
+AODVIS,day,A,1,High,0.0710,aerosol.od550aer.tavg-u-hxy-u,AODVISdn,CAM standard day-only AOD
+BURDENBC,day,A,1,Low,0.0710,atmos.loadbc.tavg-u-hxy-u,BURDENBCdn,day-only
+BURDENPOM,day,A,1,Low,0.0710,atmos.loadoa.tavg-u-hxy-u atmos.loadpoa.tavg-u-hxy-u,"BURDENPOMdn, BURDENSOAdn",day-only
+BURDENSO4,day,A,1,Low,0.0710,atmos.loadso4.tavg-u-hxy-u,BURDENSO4dn,day-only
+BURDENSOA,day,A,1,Low,0.0710,atmos.loadoa.tavg-u-hxy-u,"BURDENPOMdn, BURDENSOAdn",day-only
+FLUT,day,A,1,High,0.0710,atmos.rlut.tavg-u-hxy-u,FLUTOA,"OLR at top of model (CAM standard, probably used by CESM2 for CMIP6) instead of top of atmosphere"
+FLUTC,day,A,1,High,0.0710,atmos.rlutcs.tavg-u-hxy-u,FLUTOAC,clear-sky OLR at top of model (CAM standard) instead of top of atmosphere
+PM25_SRF,day,A,1,High,0.0710,aerosol.sfpm25.tavg-h2m-hxy-u,SFPM25,"CAM standard surface PM2.5 (dry, kg/m3)"
+RHREFHT,day,A,1,Core,0.0710,atmos.hurs.tavg-h2m-hxy-u,RHCFMIPHT,CAM standard reference-height RH w.r.t. liquid water at all temperatures
+T850,day,A,1,High,0.0710,atmos.ta.tavg-850hPa-hxy-air,T850air,"CAM-style (no ""where air""); CMIP6 cell_methods without ""where air"""
+UBOT,day,A,1,Core,0.0710,atmos.uas.tavg-h10m-hxy-u,UAS,"lowest-level wind, to rebuild other uas/vas definitions with U10"
+VBOT,day,A,1,Core,0.0710,atmos.vas.tavg-h10m-hxy-u,VAS,"lowest-level wind, to rebuild other uas/vas definitions with U10"
+Z500,day,A,1,High,0.0710,atmos.zg.tavg-500hPa-hxy-air,Z500air,"CAM-style (no ""where air""); CMIP6 cell_methods without ""where air"""
+RHREFHTMN,day,M,1,High,0.0710,atmos.hurs.tmin-h2m-hxy-u,RHCFMIPHTMN,minimum of the CAM standard RHREFHT
+RHREFHTMX,day,X,1,High,0.0710,atmos.hurs.tmax-h2m-hxy-u,RHCFMIPHTMX,maximum of the CAM standard RHREFHT
+RHREFHT,6hr,A,1,Core,0.2838,atmos.hurs.tavg-h2m-hxy-u,RHCFMIPHT,CAM standard reference-height RH w.r.t. liquid water at all temperatures
+UBOT,6hr,A,1,Medium,0.2838,atmos.uas.tavg-h10m-hxy-u,UAS,"lowest-level wind, to rebuild other uas/vas definitions with U10"
+VBOT,6hr,A,1,Medium,0.2838,atmos.vas.tavg-h10m-hxy-u,VAS,"lowest-level wind, to rebuild other uas/vas definitions with U10"
+T250,6hr,I,1,Core,0.2838,atmos.ta.tpt-p3-hxy-air,"T850air, T500air, T250air","CAM-style (no ""where air"": T extrapolated below ground)"
+T500,6hr,I,1,Core,0.2838,atmos.ta.tpt-p3-hxy-air,"T850air, T500air, T250air","CAM-style (no ""where air"": T extrapolated below ground)"
+T850,6hr,I,1,Core,0.2838,atmos.ta.tpt-p3-hxy-air,"T850air, T500air, T250air","CAM-style (no ""where air"": T extrapolated below ground)"
+U250,6hr,I,1,Core,0.2838,atmos.ua.tpt-p3-hxy-air,"U850air, U500air, U250air","CAM-style (no ""where air"": lowest-level value below ground)"
+U500,6hr,I,1,Core,0.2838,atmos.ua.tpt-p3-hxy-air,"U850air, U500air, U250air","CAM-style (no ""where air"": lowest-level value below ground)"
+U850,6hr,I,1,Core,0.2838,atmos.ua.tpt-p3-hxy-air,"U850air, U500air, U250air","CAM-style (no ""where air"": lowest-level value below ground)"
+UBOT,6hr,I,1,High,0.2838,atmos.uas.tpt-h10m-hxy-u,UAS,"lowest-level wind, to rebuild other uas/vas definitions with U10"
+V250,6hr,I,1,Core,0.2838,atmos.va.tpt-p3-hxy-air,"V850air, V500air, V250air","CAM-style (no ""where air"": lowest-level value below ground)"
+V500,6hr,I,1,Core,0.2838,atmos.va.tpt-p3-hxy-air,"V850air, V500air, V250air","CAM-style (no ""where air"": lowest-level value below ground)"
+V850,6hr,I,1,Core,0.2838,atmos.va.tpt-p3-hxy-air,"V850air, V500air, V250air","CAM-style (no ""where air"": lowest-level value below ground)"
+VBOT,6hr,I,1,High,0.2838,atmos.vas.tpt-h10m-hxy-u,VAS,"lowest-level wind, to rebuild other uas/vas definitions with U10"
+RHREFHT,3hr,I,1,Medium,0.5676,atmos.hurs.tpt-h2m-hxy-u,RHCFMIPHT,CAM standard reference-height RH w.r.t. liquid water at all temperatures
+UBOT,3hr,I,1,Core,0.5676,atmos.uas.tpt-h10m-hxy-u,UAS,"lowest-level wind, to rebuild other uas/vas definitions with U10"
+VBOT,3hr,I,1,Core,0.5676,atmos.vas.tpt-h10m-hxy-u,VAS,"lowest-level wind, to rebuild other uas/vas definitions with U10"
+PM25_SRF,1hr,A,1,High,1.7029,aerosol.sfpm25.tavg-h2m-hxy-u,SFPM25,"CAM standard surface PM2.5 (dry, kg/m3)"
+RHREFHT,1hr,A,1,Low,1.7029,atmos.hurs.tavg-h2m-hxy-u,RHCFMIPHT,CAM standard reference-height RH w.r.t. liquid water at all temperatures
+UBOT,1hr,I,1,High,1.7029,atmos.uas.tpt-h10m-hxy-u,UAS,"lowest-level wind, to rebuild other uas/vas definitions with U10"
+VBOT,1hr,I,1,High,1.7029,atmos.vas.tpt-h10m-hxy-u,VAS,"lowest-level wind, to rebuild other uas/vas definitions with U10"
