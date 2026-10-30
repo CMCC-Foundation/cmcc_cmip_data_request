@@ -4,9 +4,6 @@ input_csv: "CMCC_CMIP7-DR-opportunities-Final.csv"
 # Target Data Request API version to query metadata from
 dreq_version: "v1.2.2.5"
 
-# Directory where output CSV files and realm text lists will be written
-output_dir: "cmcc-cmip7-full"
-
 # Directory containing the mapping lookup CSV files (e.g., atm_lookup.csv)
 lookup_dir: "cmip7-lookup"
 
