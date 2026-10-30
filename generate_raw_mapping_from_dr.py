@@ -437,6 +437,7 @@ def write_model_variables_realm(output_dict, outdir):
                 for cell, model_val in cells.items():
                     f.write(f"operation: {cell}\n")
                     f.write(", ".join(model_val) + "\n")
+                f.write(f"\n")
         print(f"Wrote {filepath}")
 
 
