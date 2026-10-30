@@ -1,257 +1,257 @@
-# CMCC CMIP7 output-variable selection
+# CMCC CMIP7 data request
 
-Turn the internal **CMCC CMIP7 data-request selection** into a concrete list of
-model output variables — cross-checked against the official CMIP7 Data Request,
-translated to the model's raw variable names, and sized in GB/model-year.
+Tools to turn the internal **CMCC CMIP7 data-request selection** into a concrete
+list of model output variables:
 
-All the tooling lives in [`cmcc_selection/`](cmcc_selection/). This page is the
-30-second guide; [`cmcc_selection/RUNBOOK.md`](cmcc_selection/RUNBOOK.md) has the
-details and tuning knobs.
+1. read which Data Request (DR) *opportunities* and *variable groups* CMCC
+   is interested in,
+2. expand them with the official [CMIP7 Data Request API](https://github.com/CMIP-Data-Request/CMIP7_DReq_Software)
+   into the full list of CMIP7 variables,
+3. translate the CMIP7 names into the **raw variable names of the CMCC-ESM3 model**
+   (via lookup tables), and
+4. estimate the **data volume** (GB per model-year) of the selection.
 
-## Repository organization
+## Repository layout
 
 | path | what it is |
 |------|------------|
-| `CMCC_CMIP7-DR-opportunities-Final*` | the internal CMCC selection (source of truth): opportunities, CMCC priority, variable groups |
-| `cmcc_selection/` | our scripts + outputs |
-| `cmip7-lookup/` | **the CMOR→raw-name tables we maintain** — mappings *and* the 322 true-gap rows to fill by hand ([details](cmip7-lookup/README.md)) |
-| `CMIP7_DReq_Software` | upstream CMIP7 Data Request API (git submodule) |
-| `cmip_reformatter/` | the reformatter itself (clone; gitignored). `cmip7-lookup/` was seeded from its `cmip-tables/cmip6plus/variables/`; `cmip-tables/cmip6/variables/` has ~23 extra names (`co2`, `fco2nat`, `rtmt`, land-carbon…) usable via `--fallback-lookup-dir` |
+| `CMCC_CMIP7-DR-opportunities-Final.csv` | **The CMCC selection (source of truth).** One row per DR opportunity, with the responsible person/division, the CMCC priority (`High`, `Medium`, `Low`, `No Interest`) and the DR variable groups requested. |
+| `configurations/esm3-cmip7-full.yml` | Run configuration: input CSV, DR version, lookup directory, group filters, model grid sizes for the volume estimate. |
+| `generate_raw_mapping_from_dr.py` | **Main pipeline.** Selection CSV → DR variables → raw model variable lists. |
+| `variable_sizes_summary.py` | Estimates the data volume (GB/year) of the selected variables, per realm. |
+| `create_cmip7_lookup.py` | Builds a new set of CMIP7 lookup tables from the DR output and a reference (CMIP6plus) set of tables. |
+| `cmip6plus-lookup/` | Reference lookup tables (`atm`, `ice`, `lnd`, `ocn`, `ocnbgc`) from the `cmip_reformatter`: CMIP6plus variable → raw model field. All 373 rows are filled in. Treat as read-only. |
+| `cmip7-lookup/` | **The CMIP7 lookup tables we maintain.** Same 4-column format as the reference, extended with the requested variables that still need a raw name. See [`cmip7-lookup/README.md`](cmip7-lookup/README.md). |
+| `CMIP7_DReq_Software/` | Upstream CMIP7 Data Request software (git submodule). |
+| `environment.yml` | Conda environment (`cmcc-dr-cmip7`). |
 
-## Setup (once, on the server)
+## Setup
 
-To get the project's code, along with the CMIP7 Data Request Software, use the following command
-
-`git clone --recurse-submodules https://github.com/CMCC-Foundation/cmcc_cmip_data_request`
-
-If you already cloned the project and forgot `--recurse-submodules`, the folder CMIP7_DReq_Software will be empty, 
-but the submodule content can be initialized by running
-`git submodule update --init`
-
-The working environment can be setup using the provided anaconda3 `environment.yml` file:
-
-`conda env create -f environment.yml`
-
-The environment is called `cmcc-dr-cmip7` by default, but it is possible to use the option `--name SOME_ENVIRONMENT_NAME` to define a custom name. 
-You should then activate the conda python environment using the command:
-
-`conda activate cmcc-dr-cmip7`
-
-To update your environment with following changes to the env file use
-
-`conda env update -f environment.yml`
-
-## Run it — 5 commands
+Clone the repository together with the Data Request submodule:
 
 ```bash
-cd cmcc_selection
-
-# 1) select + expand + cross-check   -> the CMOR variable list   [needs the DR API]
-python build_cmcc_cmip7_table.py --version v1.2.2.5 --outdir out 2>/dev/null
-#   additonal options:
-#   --select_groups "baseline_monthly, baseline_daily, baseline_fixed, baseline_subdaily" to select specific variable groups
-#   --exclude_groups "dynamical_downscaling_aerosols_chemistry" remove this variable group from processing
-
-# 2) translate to raw model names     -> the production list
-python map_to_raw_names.py 2>/dev/null
-#    reads ../cmip7-lookup/*_lookup.csv
-#    (optionally pull in the older cmip6 table for names it lacks:
-#     --fallback-lookup-dir ../cmip_reformatter/cmip-tables/cmip6/variables )
-
-# 3) estimate data volume             -> GB / model-year          [needs the DR API]
-python estimate_volume.py --version v1.2.2.5 2>/dev/null
-
-# 4) push the gaps back into the lookup tables, to be filled by hand
-python build_cmip7_lookup.py            # --dry-run to preview
-
-# 5) turn the production tables into CESM history namelists
-python make_namelists.py                # -> out/namelists/user_nl_cam, user_nl_clm
+git clone --recurse-submodules https://github.com/CMCC-Foundation/cmcc_cmip_data_request
 ```
 
-(`2>/dev/null` just hides harmless `modeling_realm_-_primary` API warnings.)
+If you cloned without `--recurse-submodules`, `CMIP7_DReq_Software/` is empty;
+fill it with:
 
-Steps 1 and 3 need `data_request_api` (run them on the server env); steps 2 and 4
-and every `truegap_*`/`find_heavy_vars` script are pure post-processing and run
-anywhere.
-
-### The gap-closing loop
-
-`build_cmip7_lookup.py` appends every requested variable that has no raw name to
-`cmip7-lookup/<component>_lookup.csv` as a row with an **empty `model`** column,
-keeping the tables in their original 4-column reformatter format
-(`variable,reprocess,model,long_name`) with the original block untouched:
-
-```
-zg7h,True,"Z3, PS, T",Geopotential Height     <- end of the original block
-abs550bc,False,,black carbon aaod@550nm       <- appended: fill `model`
+```bash
+git submodule update --init
 ```
 
-Fill `model` with the raw model field name → the next `map_to_raw_names.py` run
-counts the variable as `mapped` and puts it in `out/production/`. 759 rows now:
-**373 mapped, 386 to fill** (322 true_gap + 64 derivable). The merge is
-idempotent — existing cells are copied verbatim, only missing variables are
-appended — and it ends with a coverage check (`660/660 expected CMOR names
-present`). Realm/Division/GB context stays in `out/raw/unmapped.csv` and
-`out/truegap_*.csv`. See [`cmip7-lookup/README.md`](cmip7-lookup/README.md).
+Create and activate the conda environment (default name `cmcc-dr-cmip7`, use
+`--name` to pick another):
 
-## What you get (in `cmcc_selection/out/`)
+```bash
+conda env create -f environment.yml
+conda activate cmcc-dr-cmip7
+
+# later, to pick up changes in environment.yml
+conda env update -f environment.yml
+```
+
+The environment installs `CMIP7-data-request-api`, which downloads the Data Request
+content for the requested version the first time it is used, so the first run of
+`generate_raw_mapping_from_dr.py` and `variable_sizes_summary.py` needs network access.
+
+## Workflow
+
+Both scripts take the **configuration file** as their only argument. The output
+directory is named after the config file (`esm3-cmip7-full.yml` →
+`esm3-cmip7-full/`), created in the current directory.
+
+```bash
+# 1) selection -> DR variables -> raw model variable lists
+python generate_raw_mapping_from_dr.py configurations/esm3-cmip7-full.yml
+
+# 2) data volume of the variables that have a raw mapping
+python variable_sizes_summary.py configurations/esm3-cmip7-full.yml
+```
+
+Step 2 reads the output of step 1, so run them in this order and from the same
+directory. Both need `data_request_api`.
+
+### Step 1: `generate_raw_mapping_from_dr.py`
+
+1. **Parse the selection CSV.** Every opportunity row is read together with its
+   priority and list of variable groups. Free-text notes in brackets are
+   stripped from group names. `select_groups` / `exclude_groups` from the config
+   filter the groups.
+2. **Load the Data Request** for `dreq_version` and index its variable groups.
+3. **Expand the groups** into variables. Only global-region (`glb`) variables are
+   kept; a variable requested by several groups/opportunities is stored once, with
+   all its groups, opportunities, priorities and tiers recorded. Two groups
+   renamed between DR versions are remapped through `ALIASES` in the script
+   (`omip_geometry_physics → omip_scalars_high_priority`,
+   `hydro_modelling_PET_daily → WaterResourcesPET_daily`).
+4. **Look each variable up** in `cmip7-lookup/<component>_lookup.csv`. The realm is
+   mapped to a lookup component the way the reformatter groups them:
+
+   | DR realm | lookup table |
+   |----------|--------------|
+   | `atmos`, `aerosol`, `atmosChem` | `atm` |
+   | `land`, `landIce` | `lnd` |
+   | `ocean` | `ocn` |
+   | `ocnBgchem` | `ocnbgc` |
+   | `seaIce` | `ice` |
+
+   Rows whose `model` is `DISCARD` are skipped.
+5. **Write the outputs** to `esm3-cmip7-full/`:
 
 | file | contents |
 |------|----------|
-| `cmcc_variables.csv` | **one row per unique CMOR variable** — compound name, `cmip6_name`, `out_name`, frequency, cell (ave/inst), realm, tier, and which groups/opportunities requested it |
-| `cmcc_variables_mapped.csv` | same + `raw_name`, `in_reformatter`, `map_category` (mapped/derivable/true_gap), `GB_per_year` (physical), `GB_per_year_counted` (0 for derivable) |
-| `cmcc_groups_crosscheck.csv` | **one row per requested group** — matched / aliased / unresolved, + variable count (the audit trail) |
-| `by_realm/<realm>.csv` | per realm: `frequency \| cell \| n \| variables_dr \| GB_per_year` (DR names) |
-| `raw/by_realm/<realm>.csv` | per realm: `variables_dr \| variables_raw \| variables_unmapped_derivable \| variables_unmapped_true_gap \| GB_per_year_raw \| GB_per_year_true_gap` — the production list |
-| `raw/mapping_detail.csv` | every directly-mapped DR var → raw name, which lookup, `reprocess` flag |
-| `raw/unmapped.csv` | **triage sheet** for vars with no direct raw mapping — see below |
-| `volume_by_variable.csv` | per-variable GB/model-year, largest first |
-| `namelists/user_nl_cam`, `namelists/user_nl_clm` | CESM history namelists: one tape per frequency, statistic as a per-field flag, `empty_htapes` set |
-| `namelists/tapes.csv` | audit: field → tape → the CMIP7 variables it serves, plus what was left off a tape and why |
+| `cmcc_data_request.csv` | One row per DR compound variable requested by CMCC: `compound_name`, `cmip6_name`, `out_name`, `frequency`, `time_oper` (`ave`/`inst`/`max`/`min`/`clim`/`fixed`), `realm`, `cmip6_table`, `long_name`, `dimensions`, `tiers`, `groups`, `opportunities`, `priorities`, `cell_methods`. |
+| `cmcc_data_selected.csv` | The subset of the above that has an entry in the lookup tables, same columns. This is the input of the volume estimate. |
+| `<comp>_raw_list.txt` | One file per component (`atm`, `ice`, `lnd`, `ocn`, `ocnbgc`): the raw model fields to output, grouped by frequency and time operation. This is the production list. |
 
-### Mapping outcomes (three buckets)
-
-Each selected variable ends up in exactly one bucket:
-
-- **mapped** — its exact CMIP6 name has a raw `model` name in `cmip7-lookup/` →
-  produced directly (`tasmax→TREFHTMX`, `chlos→chl` with `reprocess`).
-- **derivable** — the CMIP6 name is absent but its *base field* (the `out_name`)
-  is in the lookup → produce the base raw var and post-process
-  (`thetao200` from `thetao`; `base_raw` column names it).
-- **true_gap** — neither is known → not producible as-is (`co2s`, hemispheric
-  sea-ice scalars, most `aerosol`/`atmosChem`). These now also sit in
-  `cmip7-lookup/` as empty-`model` rows to fill in (step 4 above); a lookup row
-  whose `model` is still empty is ignored by the mapper, so the variable keeps
-  showing up as a gap until someone resolves it.
-
-`raw/unmapped.csv` lists the **derivable** and **true_gap** ones, sorted by
-realm then category, with columns `realm | category | cmip6_name | out_name |
-base_raw | frequency | cell | decision | …`. Fill the empty **`decision`**
-column (`drop` / `add` / `derive`) with the colleague to resolve the gaps. The
-run also prints a per-realm `mapped | derivable | true_gap` summary.
-
-> **CMIP6 vs CMIP7 names.** CMIP7 uses *branded* variables: the daily max of
-> `tas` has `out_name=tas` (+ `cell=max`), not `tasmax`. We therefore key both the
-> display and the reformatter join on `cmip6_name` (`tasmax`, `mrsos`, …) — the
-> name the reformatter lookups use — so no branded variable is hidden under or
-> mis-mapped to its root.
-
-## Do we have ALL the CMCC-requested variables?
-
-The CMCC request is defined at the **variable-group** level, so "we have every
-requested variable" ⇔ "every requested group was found in the DR and fully
-expanded." Two things make that easy to trust:
-
-**1. The build refuses to under-deliver.** `build_cmcc_cmip7_table.py` prints a
-coverage line and **exits non-zero** if any requested group is left unresolved:
+A `<comp>_raw_list.txt` looks like:
 
 ```
-[check] 115 matched, 2 aliased, 0 unresolved
+mon
+operation: ave
+FLNS, FLNT, PS, ...
+
+day
+operation: max
+TREFHTMX
 ```
 
-`matched` = group found verbatim in the DR · `aliased` = renamed group remapped
-(see `ALIASES` in the script) · `unresolved` = a group we could NOT place → the
-run aborts so it can never silently drop one. A clean run with `0 unresolved`
-means **every group in every High/Medium opportunity was expanded in full.**
+### Step 2: `variable_sizes_summary.py`
 
-**2. One-command audit.** List anything that is not `matched`/`aliased` — it
-should only be free-text notes that leaked from the CSV (e.g. a stray `not`),
-never a real group:
+For every row of `cmcc_data_selected.csv` it computes the uncompressed size of one
+model-year as
+
+```
+GB/year = (product of the spatial dimensions) x (time steps per year) x 4 bytes / 1024^3
+```
+
+and prints a table by realm (variable count, GB/yr, TB/yr) and a total. Notes:
+
+- Time steps per year come from the frequency (`mon` = 12, `day` = 365, `3hr` = 2920, `fx` = 1, ...).
+- Dimension sizes come from the DR; the grid of the model is set in the config:
+  - `spatial_defaults` gives `[lon, lat, lev]` per realm. The defaults describe CMCC-ESM3:
+    atmosphere/land on a spectral-element grid with 48 600 columns and 58 levels,
+    ocean/sea ice on a 360×291 NEMO grid with 75 levels.
+  - `other_dims` gives sizes for dimensions that are not on those grids
+    (`sdepth`, `soilpools`, `spectband`, `alevel`, `olevel`, ...).
+- Values are 4-byte floats with **no compression** (factor 1.0). Multiply by the
+  expected deflate ratio for archived size.
+- Only mapped variables are counted: the estimate is "what we can produce today",
+  not the full request.
+
+### Configuration reference
+
+`configurations/esm3-cmip7-full.yml`:
+
+| key | meaning |
+|-----|---------|
+| `input_csv` | The selection CSV (`CMCC_CMIP7-DR-opportunities-Final.csv`). |
+| `dreq_version` | Data Request version to query, e.g. `v1.2.2.5`. |
+| `lookup_dir` | Directory with the `*_lookup.csv` tables (`cmip7-lookup`). |
+| `select_groups` | If non-empty, process **only** these variable groups. |
+| `exclude_groups` | Variable groups to skip. |
+| `spatial_defaults` | `[lon, lat, lev]` per realm, used for the volume estimate. |
+| `other_dims` | Fallback sizes for non-standard dimensions. |
+
+To try a different selection (for example only the baseline groups), copy the file
+under a new name and edit it. The new name becomes the output directory:
+
+```yaml
+select_groups: [baseline_monthly, baseline_daily, baseline_fixed, baseline_subdaily]
+```
+
+## The selection CSV
+
+`CMCC_CMIP7-DR-opportunities-Final.csv` is organised by area (Atmosphere, Earth
+system, Impacts & Adaptation, Land & Land-Ice, Ocean & Sea-Ice). Columns:
+person, division, opportunity name, CMCC priority, DR variable groups, and the
+total number of variables. The first row is the baseline opportunity
+(`Baseline Climate Variables for Earth System Modelling`). Of the 48 opportunities,
+21 are `High`, 9 `Medium` and 18 `No Interest`.
+
+> Note that `parse_cmcc_csv` currently reads **every** row that has an opportunity name
+> and group list, whatever its priority; rows without groups (such as `No Interest`)
+> contribute nothing. Use `exclude_groups` / `select_groups` to narrow the selection.
+
+## The lookup tables
+
+Each `*_lookup.csv` has four columns:
+
+```
+variable,reprocess,model,long_name
+```
+
+| column | meaning |
+|--------|---------|
+| `variable` | CMIP6/CMOR variable name (the join key with the Data Request's `cmip6_name`). |
+| `reprocess` | `True`/`False`: whether the reformatter has to post-process the raw field. Must stay a Python literal. |
+| `model` | Raw CMCC-ESM3 field(s). Several fields are comma-separated and quoted: `"SOILLIQ, SOILICE"`. |
+| `long_name` | Variable description. |
+
+`cmip6plus-lookup/` holds the original, fully mapped tables (373 rows). `cmip7-lookup/`
+contains those rows plus the requested CMIP7 variables that have no raw name yet,
+with an **empty `model`** (386 rows to fill, out of 759):
+
+| table | rows | filled | to fill |
+|-------|-----:|-------:|--------:|
+| `atm_lookup.csv` | 218 | 77 | 141 |
+| `ice_lookup.csv` | 83 | 59 | 24 |
+| `lnd_lookup.csv` | 234 | 112 | 122 |
+| `ocn_lookup.csv` | 103 | 70 | 33 |
+| `ocnbgc_lookup.csv` | 121 | 55 | 66 |
+
+To close a gap, fill the `model` cell (for example `snw,False,H2OSNO,Surface Snow Amount`)
+and re-run step 1: the variable is then included in the raw lists. More detail on the
+table structure, counts and how to decide on a gap is in
+[`cmip7-lookup/README.md`](cmip7-lookup/README.md).
+
+### Regenerating the tables: `create_cmip7_lookup.py`
+
+Builds `<comp>_lookup.csv` from `cmcc_data_request.csv` (output of step 1) and the
+reference tables: variables whose CMIP6 name is in `cmip6plus-lookup/` get its
+`reprocess` and `model`; the others are written with `model` set to `DISCARD`.
 
 ```bash
-cd cmcc_selection
-python -c "
-import csv, collections
-rows = list(csv.DictReader(open('out/cmcc_groups_crosscheck.csv')))
-print('status counts:', dict(collections.Counter(r['status'] for r in rows)))
-leftover = [r for r in rows if r['status'] not in ('matched','aliased')]
-print(f'{len(leftover)} not matched/aliased (expect only note fragments):')
-for r in leftover:
-    print('   ', r['status'], '|', r['group_requested'], '|', r['opportunity'])
-"
+python create_cmip7_lookup.py \
+    --mapped esm3-cmip7-full/cmcc_data_request.csv \
+    --lookup-dir cmip7-lookup \
+    --reference-dir cmip6plus-lookup \
+    --force
 ```
 
-**Optional sanity cross-check** against the CMCC file's own *total variables*
-column — print our unique-variable count per opportunity and eyeball it (small
-differences are expected: DR version drift + de-duplication of shared variables):
+| option | default | meaning |
+|--------|---------|---------|
+| `--mapped` | `dr-cmip7-full/cmcc_data_request.csv` | output of step 1 (note: the default path is not the one step 1 now writes, pass it explicitly) |
+| `--lookup-dir` | `cmip7-lookup` | tables to write |
+| `--reference-dir` | `cmip6plus-lookup` | reference tables |
+| `-f`, `--force` | off | overwrite existing tables; without it the script stops if a table exists |
 
-```bash
-python -c "
-import csv, collections
-c = collections.Counter()
-for r in csv.DictReader(open('out/cmcc_variables.csv')):
-    for o in r['opportunities'].split(';'):
-        c[o] += 1
-for o, n in sorted(c.items()): print(f'{n:5d}  {o}')
-"
-```
+> **Caution.** `--force` **replaces** the tables in `--lookup-dir`, including any `model`
+> cells filled in by hand. It also writes a fifth column (`cmip6_name`) and marks
+> unmapped variables `DISCARD` rather than leaving `model` empty, so its output is not
+> identical to the committed `cmip7-lookup/` tables. Write to a different
+> `--lookup-dir` first and compare.
 
-> Note: variable *coverage* is guaranteed by group coverage above. `raw/unmapped.csv`
-> is a **different** question — those variables ARE requested and present, they
-> just don't yet have a raw-model translation (drop them, or extend the
-> `cmip_reformatter` lookups).
+## Variable names: CMIP6 vs CMIP7
 
-## Data volume, and how it compares to CMIP6
+CMIP7 uses *branded* variables: the daily maximum of near-surface temperature is a
+branded variant of `tas` rather than a variable called `tasmax`. The lookup tables are keyed on
+the **CMIP6 name** (`cmip6_name`, e.g. `tasmax`), which is the name the reformatter
+uses. One lookup row therefore serves a variable at every frequency and statistic
+it is requested at, which is why there are fewer table rows than compound variables.
 
-`estimate_volume.py` prints a `GB / model-year` table and writes the cost into
-`cmcc_variables_mapped.csv` (`GB_per_year`, `GB_per_year_counted`) and into every
-`by_realm/*.csv`. "Per model-year" = GB written for **each simulated year** (a
-100-year run ≈ 100×).
+## Known caveats
 
-**Three categories, and how they count toward storage:**
+- A lookup row with an **empty** `model` is not skipped by `generate_raw_mapping_from_dr.py`
+  (only `DISCARD` is), so unfilled rows can produce an empty entry in the raw lists.
+  Fill the row, set it to `DISCARD`, or remove it.
+- `create_cmip7_lookup.py` and `generate_raw_mapping_from_dr.py` do not share a
+  default output directory; pass paths explicitly as shown above.
+- The volume estimate covers only variables that have a lookup entry.
 
-- **mapped** — produced directly → counts its full size (`GB_per_year_raw`).
-- **derivable** — a slice/aggregate of an already-stored field (e.g. `thetao200`
-  from `thetao`) → **counts 0 GB**, because you don't store it separately.
-- **true_gap** — not produced at all → counts only as a *potential* cost if you
-  add it (`GB_per_year_true_gap`).
+## Requirements
 
-So the per-`(frequency,cell)` row in `raw/by_realm/*.csv` carries
-`GB_per_year_raw` (stored today) and `GB_per_year_true_gap` (extra if added);
-derivable variables are listed but add nothing. The printed TOTAL (v1.2.2.4,
-853 vars: 436 mapped, 67 derivable, 350 true_gap; uncompressed):
-
-```
-=== GB / model-year (compression=1.0) ===  produced  true_gap    total
-TOTAL                                        212.71    224.34    437.05
-```
-
-- **produced ≈ 213 GB/yr** — the mapped variables you write today.
-- **true_gap ≈ 224 GB/yr** — extra storage to satisfy the still-missing request.
-- **total ≈ 437 GB/yr** — full request, with derivable counted free (≈ 34 GB of
-  the old naive 471 was derivable double-counting).
-
-**vs CMIP6 (~100 GB/model-year):** produced ≈ **2×**, full request ≈ **4.4×**.
-
-**Where the cost sits:** the true_gap is almost entirely **ocean sub-daily** —
-`ocean` = 186 of the 224 GB true_gap, and by frequency `3hr` alone = 174 GB. Two
-3-hourly ocean variables account for 76 % of the whole gap cost: `ficeberg`
-(85.8 GB/yr) and `hfrunoffds` (85.5 GB/yr) — see the `GB_per_year` column of
-`cmip7-lookup/ocn_lookup.csv`, or `out/heavy_ocean_3hr.csv`. So
-the expensive part of the request is ocean 3-hourly (mostly 3-D) fields; that is
-the single biggest lever if the volume needs trimming. By contrast `atmos` is
-almost fully producible today (124 produced / 2 true_gap), and `6hr`/`1hr` have
-no true_gap at all.
-
-**Compression.** These figures are `--compression 1.0` = **uncompressed** (size
-on disk during the run, before `parallel_nc_compress.sh`). Pass e.g.
-`--compression 0.5` for the archived/deflated size (≈ 235 GB/yr request,
-≈ 106 GB/yr producible). Measured raw model output is ~uncompressed (ratio ≈ 1.0);
-the real deflate ratio can be plugged in once measured on a compressed file.
-
-## Key facts / decisions
-
-- **Priority** = CMCC per-opportunity (High + Medium): all variables of every
-  listed group, no per-variable DR-priority filtering. → 30 opportunities,
-  ~118 group references, **853 unique variables**, each falling into one of the
-  three mapping buckets above (see the run's per-realm summary / `unmapped.csv`).
-- **DR version**: the CMCC file was authored against ~v1.2.2.2 but we build
-  against **v1.2.2.4**; two renamed groups are remapped via `ALIASES`
-  (`omip_geometry_physics → omip_scalars_high_priority`,
-  `hydro_modelling_PET_daily → WaterResourcesPET_daily`).
-- **Volume grid** (in `estimate_volume.py`): CMCC-ESM3, calibrated from a real
-  B1850 run — atmos/land SE grid `ncol=48600` L58, ocean/ice NEMO 360×291 L75,
-  float32, raw output ~uncompressed (pass `--compression 0.5` for archived size).
-  Validated: `thetao` mon = 377 MB/yr, `zos` mon = 5 MB/yr match the real files.
-  Edit `HGRID`/`VLEV` for other configs. `inspect_sim.py` re-derives these from
-  any archive.
+Python with the packages in `environment.yml` (`numpy`, `pyyaml`, `requests`,
+`openpyxl`, `pooch`, `bs4`, `pytest`, `coverage`) and `CMIP7-data-request-api`
+(installed with pip by the environment file).
