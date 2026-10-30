@@ -52,7 +52,8 @@ def main():
     # Load top-level configuration parameters from YAML
     cfg = load_config(args.config_path)
 
-    output_dir = cfg['output_dir'] 
+    # Derive output_dir from config_path basename without extension
+    output_dir = os.path.splitext(os.path.basename(args.config_path))[0]
     print(f"Output directory: '{output_dir}'\n")
 
     print(f"1. Parsing selection CSV '{cfg['input_csv']}'...")
