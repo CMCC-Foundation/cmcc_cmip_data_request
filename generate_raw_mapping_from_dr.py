@@ -240,6 +240,8 @@ def time_operation(meta):
         return "clim"
     if "time:" in cm or ts.endswith("intv") or ts.startswith("time"):
         return "ave"
+    if ts == 'none' and meta['frequency'] == 'fx':
+        return "fixed"
     return "unknown"
 
 
