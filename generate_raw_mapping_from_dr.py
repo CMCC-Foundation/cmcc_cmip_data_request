@@ -9,11 +9,13 @@ Combined CMCC CMIP7 Request Generator & Raw Variable List Mapper.
 5. Generates '<realm>_raw_list.txt' files organized by realm, frequency, and cell method.
 """
 
+import argparse
 import csv
 import os
 import re
 import sys
 from collections import defaultdict
+import yaml
 
 # --------------------------------------------------------------------------- #
 # Constants & Realm Mappings                                                  #
@@ -38,21 +40,26 @@ LOOKUP_FAMILIES = ["atm", "ice", "lnd", "ocn", "ocnbgc"]
 # --------------------------------------------------------------------------- #
 def main():
     """Executes the complete end-to-end data request processing and raw variable list generation pipeline."""
-    # Hardcoded Configuration
-    input_csv = "CMCC_CMIP7-DR-opportunities-Final.csv"
-    dreq_version = "v1.2.2.5"
-    output_dir = "dr-cmip7-full"
-    lookup_dir = "cmip7-lookup"
+    parser = argparse.ArgumentParser(
+        description="CMCC CMIP7 Data Request Generator & Mapper"
+    )
+    parser.add_argument(
+        "config_path",
+        help="Path to the YAML configuration file",
+    )
+    args = parser.parse_args()
 
-    # Set group filters directly in main
-    exclude_groups = []
-    select_groups = []
+    # Load top-level configuration parameters from YAML
+    cfg = load_config(args.config_path)
 
-    print(f"1. Parsing selection CSV '{input_csv}'...")
-    selection = parse_cmcc_csv(input_csv, exclude_groups=exclude_groups, select_groups=select_groups)
+    output_dir = cfg['output_dir'] 
+    print(f"Output directory: '{output_dir}'\n")
 
-    print(f"2. Loading Data Request ({dreq_version})...")
-    _DR, meta_by_uid, groups, dreq_dim_sizes, time_dims = load_dr(dreq_version)
+    print(f"1. Parsing selection CSV '{cfg['input_csv']}'...")
+    selection = parse_cmcc_csv(cfg['input_csv'], exclude_groups=cfg['exclude_groups'], select_groups=cfg['select_groups'])
+
+    print(f"2. Loading Data Request ({cfg['dreq_version']})...")
+    _DR, meta_by_uid, groups, dreq_dim_sizes, time_dims = load_dr(cfg['dreq_version'])
 
     print("3. Building variables table...")
     var_rows = build_variables_table(selection, meta_by_uid, groups)
@@ -62,7 +69,7 @@ def main():
     variables_path = write_intermediate_csv(var_rows, output_dir, filename)
 
     print("5. Loading lookup tables...")
-    lookup_dict = load_lookup_tables(lookup_dir)
+    lookup_dict = load_lookup_tables(cfg['lookup_dir'])
 
     print("6. Processing raw variable mappings...")
     output_dict, selected_variables = process_variables(variables_path, lookup_dict)
@@ -73,6 +80,19 @@ def main():
 
     print(f"7. Writing list of model variables for each realm to '{output_dir}'...")
     write_model_variables_realm(output_dict, outdir=output_dir)
+
+
+# --------------------------------------------------------------------------- #
+# Helper Configuration Loader                                                 #
+# --------------------------------------------------------------------------- #
+def load_config(config_path):
+    """Loads top-level configuration parameters from a YAML file."""
+    if not os.path.exists(config_path):
+        raise FileNotFoundError(f"Configuration file '{config_path}' not found.")
+
+    with open(config_path, "r", encoding="utf-8") as f:
+        cfg = yaml.safe_load(f) or {}
+    return cfg
 
 
 # --------------------------------------------------------------------------- #
@@ -131,8 +151,8 @@ def clean_group_token(tok):
 
 def parse_cmcc_csv(csv_path, exclude_groups=None, select_groups=None):
     """Parses the internal CMCC selection CSV and returns selected variable groups with notes."""
-    exclude_groups = [g.lower() for g in (exclude_groups or [])]
-    select_groups = [g.lower() for g in (select_groups or [])]
+    exclude_groups = [str(g).lower() for g in (exclude_groups or [])]
+    select_groups = [str(g).lower() for g in (select_groups or [])]
 
     with open(csv_path, newline="", encoding="utf-8") as f:
         rows = list(csv.reader(f))
@@ -418,4 +438,7 @@ def write_model_variables_realm(output_dict, outdir):
 
 
 if __name__ == "__main__":
+    import warnings
+    warnings.filterwarnings("ignore", category=UserWarning)
+
     main()
