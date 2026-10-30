@@ -12,3 +12,24 @@ exclude_groups: []
 
 # List of variable group IDs to exclusively select (empty list selects all non-excluded)
 select_groups: []
+
+# use to compute data volume
+# Spatial grid dimension defaults per realm formatted as: [nx, ny, nz]
+spatial_defaults:
+  atmos: [48600, 1, 58]
+  land: [48600, 1, 1]
+  ocean: [360, 291, 75]
+  ocnBgchem: [360, 291, 75]
+  seaIce: [360, 291, 1]
+
+# Fallback sizes for non-standard vertical, soil, or grid dimensions
+other_dims:
+  gridlatitude: 291
+  rho: 75
+  sdepth: 20
+  soilpools: 5
+  spectband: 10
+  alevel: 58
+  alevhalf: 59
+  olevel: 75
+  olevhalf: 75
