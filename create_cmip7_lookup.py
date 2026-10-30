@@ -22,11 +22,7 @@ The merge is IDEMPOTENT and never destroys hand work:
     previously appended rows keep theirs, only missing variables are appended;
   * re-running with nothing new to add rewrites the files identically.
 
-Appended variables are the "unmapped" ones of out/raw/unmapped.csv, i.e. both
-  * true_gap  - no raw name anywhere         -> fill `model`
-  * derivable - a slice/aggregate of a field already stored (thetao200 from
-                thetao) -> normally NO new model output needed; skip them with
-                --true-gap-only.
+Appended variables are the "unmapped" ones of out/raw/unmapped.csv.
 Their realm / frequency / Division / GB-per-year context is deliberately NOT in
 these tables (they stay 4-column reformatter tables): it is in
 out/raw/unmapped.csv and out/truegap_{high,medium}.{csv,txt}.
@@ -38,7 +34,6 @@ No DR API needed - pure post-processing of out/cmcc_variables_mapped.csv.
 
 Usage:
     python build_cmip7_lookup.py                  # extend ../cmip7-lookup in place
-    python build_cmip7_lookup.py --true-gap-only  # skip the derivable variables
 """
 import argparse
 import csv
@@ -57,39 +52,6 @@ FIELDS = ["variable", "reprocess", "model", "long_name", "cmip6_name"]   # updat
 FAMS = sorted(set(REALM_TO_LOOKUP.values()))
 
 
-def read_table(path):
-    """(order, rows) - row order preserved, rows keyed by variable name."""
-    if not os.path.exists(path):
-        return [], {}
-    with open(path, newline="") as f:
-        rows = [r for r in csv.DictReader(f) if (r.get("variable") or "").strip()]
-    order = [r["variable"].strip() for r in rows]
-    return order, {r["variable"].strip(): r for r in rows}
-
-
-def load_request(mapped_path):
-    """req[variable] = dict(category, realms, long_name) over the whole selection."""
-    with open(mapped_path, newline="") as f:
-        rows = list(csv.DictReader(f))
-    req = {}
-    for r in rows:
-        var = '.'.join((r.get("compound_name" or "")).split('.')[:3]).strip()
-        if not var:
-            continue
-        e = req.setdefault(var, {"cmip6_name": None, "realm": None, "long_name": "", 'raw': ""})
-        e["cmip6_name"] = r.get("cmip6_name", "")
-        if r.get("realm"):
-            e["realm"] = families_of([r["realm"]])
-        else:
-            raise SystemExit (f"ERROR: Cannot find realm for variable: {var}")
-        e["long_name"] = e["long_name"] or r.get("long_name", "")
-    return req, len(rows)
-
-
-def families_of(entry):
-    return [REALM_TO_LOOKUP[r] for r in entry if r in REALM_TO_LOOKUP][0]
-
-
 def main():
     ap = argparse.ArgumentParser()
     here = os.path.dirname(os.path.abspath(__file__)) if "__file__" in globals() else "."
@@ -100,10 +62,10 @@ def main():
                     help="the ORIGINAL tables; used to tell the original block from "
                          "our appended rows and to keep its row order. Optional - "
                          "skipped if the clone is not there.")
-    ap.add_argument("--mapped", default=os.path.join(here, "dr-cmip7-full", "cmcc_variables.csv"),
+    ap.add_argument("--mapped", default=os.path.join(here, "dr-cmip7-full", "cmcc_data_request.csv"),
                     help="path to mapped variables CSV file")
-    ap.add_argument("--true-gap-only", action="store_true",
-                    help="append only true_gap variables (skip the derivable ones)")
+    ap.add_argument("-f", "--force", action="store_true",
+                    help="force overwrite of existing lookup tables")
     args = ap.parse_args()
 
     os.makedirs(args.lookup_dir, exist_ok=True)
@@ -160,17 +122,11 @@ def main():
 
         # write dicts
         path = os.path.join(args.lookup_dir, f"{fam}_lookup.csv")
-        rows = [fam_out[d] for d in fam_out.keys()]
-        if not os.path.exists(path):
-            with open(path, "w", newline="") as f:
-                w = csv.DictWriter(f, fieldnames=FIELDS, extrasaction="ignore")
-                w.writeheader()
-                w.writerows(rows)
-        else:
-            print(f"File {path} already exists. Check and remove before proceeding.")
+        written = write_dicts(path, fam_out, force=args.force)
+        if not written:
             return
                 
-        tables[fam] = {r["variable"] for r in rows}
+        tables[fam] = {r["variable"] for r in fam_out.values()}
         counts = (len(map_dict), len(new_dict))
         print(f"{fam + '_lookup.csv':22s} {counts[0]:8d} {counts[1]:8d} ")
         tot = [t + c for t, c in zip(tot, counts)]
@@ -181,6 +137,53 @@ def main():
 
     print(f"\n[write] {args.lookup_dir}/*_lookup.csv  <- fill the empty `model` "
           "cells, then re-run map_to_raw_names.py")
+
+
+def write_dicts(path, fam_out, force=False):
+    """Write collated dictionary to CSV file at path. Return False if exists and force is False."""
+    if os.path.exists(path) and not force:
+        print(f"File {path} already exists. Use --force / -f to overwrite. Stopping process.")
+        return False
+
+    rows = [fam_out[d] for d in fam_out.keys()]
+    with open(path, "w", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=FIELDS, extrasaction="ignore")
+        w.writeheader()
+        w.writerows(rows)
+    return True
+
+
+def read_table(path):
+    """(order, rows) - row order preserved, rows keyed by variable name."""
+    if not os.path.exists(path):
+        return [], {}
+    with open(path, newline="") as f:
+        rows = [r for r in csv.DictReader(f) if (r.get("variable") or "").strip()]
+    order = [r["variable"].strip() for r in rows]
+    return order, {r["variable"].strip(): r for r in rows}
+
+
+def load_request(mapped_path):
+    """req[variable] = dict(category, realms, long_name) over the whole selection."""
+    with open(mapped_path, newline="") as f:
+        rows = list(csv.DictReader(f))
+    req = {}
+    for r in rows:
+        var = '.'.join((r.get("compound_name" or "")).split('.')[:3]).strip()
+        if not var:
+            continue
+        e = req.setdefault(var, {"cmip6_name": None, "realm": None, "long_name": "", 'raw': ""})
+        e["cmip6_name"] = r.get("cmip6_name", "")
+        if r.get("realm"):
+            e["realm"] = families_of([r["realm"]])
+        else:
+            raise SystemExit (f"ERROR: Cannot find realm for variable: {var}")
+        e["long_name"] = e["long_name"] or r.get("long_name", "")
+    return req, len(rows)
+
+
+def families_of(entry):
+    return [REALM_TO_LOOKUP[r] for r in entry if r in REALM_TO_LOOKUP][0]
 
 
 if __name__ == "__main__":
