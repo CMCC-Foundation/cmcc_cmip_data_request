@@ -14,7 +14,7 @@ exclude_groups: []
 select_groups: []
 
 # use to compute data volume
-# Spatial grid dimension defaults per realm formatted as: [nx, ny, nz]
+# Spatial grid dimension defaults per realm formatted as: [lon, lat, lev]
 spatial_defaults:
   atmos: [48600, 1, 58]
   land: [48600, 1, 1]
@@ -24,8 +24,8 @@ spatial_defaults:
 
 # Fallback sizes for non-standard vertical, soil, or grid dimensions
 other_dims:
-  gridlatitude: 291
-  rho: 75
+  gridlatitude: 291 # latitude ocean model
+  rho: 75           # vertical level of ocean model
   sdepth: 20
   soilpools: 5
   spectband: 10
