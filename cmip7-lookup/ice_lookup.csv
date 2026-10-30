@@ -54,7 +54,7 @@ sithick,False,sithick,Sea Ice Thickness
 sitimefrac,False,ice_present,Fraction of Time Steps with Sea Ice
 siu,False,siu,X-Component of Sea-Ice Velocity
 siv,False,siv,Y-Component of Sea-Ice Velocity
-sivol,False,hi,Sea-Ice Volume per Area
+sivol,False,hi,Sea ice Volume per Area
 sndmassmelt,False,sndmassmelt,Snow Mass Rate of Change Through Melt
 sndmasssnf,False,sndmasssnf,Snow Mass Change Through Snow Fall
 sndmasssubl,False,sndmassubl,Snow Mass Rate of Change Through Evaporation or Sublimation
