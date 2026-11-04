@@ -30,14 +30,7 @@ list of model output variables:
 Clone the repository together with the Data Request submodule:
 
 ```bash
-git clone --recurse-submodules https://github.com/CMCC-Foundation/cmcc_cmip_data_request
-```
-
-If you cloned without `--recurse-submodules`, `CMIP7_DReq_Software/` is empty;
-fill it with:
-
-```bash
-git submodule update --init
+git clone https://github.com/CMCC-Foundation/cmcc_cmip_data_request
 ```
 
 Create and activate the conda environment (default name `cmcc-dr-cmip7`, use
@@ -50,6 +43,7 @@ conda activate cmcc-dr-cmip7
 # later, to pick up changes in environment.yml
 conda env update -f environment.yml
 ```
+
 
 The environment installs `CMIP7-data-request-api`, which downloads the Data Request
 content for the requested version the first time it is used, so the first run of
