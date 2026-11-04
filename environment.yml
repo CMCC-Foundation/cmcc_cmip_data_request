@@ -12,7 +12,7 @@ dependencies:
   - pyyaml
   - requests
   - pip
+  - pudb
   # regular pip packages
   - pip:
-    - CMIP7-data-request-api
-
+    - CMIP7-data-request-api==1.6
