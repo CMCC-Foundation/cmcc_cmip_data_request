@@ -101,32 +101,31 @@ def load_config(config_path):
 # --------------------------------------------------------------------------- #
 def extract_dreq_dimensions(version):
     """Extracts dimension sizes and temporal dimension mappings from the Data Request API for a given version."""
-    from data_request_api.content import dump_transformation as dt
     from data_request_api.query import dreq_query as dq
+    from data_request_api.content import dreq_content as dc
+
 
     time_dims = {}
     dreq_dim_sizes = {}
 
-    try:
-        content_dic = dt.get_transformed_content(version=version)
-        base = dq.create_dreq_tables_for_request(content_dic, version)
-        dreq_tables = {
-            "coordinates and dimensions": base["Coordinates and Dimensions"],
-            "temporal shape": base["Temporal Shape"],
-            "frequency": base["CMIP7 Frequency"],
-            "spatial shape": base["Spatial Shape"],
-        }
-        dreq_dim_sizes = dq.get_dimension_sizes(dreq_tables)
+    dc.retrieve(version)
+    content = dc.load(version)
+    base = dq.create_dreq_tables_for_request(content, version)
+    dreq_tables = {
+        "coordinates and dimensions": base["Coordinates and Dimensions"],
+        "temporal shape": base["Temporal Shape"],
+        "frequency": base["CMIP7 Frequency"],
+        "spatial shape": base["Spatial Shape"],
+    }
+    dreq_dim_sizes = dq.get_dimension_sizes(dreq_tables)
 
-        for rec in dreq_tables["temporal shape"].records.values():
-            if hasattr(rec, "dimensions") and rec.dimensions:
-                link = rec.dimensions[0]
-                dim_name = dreq_tables["coordinates and dimensions"].get_record(link).name
-            else:
-                dim_name = "None"
-            time_dims[dim_name] = rec.name
-    except Exception as e:
-        print(f"Warning: Failed to extract dreq dimensions ({e})")
+    for rec in dreq_tables["temporal shape"].records.values():
+        if hasattr(rec, "dimensions") and rec.dimensions:
+            link = rec.dimensions[0]
+            dim_name = dreq_tables["coordinates and dimensions"].get_record(link).name
+        else:
+            dim_name = "None"
+        time_dims[dim_name] = rec.name
 
     return dreq_dim_sizes, time_dims
 
