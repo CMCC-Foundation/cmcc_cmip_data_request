@@ -3,6 +3,46 @@
 This document describes the changes made to CICE 6.3.0 for the CMIP7 sea-ice output, compared
 with the original code, and what the post-processing and CMORization have to do with the output.
 
+## Contents
+
+- [Rationale](#rationale)
+- [Deliverables](#deliverables)
+- [1. Summary](#1-summary)
+- [2. New history fields](#2-new-history-fields)
+- [3. Changes to existing history fields](#3-changes-to-existing-history-fields)
+  - [3.1 Renamed fields](#31-renamed-fields-netcdf-name-and-namelist-flag)
+  - [3.2 Definitions](#32-definitions)
+- [4. Other code changes](#4-other-code-changes)
+  - [4.1 Reset of `evaps` and `evapi`](#41-reset-of-evaps-and-evapi-ice_fluxf90)
+  - [4.2 Snow tendency from dynamics](#42-snow-tendency-from-dynamics-ice_fluxf90-ice_step_modf90-nuopccmeps-cice_runmodf90)
+  - [4.3 History infrastructure](#43-history-infrastructure-ice_history_sharedf90-ice_historyf90-ice_history_mechredf90)
+  - [4.4 Several time samples per history file (`hist_mfilt`)](#44-several-time-samples-per-history-file-hist_mfilt)
+  - [4.5 Unchanged](#45-unchanged)
+  - [4.6 Modified files](#46-modified-files)
+- [5. CESM infrastructure](#5-cesm-infrastructure)
+- [6. Output namelist for the CMIP7 experiments](#6-output-namelist-for-the-cmip7-experiments)
+- [7. Post-processing and CMORization](#7-post-processing-and-cmorization)
+  - [7.1 General rules](#71-general-rules)
+  - [7.2 Variable by variable](#72-variable-by-variable)
+    - [State](#state)
+    - [Thickness categories](#thickness-categories)
+    - [Melt ponds and ridges](#melt-ponds-and-ridges)
+    - [Ice area and mass tendencies](#ice-area-and-mass-tendencies)
+    - [Snow tendencies and precipitation](#snow-tendencies-and-precipitation)
+    - [Radiation and heat fluxes](#radiation-and-heat-fluxes)
+    - [Fresh water and salt](#fresh-water-and-salt)
+  - [7.3 Variables computed offline](#73-variables-computed-offline-not-written-by-cice)
+  - [7.4 Variables from other components, or not available](#74-variables-from-other-components-or-not-available)
+  - [7.5 Summary of the changes for the post-processing](#75-summary-of-the-changes-for-the-post-processing)
+  - [7.6 Reconstruction of the original fields](#76-reconstruction-of-the-original-fields-offline)
+- [8. Differences from CICE 6.6.3](#8-differences-from-cice-663)
+- [9. Limitations and known behaviours](#9-limitations-and-known-behaviours)
+- [10. Verification](#10-verification)
+  - [10.1 Test script](#101-test-script)
+  - [10.2 Runs](#102-runs)
+
+## Rationale
+
 - **Original code:** CICE 6.3.0, `CMCC-Foundation/CICE` branch `cmcc-esm3` (Icepack included,
   CESM `cime_config`, nuopc/cmeps driver).
 - **Reference** for names and conventions: CICE Consortium `main`, CICE 6.6.3 (commit 928e388).
