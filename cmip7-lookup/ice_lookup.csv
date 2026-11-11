@@ -1,63 +1,74 @@
 variable,reprocess,model,long_name,cmip6_name,notes
-seaIce.evspsbl.tavg-u-hxy-si,False,sidmassevapsubl,Sea-Ice Mass Change Through Evaporation and Sublimation,sidmassevapsubl,
-seaIce.prra.tavg-u-hxy-si,False,DISCARD,Rainfall Rate over Sea Ice,sipr,This field should be different than zero only with topographic melt ponds. This is why we can put DISCARD (otherwise sipr)
-seaIce.rlds.tavg-u-hxy-si,False,sifllwdtop,Downwelling Longwave Flux over Sea Ice,sifllwdtop,
-seaIce.rlus.tavg-u-hxy-si,False,sifllwutop,Upwelling Longwave Flux over Sea Ice,sifllwutop,
-seaIce.rsds.tavg-u-hxy-si,False,siflswdtop,Downwelling Shortwave Flux over Sea Ice,siflswdtop,
-seaIce.rsus.tavg-u-hxy-si,False,siflswutop,Upwelling Shortwave Flux over Sea Ice,siflswutop,
-seaIce.siage.tavg-u-hxy-si,False,siage,Age of Sea Ice,siage,
-seaIce.siconc.tavg-u-hxy-u,True,aice*100,Sea-Ice Area Percentage (Ocean Grid),siconc,aice not in percentage
-seaIce.sidconcth.tavg-u-hxy-sea,False,sidconcth,Sea-Ice Area Fraction Tendency Due to Thermodynamics,sidconcth,
-seaIce.sidmassdyn.tavg-u-hxy-si,False,sidmassdyn,Sea-Ice Mass Change from Dynamics,sidmassdyn,
-seaIce.sidmassgrowthbot.tavg-u-hxy-si,False,sidmassgrowthbot,Sea-Ice Mass Change Through Basal Growth,sidmassgrowthbot,
-seaIce.sidmassgrowthwat.tavg-u-hxy-si,False,sidmassgrowthwat,Sea-Ice Mass Change Through Growth in Supercooled Open Water (Frazil),sidmassgrowthwat,
-seaIce.sidmassmeltbot.tavg-u-hxy-si,False,sidmassmeltbot,Sea-Ice Mass Change Through Bottom Melting,sidmassmeltbot,
-seaIce.sidmassmelttop.tavg-u-hxy-si,False,sidmassmelttop,Sea-Ice Mass Change Through Surface Melting,sidmassmelttop,
-seaIce.sidmassth.tavg-u-hxy-si,False,sidmassth,Sea-Ice Mass Change from Thermodynamics,sidmassth,
-seaIce.sieqthick.tavg-u-hxy-si,False,hi,Sea-Ice Volume per Area,sivol,
-seaIce.sifb.tavg-u-hxy-si,False,sifb,Sea-Ice Freeboard,sifb,
-seaIce.siflcondbot.tavg-u-hxy-si,False,siflcondbot,Net Conductive Heat Flux in Sea Ice at the Base,siflcondbot,
-seaIce.siflcondtop.tavg-u-hxy-si,False,siflcondtop,Net Conductive Heat Flux in Sea Ice at the Surface,siflcondtop,
-seaIce.siflfwbot.tavg-u-hxy-si,False,siflfwbot,Freshwater Flux from Sea Ice,siflfwbot,
-seaIce.siflfwdrain.tavg-u-hxy-si,False,siflfwdrain,Freshwater Flux from Sea-Ice Surface,siflfwdrain,
-seaIce.siflsenstop.tavg-u-hxy-si,False,siflsenstop,Net Downward Sensible Heat Flux over Sea Ice,siflsenstop,
-seaIce.sihc.tavg-u-hxy-sea,False,sihc,Sea-Ice Heat Content,sihc,
-seaIce.simass.tavg-u-hxy-si,False,simass,Sea-Ice Mass,simass, mass of sea ice should be available within CICE 
-seaIce.sisnhc.tavg-u-hxy-si,False,sisnhc,Snow Heat Content,sisnhc,
-seaIce.sispeed.tavg-u-hxy-si,False,sispeed,Sea-Ice Speed,sispeed,
-seaIce.sitempbot.tavg-u-hxy-si,False,sitempbot,Temperature at Ice-Ocean Interface,sitempbot,
-seaIce.sitempsnic.tavg-u-hxy-si,False,sitempsnic,Temperature at Snow-Ice Interface,sitempsnic,
-seaIce.sithick.tavg-u-hxy-si,False,sithick,Sea-Ice Thickness,sithick,
-seaIce.sithick.tavg-u-hxy-sir,False,sirdgthick,Ridged Ice Thickness,sirdgthick,
-seaIce.sitimefrac.tavg-u-hxy-sea,False,ice_present,Fraction of Time Steps with Sea Ice,sitimefrac,
-seaIce.siu.tavg-u-hxy-si,False,siu,X-Component of Sea-Ice Velocity,siu,
-seaIce.siv.tavg-u-hxy-si,False,siv,Y-Component of Sea-Ice Velocity,siv,
-seaIce.snc.tavg-u-hxy-si,True,snowfrac aice,Snow Area Percentage,sisnconc,(snowfrac/aice)*100 since snowfrac is computed on the full cell and not only on sea ice
-seaIce.snd.tavg-u-hxy-sn,True,hs snowfrac,Snow Thickness,sisnthick, hs/snowfrac since snd defines the actual thickness (computed only on the snow-covered area)
-seaIce.snw.tavg-u-hxy-si,False,sisnmass,Snow Mass per Area,sisnmass, sisnmass should be a variable of CICE
-seaIce.ts.tavg-u-hxy-si,False,sitemptop,Surface Temperature of Sea Ice,sitemptop,
-seaIce.prsn.tavg-u-hxy-si,False,sisndmasssnf,Snow Mass Change Through Snowfall,sisndmasssnf,
-seaIce.sbl.tavg-u-hxy-si,False,sisndmasssubl,Snow Mass Rate of Change Through Evaporation or Sublimation,sisndmasssubl,
-seaIce.sfdsi.tavg-u-hxy-si,False,siflsaltbot,Salt Flux from Sea Ice,siflsaltbot,
-seaIce.siconca.tavg-u-hxy-u,False,DISCARD,Sea-Ice Area Percentage (Atmospheric Grid),siconca,atmospheric grid
-seaIce.sidconcdyn.tavg-u-hxy-sea,False,sidconcdyn,Sea-Ice Area Fraction Tendency Due to Dynamics,sidconcdyn,
-seaIce.sidmassgrowthsi.tavg-u-hxy-si,False,sidmasssi,Sea-Ice Mass Change Through Snow-to-Ice Conversion,sidmassgrowthsi,
-seaIce.sidmassmeltlat.tavg-u-hxy-si,False,sidmasslat,Sea-Ice Mass Change Through Lateral Melting,sidmassmeltlat,
-seaIce.sifllattop.tavg-u-hxy-si,False,sifllatstop,Net Latent Heat Flux over Sea Ice,sifllattop,
-seaIce.siflsensbot.tavg-u-hxy-si,False,siflsensupbot,Net Upward Sensible Heat Flux under Sea Ice,siflsensbot,
-seaIce.siflswdbot.tavg-u-hxy-si,False,siflswdbot,Downwelling Shortwave Flux under Sea Ice,siflswdbot,
-seaIce.siitdconc.tavg-u-hxy-si,False,siitdconc,Sea-Ice Area Percentages in Ice Thickness Categories,siitdconc,
-seaIce.siitdsnconc.tavg-u-hxy-si,False,siitdsnconc,Snow Area Percentages in Ice Thickness Categories,siitdsnconc,
-seaIce.siitdsnthick.tavg-u-hxy-si,False,siitdsnthick,Snow Thickness in Ice Thickness Categories,siitdsnthick,
-seaIce.siitdthick.tavg-u-hxy-si,False,siitdthick,Sea-Ice Thickness in Ice Thickness Categories,siitdthick,
-seaIce.simpconc.tavg-u-hxy-si,True,apond_ai aice,Fraction of Sea Ice Covered by Melt Pond,simpconc,100 * apond_ai / aice (CICE writes snowfracn: the snow fraction of each category's ice area. CMIP7 asks for the percentage of the grid cell. Multiplying by the category ice concentration rescales it to the cell)
-seaIce.simpeffconc.tavg-u-hxy-si,True,apeff_ai aice,Fraction of Sea Ice Covered by Effective Melt Pond,simpeffconc,100 * apeff_ai/aice
-seaIce.simprefrozen.tavg-u-hxy-simp,True,hpond_ai apond_ai,Thickness of Refrozen Ice on Melt Pond,simprefrozen, hpond_ai / apond_ai
-seaIce.simpthick.tavg-u-hxy-simp,True,ipond_ai  apond_ai,Melt Pond Depth,simpthick, ipond_ai / apond_ai
-seaIce.sirdgconc.tavg-u-hxy-si,True,sirdgconc aice,Fraction of Ridged Sea Ice,sirdgconc, sirdgconc/aice
-seaIce.sisali.tavg-u-hxy-si,False,sisali,Sea-Ice Salinity,sisali, it could be constant in time
-seaIce.sisaltmass.tavg-u-hxy-si,False,sisaltmass,Mass of Salt in Sea Ice,sisaltmass,
-seaIce.sisndmassdyn.tavg-u-hxy-si,False,sisndmassdyn,Snow Mass Rate of Change Through Advection by Sea-Ice Dynamics,sisndmassdyn,
-seaIce.sisndmasssi.tavg-u-hxy-si,False,sisndmasssi,Snow Mass Rate of Change Through Snow-to-Ice Conversion,sisndmasssi,
-seaIce.sisndmasswind.tavg-u-hxy-si,False,DISCARD,Snow Mass Rate of Change Through Wind Drift of Snow,sisndmasswind,
-seaIce.snm.tavg-u-hxy-si,False,sisndmassmelt,Snow Mass Rate of Change Through Melt,sisndmassmelt,
+seaIce.evspsbl.tavg-u-hxy-si,False,sidmassevapsubl,Sea-Ice Mass Change Through Evaporation and Sublimation,sidmassevapsubl,copy. sign: flip: CICE writes the rate of change of the ice mass (negative for sublimation); the DR has positive=up: declare the model value as positive down so that CMOR flips it. change: original code: multiplied by rhoi (917 times too large) and cumulative since the start of the job (evapi never reset)
+seaIce.prra.tavg-u-hxy-si,False,sipr,Rainfall Rate over Sea Ice,sipr,copy. mask: fill where the time-mean aice = 0 (DR mask=siconc; CICE writes 0 there). change: was DISCARD: now written (rain on ice with level-ice ponds)
+seaIce.rlds.tavg-u-hxy-si,False,sifllwdtop,Downwelling Longwave Flux over Sea Ice,sifllwdtop,copy
+seaIce.rlus.tavg-u-hxy-si,False,sifllwutop,Upwelling Longwave Flux over Sea Ice,sifllwutop,copy. sign: none: now written positive up as the DR; remove any sign change in the post-processing. change: sign changed (was negative)
+seaIce.rsds.tavg-u-hxy-si,False,siflswdtop,Downwelling Shortwave Flux over Sea Ice,siflswdtop,copy. daily stream: field names with suffix _d
+seaIce.rsus.tavg-u-hxy-si,False,siflswutop,Upwelling Shortwave Flux over Sea Ice,siflswutop,"copy. sign: none: positive up, as the DR. daily stream: field names with suffix _d"
+seaIce.siage.tavg-u-hxy-si,False,siage,Age of Sea Ice,siage,copy (s). daily stream: field names with suffix _d
+seaIce.siconc.tavg-u-hxy-u,True,aice*100,Sea-Ice Area Percentage (Ocean Grid),siconc,100 * aice. mask: none (0 over open water). daily stream: field names with suffix _d
+seaIce.sidconcth.tavg-u-hxy-sea,False,sidconcth,Sea-Ice Area Fraction Tendency Due to Thermodynamics,sidconcth,copy (s-1). change: now includes the steps where the ice disappears
+seaIce.sidmassdyn.tavg-u-hxy-si,False,sidmassdyn,Sea-Ice Mass Change from Dynamics,sidmassdyn,copy. change: now includes the steps where the ice disappears
+seaIce.sidmassgrowthbot.tavg-u-hxy-si,False,sidmassgrowthbot,Sea-Ice Mass Change Through Basal Growth,sidmassgrowthbot,copy. change: as before (melt-out steps included)
+seaIce.sidmassgrowthwat.tavg-u-hxy-si,False,sidmassgrowthwat,Sea-Ice Mass Change Through Growth in Supercooled Open Water (Frazil),sidmassgrowthwat,copy. change: now includes frazil in ice-free cells
+seaIce.sidmassmeltbot.tavg-u-hxy-si,False,sidmassmeltbot,Sea-Ice Mass Change Through Bottom Melting,sidmassmeltbot,copy. sign: none: now written <= 0 as the DR; remove any sign change in the post-processing. change: sign changed (was positive)
+seaIce.sidmassmelttop.tavg-u-hxy-si,False,sidmassmelttop,Sea-Ice Mass Change Through Surface Melting,sidmassmelttop,copy. sign: none: now written <= 0 as the DR; remove any sign change in the post-processing. change: sign changed (was positive)
+seaIce.sidmassth.tavg-u-hxy-si,False,sidmassth,Sea-Ice Mass Change from Thermodynamics,sidmassth,copy. change: now includes the steps where the ice disappears
+seaIce.sieqthick.tavg-u-hxy-si,False,hi,Sea-Ice Volume per Area,sivol,copy (volume per grid-cell area)
+seaIce.sifb.tavg-u-hxy-si,False,sifb,Sea-Ice Freeboard,sifb,copy
+seaIce.siflcondbot.tavg-u-hxy-si,False,siflcondbot,Net Conductive Heat Flux in Sea Ice at the Base,siflcondbot,copy. sign: none: positive down
+seaIce.siflcondtop.tavg-u-hxy-si,False,siflcondtop,Net Conductive Heat Flux in Sea Ice at the Surface,siflcondtop,copy. sign: none: positive down. change: values corrected (original code weighted the grid-cell flux by the ice area a second time)
+seaIce.siflfwbot.tavg-u-hxy-si,False,siflfwbot,Freshwater Flux from Sea Ice,siflfwbot,copy. sign: none: positive into the ocean. change: frazil term defined (was undefined with update_ocn_f = .true.)
+seaIce.siflfwdrain.tavg-u-hxy-si,False,siflfwdrain,Freshwater Flux from Sea-Ice Surface,siflfwdrain,"copy (approximation: pond storage not removed). change: units fixed, rain removed"
+seaIce.siflsenstop.tavg-u-hxy-si,False,siflsenstop,Net Downward Sensible Heat Flux over Sea Ice,siflsenstop,copy. sign: none: positive down
+seaIce.sihc.tavg-u-hxy-sea,False,sihc,Sea-Ice Heat Content,sihc,"copy (J m-2, negative)"
+seaIce.simass.tavg-u-hxy-si,True,hi*917,Sea-Ice Mass,simass,"917 * hi (rhoi, the density of the CICE mass diagnostics). change: was simass, a field that does not exist in CICE 6.3"
+seaIce.sisnhc.tavg-u-hxy-si,False,sisnhc,Snow Heat Content,sisnhc,"copy (J m-2, negative). mask: fill where the time-mean aice = 0 (DR mask=siconc; CICE writes 0 there). daily stream: field names with suffix _d"
+seaIce.sispeed.tavg-u-hxy-si,False,sispeed,Sea-Ice Speed,sispeed,copy; U points. daily stream: field names with suffix _d
+seaIce.sitempbot.tavg-u-hxy-si,False,sitempbot,Temperature at Ice-Ocean Interface,sitempbot,copy (K). change: values corrected (original code divided the cell value Tbot by aice_init)
+seaIce.sitempsnic.tavg-u-hxy-si,False,sitempsnic,Temperature at Snow-Ice Interface,sitempsnic,"copy (K); optionally clip at 273.15 K (about 0.1 % of the points exceed it by up to 0.5 K, transient melting snow). change: values corrected (original code divided the cell value Tsnice by aice_init: down to -1e11 K). daily stream: field names with suffix _d"
+seaIce.sithick.tavg-u-hxy-si,False,sithick,Sea-Ice Thickness,sithick,copy. daily stream: field names with suffix _d
+seaIce.sithick.tavg-u-hxy-sir,False,sirdgthick,Ridged Ice Thickness,sirdgthick,copy. change: now ridged volume / ridged area (was overestimated by about 1/aice)
+seaIce.sitimefrac.tavg-u-hxy-sea,False,ice_present,Fraction of Time Steps with Sea Ice,sitimefrac,copy. daily stream: field names with suffix _d
+seaIce.siu.tavg-u-hxy-si,False,siu,X-Component of Sea-Ice Velocity,siu,"copy; U points (ULON, ULAT), native grid directions. daily stream: field names with suffix _d"
+seaIce.siv.tavg-u-hxy-si,False,siv,Y-Component of Sea-Ice Velocity,siv,"copy; U points (ULON, ULAT), native grid directions. daily stream: field names with suffix _d"
+seaIce.snc.tavg-u-hxy-si,True,snowfrac aice,Snow Area Percentage,sisnconc,100 * snowfrac / aice. mask: fill where aice = 0
+seaIce.snd.tavg-u-hxy-sn,True,hs snowfrac,Snow Thickness,sisnthick,hs / snowfrac. mask: fill where snowfrac = 0 (DR: where snow). daily stream: field names with suffix _d
+seaIce.snw.tavg-u-hxy-si,True,hs*330,Snow Mass per Area,sisnmass,"330 * hs (rhos). change: was sisnmass, a field that does not exist in CICE 6.3"
+seaIce.ts.tavg-u-hxy-si,False,sitemptop,Surface Temperature of Sea Ice,sitemptop,copy (K). daily stream: field names with suffix _d
+seaIce.prsn.tavg-u-hxy-si,False,sisndmasssnf,Snow Mass Change Through Snowfall,sisndmasssnf,"copy. mask: fill where the time-mean aice = 0 (DR mask=siconc; CICE writes 0 there). change: renamed (was sndmasssnf), no density factor, weighted by aice_init"
+seaIce.sbl.tavg-u-hxy-si,False,sisndmasssubl,Snow Mass Rate of Change Through Evaporation or Sublimation,sisndmasssubl,"copy. sign: none (rate of change, negative for sublimation; no positive attribute in the DR). mask: fill where the time-mean aice = 0 (DR mask=siconc; CICE writes 0 there). change: renamed (was sndmassubl); original code: multiplied by rhos and cumulative since the start of the job (evaps never reset)"
+seaIce.sfdsi.tavg-u-hxy-si,False,siflsaltbot,Salt Flux from Sea Ice,siflsaltbot,copy. sign: none: positive into the ocean. change: frazil term defined
+seaIce.siconca.tavg-u-hxy-u,False,DISCARD,Sea-Ice Area Percentage (Atmospheric Grid),siconca,other component: 100 * ICEFRAC from CAM (atmosphere grid)
+seaIce.sidconcdyn.tavg-u-hxy-sea,False,sidconcdyn,Sea-Ice Area Fraction Tendency Due to Dynamics,sidconcdyn,copy (s-1). change: now includes the steps where the ice disappears
+seaIce.sidmassgrowthsi.tavg-u-hxy-si,False,sidmassgrowthsi,Sea-Ice Mass Change Through Snow-to-Ice Conversion,sidmassgrowthsi,copy. change: renamed (was sidmasssi)
+seaIce.sidmassmeltlat.tavg-u-hxy-si,False,sidmassmeltlat,Sea-Ice Mass Change Through Lateral Melting,sidmassmeltlat,"copy. sign: none: now written <= 0 as the DR; remove any sign change in the post-processing. change: renamed (was sidmasslat), sign changed (was positive)"
+seaIce.sifllattop.tavg-u-hxy-si,False,sifllattop,Net Latent Heat Flux over Sea Ice,sifllattop,copy. sign: none: positive down. change: renamed (was sifllatstop)
+seaIce.siflsensbot.tavg-u-hxy-si,False,siflsensbot,Net Upward Sensible Heat Flux under Sea Ice,siflsensbot,"copy. sign: none: positive down (heat from the ocean to the ice is negative). change: new definition (fbot, the sensible flux) and name (was siflsensupbot, fhocn)"
+seaIce.siflswdbot.tavg-u-hxy-si,False,siflswdbot,Downwelling Shortwave Flux under Sea Ice,siflswdbot,copy. sign: none: positive down
+seaIce.siitdconc.tavg-u-hxy-si,False,siitdconc,Sea-Ice Area Percentages in Ice Thickness Categories,siitdconc,"copy (%); category axis nc, bounds from NCAT. mask: fill where the time-mean aice = 0 (DR mask=siconc; CICE writes 0 there). change: now in % (was a fraction): remove any factor 100 applied in the post-processing"
+seaIce.siitdsnconc.tavg-u-hxy-si,False,siitdsnconc,Snow Area Percentages in Ice Thickness Categories,siitdsnconc,"copy (%); category axis nc. mask: fill where siitdconc = 0 (DR mask=siitdconc). change: new field (was snowfracn, a fraction of the category ice area). daily stream: field names with suffix _d"
+seaIce.siitdsnthick.tavg-u-hxy-si,False,siitdsnthick,Snow Thickness in Ice Thickness Categories,siitdsnthick,copy; category axis nc. change: now snow volume / snow-covered category area (was per category ice area). daily stream: field names with suffix _d
+seaIce.siitdthick.tavg-u-hxy-si,False,siitdthick,Sea-Ice Thickness in Ice Thickness Categories,siitdthick,copy; category axis nc. change: fill value instead of 0 where the category is absent
+seaIce.simpconc.tavg-u-hxy-si,True,apond_ai aice,Fraction of Sea Ice Covered by Melt Pond,simpconc,100 * apond_ai / aice. mask: fill where aice = 0
+seaIce.simpeffconc.tavg-u-hxy-si,True,apeff_ai aice,Fraction of Sea Ice Covered by Effective Melt Pond,simpeffconc,100 * apeff_ai / aice. mask: fill where aice = 0
+seaIce.simprefrozen.tavg-u-hxy-simp,True,ipond_ai apond_ai,Thickness of Refrozen Ice on Melt Pond,simprefrozen,ipond_ai / apond_ai. mask: fill where apond_ai = 0 (DR mask=simpconc). change: fields were swapped with simpthick in the previous lookup
+seaIce.simpthick.tavg-u-hxy-simp,True,hpond_ai apond_ai,Melt Pond Depth,simpthick,hpond_ai / apond_ai. mask: fill where apond_ai = 0 (DR mask=simpconc). change: fields were swapped with simprefrozen in the previous lookup; hpond_ai now written with its own flag
+seaIce.sirdgconc.tavg-u-hxy-si,True,ardg aice,Fraction of Ridged Sea Ice,sirdgconc,"100 * ardg / aice. mask: fill where aice = 0. change: was sirdgconc, a field that does not exist in CICE 6.3"
+seaIce.sisali.tavg-u-hxy-si,False,sisali,Sea-Ice Salinity,sisali,copy (ppt = 1E-03). change: new field
+seaIce.sisaltmass.tavg-u-hxy-si,False,sisaltmass,Mass of Salt in Sea Ice,sisaltmass,copy. change: new field
+seaIce.sisndmassdyn.tavg-u-hxy-si,False,sisndmassdyn,Snow Mass Rate of Change Through Advection by Sea-Ice Dynamics,sisndmassdyn,copy. mask: fill where the time-mean aice = 0 (DR mask=siconc; CICE writes 0 there). change: new field
+seaIce.sisndmasssi.tavg-u-hxy-si,False,sisndmasssi,Snow Mass Rate of Change Through Snow-to-Ice Conversion,sisndmasssi,copy (<= 0). mask: fill where the time-mean aice = 0 (DR mask=siconc; CICE writes 0 there). change: new field
+seaIce.sisndmasswind.tavg-u-hxy-si,False,DISCARD,Snow Mass Rate of Change Through Wind Drift of Snow,sisndmasswind,"not available (snwredist = none, tr_snow = .false.)"
+seaIce.snm.tavg-u-hxy-si,False,sisndmassmelt,Snow Mass Rate of Change Through Melt,sisndmassmelt,"copy. sign: none: now written <= 0 as the DR; remove any sign change in the post-processing. mask: fill where the time-mean aice = 0 (DR mask=siconc; CICE writes 0 there). change: renamed (was sndmassmelt), sign changed (was positive)"
+seaIce.siarea.tavg-u-hm-u,True,aice tarea TLAT,Sea-Ice Area North,siarean,offline: sum(aice * tarea) / 1e12 over TLAT > 0 (nh) or TLAT < 0 (sh); 1e6 km2. mask: ocean cells only (aice is fill over land)
+seaIce.siextent.tavg-u-hm-u,True,aice tarea TLAT,Sea-Ice Extent North,siextentn,"offline: sum(tarea where aice >= 0.15) / 1e12 per hemisphere, from the monthly mean aice; 1e6 km2. mask: ocean cells only"
+seaIce.sivol.tavg-u-hm-u,True,hi tarea TLAT,Sea-Ice Volume North,sivoln,offline: sum(hi * tarea) / 1e12 per hemisphere; 1e3 km3. mask: ocean cells only
+seaIce.sisnmass.tavg-u-hm-si,True,hs tarea TLAT,Snow Mass on Sea Ice North,sisnmassn,offline: sum(330 * hs * tarea) per hemisphere; kg. mask: ocean cells only
+land.tslsi.tpt-u-hxy-lsi,False,DISCARD,Surface Temperature Where Land or Sea Ice,tslsi,"other component: CAM TS, instantaneous, 3hr (land + sea-ice surface temperature)"
+ocean.sfdsi.tavg-u-hxy-sea,False,DISCARD,Downward Sea Ice Basal Salt Flux,sfdsi,"other component: ocean model (NEMO salt flux received from the sea ice, 3-hour mean of the hourly coupling values; check field, units (g vs kg) and sign in field_def); alternative: CICE fsalt_ai on a 3-hourly stream. sign: positive into the ocean (DR positive=down)"
+ocnBgchem.sialgc.tavg-u-hxy-si,False,DISCARD,Total Ice Algal Carbon Amount in Sea Ice,sialgc,not available: sea-ice BGC off
+ocnBgchem.sichl.tavg-u-hxy-si,False,DISCARD,Amount of Total Ice Algae Expressed as Chlorophyll in Sea Ice,sichl,not available: sea-ice BGC off
+ocnBgchem.sigpp.tavg-u-hxy-si,False,DISCARD,Gross Primary Productivity in Sea Ice as Carbon Amount Flux,sigpp,not available: sea-ice BGC off
+ocnBgchem.sino3.tavg-u-hxy-si,False,DISCARD,Dissolved Nitrate Amount in Sea Ice,sino3,not available: sea-ice BGC off
+ocnBgchem.sisi.tavg-u-hxy-si,False,DISCARD,Dissolved Silicon Amount in Sea Ice,sisi,not available: sea-ice BGC off
