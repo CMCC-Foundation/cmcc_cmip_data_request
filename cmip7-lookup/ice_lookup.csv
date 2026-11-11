@@ -32,8 +32,8 @@ seaIce.sithick.tavg-u-hxy-sir,False,sirdgthick,Ridged Ice Thickness,sirdgthick,c
 seaIce.sitimefrac.tavg-u-hxy-sea,False,ice_present,Fraction of Time Steps with Sea Ice,sitimefrac,copy. daily stream: field names with suffix _d
 seaIce.siu.tavg-u-hxy-si,False,siu,X-Component of Sea-Ice Velocity,siu,"copy; U points (ULON, ULAT), native grid directions. daily stream: field names with suffix _d"
 seaIce.siv.tavg-u-hxy-si,False,siv,Y-Component of Sea-Ice Velocity,siv,"copy; U points (ULON, ULAT), native grid directions. daily stream: field names with suffix _d"
-seaIce.snc.tavg-u-hxy-si,True,snowfrac aice,Snow Area Percentage,sisnconc,100 * snowfrac / aice. mask: fill where aice = 0
-seaIce.snd.tavg-u-hxy-sn,True,hs snowfrac,Snow Thickness,sisnthick,hs / snowfrac. mask: fill where snowfrac = 0 (DR: where snow). daily stream: field names with suffix _d
+seaIce.snc.tavg-u-hxy-si,True,"snowfrac,aice",Snow Area Percentage,sisnconc,100 * snowfrac / aice. mask: fill where aice = 0
+seaIce.snd.tavg-u-hxy-sn,True,"hs,snowfrac",Snow Thickness,sisnthick,hs / snowfrac. mask: fill where snowfrac = 0 (DR: where snow). daily stream: field names with suffix _d
 seaIce.snw.tavg-u-hxy-si,True,hs*330,Snow Mass per Area,sisnmass,"330 * hs (rhos). change: was sisnmass, a field that does not exist in CICE 6.3"
 seaIce.ts.tavg-u-hxy-si,False,sitemptop,Surface Temperature of Sea Ice,sitemptop,copy (K). daily stream: field names with suffix _d
 seaIce.prsn.tavg-u-hxy-si,False,sisndmasssnf,Snow Mass Change Through Snowfall,sisndmasssnf,"copy. mask: fill where the time-mean aice = 0 (DR mask=siconc; CICE writes 0 there). change: renamed (was sndmasssnf), no density factor, weighted by aice_init"
@@ -50,21 +50,21 @@ seaIce.siitdconc.tavg-u-hxy-si,False,siitdconc,Sea-Ice Area Percentages in Ice T
 seaIce.siitdsnconc.tavg-u-hxy-si,False,siitdsnconc,Snow Area Percentages in Ice Thickness Categories,siitdsnconc,"copy (%); category axis nc. mask: fill where siitdconc = 0 (DR mask=siitdconc). change: new field (was snowfracn, a fraction of the category ice area). daily stream: field names with suffix _d"
 seaIce.siitdsnthick.tavg-u-hxy-si,False,siitdsnthick,Snow Thickness in Ice Thickness Categories,siitdsnthick,copy; category axis nc. change: now snow volume / snow-covered category area (was per category ice area). daily stream: field names with suffix _d
 seaIce.siitdthick.tavg-u-hxy-si,False,siitdthick,Sea-Ice Thickness in Ice Thickness Categories,siitdthick,copy; category axis nc. change: fill value instead of 0 where the category is absent
-seaIce.simpconc.tavg-u-hxy-si,True,apond_ai aice,Fraction of Sea Ice Covered by Melt Pond,simpconc,100 * apond_ai / aice. mask: fill where aice = 0
-seaIce.simpeffconc.tavg-u-hxy-si,True,apeff_ai aice,Fraction of Sea Ice Covered by Effective Melt Pond,simpeffconc,100 * apeff_ai / aice. mask: fill where aice = 0
-seaIce.simprefrozen.tavg-u-hxy-simp,True,ipond_ai apond_ai,Thickness of Refrozen Ice on Melt Pond,simprefrozen,ipond_ai / apond_ai. mask: fill where apond_ai = 0 (DR mask=simpconc). change: fields were swapped with simpthick in the previous lookup
-seaIce.simpthick.tavg-u-hxy-simp,True,hpond_ai apond_ai,Melt Pond Depth,simpthick,hpond_ai / apond_ai. mask: fill where apond_ai = 0 (DR mask=simpconc). change: fields were swapped with simprefrozen in the previous lookup; hpond_ai now written with its own flag
-seaIce.sirdgconc.tavg-u-hxy-si,True,ardg aice,Fraction of Ridged Sea Ice,sirdgconc,"100 * ardg / aice. mask: fill where aice = 0. change: was sirdgconc, a field that does not exist in CICE 6.3"
+seaIce.simpconc.tavg-u-hxy-si,True,"apond_ai,aice",Fraction of Sea Ice Covered by Melt Pond,simpconc,100 * apond_ai / aice. mask: fill where aice = 0
+seaIce.simpeffconc.tavg-u-hxy-si,True,"apeff_ai,aice",Fraction of Sea Ice Covered by Effective Melt Pond,simpeffconc,100 * apeff_ai / aice. mask: fill where aice = 0
+seaIce.simprefrozen.tavg-u-hxy-simp,True,"ipond_ai,apond_ai",Thickness of Refrozen Ice on Melt Pond,simprefrozen,ipond_ai / apond_ai. mask: fill where apond_ai = 0 (DR mask=simpconc). change: fields were swapped with simpthick in the previous lookup
+seaIce.simpthick.tavg-u-hxy-simp,True,"hpond_ai,apond_ai",Melt Pond Depth,simpthick,hpond_ai / apond_ai. mask: fill where apond_ai = 0 (DR mask=simpconc). change: fields were swapped with simprefrozen in the previous lookup; hpond_ai now written with its own flag
+seaIce.sirdgconc.tavg-u-hxy-si,True,"ardg,aice",Fraction of Ridged Sea Ice,sirdgconc,"100 * ardg / aice. mask: fill where aice = 0. change: was sirdgconc, a field that does not exist in CICE 6.3"
 seaIce.sisali.tavg-u-hxy-si,False,sisali,Sea-Ice Salinity,sisali,copy (ppt = 1E-03). change: new field
 seaIce.sisaltmass.tavg-u-hxy-si,False,sisaltmass,Mass of Salt in Sea Ice,sisaltmass,copy. change: new field
 seaIce.sisndmassdyn.tavg-u-hxy-si,False,sisndmassdyn,Snow Mass Rate of Change Through Advection by Sea-Ice Dynamics,sisndmassdyn,copy. mask: fill where the time-mean aice = 0 (DR mask=siconc; CICE writes 0 there). change: new field
 seaIce.sisndmasssi.tavg-u-hxy-si,False,sisndmasssi,Snow Mass Rate of Change Through Snow-to-Ice Conversion,sisndmasssi,copy (<= 0). mask: fill where the time-mean aice = 0 (DR mask=siconc; CICE writes 0 there). change: new field
 seaIce.sisndmasswind.tavg-u-hxy-si,False,DISCARD,Snow Mass Rate of Change Through Wind Drift of Snow,sisndmasswind,"not available (snwredist = none, tr_snow = .false.)"
 seaIce.snm.tavg-u-hxy-si,False,sisndmassmelt,Snow Mass Rate of Change Through Melt,sisndmassmelt,"copy. sign: none: now written <= 0 as the DR; remove any sign change in the post-processing. mask: fill where the time-mean aice = 0 (DR mask=siconc; CICE writes 0 there). change: renamed (was sndmassmelt), sign changed (was positive)"
-seaIce.siarea.tavg-u-hm-u,True,aice tarea TLAT,Sea-Ice Area North,siarean,offline: sum(aice * tarea) / 1e12 over TLAT > 0 (nh) or TLAT < 0 (sh); 1e6 km2. mask: ocean cells only (aice is fill over land)
-seaIce.siextent.tavg-u-hm-u,True,aice tarea TLAT,Sea-Ice Extent North,siextentn,"offline: sum(tarea where aice >= 0.15) / 1e12 per hemisphere, from the monthly mean aice; 1e6 km2. mask: ocean cells only"
-seaIce.sivol.tavg-u-hm-u,True,hi tarea TLAT,Sea-Ice Volume North,sivoln,offline: sum(hi * tarea) / 1e12 per hemisphere; 1e3 km3. mask: ocean cells only
-seaIce.sisnmass.tavg-u-hm-si,True,hs tarea TLAT,Snow Mass on Sea Ice North,sisnmassn,offline: sum(330 * hs * tarea) per hemisphere; kg. mask: ocean cells only
+seaIce.siarea.tavg-u-hm-u,True,"aice,tarea,TLAT",Sea-Ice Area North,siarean,offline: sum(aice * tarea) / 1e12 over TLAT > 0 (nh) or TLAT < 0 (sh); 1e6 km2. mask: ocean cells only (aice is fill over land)
+seaIce.siextent.tavg-u-hm-u,True,"aice,tarea,TLAT",Sea-Ice Extent North,siextentn,"offline: sum(tarea where aice >= 0.15) / 1e12 per hemisphere, from the monthly mean aice; 1e6 km2. mask: ocean cells only"
+seaIce.sivol.tavg-u-hm-u,True,"hi,tarea,TLAT",Sea-Ice Volume North,sivoln,offline: sum(hi * tarea) / 1e12 per hemisphere; 1e3 km3. mask: ocean cells only
+seaIce.sisnmass.tavg-u-hm-si,True,"hs,tarea,TLAT",Snow Mass on Sea Ice North,sisnmassn,offline: sum(330 * hs * tarea) per hemisphere; kg. mask: ocean cells only
 land.tslsi.tpt-u-hxy-lsi,False,DISCARD,Surface Temperature Where Land or Sea Ice,tslsi,"other component: CAM TS, instantaneous, 3hr (land + sea-ice surface temperature)"
 ocean.sfdsi.tavg-u-hxy-sea,False,DISCARD,Downward Sea Ice Basal Salt Flux,sfdsi,"other component: ocean model (NEMO salt flux received from the sea ice, 3-hour mean of the hourly coupling values; check field, units (g vs kg) and sign in field_def); alternative: CICE fsalt_ai on a 3-hourly stream. sign: positive into the ocean (DR positive=down)"
 ocnBgchem.sialgc.tavg-u-hxy-si,False,DISCARD,Total Ice Algal Carbon Amount in Sea Ice,sialgc,not available: sea-ice BGC off
