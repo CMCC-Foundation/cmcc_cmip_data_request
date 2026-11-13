@@ -87,7 +87,7 @@ ocean.rsdo.tavg-ol-hxy-sea,False,rsdo,Downwelling Shortwave Radiation in Sea Wat
 ocean.scint.tavg-op4-hxy-sea,True,so,Integral wrt depth of seawater practical salinity expressed as salt mass content,scint
 ocean.sfdsi.tavg-u-hxy-sea,False,sfdsi,Downward Sea Ice Basal Salt Flux,sfdsi
 ocean.sltbasin.tavg-u-hyb-sea,True,sltbasin,Northward Ocean Salt Transport,sltbasin
-ocean.thetao.tavg-op20bar-hxy-sea,True,thetao,Sea Water Potential Temperature at 200 meters,thetao200
+ocean.thetao.tavg-op20bar-hxy-sea,True,thetao200,Sea Water Potential Temperature at 200 meters,thetao200
 ocean.thkcelluo.tavg-ol-hxy-sea,False,thkcelluo,Ocean Model Cell Thickness at u-points,thkcelluo
 ocean.thkcellvo.tavg-ol-hxy-sea,False,thkcellvo,Ocean Model Cell Thickness at v-points,thkcellvo
 ocean.tnkebto.tavg-u-hxy-sea,False,DISCARD,Tendency of Ocean Eddy Kinetic Energy Content Due to Parameterized Eddy Advection,tnkebto
