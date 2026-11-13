@@ -21,7 +21,7 @@ ocnBgchem.intppmisc.tavg-u-hxy-sea,True,ppmisc,Net Primary Organic Carbon Produc
 ocnBgchem.nh4.tavg-ol-hxy-sea,False,nh4,Dissolved Ammonium Concentration,nh4
 ocnBgchem.no3.tavg-ol-hxy-sea,False,no3,Dissolved Nitrate Concentration,no3
 ocnBgchem.o2.tavg-ol-hxy-sea,False,o2,Dissolved Oxygen Concentration,o2
-ocnBgchem.o2.tavg-ols-hxy-sea,True,o2,Surface Dissolved Oxygen Concentration,o2os
+ocnBgchem.o2.tavg-ols-hxy-sea,True,o2os,Surface Dissolved Oxygen Concentration,o2os
 ocnBgchem.ph.tavg-ol-hxy-sea,False,ph,pH,ph
 ocnBgchem.phyc.tavg-ol-hxy-sea,True,"phydiat, phymisc",Phytoplankton Carbon Concentration,phyc
 ocnBgchem.phydiat.tavg-ol-hxy-sea,False,phydiat,Mole Concentration of Diatoms Expressed as Carbon in Sea Water,phydiat
