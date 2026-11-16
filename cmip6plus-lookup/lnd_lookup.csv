@@ -1,0 +1,113 @@
+variable,reprocess,model,long_name
+areacellr,True,area,Grid-Cell Area for River Model Variables
+baresoilFrac,True,pfts1d_wtgcell,Bare Soil Percentage Area Coverage
+burntFractionAll,True,FAREA_BURNED,Percentage of Entire Grid cell  that is Covered by Burnt Vegetation (All Classes)
+c3PftFrac,True,pfts1d_wtgcell,Percentage Cover by C3 Plant Functional Type
+c4PftFrac,True,pfts1d_wtgcell,Percentage Cover by C4 Plant Functional Type
+cLand,True,TOTCOLC,Total Carbon in All Terrestrial Carbon Pools
+cLitter,True,TOTLITC,Carbon Mass in Litter Pool
+cLitterLut,True,"TOTLITC, cols1d",Carbon  in Above and Below-Ground Litter Pools on Land-Use Tiles
+cProduct,True,TOTPRODC,Carbon Mass in Products of Land-Use Change
+cProductLut,True,"TOTPRODC, cols1d",Wood and Agricultural Product Pool Carbon Associated with Land-Use Tiles
+cSoil,True,SOILC,Carbon Mass in Model Soil Pool
+cSoilAbove1m,True,"SOIL1C_1m, SOIL2C_1m, SOIL3C_1m",Carbon Mass in Soil Pool Above 1m Depth
+cSoilLut,True,"SOILC, cols1d",carbon  in soil pool on Land-use tiles
+cTotFireLut,True,"TOTFIRE, cols1d","Total Carbon Loss from Natural and Managed Fire on Land-Use Tile, Including Deforestation Fires [kgC m-2 s-1]"
+cVeg,True,TOTVEGC,Carbon Mass in Vegetation
+cVegLut,True,"TOTVEGC, pfts1d",Carbon in Vegetation on Land-Use Tiles
+clayfrac,True,levgrnd,Clay Fraction
+cropFrac,True,pfts1d_wtgcell,Percentage Crop Cover
+cropFracC3,True,pfts1d_wtgcell,Percentage Cover by C3 Crops
+evspsblsoi,False,QSOIL,Water Evaporation from Soil
+evspsblveg,False,QVEGE,Evaporation from Canopy
+fBNF,True,NFIX_TO_SMINN,Biological Nitrogen Fixation
+fDeforestToProduct,True,"DWT_PROD100C_GAIN, DWT_PROD10C_GAIN",Deforested Biomass That Goes into Product Pool as a Result of Anthropogenic Land-Use Change
+fFire,True,TOTFIRE,Carbon Mass Flux into Atmosphere Due to CO2 Emission from Fire Excluding Land-Use Change [kgC m-2 s-1]
+fHarvestToProduct,True,WOOD_HARVESTC,Harvested Biomass That Goes into Product Pool
+fLitterSoil,True,"LITR1C_TO_SOIL1C, LITR2C_TO_SOIL1C, LITR3C_TO_SOIL2C",Total Carbon Mass Flux from Litter to Soil
+fLuc,True,LAND_USE_FLUX,Net Carbon Mass Flux into Atmosphere Due to Land-Use Change [kgC m-2 s-1]
+fLulccAtmLut,True,"DWT_CONV_CFLUX, cols1d",Carbon Transferred Directly to Atmosphere Due to any Land-Use or Land-Cover Change Activities [kgC m-2 s-1]
+fLulccProductLut,True,"DWT_PROD100C_GAIN, DWT_PROD10C_GAIN, cols1d",Carbon Harvested Due to Land-Use or Land-Cover Change Process That Enters Anthropogenic Product Pools on Tile
+fLulccResidueLut,True,"DWT_CLOSS, cols1d",Carbon Transferred to Soil or Litter Pools Due to Land-Use or Land-Cover Change Processes on Tile
+fN2O,True,"F_N2O_NIT, F_N2O_DENIT",Total Land N2O Flux
+fNLandToOcean,True,SMIN_NO3_RUNOFF,Lateral Transfer of Nitrogen out of Grid Cell That Eventually Goes into Ocean
+fNLitterSoil,True,"LITR1N_TO_SOIL1N, LITR2N_TO_SOIL1N, LITR3N_TO_SOIL2N",Total Nitrogen Mass Flux from Litter to Soil
+fNProduct,True,"DWT_PROD10N_GAIN, DWT_PROD100N_GAIN",Deforested or Harvested Biomass as a Result of Anthropogenic Land-Use or Change
+fNdep,True,NDEP_TO_SMINN,Dry and Wet Deposition of Reactive Nitrogen onto Land
+fNleach,True,"SMIN_NO3_LEACHED, SOM_N_LEACHED","Total Nitrogen Loss to Leaching or Runoff (Sum of Ammonium, Nitrite and Nitrate)"
+fNnetmin,True,NET_NMIN,Net Nitrogen Release from Soil and Litter as the Outcome of Nitrogen Immobilisation and Gross Mineralisation
+fNup,True,SMINN_TO_PLANT,Total Plant Nitrogen Uptake (Sum of Ammonium and Nitrate) Irrespective of the Source of Nitrogen
+fProductDecomp,True,PRODUCT_CLOSS,Decomposition out of Product Pools to CO2 in Atmosphere as Carbon Mass Flux [kgC m-2 s-1]
+fProductDecompLut,True,"PRODUCT_CLOSS, cols1d",Net Carbon Mass Flux from Wood and Agricultural Product Pools on Land Use Tile into Atmosphere [kgC m-2 s-1]
+fVegLitter,True,LITFALL,Total Carbon Mass Flux from Vegetation to Litter
+fahLut,True,"Qanth, pfts1d",Anthropogenic Heat Flux Generated from non-Renewable Human Primary Energy Consumption
+fracLut,True,cols1d_wtgcell,Percentage of Grid Cell for Each Land-Use Tile
+gpp,True,GPP,Carbon Mass Flux out of Atmosphere Due to Gross Primary Production on Land [kgC m-2 s-1]
+gppLut,True,"GPP, pfts1d",Gross Primary Production on Land-Use Tile as Carbon Mass Flux [kgC m-2 s-1]
+grassFrac,True,pfts1d_wtgcell,Natural Grass Area Percentage
+grassFracC3,True,pfts1d_wtgcell,C3 Natural Grass Area Percentage
+grassFracC4,True,pfts1d_wtgcell,C4 Natural Grass Area Percentage
+hfdsn,True,"FGR, FSNO",Downward Heat Flux into Snow Where Land over Land
+hflsLut,True,"EFLX_LH_TOT, pfts1d",Latent Heat Flux on Land-Use Tile
+hfssLut,True,"FSH_R, FSH_U",Sensible Heat Flux on Land-Use Tile
+hussLut,True,"Q2M, pfts1d",Near-Surface Specific Humidity on Land-Use Tile
+ksat,True,HKSAT,Saturated Hydraulic Conductivity
+lai,False,TLAI,Leaf Area Index
+laiLut,True,"TLAI, pfts1d",Leaf Area Index on Land-Use Tile
+landCoverFrac,True,"pfts1d_wtgcell, land1d_wtgcell, landfrac",Percentage of Area by Vegetation or Land-Cover Category
+mrfso,True,SOILICE,Soil Frozen Water Content
+mrlso,True,SOILLIQ,Soil Liquid Water Content
+mrro,False,QRUNOFF,Total Runoff
+mrroLut,True,"QDRAI, cols1d, QRUNOFF_R, QRUNOFF_U",Total Runoff from Land-Use Tile
+mrros,False,QOVER,Surface Runoff
+mrsfl,False,SOILICE,Frozen Water Content of Soil Layer
+mrsll,False,SOILLIQ,Liquid Water Content of Soil Layer
+mrso,True,"SOILLIQ, SOILICE",Total Soil Moisture Content
+mrsoLut,True,"SOILLIQ, SOILICE, cols1d",Total Soil Moisture
+mrsol,True,"SOILLIQ, SOILICE",Total Water Content of Soil Layer
+mrsos,False,SOILWATER_10CM,Moisture in Upper Portion of Soil Column
+mrsosLut,True,"SOILWATER_10CM, cols1d",Moisture in Upper Portion of Soil Column of Land-Use Tile
+nLand,True,TOTCOLN,Total Nitrogen in All Terrestrial Nitrogen Pools
+nLitter,True,TOTLITN,Nitrogen Mass in Litter Pool
+nMineral,True,SMINN,Mineral Nitrogen in the Soil
+nProduct,True,TOTPRODN,Nitrogen Mass in Products of Land-Use Change
+nSoil,True,"SOIL1N, SOIL2N, SOIL3N",Nitrogen Mass in Soil Pool
+nVeg,True,TOTVEGN,Nitrogen Mass in Vegetation
+nbp,True,NBP,Carbon Mass Flux out of Atmosphere Due to Net Biospheric Production on Land [kgC m-2 s-1]
+necbLut,True,"SOM_C_LEACHED, WOOD_HARVESTC, NPP, HR, TOTFIRE, cols1d, pfts1d",Net Carbon Mass Flux into Land-Use Tile [kgC m-2 s-1]
+nep,True,NEP,Net Carbon Mass Flux out of Atmosphere due to Net Ecosystem Productivity on Land [kgC m-2 s-1]
+netAtmosLandCO2Flux,True,NEE,Net Flux of CO2 Between Atmosphere and Land (Positive into Land) as a Result of All Processes [kgC m-2 s-1]
+npp,True,NPP,Net Primary Production on Land as Carbon Mass Flux [kgC m-2 s-1]
+nppLut,True,"NPP, pfts1d",Net Primary Production on Land-Use Tile as Carbon Mass Flux [kgC m-2 s-1]
+nwdFracLut,True,pfts1d_wtgcell,Non-Woody Vegetation Percentage Cover
+orog,True,topo,Surface Altitude
+ra,True,AR,Carbon Mass Flux into Atmosphere Due to Autotrophic (Plant) Respiration on Land [kgC m-2 s-1]
+raLut,True,"AR, pfts1d",Autotrophic Respiration on Land-Use Tile as Carbon Mass Flux [kgC m-2 s-1]
+residualFrac,True,pfts1d_wtgcell,Percentage of Grid Cell That Is Land but neither Vegetation Covered nor Bare Soil
+rh,True,HR,Total Heterotrophic Respiration on Land as Carbon Mass Flux [kgC m-2 s-1]
+rhLut,True,"HR, cols1d",Heterotrophic Respiration on Land-Use Tile as Carbon Mass Flux [kgC m-2 s-1]
+rlusLut,True,"LWup, pfts1d",Surface Upwelling Longwave on Land-Use Tile
+rsusLut,True,"SWup, pfts1d",Surface Upwelling Shortwave  on Land-use Tile
+sandfrac,True,levgrnd,Sand Fraction
+sbl,False,QFLX_SUB_SNOW,Surface Snow and Ice Sublimation Flux
+sftgif,True,cols1d_wtgcell,Land Ice Area Percentage
+sftgrf,True,levgrnd,Grounded Ice Sheet Area Percentage
+shrubFrac,True,pfts1d_wtgcell,Percentage Cover by Shrub
+slthick,True,DZSOI,Thickness of Soil Layers
+snc,True,FSNO,Snow Area Percentage
+snd,False,SNOWDP,Snow Depth
+snm,False,QSNOMELT,Surface Snow Melt
+sweLut,True,"H2OSNO, cols1d",Snow Water Equivalent on Land-Use Tile
+tasLut,True,"TSA, pfts1d",Near-Surface Air Temperature on Land Use Tile
+tran,False,QVEGT,Transpiration
+treeFrac,True,pfts1d_wtgcell,Tree Cover Percentage
+treeFracBdlDcd,True,pfts1d_wtgcell,Broadleaf Deciduous Tree Area Percentage
+treeFracBdlEvg,True,pfts1d_wtgcell,Broadleaf Evergreen Tree Area Percentage
+treeFracNdlDcd,True,pfts1d_wtgcell,Needleleaf Deciduous Tree Area Percentage
+treeFracNdlEvg,True,pfts1d_wtgcell,Needleleaf Evergreen Tree Area Percentage
+tsl,False,TSOI,Temperature of Soil
+tslsi,False,TG,Surface Temperature Where Land or Sea Ice
+tslsiLut,True,"TG, cols1d",Surface Temperature on Landuse Tile
+tsn,False,SNOTTOPL,Snow Internal Temperature
+vegFrac,True,pfts1d_wtgcell,Total Vegetated Percentage Cover
+vegHeight,False,HTOP,Height of the Vegetation Canopy
