@@ -1,0 +1,35 @@
+# Path to the input CMCC opportunities selection CSV file
+input_csv: "CMCC_CMIP7-DR-opportunities-Final.csv"
+
+# Target Data Request API version to query metadata from
+dreq_version: "v1.2.2.5"
+
+# Directory containing the mapping lookup CSV files (e.g., atm_lookup.csv)
+lookup_dir: "cmip7-lookup"
+
+# List of variable group IDs to exclude from processing (empty list includes all)
+exclude_groups: []
+
+# List of variable group IDs to exclusively select (empty list selects all non-excluded)
+select_groups: []
+
+# use to compute data volume
+# Spatial grid dimension defaults per realm formatted as: [lon, lat, lev]
+spatial_defaults:
+  atmos: [48600, 1, 58]
+  land: [48600, 1, 1]
+  ocean: [360, 291, 75]
+  ocnBgchem: [360, 291, 75]
+  seaIce: [360, 291, 1]
+
+# Fallback sizes for non-standard vertical, soil, or grid dimensions
+other_dims:
+  gridlatitude: 291 # latitude ocean model
+  rho: 75           # vertical level of ocean model
+  sdepth: 20
+  soilpools: 5
+  spectband: 10
+  alevel: 58
+  alevhalf: 59
+  olevel: 75
+  olevhalf: 75
