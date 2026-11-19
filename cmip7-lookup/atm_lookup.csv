@@ -12,6 +12,7 @@ atmos.clwvi.tavg-u-hxy-u,True,"TGCLDCWP, TMSNOWQM",Condensed Water Path,clwvi
 atmos.evspsbl.tavg-u-hxy-lnd,True,"QFLX, LANDFRAC",Evaporation Including Sublimation and Transpiration,evspsbl
 atmos.evspsbl.tavg-u-hxy-u,True,QFLX,Evaporation Including Sublimation and Transpiration,evspsbl
 atmos.hfls.tavg-u-hxy-u,False,LHFLX,Surface Upward Latent Heat Flux,hfls
+atmos.hfls.tavg-u-hxy-is,False,DISCARD,Ice Sheet Surface Upward Latent Heat Flux,hfls
 atmos.hfss.tavg-u-hxy-u,False,SHFLX,Surface Upward Sensible Heat Flux,hfss
 atmos.hur.tavg-p19-hxy-air,True,"RHCFMIP, PMID, PS",Relative Humidity,hur
 atmos.hur.tavg-p19-hxy-u,True,"RHCFMIP, PMID, PS",Relative Humidity,hur
@@ -20,13 +21,14 @@ atmos.hurs.tmax-h2m-hxy-u,False,RHCFMIPHTMX,Daily Maximum Near-Surface Relative 
 atmos.hurs.tmin-h2m-hxy-u,False,RHCFMIPHTMN,Daily Minimum Near-Surface Relative Humidity,hursmin
 atmos.hurs.tpt-h2m-hxy-u,False,RHCFMIPHT,Near-Surface Relative Humidity,hurs
 atmos.hus.tavg-p19-hxy-u,True,"Q, PMID, PS",Specific Humidity,hus
-atmos.hus.tpt-al-hxy-u,True,"Q, PS",Specific Humidity,hus
+atmos.hus.tpt-al-hxy-u,True,"Q, PS, PMID",Specific Humidity,hus
 atmos.huss.tavg-h2m-hxy-u,False,QREFHT,Near-Surface Specific Humidity,huss
 atmos.huss.tpt-h2m-hxy-u,False,QREFHT,Near-Surface Specific Humidity,huss
 atmos.pfull.tavg-al-hxy-u,True,PMID,Pressure at Model Full-Levels,pfull
 atmos.pr.tavg-u-hxy-u,True,PRECT,Precipitation,pr
 atmos.prc.tavg-u-hxy-u,True,PRECC,Convective Precipitation,prc
 atmos.prsn.tavg-u-hxy-u,True,"PRECSC, PRECSL",Snowfall Flux,prsn
+atmos.prsn.tavg-u-hxy-is,False,DISCARD,Ice Sheet Snowfall Flux,prsn
 atmos.prw.tavg-u-hxy-u,False,TMQ,Water Vapor Path,prw
 atmos.ps.tavg-u-hxy-u,False,PS,Surface Air Pressure,ps
 atmos.ps.tpt-u-hxy-u,False,PS,Surface Air Pressure,ps
@@ -53,7 +55,7 @@ atmos.sftlf.ti-u-hxy-u,True,LANDFRAC,Percentage of the Grid Cell Occupied by Lan
 atmos.ta.tavg-850hPa-hxy-air,False,T850air,Air Temperature,ta850
 atmos.ta.tavg-p19-hxy-air,True,"T, PMID, PS",Air Temperature,ta
 atmos.ta.tavg-p39-hy-air,True,"T, PMID, PS",Zonal Mean Air Temperature,ta
-atmos.ta.tpt-al-hxy-u,True,"T, PS",Air Temperature,ta
+atmos.ta.tpt-al-hxy-u,True,"T, PS, PMID",Air Temperature,ta
 atmos.ta.tpt-p3-hxy-air,False,"T850air, T500air, T250air",Air Temperature,ta
 atmos.tas.tavg-h2m-hxy-u,False,TREFHT,Near-Surface Air Temperature,tas
 atmos.tas.tmax-h2m-hxy-u,False,TREFHTMX,Daily Maximum Near-Surface Air Temperature,tasmax
@@ -66,12 +68,12 @@ atmos.tauv.tavg-u-hxy-u,True,"TAUY, TAUBLJY",Surface Downward Northward Wind Str
 atmos.ts.tavg-u-hxy-u,False,TS,Surface Temperature,ts
 atmos.ts.tpt-u-hxy-u,False,TS,Surface Temperature,ts
 atmos.ua.tavg-p19-hxy-air,True,"U, PMID, PS",Eastward Wind,ua
-atmos.ua.tpt-al-hxy-u,True,"U, PS",Eastward Wind,ua
+atmos.ua.tpt-al-hxy-u,True,"U, PS, PMID",Eastward Wind,ua
 atmos.ua.tpt-p3-hxy-air,False,"U850air, U500air, U250air",Eastward Wind,ua
 atmos.uas.tavg-h10m-hxy-u,True,UAS,Eastward Near-Surface Wind,uas
 atmos.uas.tpt-h10m-hxy-u,True,UAS,Eastward Near-Surface Wind,uas
 atmos.va.tavg-p19-hxy-air,True,"V, PMID, PS",Northward Wind,va
-atmos.va.tpt-al-hxy-u,True,"V, PS",Northward Wind,va
+atmos.va.tpt-al-hxy-u,True,"V, PS, PMID",Northward Wind,va
 atmos.va.tpt-p3-hxy-air,False,"V850air, V500air, V250air",Northward Wind,va
 atmos.vas.tavg-h10m-hxy-u,True,VAS,Northward Near-Surface Wind,vas
 atmos.vas.tpt-h10m-hxy-u,True,VAS,Northward Near-Surface Wind,vas
@@ -79,7 +81,7 @@ atmos.wap.tavg-p19-hxy-air,True,"OMEGA, PMID, PS",Omega (=dp/dt),wap
 atmos.wap.tavg-p19-hxy-u,True,"OMEGA, PMID, PS",Omega (=dp/dt),wap
 atmos.zg.tavg-500hPa-hxy-air,False,Z500air,Geopotential Height at 500hPa,zg500
 atmos.zg.tavg-p19-hxy-air,True,"Z3, PMID, PS",Geopotential Height,zg
-atmos.zg.tpt-al-hxy-u,True,"Z3, PS",Geopotential height,zg
+atmos.zg.tpt-al-hxy-u,True,"Z3, PS, PMID",Geopotential height,zg
 aerosol.abs550bc.tavg-u-hxy-u,False,AODABSBCdn,black carbon aaod@550nm,abs550bc
 aerosol.abs550dust.tavg-u-hxy-u,False,AODABSDUSTdn,dust absorption aerosol optical depth @550nm,abs550dust
 aerosol.abs550so4.tavg-u-hxy-u,False,AODABSSO4dn,sulfate aaod@550nm,abs550so4
@@ -122,10 +124,10 @@ atmos.co2.tclm-p19-hxy-air,True,"CO2, PMID, PS",Mole Fraction of CO2,co2Clim
 atmos.co2.tclm-u-hm-u,False,DISCARD,Total Atmospheric Mass of CO2,co2massClim
 atmos.co23D.tavg-al-hxy-u,True,"CO2, PS",3D-Field of Transported CO2,co23D
 atmos.co2mass.tavg-u-hm-u,False,DISCARD,Total Atmospheric Mass of CO2,co2mass
-atmos.fco2all.tavg-u-hxy-u,False,DISCARD,Carbon Mass Flux into Atmosphere Due to All Emissions of CO2 from All Sources [kgC m-2 s-1],fco2all
-atmos.fco2antt.tavg-u-hxy-u,False,DISCARD,Carbon Mass Flux into Atmosphere Due to All Anthropogenic Emissions of CO2 [kgC m-2 s-1],fco2antt
-atmos.fco2fos.tavg-u-hxy-u,False,DISCARD,Carbon Mass Flux into Atmosphere Due to Fossil Fuel Emissions of CO2 [kgC m-2 s-1],fco2fos
-atmos.fco2nat.tavg-u-hxy-u,False,DISCARD,Surface Carbon Mass Flux into the Atmosphere Due to Natural Sources [kgC m-2 s-1],fco2nat
+atmos.fco2all.tavg-u-hxy-u,True,SFCO2,Carbon Mass Flux into Atmosphere Due to All Emissions of CO2 from All Sources [kgC m-2 s-1],fco2all
+atmos.fco2antt.tavg-u-hxy-u,True,"SFCO2_FFF, ac_CO2",Carbon Mass Flux into Atmosphere Due to All Anthropogenic Emissions of CO2 [kgC m-2 s-1],fco2antt
+atmos.fco2fos.tavg-u-hxy-u,True,"SFCO2_FFF, ac_CO2",Carbon Mass Flux into Atmosphere Due to Fossil Fuel Emissions of CO2 [kgC m-2 s-1],fco2fos
+atmos.fco2nat.tavg-u-hxy-u,True,"SFCO2_OCN, SFCO2_LND",Surface Carbon Mass Flux into the Atmosphere Due to Natural Sources [kgC m-2 s-1],fco2nat
 atmos.hfdsnb.tavg-u-hxy-lnd,False,DISCARD,Downward Heat Flux at Snow Base,hfdsnb
 atmos.hus.tpt-p6-hxy-air,True,"Q, PMID, PS",Specific humidity,hus6
 atmos.loadbc.tavg-u-hxy-u,False,BURDENBCdn,Load of Black Carbon Aerosol,loadbc
@@ -136,6 +138,7 @@ atmos.noaahi2m.tavg-h2m-hxy-u,False,HEATIDX,mean 2m daily NOAA heat index,noaahi
 atmos.noaahi2m.tmax-h2m-hxy-u,False,HEATIDXMX,max 2m daily NOAA heat index,noaahi2mmax
 atmos.pr.tmax-u-hxy-u,True,PRECT,Maximum Hourly Precipitation Rate,prhmax
 atmos.prra.tavg-u-hxy-u,True,"PRECT, PRECSC, PRECSL",Rainfall Flux,prra
+atmos.prra.tavg-u-hxy-is,False,DISCARD,Ice Sheet Rainfall Flux,prra
 atmos.prrsn.tavg-u-hxy-lnd,False,DISCARD,Fraction of Rainfall on Snow,prrsn
 atmos.prsnc.tavg-u-hxy-lnd,True,"PRECSC, LANDFRAC",Convective Snowfall Flux,prsnc
 atmos.prsnsn.tavg-u-hxy-lnd,False,DISCARD,Fraction of Snowfall (Including Hail and Graupel) on Snow,prsnsn

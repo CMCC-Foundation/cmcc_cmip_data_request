@@ -1,12 +1,41 @@
 # CAM6.3 mapping for the CMIP7 atmosphere variables (DECK and Fast Track) - notes
 
+Version for the coupled runs (concentration-driven and emission-driven ESM), derived from the AMIP version
+(`../atm_lookup.csv`, unchanged). `atm_lookup.csv` keeps the same columns; its `model` column gives the mapping for
+the coupled emission-driven configuration. Configuration dependences are given here in the line **Configuration**
+(machine-readable: `concentration-driven: DISCARD` means not producible in concentration-driven and fixed-SST runs);
+postponed or pending rows in the line **Status**. Requests restricted to the selected opportunities and variable groups
+(`../opportunities/CMIP7-DR_opportunities_Final.csv`) are in `dr_requests_selection.csv`.
+
 Data Request v1.2.2.5. Mapping table: `atm_lookup.csv` (same order). `DISCARD` = not available in the model. Confidence: high / medium / low.
 
 Post-processing ratios of time means: missing where the denominator is 0.
 
-Summary: 177 variables: 140 resolved, 0 with open or pending points, 0 still to review, 37 DISCARD (AMIP configuration).
+Summary: 180 variables (177 of the AMIP version + 3 Greenland ice-sheet means). AMIP configuration: 140 resolved, 37 DISCARD.
+Coupled configuration: fco2all, fco2nat, fco2fos, fco2antt mapped for emission-driven runs (fco2antt incomplete, pending CLM
+output; DISCARD in concentration-driven runs); co2mass and co2massClim DISCARD as in the AMIP version (DR note);
+3 Greenland ice-sheet means DISCARD (produced by the land model); 5 p6 variables postponed.
 
-## Configuration facts (atm_in)
+## Configuration facts: coupled emission-driven runs (atm_in of esm-piControl)
+
+- `co2_cycle_nl`: `co2_flag = .true.` (prognostic CO2 tracers CO2_OCN, CO2_FFF, CO2_LND and CO2 = their sum,
+  mixtype dry); `co2_readflux_fuel = .true.` (fossil-fuel CO2 surface flux from file, preindustrial file for
+  esm-piControl); `co2_readflux_ocn` not set (ocean CO2 flux from the coupled ocean, Faoo_fco2_ocn); land flux from
+  CTSM (Fall_fco2_lnd). The two fluxes are imported only if the coupler BGC option exports them (flds_co2b: land;
+  flds_co2c: land and ocean; xml CCSM_BGC = CO2B/CO2C): to be checked in the esm case (CO2C expected); `co2_readflux_aircraft = .false.` (aircraft CO2 off: correct for preindustrial; must be .true.
+  with `aircraft_specifier` for esm-hist and the scenarios, then the aircraft emission enters CO2_FFF as a 3D tendency,
+  co2_cycle_set_ptend).
+- Surface fluxes (cpl/nuopc/atm_import_export.F90): cflx(CO2_OCN) = ocean flux, cflx(CO2_FFF) = fossil file,
+  cflx(CO2_LND) = land flux, cflx(CO2) = their sum; history fields SFCO2_OCN, SFCO2_FFF, SFCO2_LND, SFCO2 (kg CO2 m-2 s-1,
+  positive upward) and column burdens TMCO2*.
+- `flbc_list` still contains 'CO2', but co2_cycle_readnl removes it when co2_flag is on (atm.log: "remove CO2 from
+  flbc_list active forcing"): CO2 is not forced at the surface. CH4, N2O, CFC11, CFC12, CFC11eq stay concentration-driven
+  (flbc_file, CYCLICAL 1850 for esm-piControl).
+- Radiation uses the prognostic CO2 (A:CO2). Other settings as in the AMIP configuration below (ghg_mam4, MAM4,
+  prescribed ozone and volcanic aerosol, CYCLICAL 1850 inputs for esm-piControl). No active land-ice model (CTSM only).
+- Code: version with aircraft_emit (CYCLICAL/SERIAL, aircraft_cycle_yr) and the tracer_data srcnam fix.
+
+## Configuration facts: AMIP (atm_in)
 
 - Chemistry package `ghg_mam4`: CO2 transported without chemistry; CH4, N2O, CFC11, CFC12 prognostic with first-order loss rates prescribed from file (`bndtvg` = noaamisc.r8.nc); surface concentrations from `flbc_file` (CMIP7 CR-CMIP-1-0-0, species CO2, CH4, N2O, CFC11, CFC12, CFC11eq).
 - Radiation (`rad_climate`): `A:CO2`, `A:N2O`, `A:CH4`, `A:CFC12` (prognostic tracers); `N:CFC11STAR` (CFC11-equivalent, prescribed); `N:ozone` (prescribed, CMIP7 FZJ-CMIP-ozone-2-0, monthly); `N:VOLC_MMR` (prescribed volcanic aerosol); MAM4 modes.
@@ -40,10 +69,8 @@ uncompressed). Groups:
 - accessory 3D monthly: CLDICE, CLDLIQ (stratiform cloud ice/liquid, CMIP6-style cli/clw).
 Not needed as separate fields: pr tmax (CMIP6: maximum of hourly means) can be rebuilt offline from the hourly mean pr;
 tauu/tauv: TAUX and TAUBLJX are both in the main table.
-DECISION (output namelists, namelist/generate_fincl.py): at sub-daily frequencies (6hr, 3hr, 1hr) only the fields expressly
-requested by the DR for the experiment are written; the sub-daily fallback fields of atm_output_fallback.csv (T/U/V at
-850/500/250 hPa 6hr, RHREFHT 6hr/3hr, UBOT/VBOT 6hr/3hr/1hr, PM25_SRF 1hr) are not written (option --fallback-subdaily to
-restore them). Monthly and daily fallback fields are kept.
+DECISION (output namelists, namelist/generate_fincl.py): all fallback fields of atm_output_fallback.csv are written in
+their streams except UBOT, VBOT and PM25_SRF at 1hr (FALLBACK_EXCLUDE in generate_fincl.py).
 
 ## Realm: aerosol
 
@@ -493,6 +520,16 @@ restore them). Monthly and daily fallback fields are kept.
 - **Status:** ok
 - **Notes:** LHFLX = cam_in%lhf from the coupler (includes sublimation), positive up as in DR.
 
+### `atmos.hfls.tavg-u-hxy-is`
+
+- **CMIP6 name:** hfls
+- **Long name:** Ice Sheet Surface Upward Latent Heat Flux
+- **CAM fields:** `DISCARD`
+- **Reprocess:** False
+- **Confidence:** medium
+- **Status:** discard (produced by the land model)
+- **Notes:** DECISION: DISCARD in CAM, produced from the land model (CLM) output by the land group. Previous analysis: Requested only for Greenland (region grl), monthly, High, group tipmip_baseline (Robust Risk Assessment of Tipping Points), emission-driven experiments. From CAM: hfls = LHFLX averaged over the ice-sheet area of the region, weighting each column with area x land fraction x glacier fraction and selecting Greenland with the CTSM GLACIER_REGION mask (no active land-ice model; glacier area expected fixed without CISM, glc_do_dynglacier to be checked); the CAM field is the grid-cell mean, so the value is approximate in partly glaciated cells. Preferred: CLM fields on the ice landunit (CLM partitions rain/snow with the elevation-class temperature); to be defined with the land model. The DR definition includes floating ice shelves, not represented in CTSM. No extra CAM output (the fields are already written monthly).
+
 ### `atmos.hfss.tavg-u-hxy-u`
 
 - **CMIP6 name:** hfss
@@ -577,11 +614,11 @@ restore them). Monthly and daily fallback fields are kept.
 
 - **CMIP6 name:** hus
 - **Long name:** Specific Humidity
-- **CAM fields:** `Q, PS`
+- **CAM fields:** `Q, PS, PMID`
 - **Reprocess:** True
 - **Confidence:** high
 - **Status:** ok
-- **Notes:** Model levels; PS for hybrid formula terms (with SE the true pressure is pfull = PMID).
+- **Notes:** Model levels; PS for hybrid formula terms (with SE the true pressure is pfull = PMID). DECISION (coupled runs, CORDEX): PMID written at the same frequency (instantaneous 6hr), because with SE the level pressure is not hyam*P0 + hybm*PS (errors up to 2.5 hPa); the downscaling groups must use PMID (pfull) instead of a + b*ps.
 
 ### `atmos.huss.tavg-h2m-hxy-u`
 
@@ -639,6 +676,16 @@ restore them). Monthly and daily fallback fields are kept.
 - **Reprocess:** True
 - **Confidence:** high
 - **Status:** ok
+
+### `atmos.prsn.tavg-u-hxy-is`
+
+- **CMIP6 name:** prsn
+- **Long name:** Ice Sheet Snowfall Flux
+- **CAM fields:** `DISCARD`
+- **Reprocess:** False
+- **Confidence:** medium
+- **Status:** discard (produced by the land model)
+- **Notes:** DECISION: DISCARD in CAM, produced from the land model (CLM) output by the land group. Previous analysis: Requested only for Greenland (region grl), monthly, High, group tipmip_baseline (Robust Risk Assessment of Tipping Points), emission-driven experiments. From CAM: prsn = (PRECSC + PRECSL)*1000 averaged over the ice-sheet area of the region, weighting each column with area x land fraction x glacier fraction and selecting Greenland with the CTSM GLACIER_REGION mask (no active land-ice model; glacier area expected fixed without CISM, glc_do_dynglacier to be checked); the CAM field is the grid-cell mean, so the value is approximate in partly glaciated cells. Preferred: CLM fields on the ice landunit (CLM partitions rain/snow with the elevation-class temperature); to be defined with the land model. The DR definition includes floating ice shelves, not represented in CTSM. No extra CAM output (the fields are already written monthly).
 
 ### `atmos.prw.tavg-u-hxy-u`
 
@@ -897,11 +944,11 @@ restore them). Monthly and daily fallback fields are kept.
 
 - **CMIP6 name:** ta
 - **Long name:** Air Temperature
-- **CAM fields:** `T, PS`
+- **CAM fields:** `T, PS, PMID`
 - **Reprocess:** True
 - **Confidence:** high
 - **Status:** ok
-- **Notes:** Model levels; PS for hybrid formula terms (with SE the true pressure is pfull = PMID).
+- **Notes:** Model levels; PS for hybrid formula terms (with SE the true pressure is pfull = PMID). DECISION (coupled runs, CORDEX): PMID written at the same frequency (instantaneous 6hr), because with SE the level pressure is not hyam*P0 + hybm*PS (errors up to 2.5 hPa); the downscaling groups must use PMID (pfull) instead of a + b*ps.
 
 ### `atmos.ta.tpt-p3-hxy-air`
 
@@ -1024,11 +1071,11 @@ restore them). Monthly and daily fallback fields are kept.
 
 - **CMIP6 name:** ua
 - **Long name:** Eastward Wind
-- **CAM fields:** `U, PS`
+- **CAM fields:** `U, PS, PMID`
 - **Reprocess:** True
 - **Confidence:** high
 - **Status:** ok
-- **Notes:** 6hrLev instantaneous on model levels (also the usual lateral boundary conditions for regional models, e.g. CORDEX: requirements not verified). Keep. NOTE: rv850 is not in this CSV; if added, the 6hr-mean version would need online masked U850/V850 ("where air"), the instantaneous one can be derived from these fields. Model levels; PS for hybrid formula terms (with SE the true pressure is pfull = PMID).
+- **Notes:** 6hrLev instantaneous on model levels (also the usual lateral boundary conditions for regional models, e.g. CORDEX: requirements not verified). Keep. NOTE: rv850 is not in this CSV; if added, the 6hr-mean version would need online masked U850/V850 ("where air"), the instantaneous one can be derived from these fields. Model levels; PS for hybrid formula terms (with SE the true pressure is pfull = PMID). DECISION (coupled runs, CORDEX): PMID written at the same frequency (instantaneous 6hr), because with SE the level pressure is not hyam*P0 + hybm*PS (errors up to 2.5 hPa); the downscaling groups must use PMID (pfull) instead of a + b*ps.
 
 ### `atmos.ua.tpt-p3-hxy-air`
 
@@ -1074,11 +1121,11 @@ restore them). Monthly and daily fallback fields are kept.
 
 - **CMIP6 name:** va
 - **Long name:** Northward Wind
-- **CAM fields:** `V, PS`
+- **CAM fields:** `V, PS, PMID`
 - **Reprocess:** True
 - **Confidence:** high
 - **Status:** ok
-- **Notes:** 6hrLev instantaneous on model levels (also the usual lateral boundary conditions for regional models, e.g. CORDEX: requirements not verified). Keep. NOTE: rv850 is not in this CSV; if added, the 6hr-mean version would need online masked U850/V850 ("where air"), the instantaneous one can be derived from these fields. Model levels; PS for hybrid formula terms (with SE the true pressure is pfull = PMID).
+- **Notes:** 6hrLev instantaneous on model levels (also the usual lateral boundary conditions for regional models, e.g. CORDEX: requirements not verified). Keep. NOTE: rv850 is not in this CSV; if added, the 6hr-mean version would need online masked U850/V850 ("where air"), the instantaneous one can be derived from these fields. Model levels; PS for hybrid formula terms (with SE the true pressure is pfull = PMID). DECISION (coupled runs, CORDEX): PMID written at the same frequency (instantaneous 6hr), because with SE the level pressure is not hyam*P0 + hybm*PS (errors up to 2.5 hPa); the downscaling groups must use PMID (pfull) instead of a + b*ps.
 
 ### `atmos.va.tpt-p3-hxy-air`
 
@@ -1154,11 +1201,11 @@ restore them). Monthly and daily fallback fields are kept.
 
 - **CMIP6 name:** zg
 - **Long name:** Geopotential height
-- **CAM fields:** `Z3, PS`
+- **CAM fields:** `Z3, PS, PMID`
 - **Reprocess:** True
 - **Confidence:** high
 - **Status:** ok
-- **Notes:** Model levels; PS for hybrid formula terms (with SE the true pressure is pfull = PMID).
+- **Notes:** Model levels; PS for hybrid formula terms (with SE the true pressure is pfull = PMID). DECISION (coupled runs, CORDEX): PMID written at the same frequency (instantaneous 6hr), because with SE the level pressure is not hyam*P0 + hybm*PS (errors up to 2.5 hPa); the downscaling groups must use PMID (pfull) instead of a + b*ps.
 
 ### `atmos.aod550volso4.tavg-u-hxy-u`
 
@@ -1228,7 +1275,7 @@ restore them). Monthly and daily fallback fields are kept.
 - **Reprocess:** True
 - **Confidence:** high
 - **Status:** ok
-- **Notes:** Climatology (12 monthly means) only for runs in which CO2 does not vary from year to year (DR), instead of co2; derived offline from the monthly means; in practice not applicable to the planned historical/scenario AMIP and emission-driven runs (possibly amip-piForcing). Experiment-dependent: to be handled when mapping per experiment.
+- **Notes:** Climatology (12 monthly means) only for runs in which CO2 does not vary from year to year (DR), instead of co2; derived offline from the monthly means; piControl (concentration-driven, CO2 fixed at the surface) is the case it is meant for; requested also for esm-piControl, where CO2 varies slightly from year to year: provide co2 and, if wanted, the climatology. No extra output (offline from the monthly CO2 used for co2).
 
 ### `atmos.co2.tclm-u-hm-u`
 
@@ -1264,39 +1311,45 @@ restore them). Monthly and daily fallback fields are kept.
 
 - **CMIP6 name:** fco2all
 - **Long name:** Carbon Mass Flux into Atmosphere Due to All Emissions of CO2 from All Sources [kgC m-2 s-1]
-- **CAM fields:** `DISCARD`
-- **Reprocess:** False
+- **CAM fields:** `SFCO2`
+- **Reprocess:** True
 - **Confidence:** medium
-- **Status:** discard
-- **Notes:** EXPERIMENT DEPENDENCE: AMIP runs are concentration-driven (CO2 tracer forced by the flbc surface concentrations); coupled runs are emission-driven (CO2 from emissions and land/ocean fluxes). DISCARD only for the concentration-driven AMIP configuration (no CO2 surface fluxes in CAM). TO BE REVIEWED for the emission-driven coupled runs: total CO2 flux seen by the atmosphere (natural + anthropogenic). RESOLVED for AMIP (concentration-driven): DISCARD. To be revisited when the coupled emission-driven configuration is mapped.
+- **Status:** ok
+- **Configuration:** concentration-driven: DISCARD
+- **Notes:** EMISSION-DRIVEN: fco2all = SFCO2 * 12.011/44.0095 (kg CO2 -> kg C), total CO2 flux seen by the atmosphere (ocean + fossil + land); positive upward, as requested. Concentration-driven runs: DISCARD (the CAM CO2 tracer has no surface fluxes).
 
 ### `atmos.fco2antt.tavg-u-hxy-u`
 
 - **CMIP6 name:** fco2antt
 - **Long name:** Carbon Mass Flux into Atmosphere Due to All Anthropogenic Emissions of CO2 [kgC m-2 s-1]
-- **CAM fields:** `DISCARD`
-- **Reprocess:** False
+- **CAM fields:** `SFCO2_FFF, ac_CO2`
+- **Reprocess:** True
 - **Confidence:** medium
-- **Status:** discard
+- **Status:** ok (incomplete: land-use component pending CLM output)
+- **Configuration:** concentration-driven: DISCARD
+- **Notes:** EMISSION-DRIVEN: fco2antt = fossil (as fco2fos: SFCO2_FFF + column ac_CO2) + land-use change emissions + agricultural burning, * 12.011/44.0095. INCOMPLETE: the land-use component is not separated in CAM (SFCO2_LND is the net land flux): PENDING the CLM output needed to rebuild it. Concentration-driven runs: DISCARD.
 
 ### `atmos.fco2fos.tavg-u-hxy-u`
 
 - **CMIP6 name:** fco2fos
 - **Long name:** Carbon Mass Flux into Atmosphere Due to Fossil Fuel Emissions of CO2 [kgC m-2 s-1]
-- **CAM fields:** `DISCARD`
-- **Reprocess:** False
+- **CAM fields:** `SFCO2_FFF, ac_CO2`
+- **Reprocess:** True
 - **Confidence:** medium
-- **Status:** discard
+- **Status:** ok
+- **Configuration:** concentration-driven: DISCARD
+- **Notes:** EMISSION-DRIVEN: fco2fos = (SFCO2_FFF + sum over levels of ac_CO2) * 12.011/44.0095. ac_CO2 (aircraft CO2 emission per layer, kg m-2 s-1) only when co2_readflux_aircraft = .true. (historical/scenarios); otherwise SFCO2_FFF only. Concentration-driven runs: DISCARD.
 
 ### `atmos.fco2nat.tavg-u-hxy-u`
 
 - **CMIP6 name:** fco2nat
 - **Long name:** Surface Carbon Mass Flux into the Atmosphere Due to Natural Sources [kgC m-2 s-1]
-- **CAM fields:** `DISCARD`
-- **Reprocess:** False
+- **CAM fields:** `SFCO2_OCN, SFCO2_LND`
+- **Reprocess:** True
 - **Confidence:** medium
-- **Status:** discard
-- **Notes:** EXPERIMENT DEPENDENCE: AMIP runs are concentration-driven (CO2 tracer forced by the flbc surface concentrations); coupled runs are emission-driven (CO2 from emissions and land/ocean fluxes). DISCARD only for the concentration-driven AMIP configuration. TO BE REVIEWED for the emission-driven coupled runs: natural land + ocean CO2 fluxes as seen by the atmosphere. RESOLVED for AMIP (concentration-driven): DISCARD. To be revisited when the coupled emission-driven configuration is mapped. RESOLVED for AMIP (concentration-driven): DISCARD. To be revisited when the coupled emission-driven configuration is mapped. RESOLVED for AMIP (concentration-driven): DISCARD. To be revisited when the coupled emission-driven configuration is mapped.
+- **Status:** ok
+- **Configuration:** concentration-driven: DISCARD
+- **Notes:** EMISSION-DRIVEN: fco2nat = (SFCO2_OCN + SFCO2_LND) * 12.011/44.0095. Caveat: SFCO2_LND is the net land flux from CTSM, which also contains land-use and fire emissions; to be checked with the land model output what corresponds to the natural flux (DR: nep for land, fgco2 for ocean). Concentration-driven runs: DISCARD in CAM (no CO2 cycle in CAM); the natural fluxes are available from the land and ocean models.
 
 ### `atmos.hfdsnb.tavg-u-hxy-lnd`
 
@@ -1317,6 +1370,7 @@ restore them). Monthly and daily fallback fields are kept.
 - **Confidence:** high
 - **Status:** ok
 - **Notes:** Instantaneous, 950-700 hPa. Option: online 2D levels to avoid 3hr 3D. DECISION: keep 3D fields, interpolate offline with instantaneous PMID; masking with instantaneous PS is exact.
+- **Coupled runs:** POSTPONED. Requested only by "Accurate assessment of land-atmosphere coupling" (hist20/scenario20), to be produced with a dedicated rerun of that period after DECK and Fast Track; then online 2D fields on the plev6 levels (950, 900, 850, 800, 750, 700 hPa) are to be added.
 
 ### `atmos.loadbc.tavg-u-hxy-u`
 
@@ -1397,6 +1451,16 @@ restore them). Monthly and daily fallback fields are kept.
 - **Confidence:** high
 - **Status:** ok
 - **Notes:** prra = (PRECT - PRECSC - PRECSL)*1000 kg/m3: liquid precipitation (convective + large-scale), m/s water equivalent to kg m-2 s-1; linear, exact from time means.
+
+### `atmos.prra.tavg-u-hxy-is`
+
+- **CMIP6 name:** prra
+- **Long name:** Ice Sheet Rainfall Flux
+- **CAM fields:** `DISCARD`
+- **Reprocess:** False
+- **Confidence:** medium
+- **Status:** discard (produced by the land model)
+- **Notes:** DECISION: DISCARD in CAM, produced from the land model (CLM) output by the land group. Previous analysis: Requested only for Greenland (region grl), monthly, High, group tipmip_baseline (Robust Risk Assessment of Tipping Points), emission-driven experiments. From CAM: prra = (PRECT - PRECSC - PRECSL)*1000 averaged over the ice-sheet area of the region, weighting each column with area x land fraction x glacier fraction and selecting Greenland with the CTSM GLACIER_REGION mask (no active land-ice model; glacier area expected fixed without CISM, glc_do_dynglacier to be checked); the CAM field is the grid-cell mean, so the value is approximate in partly glaciated cells. Preferred: CLM fields on the ice landunit (CLM partitions rain/snow with the elevation-class temperature); to be defined with the land model. The DR definition includes floating ice shelves, not represented in CTSM. No extra CAM output (the fields are already written monthly).
 
 ### `atmos.prrsn.tavg-u-hxy-lnd`
 
@@ -1507,6 +1571,7 @@ restore them). Monthly and daily fallback fields are kept.
 - **Confidence:** high
 - **Status:** ok
 - **Notes:** Instantaneous, 950-700 hPa; masking exact. DECISION: keep 3D fields, interpolate offline with instantaneous PMID; masking with instantaneous PS is exact.
+- **Coupled runs:** POSTPONED. Requested only by "Accurate assessment of land-atmosphere coupling" (hist20/scenario20), to be produced with a dedicated rerun of that period after DECK and Fast Track; then online 2D fields on the plev6 levels (950, 900, 850, 800, 750, 700 hPa) are to be added.
 
 ### `atmos.tntrs.tavg-al-hxy-u`
 
@@ -1547,6 +1612,7 @@ restore them). Monthly and daily fallback fields are kept.
 - **Confidence:** high
 - **Status:** ok
 - **Notes:** Instantaneous, 950-700 hPa. Option: online 2D levels. DECISION: keep 3D fields, interpolate offline with instantaneous PMID; masking with instantaneous PS is exact.
+- **Coupled runs:** POSTPONED. Requested only by "Accurate assessment of land-atmosphere coupling" (hist20/scenario20), to be produced with a dedicated rerun of that period after DECK and Fast Track; then online 2D fields on the plev6 levels (950, 900, 850, 800, 750, 700 hPa) are to be added.
 
 ### `atmos.va.tpt-p5u-hxy-air`
 
@@ -1567,6 +1633,7 @@ restore them). Monthly and daily fallback fields are kept.
 - **Confidence:** high
 - **Status:** ok
 - **Notes:** Instantaneous, 950-700 hPa. Option: online 2D levels. DECISION: keep 3D fields, interpolate offline with instantaneous PMID; masking with instantaneous PS is exact.
+- **Coupled runs:** POSTPONED. Requested only by "Accurate assessment of land-atmosphere coupling" (hist20/scenario20), to be produced with a dedicated rerun of that period after DECK and Fast Track; then online 2D fields on the plev6 levels (950, 900, 850, 800, 750, 700 hPa) are to be added.
 
 ### `atmos.wap.tpt-p6-hxy-air`
 
@@ -1577,6 +1644,7 @@ restore them). Monthly and daily fallback fields are kept.
 - **Confidence:** high
 - **Status:** ok
 - **Notes:** Instantaneous, 950-700 hPa. Option: online 2D levels. DECISION: keep 3D fields, interpolate offline with instantaneous PMID; masking with instantaneous PS is exact.
+- **Coupled runs:** POSTPONED. Requested only by "Accurate assessment of land-atmosphere coupling" (hist20/scenario20), to be produced with a dedicated rerun of that period after DECK and Fast Track; then online 2D fields on the plev6 levels (950, 900, 850, 800, 750, 700 hPa) are to be added.
 
 ### `atmos.wbgt.tavg-h2m-hxy-u`
 
