@@ -6,7 +6,7 @@ seaIce.rlus.tavg-u-hxy-si,False,sifllwutop,Upwelling Longwave Flux over Sea Ice,
 seaIce.rsds.tavg-u-hxy-si,False,siflswdtop,Downwelling Shortwave Flux over Sea Ice,siflswdtop,copy. daily stream: field names with suffix _d
 seaIce.rsus.tavg-u-hxy-si,False,siflswutop,Upwelling Shortwave Flux over Sea Ice,siflswutop,"copy. sign: none: positive up, as the DR. daily stream: field names with suffix _d"
 seaIce.siage.tavg-u-hxy-si,False,siage,Age of Sea Ice,siage,copy (s). daily stream: field names with suffix _d
-seaIce.siconc.tavg-u-hxy-u,True,aice*100,Sea-Ice Area Percentage (Ocean Grid),siconc,100 * aice. mask: none (0 over open water). daily stream: field names with suffix _d
+seaIce.siconc.tavg-u-hxy-u,True,aice,Sea-Ice Area Percentage (Ocean Grid),siconc,100 * aice. mask: none (0 over open water). daily stream: field names with suffix _d
 seaIce.sidconcth.tavg-u-hxy-sea,False,sidconcth,Sea-Ice Area Fraction Tendency Due to Thermodynamics,sidconcth,copy (s-1). change: now includes the steps where the ice disappears
 seaIce.sidmassdyn.tavg-u-hxy-si,False,sidmassdyn,Sea-Ice Mass Change from Dynamics,sidmassdyn,copy. change: now includes the steps where the ice disappears
 seaIce.sidmassgrowthbot.tavg-u-hxy-si,False,sidmassgrowthbot,Sea-Ice Mass Change Through Basal Growth,sidmassgrowthbot,copy. change: as before (melt-out steps included)
@@ -22,7 +22,7 @@ seaIce.siflfwbot.tavg-u-hxy-si,False,siflfwbot,Freshwater Flux from Sea Ice,sifl
 seaIce.siflfwdrain.tavg-u-hxy-si,False,siflfwdrain,Freshwater Flux from Sea-Ice Surface,siflfwdrain,"copy (approximation: pond storage not removed). change: units fixed, rain removed"
 seaIce.siflsenstop.tavg-u-hxy-si,False,siflsenstop,Net Downward Sensible Heat Flux over Sea Ice,siflsenstop,copy. sign: none: positive down
 seaIce.sihc.tavg-u-hxy-sea,False,sihc,Sea-Ice Heat Content,sihc,"copy (J m-2, negative)"
-seaIce.simass.tavg-u-hxy-si,True,hi*917,Sea-Ice Mass,simass,"917 * hi (rhoi, the density of the CICE mass diagnostics). change: was simass, a field that does not exist in CICE 6.3"
+seaIce.simass.tavg-u-hxy-si,True,hi,Sea-Ice Mass,simass,"917 * hi (rhoi, the density of the CICE mass diagnostics). change: was simass, a field that does not exist in CICE 6.3"
 seaIce.sisnhc.tavg-u-hxy-si,False,sisnhc,Snow Heat Content,sisnhc,"copy (J m-2, negative). mask: fill where the time-mean aice = 0 (DR mask=siconc; CICE writes 0 there). daily stream: field names with suffix _d"
 seaIce.sispeed.tavg-u-hxy-si,False,sispeed,Sea-Ice Speed,sispeed,copy; U points. daily stream: field names with suffix _d
 seaIce.sitempbot.tavg-u-hxy-si,False,sitempbot,Temperature at Ice-Ocean Interface,sitempbot,copy (K). change: values corrected (original code divided the cell value Tbot by aice_init)
@@ -34,7 +34,7 @@ seaIce.siu.tavg-u-hxy-si,False,siu,X-Component of Sea-Ice Velocity,siu,"copy; U 
 seaIce.siv.tavg-u-hxy-si,False,siv,Y-Component of Sea-Ice Velocity,siv,"copy; U points (ULON, ULAT), native grid directions. daily stream: field names with suffix _d"
 seaIce.snc.tavg-u-hxy-si,True,"snowfrac,aice",Snow Area Percentage,sisnconc,100 * snowfrac / aice. mask: fill where aice = 0
 seaIce.snd.tavg-u-hxy-sn,True,"hs,snowfrac",Snow Thickness,sisnthick,hs / snowfrac. mask: fill where snowfrac = 0 (DR: where snow). daily stream: field names with suffix _d
-seaIce.snw.tavg-u-hxy-si,True,hs*330,Snow Mass per Area,sisnmass,"330 * hs (rhos). change: was sisnmass, a field that does not exist in CICE 6.3"
+seaIce.snw.tavg-u-hxy-si,True,hs,Snow Mass per Area,sisnmass,"330 * hs (rhos). change: was sisnmass, a field that does not exist in CICE 6.3"
 seaIce.ts.tavg-u-hxy-si,False,sitemptop,Surface Temperature of Sea Ice,sitemptop,copy (K). daily stream: field names with suffix _d
 seaIce.prsn.tavg-u-hxy-si,False,sisndmasssnf,Snow Mass Change Through Snowfall,sisndmasssnf,"copy. mask: fill where the time-mean aice = 0 (DR mask=siconc; CICE writes 0 there). change: renamed (was sndmasssnf), no density factor, weighted by aice_init"
 seaIce.sbl.tavg-u-hxy-si,False,sisndmasssubl,Snow Mass Rate of Change Through Evaporation or Sublimation,sisndmasssubl,"copy. sign: none (rate of change, negative for sublimation; no positive attribute in the DR). mask: fill where the time-mean aice = 0 (DR mask=siconc; CICE writes 0 there). change: renamed (was sndmassubl); original code: multiplied by rhos and cumulative since the start of the job (evaps never reset)"
