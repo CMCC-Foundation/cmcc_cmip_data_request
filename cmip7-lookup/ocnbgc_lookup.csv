@@ -53,19 +53,19 @@ ocnBgchem.fric.tavg-u-hxy-sea,False,DISCARD,Downward Inorganic Carbon Flux at Oc
 ocnBgchem.froc.tavg-u-hxy-sea,False,DISCARD,Downward Organic Carbon Flux at Ocean Bottom,froc
 ocnBgchem.graz.tavg-ol-hxy-sea,False,graz,Total Grazing of Phytoplankton by Zooplankton,graz
 ocnBgchem.icfriver.tavg-u-hxy-sea,False,DISCARD,Flux of Inorganic Carbon into Ocean Surface by Runoff,icfriver
-ocnBgchem.intpoc.tavg-u-hxy-sea,False,DISCARD,Particulate Organic Carbon Content,intpoc
+ocnBgchem.intpoc.tavg-u-hxy-sea,True,detoc,Particulate Organic Carbon vertically Integrated Content,intpoc
 ocnBgchem.intppcalc.tavg-u-hxy-sea,False,DISCARD,Net Primary Mole Productivity of Carbon by Calcareous Phytoplankton,intppcalc
 ocnBgchem.intppdiaz.tavg-u-hxy-sea,False,DISCARD,Net Primary Mole Productivity of Carbon by Diazotrophs,intppdiaz
 ocnBgchem.intppnano.tavg-u-hxy-sea,False,DISCARD,Net Primary Organic Carbon Production by Nanophytoplankton,intppnano
 ocnBgchem.intppnitrate.tavg-u-hxy-sea,False,DISCARD,Primary Organic Carbon Production by Phytoplankton Based on Nitrate Uptake Alone,intppnitrate
 ocnBgchem.intpppico.tavg-u-hxy-sea,False,DISCARD,Net Primary Mole Productivity of Carbon by Picophytoplankton,intpppico
-ocnBgchem.o2.tavg-op20bar-hxy-sea,False,DISCARD,Dissolved Oxygen Concentration at 200 meters,o2200
-ocnBgchem.o2min.tavg-u-hxy-sea,False,DISCARD,Oxygen Minimum Concentration,o2min
+ocnBgchem.o2.tavg-op20bar-hxy-sea,False,o2200,Dissolved Oxygen Concentration at 200 meters,o2200
+ocnBgchem.o2min.tavg-u-hxy-sea,False,o2min,Oxygen Minimum Concentration,o2min
 ocnBgchem.o2sat.tavg-ol-hxy-sea,False,DISCARD,Dissolved Oxygen Concentration at Saturation,o2sat
 ocnBgchem.ocfriver.tavg-u-hxy-sea,False,DISCARD,Flux of Organic Carbon into Ocean Surface by Runoff,ocfriver
-ocnBgchem.ph.tavg-op20bar-hxy-sea,False,DISCARD,pH,ph200
+ocnBgchem.ph.tavg-op20bar-hxy-sea,False,ph200,pH,ph200
 ocnBgchem.phyc.tavg-ols-hxy-sea,False,phycos,Sea Surface Phytoplankton Carbon Concentration,phycos
-ocnBgchem.phyc.tavg-op20bar-hxy-sea,False,DISCARD,Phytoplankton Carbon Concentration,phyc200
+ocnBgchem.phyc.tavg-op20bar-hxy-sea,False,phyc200,Phytoplankton Carbon Concentration,phyc200
 ocnBgchem.phycalc.tavg-ol-hxy-sea,False,DISCARD,Mole Concentration of Calcareous Phytoplankton Expressed as Carbon in Sea Water,phycalc
 ocnBgchem.phydiat.tavg-ols-hxy-sea,False,phydiatos,Surface Mole Concentration of Diatoms Expressed as Carbon in Sea Water,phydiatos
 ocnBgchem.phydiaz.tavg-ol-hxy-sea,False,DISCARD,Mole Concentration of Diazotrophs Expressed as Carbon in Sea Water,phydiaz
