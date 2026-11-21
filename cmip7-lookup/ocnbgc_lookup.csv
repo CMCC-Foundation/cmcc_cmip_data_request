@@ -53,7 +53,7 @@ ocnBgchem.fric.tavg-u-hxy-sea,False,DISCARD,Downward Inorganic Carbon Flux at Oc
 ocnBgchem.froc.tavg-u-hxy-sea,False,DISCARD,Downward Organic Carbon Flux at Ocean Bottom,froc
 ocnBgchem.graz.tavg-ol-hxy-sea,False,graz,Total Grazing of Phytoplankton by Zooplankton,graz
 ocnBgchem.icfriver.tavg-u-hxy-sea,False,DISCARD,Flux of Inorganic Carbon into Ocean Surface by Runoff,icfriver
-ocnBgchem.intpoc.tavg-u-hxy-sea,True,detoc,Particulate Organic Carbon vertically Integrated Content,intpoc
+ocnBgchem.intpoc.tavg-u-hxy-sea,True,intpoc,Particulate Organic Carbon Content vertically Integrated,intpoc
 ocnBgchem.intppcalc.tavg-u-hxy-sea,False,DISCARD,Net Primary Mole Productivity of Carbon by Calcareous Phytoplankton,intppcalc
 ocnBgchem.intppdiaz.tavg-u-hxy-sea,False,DISCARD,Net Primary Mole Productivity of Carbon by Diazotrophs,intppdiaz
 ocnBgchem.intppnano.tavg-u-hxy-sea,False,DISCARD,Net Primary Organic Carbon Production by Nanophytoplankton,intppnano
